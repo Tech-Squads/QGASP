@@ -20,15 +20,29 @@ namespace QlityG.DataAccess
             }
         }
 
-        public void InsertUser(UserModel obj)
+        public void InsertUser(string email,string password)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("dbQ")))
             {
-
                 List<UserModel> members = new List<UserModel>();
-                members.Add(new UserModel { uEmail = obj.uEmail, uPassword = obj.uPassword , uType = obj.uType, ID = obj.ID });
-                connection.Execute("dbo.spUsers_CreateUser @email, @password, @type, @ID", members);
+                members.Add(new UserModel { uEmail = email,uPassword = password,uType = 1,ID = 1 });
+                connection.Execute("dbo.spUsers_CreateUser @uEmail, @uPassword, @uType, @ID", members);
             }
+        }
+
+        public bool loginUser(string email,string password)
+        {
+
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("dbQ")))
+            {
+                var output = connection.Query<UserModel>("dbo.spUsers_LoginUser @uEmail,@uPassword", new { uEmail = email, uPassword = password }).ToList();
+                if (output.Count.Equals(0))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
     }

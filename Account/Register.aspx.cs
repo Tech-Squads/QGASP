@@ -5,31 +5,32 @@ using System.Web.UI;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
+using QlityG.DataAccess;
 using QlityG.Models;
 
 namespace QlityG.Account
 {
     public partial class Register : Page
     {
+        DataTool db = new DataTool();
+        string email, password;
+        
         protected void CreateUser_Click(object sender, EventArgs e)
         {
-            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-            var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text };
-            IdentityResult result = manager.Create(user, Password.Text);
-            if (result.Succeeded)
-            {
-                // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
-                //string code = manager.GenerateEmailConfirmationToken(user.Id);
-                //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
-                //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
 
-                signInManager.SignIn( user, isPersistent: false, rememberBrowser: false);
-                IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+            if(txtPassword.Text == txtConfirmPassword.Text)
+            {
+                email = txtEmail.Text.Trim();
+                password = txtPassword.Text.Trim();
+                // user = new UserModel(email,password);
+                db.InsertUser(email,password);
+                Session["userEmail"] = email;
+                Response.Redirect("/Default");
             }
+       
             else 
             {
-                ErrorMessage.Text = result.Errors.FirstOrDefault();
+                ErrorMessage.Text = "Please ensure passwords match";
             }
         }
     }
