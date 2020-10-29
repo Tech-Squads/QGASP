@@ -361,7 +361,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ProfileModel.cs" />
+    <Compile Include="Models\GiggerProfileModel.cs" />
+    <Compile Include="Models\RequestorProfileModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">

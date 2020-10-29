@@ -4,12 +4,15 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
+using QlityG.DataAccess;
 using QlityG.Models;
 
 namespace QlityG.Account
 {
     public partial class RegisterExternalLogin : System.Web.UI.Page
     {
+        DataTool db = new DataTool();
+
         protected string ProviderName
         {
             get { return (string)ViewState["ProviderName"] ?? String.Empty; }
@@ -46,10 +49,12 @@ namespace QlityG.Account
                     RedirectOnFail();
                     return;
                 }
-                var user = manager.Find(loginInfo.Login);
-                if (user != null)
+                //var user = manager.Find(loginInfo.Login);
+                if (loginInfo != null)
                 {
-                    signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
+                    db.InsertUser(loginInfo.Email, loginInfo.Login.ProviderKey);
+                    Response.Redirect("/Default");
+                   // signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
                     IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
                 }
                 else if (User.Identity.IsAuthenticated)
