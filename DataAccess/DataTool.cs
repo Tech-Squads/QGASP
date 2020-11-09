@@ -11,11 +11,6 @@ namespace QlityG.DataAccess
     public class DataTool
     {
 
-
-
-
-
-
         public bool Exists(string email) 
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("dbQ")))
@@ -39,8 +34,8 @@ namespace QlityG.DataAccess
                     return false;
                 }
                 List<UserModel> members = new List<UserModel>();
-                members.Add(new UserModel { uEmail = email,uPassword = password,uType = 1,ID = 1 });
-                connection.Execute("dbo.spUsers_CreateUser @uEmail, @uPassword, @uType, @ID", members);
+                members.Add(new UserModel { uEmail = email,uPassword = password,uType = 1,UserID = 1 , FirstLogin = "True"});
+                connection.Execute("dbo.spUsers_CreateUser @uEmail, @uPassword, @uType, @ID, @FLogin", members);
             }
             return true;
         }
@@ -89,6 +84,33 @@ namespace QlityG.DataAccess
             return true;
         }
 
+
+        public UserModel GetUserByEmail(string email)
+        {
+
+            if (Exists(email))
+            {
+                    using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("dbQ")))
+                    {
+                        var output = connection.Query<UserModel>("dbo.spUsers_GetUserByEmail @uEmail", new { uEmail = email }).ToList();
+                        if (output.Count == 0)
+                        {
+                             return null;
+                        }
+                        return output.ElementAt(0);
+                    }
+            }
+            return null;
+        }
+
+        public void UpdateUserType(int type,string uEmail)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("dbQ")))
+            {
+                //var output = connection.Query<User>("dbo.Members_ChangeiSBooked @memberID,@mIsBooked", new { memberID = memID, mIsBooked = IsBooked });
+                connection.Execute("dbo.spUser_UpdateType @uEmail,@uType", new { uEmail = uEmail, uType = type });
+            }
+        }
 
         public string GetUserProfile(int type,string email)
         {

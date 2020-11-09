@@ -7,34 +7,25 @@ namespace QlityG.Models
 {
     public class UserModel
     {
-        private string email;
-        private string password;
-
-        public UserModel(string email, string password)
-        {
-            this.ID = 0;
-            this.uType = 0;
-            this.uProfileID = 0;
-            this.email = email;
-            this.password = password;
-        }
+    
         public UserModel()
         {
                 
         }
         public UserModel(UserModel u)
         {
-            ID = u.ID;
-            uType = u.uType;
-            uEmail = u.uEmail;
-            uPassword = u.uPassword;
-            uProfileID = u.uProfileID;
+            this.UserID = u.UserID;
+            this.uEmail = u.uEmail;
+            this.uPassword = u.uPassword;
+            this.FirstLogin = u.FirstLogin;
+            this.uType = u.uType;
+
         }
 
-        public int ID { get; set; }
         public string uEmail { get; set; }
         public string uPassword { get; set; }
+        public int UserID { get; set; }
         public int uType { get; set; }
-        public int uProfileID { get; set; }
+        public string FirstLogin { get; set; }
     }
 }
