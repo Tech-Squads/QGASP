@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Net.Http;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using Newtonsoft.Json;
 using Owin;
 using QlityG.DataAccess;
 using QlityG.Models;
@@ -38,13 +40,17 @@ namespace QlityG.Account
             email = txtEmail.Text.Trim();
             password = txtPassword.Text.Trim();
 
+
+            string data = JsonConvert.SerializeObject(user);
+            StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+            HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/AddUser", content).Result;
             loggedIn = true;
-            if (loggedIn)
+            if (resp.IsSuccessStatusCode)
             {
-                UserModel u = new UserModel(db.GetUserByEmail(email));
-                Session["FirstLogin"] = u.FirstLogin;
-                Session["uEmail"] = email;
-                Session["user"] = u;
+              //  UserModel u = new UserModel(db.GetUserByEmail(email));
+               // Session["FirstLogin"] = u.FirstLogin;
+                //Session["uEmail"] = email;
+                //Session["user"] = u;
                 Response.Redirect("/Default");
             }
             else
