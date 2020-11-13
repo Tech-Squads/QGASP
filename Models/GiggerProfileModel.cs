@@ -17,7 +17,8 @@ namespace QlityG.Models
         public string uPastProjectName { get; set; }
         public string uPastProjectDuration { get; set; }
         public string uPastProjectDetails { get; set; }
-        public string uEmail { get; set; }
+        public int UserID { get; set; }
+
 
         public GiggerProfileModel()
         {

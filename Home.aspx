@@ -1,7 +1,8 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="QlityG._Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoggedInMaster.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="QlityG.Home" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-      <div class="jumbotron" style="text-align:center;background-image: url(fonts/imagese.jpg);">
+
+    <div class="jumbotron" style="text-align:center;background-image: url(fonts/imagese.jpg);">
     
        <marquee direction="right"> <h1>Qlity Gigs</h1> </marquee>
         <p class="lead">Qlity Gig is a platform that enables ...</p>
@@ -41,4 +42,5 @@
       <hr />
     </div>
         </div>
+
 </asp:Content>

@@ -11,7 +11,7 @@ namespace QlityG
 {
 
 
-    public partial class _Default
+    public partial class Home
     {
     }
 }

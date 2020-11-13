@@ -11,9 +11,9 @@ namespace QlityG.Models
         public string uName { get; set; }
         public string uSurname { get; set; }
         public string uCompany { get; set; }
-
         public string uCountry { get; set; }
         public string uEmail { get; set; }
+        public int UserID { get; set; }
 
 
         public RequestorProfileModel()

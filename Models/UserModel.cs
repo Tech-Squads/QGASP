@@ -7,7 +7,9 @@ namespace QlityG.Models
 {
     public class UserModel
     {
-    
+        private string email;
+        private string password;
+
         public UserModel()
         {
                 
@@ -20,6 +22,12 @@ namespace QlityG.Models
             this.FirstLogin = u.FirstLogin;
             this.uType = u.uType;
 
+        }
+
+        public UserModel(string email, string password)
+        {
+            this.email = email;
+            this.password = password;
         }
 
         public string uEmail { get; set; }

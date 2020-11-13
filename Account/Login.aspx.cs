@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Web;
@@ -14,13 +15,14 @@ namespace QlityG.Account
 {
     public partial class Login : Page
     {
-        string email, password;
-        bool loggedIn;
+        string uEmail, uPassword;
+      //  bool loggedIn;
 
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri("https://localhost:44364/api/User");
+        
+        Uri baseAddress = new Uri("https://localhost:44364");
 
-        UserModel user;
+        UserModel u = new UserModel();
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -37,21 +39,43 @@ namespace QlityG.Account
 
         protected void LogIn(object sender, EventArgs e)
         {
-            email = txtEmail.Text.Trim();
-            password = txtPassword.Text.Trim();
+            client.BaseAddress = baseAddress;
+            uEmail = txtEmail.Text.Trim();
+            uPassword = txtPassword.Text.Trim();
+            UserModel ust = new UserModel();
+            ust.uEmail = uEmail;
+            ust.uPassword = uPassword;
 
+            string dat = JsonConvert.SerializeObject(ust);
+            StringContent content = new StringContent(dat, Encoding.UTF8, "application/json");
+            HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/UserLogon", content).Result;
 
-            string data = JsonConvert.SerializeObject(user);
-            StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/AddUser", content).Result;
-            loggedIn = true;
+            
             if (resp.IsSuccessStatusCode)
             {
-              //  UserModel u = new UserModel(db.GetUserByEmail(email));
-               // Session["FirstLogin"] = u.FirstLogin;
-                //Session["uEmail"] = email;
-                //Session["user"] = u;
-                Response.Redirect("/Default");
+                string data = resp.Content.ReadAsStringAsync().Result;
+              UserModel  LoggedUser = new UserModel(JsonConvert.DeserializeObject<UserModel>(data));
+
+
+                if(LoggedUser.Equals(null))
+                {
+                    ErrorMessage.Visible = true;
+
+                }
+                else
+                {
+
+                    if (LoggedUser.FirstLogin == "true")
+                    {
+
+                        Session["email"] = LoggedUser.uEmail;
+                        Session["UserID"] = LoggedUser.UserID;
+                        Response.Redirect("/SelectType.aspx");
+                    }
+                    Session["UserID"] = LoggedUser.UserID;
+                    Response.Redirect("/Home");
+                }
+                
             }
             else
                 ErrorLogin.Visible = true;

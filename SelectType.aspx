@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="profilecreate.aspx.cs" Inherits="QlityG.profilecreate" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoggedInMaster.Master" AutoEventWireup="true" CodeBehind="SelectType.aspx.cs" Inherits="QlityG.profilecreate" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
@@ -17,4 +17,7 @@
         <a runat="server" href="~/Account/Gigger">Gigger</a>
     </h3>
 </div>
+    <div>
+        <label id="ErrorM" runat="server" visible="false"> Something went wrong please load page again!</label>
+    </div>
 </asp:Content>

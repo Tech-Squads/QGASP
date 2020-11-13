@@ -62,7 +62,7 @@ namespace QlityG.DataAccess
                     return false;
                 }
                 List<GiggerProfileModel> members = new List<GiggerProfileModel>();
-                members.Add(new GiggerProfileModel { uName = Name, uSurname = Surname,uCountry = Country, uEducation = Education , uSkills = Skills , uReferences = References, uPastProjectName = PastProjectName , uPastProjectDuration = PastProjectDuration , uPastProjectDetails = PastProjectDetails, uEmail = Email  });
+                members.Add(new GiggerProfileModel { uName = Name, uSurname = Surname,uCountry = Country, uEducation = Education , uSkills = Skills , uReferences = References, uPastProjectName = PastProjectName , uPastProjectDuration = PastProjectDuration , uPastProjectDetails = PastProjectDetails   });
                 connection.Execute("dbo.spProfile_CreateGiggerProfile @name,@surname,@country,@education,@skills,@projName,@projDuration,@projDetails,@references,@email", members);
             }
             return true;

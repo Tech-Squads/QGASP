@@ -212,12 +212,13 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="CreateGig.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\imagese.jpg" />
     <Content Include="fonts\QGLogo.ico" />
     <Content Include="fonts\QGLogo.jpg" />
+    <Content Include="GiggerProfile.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -228,8 +229,12 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="Home.aspx" />
+    <Content Include="LoggedInMaster.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="profilecreate.aspx" />
+    <Content Include="Scripts\StyleSheetGigs.css" />
+    <Content Include="SelectType.aspx" />
+    <Content Include="RequestorProfile.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -259,6 +264,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="ViewGigs.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -395,30 +401,59 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DataTool.cs" />
-    <Compile Include="DataAccess\Helper.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="CreateGig.aspx.cs">
+      <DependentUpon>CreateGig.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="CreateGig.aspx.designer.cs">
+      <DependentUpon>CreateGig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\DataTool.cs" />
+    <Compile Include="DataAccess\Helper.cs" />
+    <Compile Include="GiggerProfile.aspx.cs">
+      <DependentUpon>GiggerProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiggerProfile.aspx.designer.cs">
+      <DependentUpon>GiggerProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoggedInMaster.Master.cs">
+      <DependentUpon>LoggedInMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoggedInMaster.Master.designer.cs">
+      <DependentUpon>LoggedInMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GigModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\GiggerProfileModel.cs" />
     <Compile Include="Models\RequestorProfileModel.cs" />
     <Compile Include="Models\UserModel.cs" />
-    <Compile Include="profilecreate.aspx.cs">
-      <DependentUpon>profilecreate.aspx</DependentUpon>
+    <Compile Include="SelectType.aspx.cs">
+      <DependentUpon>SelectType.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="profilecreate.aspx.designer.cs">
-      <DependentUpon>profilecreate.aspx</DependentUpon>
+    <Compile Include="SelectType.aspx.designer.cs">
+      <DependentUpon>SelectType.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestorProfile.aspx.cs">
+      <DependentUpon>RequestorProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestorProfile.aspx.designer.cs">
+      <DependentUpon>RequestorProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -434,6 +469,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewGigs.aspx.cs">
+      <DependentUpon>ViewGigs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewGigs.aspx.designer.cs">
+      <DependentUpon>ViewGigs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
