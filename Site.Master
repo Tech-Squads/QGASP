@@ -53,7 +53,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" style="font-size:18px;">
-                        <li><a runat="server" href="~/"></a></li>
+                        <li><a href="fonts/QGLogo.ico">fonts/QGLogo.ico</a></li>
                         <li><a runat="server" href="~/"></a></li>
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">Overview</a></li>

@@ -7,7 +7,7 @@
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
        
          <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="txtEmail" CssClass="col-md-2 control-label">Email Address</asp:Label>
+            <asp:Label runat="server"  AssociatedControlID="txtEmail" CssClass="col-md-2 control-label">Email Address</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="txtEmail"  CssClass="form-control" Enabled="False" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
@@ -18,7 +18,7 @@
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="txtName" CssClass="col-md-2 control-label">Name</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="txtName" CssClass="form-control"  />
+                <asp:TextBox runat="server" ID="txtName" CssClass="form-control" OnTextChanged="txtName_TextChanged"  />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtName"
                     CssClass="text-danger" ErrorMessage="The Name field is required." />
             </div>
@@ -97,10 +97,15 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <asp:Button runat="server" ID="UpdateProfile" Text="Update Profile" CssClass="btn btn-default" OnClick="UpdateProfile_Click"  />
+                <asp:Button runat="server" ID="Create" Text="Create Profile" CssClass="btn btn-default" OnClick="UpdateProfile_Click"  />
             </div>
         </div>
-    
+    <br />
+    <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <asp:Button runat="server" ID="Update" Text="Update Profile" CssClass="btn btn-default" OnClick="Update_Click"  />
+            </div>
+        </div>
 
 
 

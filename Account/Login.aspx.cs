@@ -16,39 +16,34 @@ namespace QlityG.Account
     public partial class Login : Page
     {
         string uEmail, uPassword;
-      //  bool loggedIn;
+      
 
         HttpClient client = new HttpClient();
         
         Uri baseAddress = new Uri("https://localhost:44364");
 
-        UserModel u = new UserModel();
+        UserModel u;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            RegisterHyperLink.NavigateUrl = "Register";
-            // Enable this once you have account confirmation enabled for password reset functionality
-            //ForgotPasswordHyperLink.NavigateUrl = "Forgot";
-            OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
-            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            if (!String.IsNullOrEmpty(returnUrl))
-            {
-                RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
-            }
+            
         }
 
         protected void LogIn(object sender, EventArgs e)
         {
             client.BaseAddress = baseAddress;
-            uEmail = txtEmail.Text.Trim();
-            uPassword = txtPassword.Text.Trim();
-            UserModel ust = new UserModel();
-            ust.uEmail = uEmail;
-            ust.uPassword = uPassword;
+            uEmail = txtEmail.Text.Trim().ToUpper();
+            uPassword = txtPassword.Text.Trim().ToUpper();
+            
+            u = new UserModel();
+            u.uEmail = uEmail;
+            u.uPassword = uPassword;
 
-            string dat = JsonConvert.SerializeObject(ust);
+            string dat = JsonConvert.SerializeObject(u);
             StringContent content = new StringContent(dat, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/UserLogon", content).Result;
+            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + string.Format("/UserLogon?Uemail={0}&Upassword={1}",uEmail,uPassword)).Result;
 
             
             if (resp.IsSuccessStatusCode)
@@ -57,7 +52,7 @@ namespace QlityG.Account
               UserModel  LoggedUser = new UserModel(JsonConvert.DeserializeObject<UserModel>(data));
 
 
-                if(LoggedUser.Equals(null))
+                if(LoggedUser == null)
                 {
                     ErrorMessage.Visible = true;
 
@@ -65,15 +60,23 @@ namespace QlityG.Account
                 else
                 {
 
-                    if (LoggedUser.FirstLogin == "true")
+                    if (LoggedUser.FirstLogin == "True")
                     {
 
                         Session["email"] = LoggedUser.uEmail;
                         Session["UserID"] = LoggedUser.UserID;
+                 
+                        Session["HasGig"] = LoggedUser.HasGig;
                         Response.Redirect("/SelectType.aspx");
+                    }else
+                    {
+                        
+                        Session["uType"] = u.uType;
+                        Session["UserID"] = LoggedUser.UserID;
+                        Response.Redirect("/Home");
                     }
-                    Session["UserID"] = LoggedUser.UserID;
-                    Response.Redirect("/Home");
+
+                    
                 }
                 
             }

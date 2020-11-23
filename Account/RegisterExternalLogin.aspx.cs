@@ -52,7 +52,7 @@ namespace QlityG.Account
                 //var user = manager.Find(loginInfo.Login);
                 if (loginInfo != null)
                 {
-                    db.InsertUser(loginInfo.Email, loginInfo.Login.ProviderKey);
+                    //db.InsertUser(loginInfo.Email, loginInfo.Login.ProviderKey);
                     Response.Redirect("/Default");
                    // signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
                     IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);

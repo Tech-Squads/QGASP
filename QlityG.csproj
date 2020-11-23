@@ -190,7 +190,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\Forgot.aspx" />
     <Content Include="Account\Lockout.aspx" />
@@ -219,6 +218,7 @@
     <Content Include="fonts\QGLogo.ico" />
     <Content Include="fonts\QGLogo.jpg" />
     <Content Include="GiggerProfile.aspx" />
+    <Content Include="GigInfo.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -232,6 +232,7 @@
     <Content Include="Home.aspx" />
     <Content Include="LoggedInMaster.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Profile.aspx" />
     <Content Include="Scripts\StyleSheetGigs.css" />
     <Content Include="SelectType.aspx" />
     <Content Include="RequestorProfile.aspx" />
@@ -271,13 +272,6 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\AddPhoneNumber.aspx.cs">
-      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
-      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\Confirm.aspx.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -417,6 +411,13 @@
     <Compile Include="GiggerProfile.aspx.designer.cs">
       <DependentUpon>GiggerProfile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GigInfo.aspx.cs">
+      <DependentUpon>GigInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GigInfo.aspx.designer.cs">
+      <DependentUpon>GigInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -436,9 +437,15 @@
     </Compile>
     <Compile Include="Models\GigModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\GiggerProfileModel.cs" />
-    <Compile Include="Models\RequestorProfileModel.cs" />
+    <Compile Include="Models\UProfile.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SelectType.aspx.cs">
       <DependentUpon>SelectType.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

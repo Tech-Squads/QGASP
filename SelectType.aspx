@@ -6,15 +6,15 @@
 
     <hr />
     <h3 style="text-align:center">
-        <asp:Button ID="RequestorType" Text="Requestor" runat="server" OnClick="RequestorType_Click" />
-        <a runat="server" href="~/Account/Requestor">Requestor</a>
+        <asp:Button Class="Button-Primary" ID="RequestorType" Text="Requestor" runat="server" OnClick="RequestorType_Click" />
+       
     </h3>
 
     <br />
     <p style="text-align:center">OR</p>
     <h3 style="text-align:center">
-        <asp:Button ID="GiggerProfile" Text="Gigger" runat="server" OnClick="GiggerProfile_Click" />        
-        <a runat="server" href="~/Account/Gigger">Gigger</a>
+        <asp:Button Class="Button-Primary" ID="GiggerProfile" Text="Gigger" runat="server" OnClick="GiggerProfile_Click" />        
+       
     </h3>
 </div>
     <div>

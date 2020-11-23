@@ -10,7 +10,7 @@ namespace QlityG.DataAccess
 {
     public class DataTool
     {
-
+        /* 
         public bool Exists(string email) 
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("dbQ")))
@@ -150,7 +150,7 @@ namespace QlityG.DataAccess
     
     
     
-    
+    */
     
     
     }

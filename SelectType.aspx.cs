@@ -17,7 +17,7 @@ namespace QlityG
         
         UserModel u;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri("https://localhost:44364/api/User");
+        Uri baseAddress = new Uri("https://localhost:44364");
 
          
         protected void Page_Load(object sender, EventArgs e)
@@ -46,20 +46,21 @@ namespace QlityG
 
         protected void RequestorType_Click(object sender, EventArgs e)
         {
-            u.FirstLogin = "false";
+            u.FirstLogin = "False";
             u.uType = 2;
 
             string data = JsonConvert.SerializeObject(u);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser" , content).Result;
+            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/"+ u.UserID , content).Result;
 
 
             if (resp.IsSuccessStatusCode)
             {
                 Session["userID"] = u.UserID;
+                Session["uType"] = "Req";
                 Response.Redirect("~/RequestorProfile");
             }
-            Response.Redirect("~/Account/Login");
+            Response.Redirect("~/SelectType.aspx");
 
 
 
@@ -68,13 +69,24 @@ namespace QlityG
         protected void GiggerProfile_Click(object sender, EventArgs e)
         {
 
-            u.FirstLogin = "false";
+            u.FirstLogin = "False";
             u.uType = 1;
 
+            string data = JsonConvert.SerializeObject(u);
+            StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + u.UserID, content).Result;
 
-            Session["userID"] = u.UserID;
+
+            if (resp.IsSuccessStatusCode)
+            {
+                Session["userID"] = u.UserID;
+                Session["uType"] = u.uType;
+                Response.Redirect("~/GiggerProfile");
+            }
+            Response.Redirect("~/SelectType.aspx");
+
+
             
-            Response.Redirect("~/GiggerProfile");
         }
     }
 }
