@@ -1,6 +1,7 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="QlityG.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DashboardLogon.Master.cs" Inherits="QlityG.DashboardLogon" %>
 
 <!DOCTYPE html>
+
 
 <html lang="en">
 <head runat="server">
@@ -49,37 +50,21 @@
                     </button>
                     <a class="navbar-brand" runat="server" href="~/">
                      </a>
-                       <img src="../fonts/Qlit.jpg" alt="QlityGigs" style="width:190px;height:44px;"/>
                     
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" style="font-size:18px;">
-                        <li><a runat="server" href="~/Home">Home</a></li>
-                        <li><a runat="server" href="~/About">Overview</a></li>
-                        <li><a runat="server" href="~/Contact">How it works</a></li>
-                    
-                     
-                       
+                        <li><a runat="server" href="~/About">About</a></li>
+                        <li><a runat="server" href="~/Contact">How it works</a></li> 
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right" style="font-size:18px">
-                                <li><a runat="server" href="~/Account/Register">Join</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+         
+                                <li><a runat="server" href="~/Account/Login">Log Out</a></li>
                             </ul>
                         </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" id="LogOutElement" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !<%: Context.User.Identity.GetUserId()  %></a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-
-                                 <li>
-                                  <li><a runat="server" id="profileElement" href="~/Account/profilecreate">Profile</a></li>
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
+                      
                     </asp:LoginView>
                 </div>
             </div>
@@ -89,7 +74,7 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
            
-            <br /> <br />  <br /> <br /><hr />
+            <br /> <br />   <br /><hr />
           
             
             <footer>

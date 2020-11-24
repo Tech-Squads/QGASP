@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoggedInMaster.Master" AutoEventWireup="true" CodeBehind="SelectType.aspx.cs" Inherits="QlityG.profilecreate" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DashboardLogon.Master" AutoEventWireup="true" CodeBehind="SelectType.aspx.cs" Inherits="QlityG.profilecreate" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
@@ -6,14 +6,14 @@
 
     <hr />
     <h3 style="text-align:center">
-        <asp:Button Class="Button-Primary" ID="RequestorType" Text="Requestor" runat="server" OnClick="RequestorType_Click" />
+        <asp:Button  ID="RequestorType" Text="Requestor" runat="server" OnClick="RequestorType_Click" CssClass="btn btn-default" BorderColor="Blue" ForeColor="Blue" Width="150px"/>
        
     </h3>
 
     <br />
     <p style="text-align:center">OR</p>
     <h3 style="text-align:center">
-        <asp:Button Class="Button-Primary" ID="GiggerProfile" Text="Gigger" runat="server" OnClick="GiggerProfile_Click" />        
+        <asp:Button  ID="GiggerProfile" Text="Gigger" runat="server" OnClick="GiggerProfile_Click" CssClass="btn btn-default" BorderColor="Purple" ForeColor="Purple"  Width="150px"/>     
        
     </h3>
 </div>

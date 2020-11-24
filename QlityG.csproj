@@ -217,6 +217,7 @@
     <Content Include="fonts\imagese.jpg" />
     <Content Include="fonts\QGLogo.ico" />
     <Content Include="fonts\QGLogo.jpg" />
+    <Content Include="fonts\Qlit.jpg" />
     <Content Include="GiggerProfile.aspx" />
     <Content Include="GigInfo.aspx" />
     <Content Include="Global.asax" />
@@ -231,6 +232,9 @@
     <Content Include="Account\Web.config" />
     <Content Include="Home.aspx" />
     <Content Include="LoggedInMaster.Master" />
+    <Content Include="DashboardLogon.Master" />
+    <Content Include="RequestorDashboard.Master" />
+    <Content Include="GiggerDashboard.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Profile.aspx" />
     <Content Include="Scripts\StyleSheetGigs.css" />
@@ -402,6 +406,20 @@
     <Compile Include="CreateGig.aspx.designer.cs">
       <DependentUpon>CreateGig.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GiggerDashboard.Master.cs">
+      <DependentUpon>GiggerDashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiggerDashboard.Master.designer.cs">
+      <DependentUpon>GiggerDashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="RequestorDashboard.Master.cs">
+      <DependentUpon>RequestorDashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestorDashboard.Master.designer.cs">
+      <DependentUpon>RequestorDashboard.Master</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess\DataTool.cs" />
     <Compile Include="DataAccess\Helper.cs" />
     <Compile Include="GiggerProfile.aspx.cs">
@@ -427,6 +445,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardLogon.Master.cs">
+      <DependentUpon>DashboardLogon.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashboardLogon.Master.designer.cs">
+      <DependentUpon>DashboardLogon.Master</DependentUpon>
     </Compile>
     <Compile Include="LoggedInMaster.Master.cs">
       <DependentUpon>LoggedInMaster.Master</DependentUpon>

@@ -128,6 +128,13 @@ namespace QlityG
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
             HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/AddProfile", content).Result;
 
+            u.FirstLogin = "False";
+
+
+            string uData = JsonConvert.SerializeObject(u);
+            StringContent uContent = new StringContent(uData, Encoding.UTF8, "application/json");
+            HttpResponseMessage respnse = client.PutAsync(client.BaseAddress + "/UpdateUser/" + u.UserID, uContent).Result;
+
 
             if (resp.IsSuccessStatusCode)
             {

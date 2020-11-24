@@ -60,13 +60,13 @@ namespace QlityG
         protected global::System.Web.UI.WebControls.TextBox txtCountry;
 
         /// <summary>
-        /// txtEducation control.
+        /// Table1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEducation;
+        protected global::System.Web.UI.WebControls.Table Table1;
 
         /// <summary>
         /// txtSkills control.
@@ -78,6 +78,24 @@ namespace QlityG
         protected global::System.Web.UI.WebControls.TextBox txtSkills;
 
         /// <summary>
+        /// txtReferences control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtReferences;
+
+        /// <summary>
+        /// txtEducation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEducation;
+
+        /// <summary>
         /// txtPastProjectName control.
         /// </summary>
         /// <remarks>
@@ -85,15 +103,6 @@ namespace QlityG
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPastProjectName;
-
-        /// <summary>
-        /// txtPastProjectDuration control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPastProjectDuration;
 
         /// <summary>
         /// txtPastProjectDetails control.
@@ -105,13 +114,13 @@ namespace QlityG
         protected global::System.Web.UI.WebControls.TextBox txtPastProjectDetails;
 
         /// <summary>
-        /// txtReferences control.
+        /// txtPastProjectDuration control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtReferences;
+        protected global::System.Web.UI.WebControls.TextBox txtPastProjectDuration;
 
         /// <summary>
         /// Create control.

@@ -46,7 +46,7 @@ namespace QlityG
 
         protected void RequestorType_Click(object sender, EventArgs e)
         {
-            u.FirstLogin = "False";
+            u.FirstLogin = "ACTIVE";
             u.uType = 2;
 
             string data = JsonConvert.SerializeObject(u);
@@ -69,7 +69,7 @@ namespace QlityG
         protected void GiggerProfile_Click(object sender, EventArgs e)
         {
 
-            u.FirstLogin = "False";
+            u.FirstLogin = "v";
             u.uType = 1;
 
             string data = JsonConvert.SerializeObject(u);
