@@ -17,11 +17,10 @@
         <div class="form-group">
            <%-- <asp:Label runat="server" AssociatedControlID="txtEmail" CssClass="col-md-2 control-label">Email</asp:Label>--%>
            <div class="col-md-offset-2 col-md-8">
-                <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="349px" />
-               
-            </div>
-             <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
-             CssClass="text-danger" ErrorMessage="The Email field is required." />
+           <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="349px" />         
+           </div>
+           <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
+           CssClass="text-danger" ErrorMessage="The Email field is required." />
         </div>
 
         <div class="form-group">
@@ -44,11 +43,13 @@
             <asp:CompareValidator runat="server" ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword"
             CssClass="text-danger" Display="Dynamic" ErrorMessage="The Passwords do not match!" />
         </div>
+
         <div class="form-group">
           <div class="col-md-offset-2 col-md-8">
-                <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" BorderColor="Blue" ForeColor="Blue"/>
-            </div>
+           <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" BorderColor="Blue" ForeColor="Blue"/>
+           </div>
         </div>
+
     </div>
        </div>
 </asp:Content>

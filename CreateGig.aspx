@@ -6,14 +6,12 @@
 
       <div style="text-align: center;">
         <h4>Create Gig</h4>
-        <hr />
-   
-          
+        <hr />       
            <div class="form-group"> 
                <label for="form_name">Title/Name *</label> <br />
                <div class="col-md-offset-2 col-md-8">
                <asp:TextBox runat="server" id="gigTitle" type="text" name="name"  CssClass="btn btn-default" placeholder="Enter Title of the Gig *" required="required" data-error="Firstname is required."    Width="349px" /><br /><br />
-                </div>
+               </div>
            </div>
                                    
                                
@@ -52,12 +50,12 @@
                                             <label for="form_message">Description of Gig *</label><br />
                                         <asp:TextBox runat="server" id="gDescription" name="message" CssClass="btn btn-default" placeholder="Write your message here." rows="5" required="required" data-error="Please, leave us a message." TextMode="MultiLine"  Width="349px" /> <br /><br />
                                     </div>
-                                 </div>
-                                  <div class="form-group">
-                                    <div class="col-md-offset-2 col-md-8">
-                                        <asp:Button runat="server" id="AddGig" CssClass="btn btn-default" Text="Create" OnClick="AddGig_Click" BorderColor ="Blue" ForeColor="Green"/>
-                                    </div>
-                                    </div>
+                             </div>
+                             <div class="form-group">
+                             <div class="col-md-offset-2 col-md-8">
+                             <asp:Button runat="server" id="AddGig" CssClass="btn btn-default" Text="Create" OnClick="AddGig_Click" BorderColor ="Blue" ForeColor="Green"/>
+                             </div>
+                             </div>
 
 
 
