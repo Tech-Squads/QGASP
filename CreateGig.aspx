@@ -10,7 +10,7 @@
            <div class="form-group"> 
                <label for="form_name">Title/Name *</label> <br />
                <div class="col-md-offset-2 col-md-8">
-               <asp:TextBox runat="server" id="gigTitle" type="text" name="name"  CssClass="btn btn-default" placeholder="Enter Title of the Gig *" required="required" data-error="Firstname is required."    Width="349px" /><br /><br />
+               <asp:TextBox runat="server" id="gigTitle" type="text" name="name"  CssClass="btn btn-default" placeholder="Enter Title of the Gig *" required="required" data-error="Title is required."    Width="349px" /><br /><br />
                </div>
            </div>
                                    
@@ -18,7 +18,7 @@
            <div class="form-group">
             <div class="col-md-offset-2 col-md-8">
            <label for="form_lastname">Due Date *</label><br />
-            <asp:TextBox runat="server" id="dueDate" type="text" name="surname" CssClass="btn btn-default"  placeholder="Please enter the last day for a respond" required="required" data-error="Lastname is required."  Width="349px" /> <br /><br />
+            <asp:TextBox runat="server" id="dueDate" type="text" name="surname" CssClass="btn btn-default"  placeholder="Please enter the last day for a respond" required="required" data-error=" Field is required."  Width="349px" /> <br /><br />
           </div>
           </div>
 
@@ -26,12 +26,14 @@
            <div class="col-md-offset-2 col-md-8">
        
             <label for="form_email">Contact Email *</label><br />
-            <asp:TextBox runat="server" id="ContactEmail" type="email" name="email" CssClass="btn btn-default" placeholder="eg John@gmail.com" required="required" data-error="Valid email is required."    Width="349px" /> </div><br /><br />
-           </div><br /><br /><br />
+            <asp:TextBox runat="server" id="ContactEmail" type="email" name="email" CssClass="btn btn-default" placeholder="eg John@gmail.com" required="required" data-error="Valid email is required."    Width="349px" /><br /><br />
+
+           </div>
+           </div>
                                     
                                      <div class="form-group">
                                     <div class="col-md-offset-2 col-md-8">
-                                     <asp:CheckBoxList runat="server" ID="SkillsRequired" CssClass="btn btn-default" >
+                                     <asp:CheckBoxList runat="server" ID="SkillsRequired" RepeatDirection="Horizontal"  CssClass="btn btn-default"  Width="400px">
                                             <asp:ListItem>Java</asp:ListItem>
                                             <asp:ListItem>C#</asp:ListItem>
                                             <asp:ListItem>RPA</asp:ListItem>
@@ -41,14 +43,14 @@
                                             </asp:CheckBoxList> 
                                      </div>
                               
-                                </div>
+                                     </div>
 
                                 
                              <div class="form-group">
                                     <div class="col-md-offset-2 col-md-8">
                                        
-                                            <label for="form_message">Description of Gig *</label><br />
-                                        <asp:TextBox runat="server" id="gDescription" name="message" CssClass="btn btn-default" placeholder="Write your message here." rows="5" required="required" data-error="Please, leave us a message." TextMode="MultiLine"  Width="349px" /> <br /><br />
+                                            <br /><label for="form_message">Description of Gig *</label><br />
+                                        <asp:TextBox runat="server" id="gDescription" name="message" CssClass="btn btn-default" placeholder="Write your message here." rows="5" required="required" data-error="Please, leave us a message." TextMode="MultiLine"  Width="400px" /> <br /><br />
                                     </div>
                              </div>
                              <div class="form-group">

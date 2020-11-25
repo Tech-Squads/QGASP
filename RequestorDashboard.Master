@@ -50,6 +50,7 @@
                     </button>
                     <a class="navbar-brand" runat="server" href="~/">
                      </a>
+                      <img src="../fonts/Qlit.jpg" alt="QlityGigs" style="width:190px;height:44px;"/>
                     
                 </div>
                 <div class="navbar-collapse collapse">
@@ -61,7 +62,7 @@
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right" style="font-size:18px">
          
-                               
+                            
                                  <li><a runat="server" href="~/Profile">Profile</a></li>
                                 <li runat="server" id="CreateGigLink" ><a runat="server" href="CreateGig">Create Gig</a></li>
                                 <li><a runat="server" href="~/ViewGigs">View Gigs</a></li>

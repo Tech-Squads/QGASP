@@ -50,12 +50,14 @@
                     </button>
                     <a class="navbar-brand" runat="server" href="~/">
                      </a>
+                     <img src="../fonts/Qlit.jpg" alt="QlityGigs" style="width:190px;height:44px;"/>
                     
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" style="font-size:18px;">
                         <li><a runat="server" href="~/"></a></li>
                         <li><a runat="server" href="~/"></a></li>
+
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">How it works</a></li> 
@@ -79,13 +81,15 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
            
-            <br /> <br />   <br /><hr />
+            <br /> <br />  
+            <br /> 
           
             
-            <footer>
+           
+        </div>
+    </form><hr />
+     <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Qlity Gigs</p>
             </footer>
-        </div>
-    </form>
 </body>
 </html>
