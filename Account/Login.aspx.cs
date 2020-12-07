@@ -20,7 +20,7 @@ namespace QlityG.Account
 
         HttpClient client = new HttpClient();
         
-        Uri baseAddress = new Uri("https://localhost:44364");
+        Uri baseAddress = new Uri("http://localhost:8080");
 
         UserModel u;
 

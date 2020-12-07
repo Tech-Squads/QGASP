@@ -11,7 +11,7 @@ namespace QlityG
 {
 
 
-    public partial class RequestorDashboard
+    public partial class GiggerDashboard
     {
 
         /// <summary>

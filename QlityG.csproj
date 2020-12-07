@@ -48,6 +48,9 @@
       <HintPath>packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Desktop\New folder\Qlity\packages\Microsoft.Owin.4.1.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -157,9 +160,6 @@
     <Reference Include="Owin">
       <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin">
-      <HintPath>packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Owin.Host.SystemWeb">
       <HintPath>packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
     </Reference>
@@ -235,6 +235,8 @@
     <Content Include="DashboardLogon.Master" />
     <Content Include="RequestorDashboard.Master" />
     <Content Include="GiggerDashboard.Master" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Profile.aspx" />
     <Content Include="Scripts\StyleSheetGigs.css" />
@@ -406,6 +408,9 @@
     <Compile Include="CreateGig.aspx.designer.cs">
       <DependentUpon>CreateGig.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess\DataTool.cs" />
+    <Compile Include="DataAccess\Helper.cs" />
+    <Compile Include="DataAccess\DeployString.cs" />
     <Compile Include="GiggerDashboard.Master.cs">
       <DependentUpon>GiggerDashboard.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -413,15 +418,6 @@
     <Compile Include="GiggerDashboard.Master.designer.cs">
       <DependentUpon>GiggerDashboard.Master</DependentUpon>
     </Compile>
-    <Compile Include="RequestorDashboard.Master.cs">
-      <DependentUpon>RequestorDashboard.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RequestorDashboard.Master.designer.cs">
-      <DependentUpon>RequestorDashboard.Master</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\DataTool.cs" />
-    <Compile Include="DataAccess\Helper.cs" />
     <Compile Include="GiggerProfile.aspx.cs">
       <DependentUpon>GiggerProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -471,6 +467,13 @@
     <Compile Include="Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RequestorDashboard.Master.cs">
+      <DependentUpon>RequestorDashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestorDashboard.Master.designer.cs">
+      <DependentUpon>RequestorDashboard.Master</DependentUpon>
+    </Compile>
     <Compile Include="SelectType.aspx.cs">
       <DependentUpon>SelectType.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -516,7 +519,6 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />

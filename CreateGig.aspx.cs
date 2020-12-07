@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using QlityG.DataAccess;
 using QlityG.Models;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace QlityG
         GigModel gig;
         UserModel u;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri("https://localhost:44364");
+        Uri baseAddress = new Uri(DeployString.API);
         int userID;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -51,7 +52,7 @@ namespace QlityG
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["userID"] = u.UserID;
+                Session["userID"] = userID;
                 Response.Redirect("~/ViewGigs");
             }
             Response.Redirect("~/Home");

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using QlityG.DataAccess;
 using QlityG.Models;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace QlityG
         readonly StringBuilder card = new StringBuilder();
         List<GigModel> gigs = new List<GigModel>();
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri("https://localhost:44364");
+        Uri baseAddress = new Uri(DeployString.API);
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -37,8 +38,9 @@ namespace QlityG
                     card.Append("<div class='card - body'>");
                     card.Append("<h6 class='card-subtitle mb-2 text-muted'>"+ gig.DueDate + "</h6>");
                     card.Append("<p class= 'card-text'>"+gig.GigDescription+"</p>");
-                    card.Append("<a href =  '#' class= 'card-link'>ACCEPT</a>");
-                    card.Append("<a href = ~/GigInfo ?GigId="+ gig.GigID +"  class='card-link'>VIEW</a>");
+                    card.Append("<a href =  '#' class= 'card-link'>ACCEPT GIG</a>");
+                    card.Append("<br/>");
+                    card.Append("<a href = ~/GigInfo ?GigId="+ gig.GigID +"  class='card-link'>VIEW GIG</a>");
                     card.Append("</div>");
                     card.Append("</div>");
                     PlaceH.Controls.Add(new Literal { Text = card.ToString() });

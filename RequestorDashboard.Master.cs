@@ -11,13 +11,7 @@ namespace QlityG
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          //  int Usertype = (int)Session["uType"];
 
-            //if (Session["LoggedIn"] == null)
-            //{
-            //    Response.Redirect("~/Account/Login");
-            //}
-            
         }
     }
 }

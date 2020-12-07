@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using QlityG.DataAccess;
 using QlityG.Models;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,10 @@ namespace QlityG
     {
 
         UserModel u;
+        int UserID;
         UProfile pro,profile;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri("https://localhost:44364");
+        Uri baseAddress = new Uri(DeployString.API);
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,14 +27,14 @@ namespace QlityG
             Update.Enabled = false;
             client.BaseAddress = baseAddress;
 
-            int userID = (int)Session["UserID"];
+             UserID = (int)Session["UserID"];
             
-            if (userID.Equals(null))
+            if (UserID.Equals(null))
             {
                 Response.Redirect("~/Account/Login");
             }
 
-            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + userID).Result;
+            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + UserID).Result;
 
             if (resp.IsSuccessStatusCode)
             {
@@ -42,7 +44,7 @@ namespace QlityG
                 if(u.FirstLogin == "False")
                 {
                     Update.Enabled = true;
-                    HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserProfile/" + u.UserID).Result;
+                    HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserProfile/" + UserID).Result;
                     if (res.IsSuccessStatusCode)
                     {
                         string objectPro = res.Content.ReadAsStringAsync().Result;
@@ -50,15 +52,15 @@ namespace QlityG
                         profile = new UProfile(JsonConvert.DeserializeObject<UProfile>(objectPro));
 
 
-                        txtCountry.Text = profile.uCountry;
-                        txtEducation.Text = profile.uEducation;
-                        txtName.Text = profile.uName;
-                        txtSurname.Text = profile.uSurname;
-                        txtSkills.Text = profile.uSkills;
-                        txtReferences.Text = profile.uReferences;
-                        txtPastProjectName.Text = profile.uPastProjectName;
-                        txtPastProjectDuration.Text = profile.uPastProjectDuration;
-                        txtPastProjectDetails.Text = profile.uPastProjectDetails;
+                        txtCountry.Attributes.Add("placeholder", profile.uCountry);
+                        txtEducation.Attributes.Add("placeholder", profile.uEducation);
+                        txtName.Attributes.Add("placeholder", profile.uName);
+                        txtSurname.Attributes.Add("placeholder",profile.uSurname);
+                        txtSkills.Attributes.Add("placeholder", profile.uSkills);
+                        txtReferences.Attributes.Add("placeholder", profile.uReferences);
+                        txtPastProjectName.Attributes.Add("placeholder", profile.uPastProjectName);
+                        txtPastProjectDuration.Attributes.Add("placeholder", profile.uPastProjectDuration);
+                        txtPastProjectDetails.Attributes.Add("placeholder", profile.uPastProjectDetails);
                     }
                    
                 }
@@ -78,7 +80,7 @@ namespace QlityG
         protected void Update_Click(object sender, EventArgs e)
         {
 
-            profile.userID = u.UserID;
+            profile.userID = UserID;
             profile.uPastProjectName = txtPastProjectName.Text;
             profile.uPastProjectDuration = txtPastProjectDuration.Text;
             profile.uPastProjectDetails = txtPastProjectDetails.Text;
@@ -86,7 +88,7 @@ namespace QlityG
             profile.uReferences = txtReferences.Text;
             profile.uSkills = txtSkills.Text;
             profile.uCountry = txtCountry.Text;
-            profile.uName = "John Fredrick";
+            profile.uName = txtName.Text;
             profile.uSurname = txtSurname.Text;
 
 
@@ -112,7 +114,7 @@ namespace QlityG
         protected void UpdateProfile_Click(object sender, EventArgs e)
         {
             pro = new UProfile();
-            pro.userID = u.UserID;
+            pro.userID = UserID;
             pro.uPastProjectName = txtPastProjectName.Text;
             pro.uPastProjectDuration = txtPastProjectDuration.Text;
             pro.uPastProjectDetails = txtPastProjectDetails.Text;

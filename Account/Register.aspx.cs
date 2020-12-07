@@ -18,11 +18,12 @@ namespace QlityG.Account
     public partial class Register : Page
     {
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri("https://localhost:44364");
+        Uri baseAddress = new Uri("http://localhost:8080");
        
         UserModel user;
         string email, password;
         
+        //Create module that carries the url for repeated usage.
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             client.BaseAddress = baseAddress;

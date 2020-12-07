@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using QlityG.DataAccess;
 using QlityG.Models;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,10 @@ namespace QlityG
     public partial class RequestorProfile : System.Web.UI.Page
     {
         UserModel u;
+        int userID;
         UProfile pro, profile;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri("https://localhost:44364");
+        Uri baseAddress = new Uri(DeployString.API);
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,7 +26,7 @@ namespace QlityG
             Create.Enabled = false;
             client.BaseAddress = baseAddress;
 
-            int userID = (int)Session["UserID"];
+             userID = (int)Session["UserID"];
             if(userID.Equals( null))
             {
                 Response.Redirect("~/Account/Login");
@@ -48,9 +50,9 @@ namespace QlityG
                         profile = new UProfile(JsonConvert.DeserializeObject<UProfile>(objectPro));
 
 
-                        txtCountry.Text = profile.uCountry;
-                        txtName.Text = profile.uName;
-                        txtSurname.Text = profile.uSurname;
+                        txtCountry.Attributes.Add("placeholder", profile.uCountry);
+                        txtName.Attributes.Add("placeholder", profile.uName);
+                        txtSurname.Attributes.Add("placeholder", profile.uSurname);
                     }
                 }
                 Create.Enabled = true;
@@ -67,14 +69,14 @@ namespace QlityG
 
         protected void Update_Click(object sender, EventArgs e)
         {
+            profile.userID = userID;
             profile.uCompany = txtCompany.Text;
-            profile.uCountry = txtCountry.Text;
             profile.uName = txtName.Text;
             profile.uSurname = txtSurname.Text;
 
             string data = JsonConvert.SerializeObject(profile);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUProfile/" + u.UserID, content).Result;
+            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUProfile/" + userID, content).Result;
 
 
             if (resp.IsSuccessStatusCode)
@@ -89,7 +91,7 @@ namespace QlityG
         {
             pro = new UProfile();
 
-            pro.uCompany = txtCompany.Text;
+       //     txtCompany.Attributes.Add("placeholder", pro.uCompany); 
             pro.uCountry = txtCountry.Text;
             pro.uName = txtName.Text;
             pro.uSurname = txtSurname.Text;
