@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace QlityG
 {
-    public partial class ViewGigs : System.Web.UI.Page
+    public partial class ViewingTheGigs : System.Web.UI.Page
     {
         readonly StringBuilder card = new StringBuilder();
         List<GigModel> gigs = new List<GigModel>();
@@ -32,25 +32,30 @@ namespace QlityG
                 foreach (GigModel gig in gigs)
                 {
 
-
-
+                    
+              
 
                     card.Append("<table border='1;border - spacing: 1em .5em;padding: 0 2em 1em 0;'>");
-
+                   
                     card.Append("<tr>");
-                    card.Append("<th></th>");
-                    card.Append("<th> </th>");
-                    card.Append("<th> </th>");
+                    card.Append("<th> Title Of Gig </th>");
+                    card.Append("<th> Gig Description</th>");                
+                    card.Append("<th> Due Date</th>");
                     card.Append("</tr>");
 
                     card.Append("<tr>");
-                    card.Append("<td> " + gig.GigTitle + " </td>");
+                    card.Append("<td> "+ gig.GigTitle + " </td>");
                     card.Append("<td> " + gig.GigDescription + " </td>");
                     card.Append("<td> " + gig.DueDate + " </td>");
                     card.Append("</tr>");
 
+                    
+
+                  
+                    
+
                     card.Append("</table>");
-                    viewgigs.Controls.Add(new Literal { Text = card.ToString() });
+                   Label1.Controls.Add(new Literal { Text = card.ToString() });
 
                     //card.Append("<div class='card' style='width: 18rem;text-align:center;' >");
                     //card.Append("<h4 class= 'card-link'><b>Gig Title<b/> <hr /></h4>");
@@ -69,9 +74,16 @@ namespace QlityG
                     //Label1.Controls.Add(new Literal { Text = card.ToString() });
 
                     //PlaceH.Controls.Add(new Literal { Text = card.ToString() });
-
                 }
+
+
+
             }
+
+            //  Response.Redirect("~/Home");
+
+
+
         }
     }
 }

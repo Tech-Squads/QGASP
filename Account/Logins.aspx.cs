@@ -20,7 +20,7 @@ namespace QlityG.Account
 
         HttpClient client = new HttpClient();
 
-        Uri baseAddress = new Uri("https://localhost:44364");
+        Uri baseAddress = new Uri(Utils.TestUSendRL);
 
         UserModel u;
         protected void Page_Load(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace QlityG.Account
 
             client.BaseAddress = baseAddress;
             uEmail = txtEmail.Text.Trim().ToUpper();
-            uPassword = txtPassword.Text.Trim().ToUpper();
+            uPassword = Utils.HashThis(txtPassword.Text.Trim().ToUpper());
 
             u = new UserModel();
             u.uEmail = uEmail;

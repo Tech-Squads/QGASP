@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace QlityG
 {
-    public partial class CreatingGig : System.Web.UI.Page
+    public partial class CreateGigs : System.Web.UI.Page
     {
         GigModel gig;
         UserModel u;
@@ -35,7 +35,7 @@ namespace QlityG
 
         protected void AddGig_Click(object sender, EventArgs e)
         {
-              gig.GigTitle = gigTitle.Text.Trim();
+            gig.GigTitle = gigTitle.Text.Trim();
             gig.DueDate = dueDate.Text.Trim();
             gig.GigDescription = gDescription.Text.Trim();
             gig.ContactDetails = ContactEmail.Text.Trim();
@@ -51,10 +51,9 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 Session["userID"] = userID;
-                //Response.Redirect("~/ViewGigs");
-                Response.Redirect("~/RequestorDashboard");
+                Response.Redirect("~/ViewGigs");
             }
-            Response.Redirect("~/Homepage/Homepage");
+            Response.Redirect("~/Home");
         }
     }
 }

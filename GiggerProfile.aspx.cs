@@ -11,21 +11,22 @@ using System.Web.UI.WebControls;
 
 namespace QlityG
 {
-    public partial class RequestorDash : System.Web.UI.Page
+    public partial class GiggerProfile : System.Web.UI.Page
     {
 
         UserModel u;
-        UProfile pro, profile;
+        UProfile pro,profile;
         HttpClient client = new HttpClient();
         Uri baseAddress = new Uri(Utils.TestUSendRL);
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Update.Enabled = false;
             Create.Enabled = false;
+            Update.Enabled = false;
             client.BaseAddress = baseAddress;
 
             int userID = (int)Session["UserID"];
+            
             if (userID.Equals(null))
             {
                 Response.Redirect("~/Account/Login");
@@ -37,8 +38,8 @@ namespace QlityG
             {
                 string data = resp.Content.ReadAsStringAsync().Result;
                 u = new UserModel(JsonConvert.DeserializeObject<UserModel>(data));
-
-                if (u.FirstLogin == "False")
+                
+                if(u.FirstLogin == "False")
                 {
                     Update.Enabled = true;
                     HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserProfile/" + u.UserID).Result;
@@ -50,9 +51,16 @@ namespace QlityG
 
 
                         txtCountry.Text = profile.uCountry;
+                        txtEducation.Text = profile.uEducation;
                         txtName.Text = profile.uName;
                         txtSurname.Text = profile.uSurname;
+                        txtSkills.Text = profile.uSkills;
+                        txtReferences.Text = profile.uReferences;
+                        txtPastProjectName.Text = profile.uPastProjectName;
+                        txtPastProjectDuration.Text = profile.uPastProjectDuration;
+                        txtPastProjectDetails.Text = profile.uPastProjectDetails;
                     }
+                   
                 }
                 Create.Enabled = true;
             }
@@ -63,34 +71,58 @@ namespace QlityG
 
 
             txtEmail.Text = u.uEmail;
+            
+
         }
 
         protected void Update_Click(object sender, EventArgs e)
         {
-            profile.uCompany = txtCompany.Text;
+
+            profile.userID = u.UserID;
+            profile.uPastProjectName = txtPastProjectName.Text;
+            profile.uPastProjectDuration = txtPastProjectDuration.Text;
+            profile.uPastProjectDetails = txtPastProjectDetails.Text;
+            profile.uEducation = txtEducation.Text;
+            profile.uReferences = txtReferences.Text;
+            profile.uSkills = txtSkills.Text;
             profile.uCountry = txtCountry.Text;
-            profile.uName = txtName.Text;
+            profile.uName = "John Fredrick";
             profile.uSurname = txtSurname.Text;
+
 
             string data = JsonConvert.SerializeObject(profile);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
             HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUProfile/" + u.UserID, content).Result;
 
 
+
+            
+
+
             if (resp.IsSuccessStatusCode)
             {
                 Session["userID"] = u.UserID;
-                Response.Redirect("~/RequestorDashboard");
-                //Response.Redirect("~/RequestorDashboards");
+                Response.Redirect("~/Home");
             }
-            Response.Redirect("~/RequestorProfile");
+            Response.Redirect("~/GiggerProfile");
         }
 
-        protected void Create_Click(object sender, EventArgs e)
+
+        protected void txtName_TextChanged(object sender, EventArgs e)
+        {
+            txtName.Text = txtName.Text;
+        }
+
+        protected void UpdateProfile_Click(object sender, EventArgs e)
         {
             pro = new UProfile();
-
-            pro.uCompany = txtCompany.Text;
+            pro.userID = u.UserID;
+            pro.uPastProjectName = txtPastProjectName.Text;
+            pro.uPastProjectDuration = txtPastProjectDuration.Text;
+            pro.uPastProjectDetails = txtPastProjectDetails.Text;
+            pro.uEducation = txtEducation.Text;
+            pro.uReferences =  txtReferences.Text;
+            pro.uSkills = txtSkills.Text;
             pro.uCountry = txtCountry.Text;
             pro.uName = txtName.Text;
             pro.uSurname = txtSurname.Text;
@@ -111,10 +143,9 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 Session["userID"] = u.UserID;
-                //Response.Redirect("~/CreateGig");
-                Response.Redirect("~/RequestorDashboard");
+                Response.Redirect("~/Home");
             }
-            Response.Redirect("~/RequestorProfile");
+            Response.Redirect("~/GiggerProfile");
         }
     }
 }
