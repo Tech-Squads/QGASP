@@ -598,6 +598,7 @@
     <Compile Include="GiggerDashboard.aspx.designer.cs">
       <DependentUpon>GiggerDashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Utils.cs" />
     <Compile Include="RequestorDash.aspx.cs">
       <DependentUpon>RequestorDash.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
