@@ -18,12 +18,12 @@ namespace QlityG
         HttpClient client = new HttpClient();
         Uri baseAddress = new Uri("https://localhost:44364");
         int userID;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
             client.BaseAddress = baseAddress;
             gig = new GigModel();
-             userID = (int)Session["UserID"];
+            userID = (int)Session["UserID"];
             HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/api/User/GetUserByID/" + userID).Result;
 
             if (resp.IsSuccessStatusCode)
@@ -35,12 +35,11 @@ namespace QlityG
 
         protected void AddGig_Click(object sender, EventArgs e)
         {
-
             gig.GigTitle = gigTitle.Text.Trim();
             gig.DueDate = dueDate.Text.Trim();
             gig.GigDescription = gDescription.Text.Trim();
             gig.ContactDetails = ContactEmail.Text.Trim();
-            //gig.RequiredSkills = SkillsRequired.SelectedValue;
+            gig.RequiredSkills = SkillsRequired.Text.Trim();
             gig.RequestorID = userID;
 
 
@@ -52,9 +51,10 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 Session["userID"] = userID;
-                Response.Redirect("~/ViewGigs");
+                //Response.Redirect("~/ViewGigs");
+                Response.Redirect("~/RequestorDashboard");
             }
-            Response.Redirect("~/Home");
+            Response.Redirect("~/Homepage/Homepage");
         }
     }
 }

@@ -15,6 +15,15 @@ namespace QlityG
     {
 
         /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
         /// gigTitle control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace QlityG
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox gigTitle;
+
+        /// <summary>
+        /// ContactEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ContactEmail;
 
         /// <summary>
         /// dueDate control.
@@ -33,13 +51,13 @@ namespace QlityG
         protected global::System.Web.UI.WebControls.TextBox dueDate;
 
         /// <summary>
-        /// ContactEmail control.
+        /// SkillsRequired control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ContactEmail;
+        protected global::System.Web.UI.WebControls.TextBox SkillsRequired;
 
         /// <summary>
         /// gDescription control.

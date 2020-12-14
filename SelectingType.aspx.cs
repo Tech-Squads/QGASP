@@ -59,7 +59,7 @@ namespace QlityG
             {
                 Session["userID"] = u.UserID;
                 Session["uType"] = "Req";
-                Response.Redirect("~/RequestorDash");
+                Response.Redirect("~/RequestorDashboard");
                 //Response.Redirect("~/RequestorProfile");
             }
             Response.Redirect("~/SelectingType.aspx");

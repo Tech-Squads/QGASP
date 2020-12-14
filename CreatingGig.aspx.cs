@@ -52,7 +52,7 @@ namespace QlityG
             {
                 Session["userID"] = userID;
                 //Response.Redirect("~/ViewGigs");
-                Response.Redirect("~/ViewingTheGigs");
+                Response.Redirect("~/RequestorDashboard");
             }
             Response.Redirect("~/Homepage/Homepage");
         }

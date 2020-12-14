@@ -80,7 +80,7 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 Session["userID"] = u.UserID;
-                Response.Redirect("~/CreateGig");
+                Response.Redirect("~/RequestorDashboard");
                 //Response.Redirect("~/RequestorDashboards");
             }
             Response.Redirect("~/RequestorProfile");
@@ -112,7 +112,7 @@ namespace QlityG
             {
                 Session["userID"] = u.UserID;
                 //Response.Redirect("~/CreateGig");
-                Response.Redirect("~/CreatingGig");
+                Response.Redirect("~/RequestorDashboard");
             }
             Response.Redirect("~/RequestorProfile");
         }

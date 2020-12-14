@@ -144,14 +144,9 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-         
-         
-          <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:blue;font-size:medium;">Log Out</a></p>
-              
-          
-          </li>
-         <%-- <li><a href="#contact">Login</a></li>--%>
-     
+          <li><p style="color:blue"> <a href="RequestorDashboard.aspx" style="color:cornflowerblue;font-size:medium;">Dashboard</a></p> </li>
+
+             <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:cornflowerblue;font-size:medium;">Log Out</a></p> </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

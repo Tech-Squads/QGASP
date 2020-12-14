@@ -212,10 +212,12 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\th.jpg" />
     <Content Include="assets\images\1.jpg" />
+    <Content Include="CreateGig.aspx" />
     <Content Include="CreatingGig.aspx" />
     <Content Include="GiggerDash.aspx" />
-    <Content Include="GiggerDashboards.aspx" />
+    <Content Include="GiggerDashboard.aspx" />
     <Content Include="RequestorDash.aspx" />
+    <Content Include="RequestorDashboard.aspx" />
     <Content Include="SelectingType.aspx" />
     <Content Include="Account\SelectType.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
@@ -288,8 +290,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="CreateGig.aspx" />
-    <Content Include="CreateGigs.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\imagese.jpg" />
@@ -297,7 +297,6 @@
     <Content Include="fonts\QGLogo.jpg" />
     <Content Include="fonts\Qlit - Copy.jpg" />
     <Content Include="fonts\Qlit.jpg" />
-    <Content Include="GiggerProfile.aspx" />
     <Content Include="GigInfo.aspx" />
     <Content Include="Gigstyle\css\inputTags.css" />
     <Content Include="Gigstyle\css\inputTags.min.css" />
@@ -413,7 +412,6 @@
     <Content Include="LoggedInMaster.Master" />
     <Content Include="DashboardLogon.Master" />
     <Content Include="MainHomepage.aspx" />
-    <Content Include="RequestorDashboard.Master" />
     <Content Include="HomeMaster.Master" />
     <Content Include="assets\fonts\fontawesome-webfont.eot" />
     <Content Include="assets\fonts\fontawesome-webfont.ttf" />
@@ -437,7 +435,6 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Profile.aspx" />
     <Content Include="Scripts\StyleSheetGigs.css" />
-    <Content Include="RequestorProfile.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -469,7 +466,6 @@
     <Content Include="Site.Master" />
     <Content Include="StyleSheet1.css" />
     <Content Include="ViewGigs.aspx" />
-    <Content Include="ViewingTheGigs.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -574,6 +570,13 @@
     <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
       <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CreateGig.aspx.cs">
+      <DependentUpon>CreateGig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateGig.aspx.designer.cs">
+      <DependentUpon>CreateGig.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CreatingGig.aspx.cs">
       <DependentUpon>CreatingGig.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -588,12 +591,12 @@
     <Compile Include="GiggerDash.aspx.designer.cs">
       <DependentUpon>GiggerDash.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GiggerDashboards.aspx.cs">
-      <DependentUpon>GiggerDashboards.aspx</DependentUpon>
+    <Compile Include="GiggerDashboard.aspx.cs">
+      <DependentUpon>GiggerDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GiggerDashboards.aspx.designer.cs">
-      <DependentUpon>GiggerDashboards.aspx</DependentUpon>
+    <Compile Include="GiggerDashboard.aspx.designer.cs">
+      <DependentUpon>GiggerDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="RequestorDash.aspx.cs">
       <DependentUpon>RequestorDash.aspx</DependentUpon>
@@ -601,6 +604,13 @@
     </Compile>
     <Compile Include="RequestorDash.aspx.designer.cs">
       <DependentUpon>RequestorDash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestorDashboard.aspx.cs">
+      <DependentUpon>RequestorDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestorDashboard.aspx.designer.cs">
+      <DependentUpon>RequestorDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="SelectingType.aspx.cs">
       <DependentUpon>SelectingType.aspx</DependentUpon>
@@ -648,20 +658,6 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CreateGig.aspx.cs">
-      <DependentUpon>CreateGig.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CreateGig.aspx.designer.cs">
-      <DependentUpon>CreateGig.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CreateGigs.aspx.cs">
-      <DependentUpon>CreateGigs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CreateGigs.aspx.designer.cs">
-      <DependentUpon>CreateGigs.aspx</DependentUpon>
-    </Compile>
     <Compile Include="HomeMaster.Master.cs">
       <DependentUpon>HomeMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -683,22 +679,8 @@
     <Compile Include="MainHomepage.aspx.designer.cs">
       <DependentUpon>MainHomepage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="RequestorDashboard.Master.cs">
-      <DependentUpon>RequestorDashboard.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RequestorDashboard.Master.designer.cs">
-      <DependentUpon>RequestorDashboard.Master</DependentUpon>
-    </Compile>
     <Compile Include="DataAccess\DataTool.cs" />
     <Compile Include="DataAccess\Helper.cs" />
-    <Compile Include="GiggerProfile.aspx.cs">
-      <DependentUpon>GiggerProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GiggerProfile.aspx.designer.cs">
-      <DependentUpon>GiggerProfile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="GigInfo.aspx.cs">
       <DependentUpon>GigInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -742,13 +724,6 @@
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestorProfile.aspx.cs">
-      <DependentUpon>RequestorProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RequestorProfile.aspx.designer.cs">
-      <DependentUpon>RequestorProfile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -770,13 +745,6 @@
     </Compile>
     <Compile Include="ViewGigs.aspx.designer.cs">
       <DependentUpon>ViewGigs.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewingTheGigs.aspx.cs">
-      <DependentUpon>ViewingTheGigs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewingTheGigs.aspx.designer.cs">
-      <DependentUpon>ViewingTheGigs.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -821,7 +789,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties content_4bootstrap-theme_1min_1css_1map__JsonSchema="" content_4bootstrap_1css_1map__JsonSchema="" />
+      <UserProperties content_4bootstrap_1css_1map__JsonSchema="" content_4bootstrap-theme_1min_1css_1map__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
