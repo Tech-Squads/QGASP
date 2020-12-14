@@ -17,7 +17,7 @@ namespace QlityG
         UserModel u;
         UProfile pro,profile;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri("https://localhost:44364");
+        Uri baseAddress = new Uri(Utils.TestUSendRL);
 
         protected void Page_Load(object sender, EventArgs e)
         {

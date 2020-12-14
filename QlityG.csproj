@@ -595,6 +595,7 @@
     <Compile Include="GiggerDashboards.aspx.designer.cs">
       <DependentUpon>GiggerDashboards.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Utils.cs" />
     <Compile Include="RequestorDash.aspx.cs">
       <DependentUpon>RequestorDash.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -821,7 +822,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties content_4bootstrap-theme_1min_1css_1map__JsonSchema="" content_4bootstrap_1css_1map__JsonSchema="" />
+      <UserProperties content_4bootstrap_1css_1map__JsonSchema="" content_4bootstrap-theme_1min_1css_1map__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

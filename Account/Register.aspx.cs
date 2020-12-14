@@ -18,8 +18,8 @@ namespace QlityG.Account
     public partial class Register : Page
     {
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri("https://localhost:44364");
-       
+        
+        Uri baseAddress = new Uri(Utils.TestUSendRL);
         UserModel user;
         string email, password;
         
@@ -32,7 +32,7 @@ namespace QlityG.Account
             if (txtPassword.Text == txtConfirmPassword.Text)
             {
                 email = txtEmail.Text.Trim().ToUpper();
-                password = txtPassword.Text.Trim().ToUpper();
+                password = Utils.HashThis(txtPassword.Text.Trim().ToUpper());
               
                 user = new UserModel();
                 user.FirstLogin = "True";
