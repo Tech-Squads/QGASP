@@ -18,18 +18,18 @@ namespace QlityG.Account
     public partial class Register : Page
     {
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri("http://localhost:8080");
+        Uri baseAddress = new Uri("https://localhost:44364");
        
         UserModel user;
         string email, password;
         
-        //Create module that carries the url for repeated usage.
         protected void CreateUser_Click(object sender, EventArgs e)
         {
+           
             client.BaseAddress = baseAddress;
-            
+          
 
-            if(txtPassword.Text == txtConfirmPassword.Text)
+            if (txtPassword.Text == txtConfirmPassword.Text)
             {
                 email = txtEmail.Text.Trim().ToUpper();
                 password = txtPassword.Text.Trim().ToUpper();
@@ -46,9 +46,12 @@ namespace QlityG.Account
                 HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/AddUser", content).Result;
                 if(resp.IsSuccessStatusCode)
                 {
-                    Response.Redirect("~/Account/Login");
+                    Session["mine"] = txtEmail.Text;
+                    Response.Redirect("~/Account/Logins");
+
                 }
                 else
+
                 {
                     ErrorMessage.Text = "An Error Occuried Please try again!.";
                 }

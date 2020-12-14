@@ -1,0 +1,25 @@
+﻿body {
+/*    background-image: url('../assets/images/gallery1.jpg');*/
+}
+.containers {
+   
+    /*background-image: url('../assets/images/gallery1.jpg');*/
+ /*   background-size: cover;*/
+    /*height:500px;
+    width:100%;*/
+  /*  overflow: hidden;
+    position: relative;
+    z-index: 0;*/
+}
+.second-con {
+    height: 380px;
+    width: 390px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+   
+    /* background: url(login.png) no-repeat;*/
+    background-color: rebeccapurple;
+    /*border:5px solid #cccccc;*/
+    border-radius: 5px;
+}

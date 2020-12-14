@@ -1,3 +1,108 @@
+C:\Users\Trust Mpofu\projs\QGASP\bin\QlityG.dll.config
+C:\Users\Trust Mpofu\projs\QGASP\bin\QlityG.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\QlityG.pdb
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\csc.exe
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\csc.exe.config
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\csc.rsp
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\csi.exe
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\csi.exe.config
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\csi.rsp
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.AppContext.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Console.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.IO.Compression.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Net.Http.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.ValueTuple.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\vbc.exe
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\vbc.exe.config
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\vbc.rsp
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\VBCSCompiler.exe
+C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Trust Mpofu\projs\QGASP\bin\Antlr3.Runtime.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Dapper.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\EntityFramework.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\EntityFramework.SqlServer.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Newtonsoft.Json.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Owin.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\System.Web.Optimization.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\WebGrease.dll
+C:\Users\Trust Mpofu\projs\QGASP\bin\Dapper.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\System.Web.Optimization.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Newtonsoft.Json.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Antlr3.Runtime.pdb
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\EntityFramework.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\EntityFramework.SqlServer.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Trust Mpofu\projs\QGASP\obj\Debug\QlityG.csprojAssemblyReference.cache
+C:\Users\Trust Mpofu\projs\QGASP\obj\Debug\QlityG.csproj.CoreCompileInputs.cache
+C:\Users\Trust Mpofu\projs\QGASP\obj\Debug\QlityG.csproj.CopyComplete
+C:\Users\Trust Mpofu\projs\QGASP\obj\Debug\QlityG.dll
+C:\Users\Trust Mpofu\projs\QGASP\obj\Debug\QlityG.pdb
 C:\Users\MKLM\Source\Repos\QGAS\bin\QlityG.dll.config
 C:\Users\MKLM\Source\Repos\QGAS\bin\QlityG.dll
 C:\Users\MKLM\Source\Repos\QGAS\bin\QlityG.pdb
@@ -103,117 +208,213 @@ C:\Users\MKLM\Source\Repos\QGAS\obj\Debug\QlityG.csproj.CoreCompileInputs.cache
 C:\Users\MKLM\Source\Repos\QGAS\obj\Debug\QlityG.csproj.CopyComplete
 C:\Users\MKLM\Source\Repos\QGAS\obj\Debug\QlityG.dll
 C:\Users\MKLM\Source\Repos\QGAS\obj\Debug\QlityG.pdb
-C:\Users\Trust Mpofu\projs\QGASP\bin\QlityG.dll.config
-C:\Users\Trust Mpofu\projs\QGASP\bin\QlityG.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\QlityG.pdb
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\csc.exe
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\csc.exe.config
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\csc.rsp
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\csi.exe
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\csi.exe.config
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\csi.rsp
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.AppContext.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Console.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.IO.Compression.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Net.Http.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Net.Sockets.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.ValueTuple.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Xml.XPath.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\vbc.exe
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\vbc.exe.config
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\vbc.rsp
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\VBCSCompiler.exe
-C:\Users\Trust Mpofu\projs\QGASP\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Trust Mpofu\projs\QGASP\bin\Antlr3.Runtime.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\AspNet.ScriptManager.bootstrap.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\AspNet.ScriptManager.jQuery.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Dapper.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\EntityFramework.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\EntityFramework.SqlServer.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.FriendlyUrls.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.ScriptManager.MSAjax.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.ScriptManager.WebForms.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Newtonsoft.Json.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Owin.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\System.Web.Optimization.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\WebGrease.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Dapper.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Newtonsoft.Json.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\System.Web.Optimization.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Antlr3.Runtime.pdb
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\EntityFramework.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\EntityFramework.SqlServer.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Trust Mpofu\projs\QGASP\obj\Debug\QlityG.csproj.CoreCompileInputs.cache
-C:\Users\Trust Mpofu\projs\QGASP\obj\Debug\QlityG.csproj.CopyComplete
-C:\Users\Trust Mpofu\projs\QGASP\obj\Debug\QlityG.dll
-C:\Users\Trust Mpofu\projs\QGASP\obj\Debug\QlityG.pdb
-C:\Users\Trust Mpofu\projs\QGASP\bin\Qlity.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\System.Web.Http.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\System.Web.Http.WebHost.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\System.Net.Http.Formatting.dll
-C:\Users\Trust Mpofu\projs\QGASP\bin\Qlity.pdb
-C:\Users\Trust Mpofu\projs\QGASP\bin\Qlity.dll.config
-C:\Users\Trust Mpofu\projs\QGASP\bin\System.Web.Http.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\System.Web.Http.WebHost.xml
-C:\Users\Trust Mpofu\projs\QGASP\bin\System.Net.Http.Formatting.xml
-C:\Users\Trust Mpofu\projs\QGASP\obj\Debug\QlityG.csprojAssemblyReference.cache
+C:\gadget\Machine games\QGAS\bin\QlityG.dll.config
+C:\gadget\Machine games\QGAS\bin\QlityG.dll
+C:\gadget\Machine games\QGAS\bin\QlityG.pdb
+C:\gadget\Machine games\QGAS\bin\roslyn\csc.exe
+C:\gadget\Machine games\QGAS\bin\roslyn\csc.exe.config
+C:\gadget\Machine games\QGAS\bin\roslyn\csc.rsp
+C:\gadget\Machine games\QGAS\bin\roslyn\csi.exe
+C:\gadget\Machine games\QGAS\bin\roslyn\csi.exe.config
+C:\gadget\Machine games\QGAS\bin\roslyn\csi.rsp
+C:\gadget\Machine games\QGAS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\gadget\Machine games\QGAS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\Microsoft.Managed.Core.targets
+C:\gadget\Machine games\QGAS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\gadget\Machine games\QGAS\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.AppContext.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Collections.Immutable.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Console.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Globalization.Calendars.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.IO.Compression.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.IO.FileSystem.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Net.Http.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Net.Sockets.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Reflection.Metadata.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.ValueTuple.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Xml.XmlDocument.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Xml.XPath.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\gadget\Machine games\QGAS\bin\roslyn\vbc.exe
+C:\gadget\Machine games\QGAS\bin\roslyn\vbc.exe.config
+C:\gadget\Machine games\QGAS\bin\roslyn\vbc.rsp
+C:\gadget\Machine games\QGAS\bin\roslyn\VBCSCompiler.exe
+C:\gadget\Machine games\QGAS\bin\roslyn\VBCSCompiler.exe.config
+C:\gadget\Machine games\QGAS\bin\Antlr3.Runtime.dll
+C:\gadget\Machine games\QGAS\bin\AspNet.ScriptManager.bootstrap.dll
+C:\gadget\Machine games\QGAS\bin\AspNet.ScriptManager.jQuery.dll
+C:\gadget\Machine games\QGAS\bin\Dapper.dll
+C:\gadget\Machine games\QGAS\bin\EntityFramework.dll
+C:\gadget\Machine games\QGAS\bin\EntityFramework.SqlServer.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.Google.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.ScriptManager.WebForms.dll
+C:\gadget\Machine games\QGAS\bin\Microsoft.Web.Infrastructure.dll
+C:\gadget\Machine games\QGAS\bin\Newtonsoft.Json.dll
+C:\gadget\Machine games\QGAS\bin\Owin.dll
+C:\gadget\Machine games\QGAS\bin\System.Web.Optimization.dll
+C:\gadget\Machine games\QGAS\bin\WebGrease.dll
+C:\gadget\Machine games\QGAS\bin\Dapper.xml
+C:\gadget\Machine games\QGAS\bin\Newtonsoft.Json.xml
+C:\gadget\Machine games\QGAS\bin\System.Web.Optimization.xml
+C:\gadget\Machine games\QGAS\bin\Antlr3.Runtime.pdb
+C:\gadget\Machine games\QGAS\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\gadget\Machine games\QGAS\bin\EntityFramework.xml
+C:\gadget\Machine games\QGAS\bin\EntityFramework.SqlServer.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.Google.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\gadget\Machine games\QGAS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\gadget\Machine games\QGAS\obj\Debug\QlityG.csprojAssemblyReference.cache
+C:\gadget\Machine games\QGAS\obj\Debug\QlityG.csproj.CoreCompileInputs.cache
+C:\gadget\Machine games\QGAS\obj\Debug\QlityG.csproj.CopyComplete
+C:\gadget\Machine games\QGAS\obj\Debug\QlityG.dll
+C:\gadget\Machine games\QGAS\obj\Debug\QlityG.pdb
+C:\gadget\applications\QGAS\bin\QlityG.dll.config
+C:\gadget\applications\QGAS\bin\QlityG.dll
+C:\gadget\applications\QGAS\bin\QlityG.pdb
+C:\gadget\applications\QGAS\bin\roslyn\csc.exe
+C:\gadget\applications\QGAS\bin\roslyn\csc.exe.config
+C:\gadget\applications\QGAS\bin\roslyn\csc.rsp
+C:\gadget\applications\QGAS\bin\roslyn\csi.exe
+C:\gadget\applications\QGAS\bin\roslyn\csi.exe.config
+C:\gadget\applications\QGAS\bin\roslyn\csi.rsp
+C:\gadget\applications\QGAS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\gadget\applications\QGAS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\gadget\applications\QGAS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\gadget\applications\QGAS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\gadget\applications\QGAS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\gadget\applications\QGAS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\gadget\applications\QGAS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\gadget\applications\QGAS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\gadget\applications\QGAS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\gadget\applications\QGAS\bin\roslyn\Microsoft.Managed.Core.targets
+C:\gadget\applications\QGAS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\gadget\applications\QGAS\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.AppContext.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Collections.Immutable.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Console.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Globalization.Calendars.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.IO.Compression.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.IO.FileSystem.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Net.Http.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Net.Sockets.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Reflection.Metadata.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.ValueTuple.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Xml.XmlDocument.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Xml.XPath.dll
+C:\gadget\applications\QGAS\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\gadget\applications\QGAS\bin\roslyn\vbc.exe
+C:\gadget\applications\QGAS\bin\roslyn\vbc.exe.config
+C:\gadget\applications\QGAS\bin\roslyn\vbc.rsp
+C:\gadget\applications\QGAS\bin\roslyn\VBCSCompiler.exe
+C:\gadget\applications\QGAS\bin\roslyn\VBCSCompiler.exe.config
+C:\gadget\applications\QGAS\bin\Antlr3.Runtime.dll
+C:\gadget\applications\QGAS\bin\AspNet.ScriptManager.bootstrap.dll
+C:\gadget\applications\QGAS\bin\AspNet.ScriptManager.jQuery.dll
+C:\gadget\applications\QGAS\bin\Dapper.dll
+C:\gadget\applications\QGAS\bin\EntityFramework.dll
+C:\gadget\applications\QGAS\bin\EntityFramework.SqlServer.dll
+C:\gadget\applications\QGAS\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\gadget\applications\QGAS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\gadget\applications\QGAS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\gadget\applications\QGAS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\gadget\applications\QGAS\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\gadget\applications\QGAS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.dll
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.dll
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.Google.dll
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\gadget\applications\QGAS\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\gadget\applications\QGAS\bin\Microsoft.ScriptManager.WebForms.dll
+C:\gadget\applications\QGAS\bin\Microsoft.Web.Infrastructure.dll
+C:\gadget\applications\QGAS\bin\Newtonsoft.Json.dll
+C:\gadget\applications\QGAS\bin\Owin.dll
+C:\gadget\applications\QGAS\bin\System.Web.Optimization.dll
+C:\gadget\applications\QGAS\bin\WebGrease.dll
+C:\gadget\applications\QGAS\bin\Dapper.xml
+C:\gadget\applications\QGAS\bin\Newtonsoft.Json.xml
+C:\gadget\applications\QGAS\bin\System.Web.Optimization.xml
+C:\gadget\applications\QGAS\bin\Antlr3.Runtime.pdb
+C:\gadget\applications\QGAS\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\gadget\applications\QGAS\bin\EntityFramework.xml
+C:\gadget\applications\QGAS\bin\EntityFramework.SqlServer.xml
+C:\gadget\applications\QGAS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\gadget\applications\QGAS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\gadget\applications\QGAS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.xml
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.xml
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.Google.xml
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\gadget\applications\QGAS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\gadget\applications\QGAS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\gadget\applications\QGAS\obj\Debug\QlityG.csprojAssemblyReference.cache
+C:\gadget\applications\QGAS\obj\Debug\QlityG.csproj.CoreCompileInputs.cache
+C:\gadget\applications\QGAS\obj\Debug\QlityG.csproj.CopyComplete
+C:\gadget\applications\QGAS\obj\Debug\QlityG.dll
+C:\gadget\applications\QGAS\obj\Debug\QlityG.pdb

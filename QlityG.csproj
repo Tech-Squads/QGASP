@@ -48,9 +48,6 @@
       <HintPath>packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Owin, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\Desktop\New folder\Qlity\packages\Microsoft.Owin.4.1.1\lib\net45\Microsoft.Owin.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -160,6 +157,9 @@
     <Reference Include="Owin">
       <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Owin.Host.SystemWeb">
       <HintPath>packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
     </Reference>
@@ -190,21 +190,98 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Account\1.jpg" />
     <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\email icon.png" />
     <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\google image.jpg" />
     <Content Include="Account\Lockout.aspx" />
     <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Logins.aspx" />
+    <Content Include="Account\LoginStyle.css" />
     <Content Include="Account\Manage.aspx" />
     <Content Include="Account\ManageLogins.aspx" />
     <Content Include="Account\ManagePassword.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\QlityGigs_Log.png" />
+    <Content Include="Account\QlityGigs_Logo_Transparent.png" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Account\Registeres.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Account\ResetPassword.aspx" />
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\th.jpg" />
+    <Content Include="assets\images\1.jpg" />
+    <Content Include="CreatingGig.aspx" />
+    <Content Include="GiggerDash.aspx" />
+    <Content Include="GiggerDashboards.aspx" />
+    <Content Include="RequestorDash.aspx" />
+    <Content Include="SelectingType.aspx" />
     <Content Include="Account\SelectType.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="assets\css\aos\aos.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="assets\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="assets\css\bootstrap\bootstrap.css" />
+    <Content Include="assets\css\font-awesome\font-awesome.css" />
+    <Content Include="assets\css\lightgallery.min.css" />
+    <Content Include="assets\css\loader\loaders.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\swiper\swiper.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\lg.svg" />
+    <Content Include="assets\images\client1.png" />
+    <Content Include="assets\images\client2.png" />
+    <Content Include="assets\images\client3.png" />
+    <Content Include="assets\images\client4.png" />
+    <Content Include="assets\images\client5.png" />
+    <Content Include="assets\images\featured-img1.jpg" />
+    <Content Include="assets\images\featured-img2.jpg" />
+    <Content Include="assets\images\footer-bg.png" />
+    <Content Include="assets\images\gallery1.jpg" />
+    <Content Include="assets\images\gallery2.jpg" />
+    <Content Include="assets\images\gallery3.jpg" />
+    <Content Include="assets\images\hero-bg.jpg" />
+    <Content Include="assets\images\hero-texture.png" />
+    <Content Include="assets\images\loading.gif" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\post1.jpg" />
+    <Content Include="assets\images\post2.jpg" />
+    <Content Include="assets\images\post3.jpg" />
+    <Content Include="assets\images\post4.jpg" />
+    <Content Include="assets\images\pricing.svg" />
+    <Content Include="assets\images\Qlit.jpg" />
+    <Content Include="assets\images\rcnt-post1.png" />
+    <Content Include="assets\images\rcnt-post2.png" />
+    <Content Include="assets\images\rcnt-post3.png" />
+    <Content Include="assets\images\rcnt-post4.png" />
+    <Content Include="assets\images\service1.png" />
+    <Content Include="assets\images\service2.png" />
+    <Content Include="assets\images\service3.png" />
+    <Content Include="assets\images\service4.png" />
+    <Content Include="assets\images\service5.png" />
+    <Content Include="assets\images\test-clients-bg.png" />
+    <Content Include="assets\images\test1.png" />
+    <Content Include="assets\images\video-play.png" />
+    <Content Include="assets\images\vimeo-play.png" />
+    <Content Include="assets\images\youtube-play.png" />
+    <Content Include="assets\js\aos.js" />
+    <Content Include="assets\js\bootstrap.bundle.js" />
+    <Content Include="assets\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\js\imagesloaded.pkgd.min.js" />
+    <Content Include="assets\js\isotope.pkgd.min.js" />
+    <Content Include="assets\js\jquery-3.3.1.js" />
+    <Content Include="assets\js\jquery.filterizr.min.js" />
+    <Content Include="assets\js\lightgallery-all.min.js" />
+    <Content Include="assets\js\loaders.css.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\swiper.min.js" />
+    <Content Include="assets\picture\PIC1qlity.png" />
+    <Content Include="assets\picture\pic2.png" />
+    <Content Include="assets\picture\Qlity3.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -212,14 +289,21 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="CreateGig.aspx" />
+    <Content Include="CreateGigs.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\imagese.jpg" />
     <Content Include="fonts\QGLogo.ico" />
     <Content Include="fonts\QGLogo.jpg" />
+    <Content Include="fonts\Qlit - Copy.jpg" />
     <Content Include="fonts\Qlit.jpg" />
     <Content Include="GiggerProfile.aspx" />
     <Content Include="GigInfo.aspx" />
+    <Content Include="Gigstyle\css\inputTags.css" />
+    <Content Include="Gigstyle\css\inputTags.min.css" />
+    <Content Include="Gigstyle\js\app.js" />
+    <Content Include="Gigstyle\js\inputTags.jquery.js" />
+    <Content Include="Gigstyle\js\inputTags.jquery.min.js" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -231,16 +315,128 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
     <Content Include="Home.aspx" />
+    <Content Include="Homepage\contactform\contactform.js" />
+    <Content Include="Homepage\contactform\Readme.txt" />
+    <Content Include="Homepage\css\style.css" />
+    <Content Include="Homepage\Homepage.aspx" />
+    <Content Include="Homepage\img\about-bg.jpg" />
+    <Content Include="Homepage\img\about-mission.jpg" />
+    <Content Include="Homepage\img\about-plan.jpg" />
+    <Content Include="Homepage\img\about-vision.jpg" />
+    <Content Include="Homepage\img\apple-touch-icon.png" />
+    <Content Include="Homepage\img\call-to-action-bg.jpg" />
+    <Content Include="Homepage\img\clients\client-1.png" />
+    <Content Include="Homepage\img\clients\client-2.png" />
+    <Content Include="Homepage\img\clients\client-3.png" />
+    <Content Include="Homepage\img\clients\client-4.png" />
+    <Content Include="Homepage\img\clients\client-5.png" />
+    <Content Include="Homepage\img\clients\client-6.png" />
+    <Content Include="Homepage\img\clients\client-7.png" />
+    <Content Include="Homepage\img\clients\client-8.png" />
+    <Content Include="Homepage\img\facts-bg.jpg" />
+    <Content Include="Homepage\img\facts-img.png" />
+    <Content Include="Homepage\img\favicon.png" />
+    <Content Include="Homepage\img\intro-carousel\1.jpg" />
+    <Content Include="Homepage\img\intro-carousel\2.jpg" />
+    <Content Include="Homepage\img\intro-carousel\3.jpg" />
+    <Content Include="Homepage\img\intro-carousel\4.jpg" />
+    <Content Include="Homepage\img\intro-carousel\5.jpg" />
+    <Content Include="Homepage\img\portfolio\app1.jpg" />
+    <Content Include="Homepage\img\portfolio\app2.jpg" />
+    <Content Include="Homepage\img\portfolio\app3.jpg" />
+    <Content Include="Homepage\img\portfolio\card1.jpg" />
+    <Content Include="Homepage\img\portfolio\card2.jpg" />
+    <Content Include="Homepage\img\portfolio\card3.jpg" />
+    <Content Include="Homepage\img\portfolio\web1.jpg" />
+    <Content Include="Homepage\img\portfolio\web2.jpg" />
+    <Content Include="Homepage\img\portfolio\web3.jpg" />
+    <Content Include="Homepage\img\preloader.gif" />
+    <Content Include="Homepage\img\quote-sign-left.png" />
+    <Content Include="Homepage\img\quote-sign-right.png" />
+    <Content Include="Homepage\img\team-1.jpg" />
+    <Content Include="Homepage\img\team-2.jpg" />
+    <Content Include="Homepage\img\team-3.jpg" />
+    <Content Include="Homepage\img\team-4.jpg" />
+    <Content Include="Homepage\img\testimonial-1.jpg" />
+    <Content Include="Homepage\img\testimonial-2.jpg" />
+    <Content Include="Homepage\img\testimonial-3.jpg" />
+    <Content Include="Homepage\img\testimonial-4.jpg" />
+    <Content Include="Homepage\img\testimonial-5.jpg" />
+    <Content Include="Homepage\js\main.js" />
+    <Content Include="Homepage\lib\animate\animate.css" />
+    <Content Include="Homepage\lib\animate\animate.min.css" />
+    <Content Include="Homepage\lib\bootstrap\css\bootstrap.css" />
+    <Content Include="Homepage\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Homepage\lib\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Homepage\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Homepage\lib\counterup\counterup.min.js" />
+    <Content Include="Homepage\lib\easing\easing.js" />
+    <Content Include="Homepage\lib\easing\easing.min.js" />
+    <Content Include="Homepage\lib\font-awesome\css\font-awesome.css" />
+    <Content Include="Homepage\lib\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Homepage\lib\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Homepage\lib\ionicons\css\ionicons.css" />
+    <Content Include="Homepage\lib\ionicons\css\ionicons.min.css" />
+    <Content Include="Homepage\lib\ionicons\fonts\ionicons.svg" />
+    <Content Include="Homepage\lib\isotope\isotope.pkgd.js" />
+    <Content Include="Homepage\lib\isotope\isotope.pkgd.min.js" />
+    <Content Include="Homepage\lib\jquery\jquery-migrate.min.js" />
+    <Content Include="Homepage\lib\jquery\jquery.min.js" />
+    <Content Include="Homepage\lib\lightbox\css\lightbox.css" />
+    <Content Include="Homepage\lib\lightbox\css\lightbox.min.css" />
+    <Content Include="Homepage\lib\lightbox\images\close.png" />
+    <Content Include="Homepage\lib\lightbox\images\loading.gif" />
+    <Content Include="Homepage\lib\lightbox\images\next.png" />
+    <Content Include="Homepage\lib\lightbox\images\prev.png" />
+    <Content Include="Homepage\lib\lightbox\js\lightbox.js" />
+    <Content Include="Homepage\lib\lightbox\js\lightbox.min.js" />
+    <Content Include="Homepage\lib\lightbox\links.php" />
+    <Content Include="Homepage\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="Homepage\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="Homepage\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="Homepage\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="Homepage\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="Homepage\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="Homepage\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="Homepage\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="Homepage\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="Homepage\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="Homepage\lib\superfish\hoverIntent.js" />
+    <Content Include="Homepage\lib\superfish\superfish.js" />
+    <Content Include="Homepage\lib\superfish\superfish.min.js" />
+    <Content Include="Homepage\lib\touchSwipe\jquery.touchSwipe.js" />
+    <Content Include="Homepage\lib\touchSwipe\jquery.touchSwipe.min.js" />
+    <Content Include="Homepage\lib\waypoints\links.php" />
+    <Content Include="Homepage\lib\waypoints\waypoints.min.js" />
+    <Content Include="Homepage\lib\wow\wow.js" />
+    <Content Include="Homepage\lib\wow\wow.min.js" />
     <Content Include="LoggedInMaster.Master" />
     <Content Include="DashboardLogon.Master" />
+    <Content Include="MainHomepage.aspx" />
     <Content Include="RequestorDashboard.Master" />
-    <Content Include="GiggerDashboard.Master" />
-    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
-    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="HomeMaster.Master" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\lg.eot" />
+    <Content Include="assets\fonts\lg.ttf" />
+    <Content Include="assets\fonts\lg.woff" />
+    <Content Include="assets\js\bootstrap.bundle.js.map" />
+    <Content Include="assets\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Gigstyle\css\inputTags.less" />
+    <Content Include="Homepage\lib\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Homepage\lib\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Homepage\lib\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Homepage\lib\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Homepage\lib\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Homepage\lib\ionicons\fonts\ionicons.eot" />
+    <Content Include="Homepage\lib\ionicons\fonts\ionicons.ttf" />
+    <Content Include="Homepage\lib\ionicons\fonts\ionicons.woff" />
+    <Content Include="Homepage\lib\owlcarousel\LICENSE" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Profile.aspx" />
     <Content Include="Scripts\StyleSheetGigs.css" />
-    <Content Include="SelectType.aspx" />
     <Content Include="RequestorProfile.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -271,7 +467,9 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="StyleSheet1.css" />
     <Content Include="ViewGigs.aspx" />
+    <Content Include="ViewingTheGigs.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -305,6 +503,13 @@
     </Compile>
     <Compile Include="Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Logins.aspx.cs">
+      <DependentUpon>Logins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Logins.aspx.designer.cs">
+      <DependentUpon>Logins.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Manage.aspx.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
@@ -341,6 +546,13 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Account\Registeres.aspx.cs">
+      <DependentUpon>Registeres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Registeres.aspx.designer.cs">
+      <DependentUpon>Registeres.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\RegisterExternalLogin.aspx.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -361,6 +573,41 @@
     </Compile>
     <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
       <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatingGig.aspx.cs">
+      <DependentUpon>CreatingGig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatingGig.aspx.designer.cs">
+      <DependentUpon>CreatingGig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiggerDash.aspx.cs">
+      <DependentUpon>GiggerDash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiggerDash.aspx.designer.cs">
+      <DependentUpon>GiggerDash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiggerDashboards.aspx.cs">
+      <DependentUpon>GiggerDashboards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiggerDashboards.aspx.designer.cs">
+      <DependentUpon>GiggerDashboards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestorDash.aspx.cs">
+      <DependentUpon>RequestorDash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestorDash.aspx.designer.cs">
+      <DependentUpon>RequestorDash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectingType.aspx.cs">
+      <DependentUpon>SelectingType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelectingType.aspx.designer.cs">
+      <DependentUpon>SelectingType.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\SelectType.aspx.cs">
       <DependentUpon>SelectType.aspx</DependentUpon>
@@ -408,16 +655,43 @@
     <Compile Include="CreateGig.aspx.designer.cs">
       <DependentUpon>CreateGig.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DataTool.cs" />
-    <Compile Include="DataAccess\Helper.cs" />
-    <Compile Include="DataAccess\DeployString.cs" />
-    <Compile Include="GiggerDashboard.Master.cs">
-      <DependentUpon>GiggerDashboard.Master</DependentUpon>
+    <Compile Include="CreateGigs.aspx.cs">
+      <DependentUpon>CreateGigs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GiggerDashboard.Master.designer.cs">
-      <DependentUpon>GiggerDashboard.Master</DependentUpon>
+    <Compile Include="CreateGigs.aspx.designer.cs">
+      <DependentUpon>CreateGigs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="HomeMaster.Master.cs">
+      <DependentUpon>HomeMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeMaster.Master.designer.cs">
+      <DependentUpon>HomeMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage\Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Homepage\Homepage.aspx.designer.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainHomepage.aspx.cs">
+      <DependentUpon>MainHomepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainHomepage.aspx.designer.cs">
+      <DependentUpon>MainHomepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestorDashboard.Master.cs">
+      <DependentUpon>RequestorDashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestorDashboard.Master.designer.cs">
+      <DependentUpon>RequestorDashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\DataTool.cs" />
+    <Compile Include="DataAccess\Helper.cs" />
     <Compile Include="GiggerProfile.aspx.cs">
       <DependentUpon>GiggerProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -467,20 +741,6 @@
     <Compile Include="Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="RequestorDashboard.Master.cs">
-      <DependentUpon>RequestorDashboard.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RequestorDashboard.Master.designer.cs">
-      <DependentUpon>RequestorDashboard.Master</DependentUpon>
-    </Compile>
-    <Compile Include="SelectType.aspx.cs">
-      <DependentUpon>SelectType.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SelectType.aspx.designer.cs">
-      <DependentUpon>SelectType.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestorProfile.aspx.cs">
       <DependentUpon>RequestorProfile.aspx</DependentUpon>
@@ -511,6 +771,13 @@
     <Compile Include="ViewGigs.aspx.designer.cs">
       <DependentUpon>ViewGigs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewingTheGigs.aspx.cs">
+      <DependentUpon>ViewingTheGigs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewingTheGigs.aspx.designer.cs">
+      <DependentUpon>ViewingTheGigs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -519,6 +786,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
@@ -553,6 +821,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties content_4bootstrap-theme_1min_1css_1map__JsonSchema="" content_4bootstrap_1css_1map__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

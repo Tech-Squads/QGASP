@@ -20,20 +20,21 @@ namespace QlityG.Account
 
         HttpClient client = new HttpClient();
         
-        Uri baseAddress = new Uri("http://localhost:8080");
+        Uri baseAddress = new Uri("https://localhost:44364");
 
         UserModel u;
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            
+          
         }
 
         protected void LogIn(object sender, EventArgs e)
         {
-            client.BaseAddress = baseAddress;
+         
+
+          client.BaseAddress = baseAddress;
             uEmail = txtEmail.Text.Trim().ToUpper();
             uPassword = txtPassword.Text.Trim().ToUpper();
             
@@ -65,8 +66,10 @@ namespace QlityG.Account
 
                         Session["email"] = LoggedUser.uEmail;
                         Session["UserID"] = LoggedUser.UserID;
-                 
+                      
                         Session["HasGig"] = LoggedUser.HasGig;
+                        //mine
+                        Session["uemail"] = txtEmail.Text;
                         Response.Redirect("/SelectType.aspx");
                     }else
                     {
@@ -81,7 +84,7 @@ namespace QlityG.Account
                 
             }
             else
-                ErrorLogin.Visible = true;
+                 ErrorLogin.Visible = true;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace QlityG.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ibluname.Text = (string)Session["uemail"];
 
         }
     }

@@ -3,6 +3,12 @@
 
    <link href="Scripts/StyleSheetGigs.css" rel="stylesheet" />
 
+  
+
+
+    
+ <%--   <link href="StyleSheet1.css" rel="stylesheet" />--%>
+    
 
       <div style="text-align: center;">
         <h4>Create Gig</h4>
@@ -31,7 +37,7 @@
            </div>
            </div>
                                     
-                                     <div class="form-group">
+                                   <%--  <div class="form-group">
                                     <div class="col-md-offset-2 col-md-8">
                                      <asp:CheckBoxList runat="server" ID="SkillsRequired" RepeatDirection="Horizontal"  CssClass="btn btn-default"  Width="400px">
                                             <asp:ListItem>Java</asp:ListItem>
@@ -43,8 +49,20 @@
                                             </asp:CheckBoxList> 
                                      </div>
                               
-                                     </div>
+                                     </div>--%>
+      <div class="form-group">
+          <div class="col-md-offset-2 col-md-8">
+           <a href="#" onclick="window.open('Default1.aspx','FP','width=500,height=50,top=300,left=500,fullscreen=no,resizable=0');">Add skills</a>
+     
+      </div>
+      </div>
+          <div>
+             
 
+
+          </div>
+                    
+                    
                                 
                              <div class="form-group">
                                     <div class="col-md-offset-2 col-md-8">
@@ -58,7 +76,8 @@
                              <asp:Button runat="server" id="AddGig" CssClass="btn btn-default" Text="Create" OnClick="AddGig_Click" BorderColor ="Blue" ForeColor="Green"/>
                              </div>
                              </div>
-
+ 
+    
 
 
 </div>

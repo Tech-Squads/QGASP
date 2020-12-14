@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using QlityG.DataAccess;
 using QlityG.Models;
 using System;
 using System.Collections.Generic;
@@ -17,7 +16,7 @@ namespace QlityG
         GigModel gig;
         UserModel u;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(DeployString.API);
+        Uri baseAddress = new Uri("https://localhost:44364");
         int userID;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -41,7 +40,7 @@ namespace QlityG
             gig.DueDate = dueDate.Text.Trim();
             gig.GigDescription = gDescription.Text.Trim();
             gig.ContactDetails = ContactEmail.Text.Trim();
-            gig.RequiredSkills = SkillsRequired.SelectedValue;
+            //gig.RequiredSkills = SkillsRequired.SelectedValue;
             gig.RequestorID = userID;
 
 

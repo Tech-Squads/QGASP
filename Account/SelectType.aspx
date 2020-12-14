@@ -3,12 +3,13 @@
 
       <div >
         <hr />
+       
         <br />
 
           <h3 style="text-align:center">
               <a runat="server" href="~/Account/Requestorprofile">Requestor</a>
          </h3>
-              <br /><p style="text-align:center">OR</p><br />
+              <br /><p style="text-align:center">OR</p><br />   <asp:Label ID="ibluname" runat="server" Forecolor="Blue" Text=""></asp:Label>
  
              <h3 style="text-align:center;color:aqua;">
                  <a runat="server" href="~/Account/Giggerprofile">Gigger</a>

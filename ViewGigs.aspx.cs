@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using QlityG.DataAccess;
 using QlityG.Models;
 using System;
 using System.Collections.Generic;
@@ -17,7 +16,7 @@ namespace QlityG
         readonly StringBuilder card = new StringBuilder();
         List<GigModel> gigs = new List<GigModel>();
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(DeployString.API);
+        Uri baseAddress = new Uri("https://localhost:44364");
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,20 +32,21 @@ namespace QlityG
 
                 foreach (GigModel gig in gigs)
                 {
-                    card.Append("<div class='card' style='width: 18rem;' >");
-                    card.Append("<h5 class='card - title'>"+ gig.GigTitle + "</h5>");
+                    card.Append("<div class='card' style='width: 18rem;text-align:center;' >");
+                    card.Append("<h4 class= 'card-link'><b>Gig Title<b/> <hr /></h4>");
+                    card.Append("<h5 class='card - title'> " + gig.GigTitle + "</h5>");
                     card.Append("<div class='card - body'>");
                     card.Append("<h6 class='card-subtitle mb-2 text-muted'>"+ gig.DueDate + "</h6>");
                     card.Append("<p class= 'card-text'>"+gig.GigDescription+"</p>");
-                    card.Append("<a href =  '#' class= 'card-link'>ACCEPT GIG</a>");
-                    card.Append("<br/>");
-                    card.Append("<a href = ~/GigInfo ?GigId="+ gig.GigID +"  class='card-link'>VIEW GIG</a>");
+                    card.Append("<a href =  '#' class= 'card-link'>ACCEPT GIG <hr /></a>");
+                    card.Append("<a href = ~/GigInfo ?GigId="+ gig.GigID +"  class='card-link'>VIEW GIGs</a>");
                     card.Append("</div>");
                     card.Append("</div>");
-                    PlaceH.Controls.Add(new Literal { Text = card.ToString() });
+                    titletext.Text = gig.GigTitle;
+                    //PlaceH.Controls.Add(new Literal { Text = card.ToString() });
                 }
 
-                
+
 
             }
 

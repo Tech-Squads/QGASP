@@ -44,35 +44,26 @@
         </div>
         </div>
 
-
-
-
-         <asp:Table ID="Table1" runat="server"  Height="123px" Width="95%">
-        <asp:TableRow runat="server">
-        <asp:TableCell runat="server">
-        <div class="form-group">
+          <div class="form-group">
          <%--   <asp:Label runat="server" AssociatedControlID="txtSkills" CssClass="col-md-2 control-label">Skills</asp:Label>--%>
          <div class="col-md-offset-2 col-md-8">
             <asp:TextBox runat="server" ID="txtSkills"   TextMode="MultiLine" CssClass="btn btn-default" placeholder="Skills" Width="280px" /><br />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtSkills"
-                    CssClass="text-danger" ErrorMessage="The Skills field is required." /> 
+            <asp:RequiredFieldValidator runat="server" ControlToValidate="txtSkills"
+            CssClass="text-danger" ErrorMessage="The Skills field is required." /> 
             </div>
         </div>
-         </asp:TableCell>
 
-         <asp:TableCell runat="server">
-           <div class="form-group">
+
+          <div class="form-group">
             <%-- <asp:Label runat="server" AssociatedControlID="txtReferences" CssClass="col-md-2 control-label">References</asp:Label>--%>
             <div class="col-md-offset-2 col-md-8">
              <asp:TextBox runat="server" ID="txtReferences"   TextMode="MultiLine" CssClass="btn btn-default" placeholder="References" Width="280px" /><br />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtReferences"
-                    CssClass="text-danger" ErrorMessage="The References field is required." /> 
+            <asp:RequiredFieldValidator runat="server" ControlToValidate="txtReferences"
+            CssClass="text-danger" ErrorMessage="The References field is required." /> 
             </div>
         </div>
-         </asp:TableCell>
 
-         <asp:TableCell runat="server">
-                   <div class="form-group">
+         <div class="form-group">
             <%--<asp:Label runat="server" AssociatedControlID="txtEducation" CssClass="col-md-2 control-label">Education</asp:Label>--%>
               <div class="col-md-offset-2 col-md-8">
                 <asp:TextBox runat="server" ID="txtEducation"   TextMode="MultiLine"  CssClass="btn btn-default" placeholder="Education" Width="280px" /><br />
@@ -81,13 +72,8 @@
         </div>
         </div>
 
-         </asp:TableCell>
 
-
-            </asp:TableRow>
-            <asp:TableRow runat="server">
-            <asp:TableCell runat="server">
-            <div class="form-group">
+         <div class="form-group">
             <%-- <asp:Label runat="server" AssociatedControlID="txtPastProjectName" CssClass="col-md-2 control-label">Past Project Name</asp:Label>--%>
             <div class="col-md-offset-2 col-md-8">
             <asp:TextBox runat="server" ID="txtPastProjectName"  CssClass="btn btn-default" placeholder="Past Project Name" Width="280px" /><br />
@@ -95,10 +81,8 @@
                     CssClass="text-danger" ErrorMessage="The Past Project Name field is required." />    
             </div>
             </div>
-             </asp:TableCell>
 
-                <asp:TableCell runat="server">
-                <div class="form-group">
+         <div class="form-group">
             <%-- <asp:Label runat="server" AssociatedControlID="txtPastProjectDetails" CssClass="col-md-2 control-label">Past Project Details</asp:Label>--%>
             <div class="col-md-offset-2 col-md-8">
            <asp:TextBox runat="server" ID="txtPastProjectDetails"   TextMode="MultiLine"  CssClass="btn btn-default" placeholder="Past Project Details" Width="280px" /><br />
@@ -106,11 +90,8 @@
                     CssClass="text-danger" ErrorMessage="The Past Project Details field is required." />    
             </div>
             </div>
-                </asp:TableCell>
 
-                <asp:TableCell runat="server">
-
-                      <div class="form-group">
+         <div class="form-group">
                  <%--<asp:Label runat="server" AssociatedControlID="txtPastProjectDuration" CssClass="col-md-2 control-label">Past Project Duration</asp:Label>--%>
                 <div class="col-md-offset-2 col-md-8">
                <asp:TextBox runat="server" ID="txtPastProjectDuration" CssClass="btn btn-default" placeholder="Past Project Duration" Width="280px" /><br />
@@ -118,11 +99,6 @@
                     CssClass="text-danger" ErrorMessage="The Past Project Duration field is required." />    
                 </div>
                 </div>
-           </asp:TableCell>
-            </asp:TableRow>
-        </asp:Table>
-
-  
 
 
         <div class="form-group">
@@ -132,11 +108,7 @@
             </div>
         </div>
     <br />
-    <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-               
-            </div>
-        </div>
+   
 
 </div>
 

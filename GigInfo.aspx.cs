@@ -39,6 +39,7 @@ namespace QlityG
             card.Append("<h6 class='card-subtitle mb-2 text-muted'>" + gig.DueDate + "</h6>");
             card.Append("<p class= 'card-text'>" + gig.GigDescription + "</p>");
             card.Append("<a href =  '#' class= 'card-link'>ACCEPT</a>");
+
             card.Append("<a href = ~/ViewGigs  class='card-link'>BACK</a>");
             card.Append("</div>");
             card.Append("</div>");
