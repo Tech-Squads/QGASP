@@ -5,8 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <meta name="google-signin-client_id" content="1054218211676-etkbdtbaicnj05nfd897r8rja5iuj1no.apps.googleusercontent.com"/>
+
+    <meta name="google-signin-client_id" content="51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com"/>
     <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
          <style type="text/css">
              .input-icons i { 
             position: absolute; 
@@ -183,13 +185,19 @@
                         <a href="Registeres.aspx">Register as a new user</a>
                         </p>
                  <p>OR</p>
-                 <div id="signin"></div>
-                 <script>
-                     gapi.load('auth2', function () {
-                         gapi.auth2.init();
-                     }
-                     );
-                 </script>
+               
+                   <div  class="g-signin2" data-width="370" data-height="50" data-longtitle="true"></div>
+              <script>
+                  function onSignIn(googleUser) {
+                      var profile = googleUser.getBasicProfile();
+                      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                      console.log('Name: ' + profile.getName());
+                      console.log('Image URL: ' + profile.getImageUrl());
+                      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                  }
+              </script>
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" ></script>
 
                  <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
                           CssClass="text-danger" ErrorMessage="The email field is required." /><br />
@@ -203,7 +211,15 @@
                     </asp:PlaceHolder>
 
                  
-                    
+                    <%--<a href="#" onclick="signOut();">Sign out</a>--%>
+<script>
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
+    }
+</script>
 
 
                  </div> 

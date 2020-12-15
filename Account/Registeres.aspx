@@ -5,6 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <meta name="google-signin-client_id" content="51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com"/>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
 
          <style type="text/css">
 
@@ -46,7 +49,7 @@
     
     #formstyle
     {
-      height:400px;
+      height:390px;
       width:380px;
       margin:0 auto;
       position:relative;
@@ -194,7 +197,11 @@
                  <asp:TextBox runat="server" ID="txtConfirmPassword" TextMode="Password" CssClass="btn btn-default" placeholder="Confirm-Password" Width="340px" Height="40px" />
             </div> 
                  <asp:Button runat="server" Text="Register" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" OnClick="Unnamed1_Click1"   /><br />
-               <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
+               <br />
+                 <p>OR</p>
+               
+                   <div  class="g-signin2" data-width="370" data-height="50" data-longtitle="true"></div>
+                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
            CssClass="text-danger" ErrorMessage="The Email field is required*" /><br />
               <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword"
                CssClass="text-danger" ErrorMessage="The Password field is required*" /><br />
@@ -203,7 +210,7 @@
 
 
                  <asp:Label ID="errormesage" runat="server" Text=""></asp:Label>
-
+                  
 
              </div>
                

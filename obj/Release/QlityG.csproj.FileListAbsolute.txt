@@ -186,7 +186,6 @@ C:\QlityGigProjects\bin\WebGrease.dll
 C:\QlityGigProjects\bin\Dapper.xml
 C:\QlityGigProjects\bin\Newtonsoft.Json.xml
 C:\QlityGigProjects\bin\System.Web.Optimization.xml
-C:\QlityGigProjects\bin\Antlr3.Runtime.pdb
 C:\QlityGigProjects\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\QlityGigProjects\bin\EntityFramework.xml
 C:\QlityGigProjects\bin\EntityFramework.SqlServer.xml
@@ -203,8 +202,8 @@ C:\QlityGigProjects\bin\Microsoft.Owin.Security.Twitter.xml
 C:\QlityGigProjects\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\QlityGigProjects\bin\Microsoft.Owin.Security.OAuth.xml
 C:\QlityGigProjects\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\QlityGigProjects\obj\Release\QlityG.csprojAssemblyReference.cache
 C:\QlityGigProjects\obj\Release\QlityG.csproj.CoreCompileInputs.cache
 C:\QlityGigProjects\obj\Release\QlityG.csproj.CopyComplete
 C:\QlityGigProjects\obj\Release\QlityG.dll
 C:\QlityGigProjects\obj\Release\QlityG.pdb
+C:\QlityGigProjects\obj\Release\QlityG.csprojAssemblyReference.cache

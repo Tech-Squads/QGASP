@@ -27,7 +27,9 @@ namespace QlityG
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
+                //LoginPath = new PathString("/Account/Login"),
                 LoginPath = new PathString("/Account/Login"),
+               
                 Provider = new CookieAuthenticationProvider
                 {
                     OnValidateIdentity = SecurityStampValidator.OnValidateIdentity<ApplicationUserManager, ApplicationUser>(
@@ -59,11 +61,11 @@ namespace QlityG
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com",
+                ClientSecret = "OjY8rLlKgre3QmlDjmyeNifl"
+            });
         }
     }
 }
