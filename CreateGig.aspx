@@ -1,4 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateGig.aspx.cs" Inherits="QlityG.CreateGig" %>
+﻿
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateGig.aspx.cs" Inherits="QlityG.CreateGig" %>
 
 <!DOCTYPE html>
 
@@ -108,7 +110,7 @@
              }
    #loginScreenin
     {
-      height:500px;
+      height:470px;
       width:400px;
       margin:0 auto;
       position:relative;
@@ -189,7 +191,7 @@
               <div class="form-group"> 
               <div class="col-md-offset-2 col-md-8">
               <%-- <label for="form_name">Title/Name *</label> <br /> --%>         
-               <asp:TextBox runat="server" id="gigTitle" type="text" name="name"  CssClass="btn btn-default" placeholder="Enter Title of the Gig *"  data-error="Title is required."    Width="250px" /><br/><br/>
+               <asp:TextBox runat="server" id="gigTitle" type="text" name="name"  CssClass="btn btn-default" placeholder="Enter Title of the Gig *"  required="required"    Width="250px" /><br/><br/>
                </div>
            </div><br />
 
@@ -205,7 +207,7 @@
                 
                  <div class="col-md-offset-2 col-md-8">
                     <%--  <label for="form_lastname">Due Date *</label><br />--%>
-                <asp:TextBox runat="server" id="dueDate" type="text" name="surname" CssClass="btn btn-default"  placeholder="Please enter the last day for a respond"  data-error=" Field is required."  Width="250px" /><br/><br/>
+             <%--   <asp:TextBox runat="server" id="dueDate" type="text" name="surname" CssClass="btn btn-default"  placeholder="Please enter the last day for a respond"  data-error=" Field is required."  Width="250px" /><br/><br/>--%>
                 </div>              
           </div>
 
@@ -228,7 +230,7 @@
 
            $('#SkillsRequired').inputTags({
                autocomplete: {
-                   values: ['jQuery', 'Java', 'C++', 'Javascript', 'C#', 'ReactJs', , 'ReactJs'],
+                   values: ['jQuery', 'Java', 'C++', 'Javascript', 'C#', 'ReactJs' , 'ReactJs ' ,'Sql' ,'React' ,'MongoDb' ,'Html5' ,'CSS' ,'Bootstrap'],
                    only: false
                },
                max: 8,
@@ -245,12 +247,21 @@
           <div class="col-md-offset-2 col-md-8">
                                        
          <%--    <br /><label for="form_message">Description of Gig *</label><br />--%>
-           <asp:TextBox runat="server" id="gDescription" name="message" CssClass="btn btn-default" placeholder=" Gig Description" rows="5"  data-error="Please, leave us a message." TextMode="MultiLine"  Width="250px" /> <br/><br/>
+           <asp:TextBox runat="server" id="gDescription" name="message" CssClass="btn btn-default" placeholder=" Gig Description" rows="5"    TextMode="MultiLine"  Width="250px" /> <br/><br/>
+           </div>
+          </div>
+
+                <div class="form-group">
+          <div class="col-md-offset-2 col-md-8">
+                                    
+              
+              <asp:Label ID="Label1" runat="server"  ForeColor="orange" Text="" />    
+         
            </div>
           </div>
 
          <div class="form-group">
-          <div class="col-md-offset-2 col-md-8">
+          <div class="col-md-offset-2 col-md-8"><br /> 
         <asp:Button runat="server" id="AddGig" CssClass="btn btn-default" Text="Create"  BorderColor ="Blue" ForeColor="Green" OnClick="AddGig_Click"  />
            </div>
            </div>

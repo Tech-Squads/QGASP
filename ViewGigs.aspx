@@ -45,7 +45,7 @@
     
     #formstyle
     {
-      height:750px;
+      height:auto;
       width:780px;
       margin:0 auto;
       position:relative;
@@ -68,7 +68,6 @@
      
         background:lightblue;
     }
-  
      .nav-menu a:hover{
 	color:red;
 	border-bottom-style:solid;
@@ -88,21 +87,33 @@
 
      }
              #outer-layer {
-                 /*  border:1px solid red;*/
                  width: 100%;
                  height: 900px;
                  background-color:lavender;
-               /*  background-color:seashell;*/
-                 /*background: url(/assets/images/1.jpg) no-repeat center center fixed;*/
-        
                  
              }
-   #header{
-               /*  background-color:black;
-                 height:40px;*/
-               
-             }
-
+  #formstyle2
+    {
+      height:auto;
+      width:680px;
+      margin:0 auto;
+      position:relative;
+      z-index:10;
+     background-color:white;
+      border-radius:6px;
+    }
+    #formstyle2:target, #formstyle2:target + #cover {
+      display:block;
+      opacity:2;
+    }
+    #skills-style{
+        width:100px;
+        height:20px;
+        color:white;
+ 
+          background-color:blueviolet;
+          border-radius:6px;
+    }
   </style>
      <link rel="stylesheet"
           href= 
@@ -129,7 +140,7 @@
       <link href="~/Content/bootstrap.css" rel="stylesheet" />
     
 </head>
-<body>
+<body id="outer-layer">
  <form id="form1" runat="server">
   <!--==========================
     Header
@@ -154,24 +165,25 @@
 
   
 
-     <div id="outer-layer"><br /><br />  
+     <div ><br /><br />  
          <br /><br /><br />
          <br/><br/><br/>
          
          <div>
              <div id="formstyle" style="text-align:center;"><br />
-                 <h4>Running  Gigs</h4><br />
-                 <asp:Label ID="viewgigs" runat="server" Text="Label"></asp:Label>
+                 <div id="formstyle2">
+                    <h3>Running  Gigs</h3><hr />
+                    <asp:Label ID="viewgig" runat="server" Text=""></asp:Label>
 
-             </div>
-               
+                </div>
+               </div>
          </div>
       
     <br /></div>
 
 
  
-  <footer id="footer">
+ <%-- <footer id="footer">
    
 
     <div class="container">
@@ -183,7 +195,7 @@
         Designed by <a href="#">QlityGigs</a>
       </div>
     </div>
-  </footer><!-- #footer -->
+  </footer>--%><!-- #footer -->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <!-- Uncomment below i you want to use a preloader -->

@@ -209,7 +209,7 @@
                             <asp:Literal runat="server" ID="FailureText" />
                         </p>
                     </asp:PlaceHolder>
-
+                 <asp:Label ID="ErrorMsg" runat="server" Text=""></asp:Label>
                  
                     <%--<a href="#" onclick="signOut();">Sign out</a>--%>
 <script>

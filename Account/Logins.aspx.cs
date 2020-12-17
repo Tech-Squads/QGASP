@@ -72,18 +72,29 @@ namespace QlityG.Account
                     }
                     else
                     {
+                        if (LoggedUser.uType == 2)
+                        {
 
-                        Session["uType"] = u.uType;
-                        Session["UserID"] = LoggedUser.UserID;
-                        Response.Redirect("/Homepage");
+                            Session["email"] = LoggedUser.uEmail;
+                            Session["UserID"] = LoggedUser.UserID;
+
+                            Session["HasGig"] = LoggedUser.HasGig;
+                            //mine
+                            Session["uemail"] = txtEmail.Text;
+                            Response.Redirect("/RequestorDash.aspx");
+
+                        }
                     }
+                    
 
 
                 }
-
+                
             }
-            //else
-            //    ErrorLogin.Visible = true;
+            else
+            {
+                ErrorMsg.Text = "Incorrect logins";
+            }
         }
     }
 }

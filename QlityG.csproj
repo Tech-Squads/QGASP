@@ -191,7 +191,6 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Account\1.jpg" />
-    <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\email icon.png" />
     <Content Include="Account\Forgot.aspx" />
     <Content Include="Account\google image.jpg" />
@@ -457,6 +456,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="StyleSheet1.css" />
+    <Content Include="ViewGigGigger.aspx" />
     <Content Include="ViewGigs.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -464,13 +464,6 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\Confirm.aspx.cs">
-      <DependentUpon>Confirm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Confirm.aspx.designer.cs">
-      <DependentUpon>Confirm.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\Forgot.aspx.cs">
       <DependentUpon>Forgot.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -676,6 +669,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewGigGigger.aspx.cs">
+      <DependentUpon>ViewGigGigger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewGigGigger.aspx.designer.cs">
+      <DependentUpon>ViewGigGigger.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewGigs.aspx.cs">
       <DependentUpon>ViewGigs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -726,7 +726,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties content_4bootstrap-theme_1min_1css_1map__JsonSchema="" content_4bootstrap_1css_1map__JsonSchema="" />
+      <UserProperties content_4bootstrap_1css_1map__JsonSchema="" content_4bootstrap-theme_1min_1css_1map__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

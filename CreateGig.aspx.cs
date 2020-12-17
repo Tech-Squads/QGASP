@@ -21,6 +21,7 @@ namespace QlityG
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label1.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm tt");
             client.BaseAddress = baseAddress;
             gig = new GigModel();
             userID = (int)Session["UserID"];
@@ -35,8 +36,11 @@ namespace QlityG
 
         protected void AddGig_Click(object sender, EventArgs e)
         {
+                   
+            
             gig.GigTitle = gigTitle.Text.Trim();
-            gig.DueDate = dueDate.Text.Trim();
+            
+            gig.DueDate = Label1.Text.Trim();
             gig.GigDescription = gDescription.Text.Trim();
             gig.ContactDetails = ContactEmail.Text.Trim();
             gig.RequiredSkills = SkillsRequired.Text.Trim();

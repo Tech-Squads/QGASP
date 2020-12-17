@@ -51,7 +51,7 @@ namespace QlityG.Account
                 HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/AddUser", content).Result;
                 if (resp.IsSuccessStatusCode)
                 {
-                    Session["mine"] = txtEmail.Text;
+                    //Session["mine"] = txtEmail.Text;
                     Response.Redirect("~/Account/Logins");
 
                 }

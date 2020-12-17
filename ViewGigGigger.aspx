@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GiggerDashboard.aspx.cs" Inherits="QlityG.GiggerDashboard" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewGigGigger.aspx.cs" Inherits="QlityG.ViewGigGigger" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
- <style type="text/css">
+  <style type="text/css">
 
 
              .input-icons i { 
@@ -45,12 +45,11 @@
     
     #formstyle
     {
-      height:390px;
-      width:380px;
+      height:auto;
+      width:780px;
       margin:0 auto;
       position:relative;
       z-index:10;
-      display:none;
     
      /* background: url(login.png) no-repeat;*/
      background-color:white;
@@ -69,7 +68,6 @@
      
         background:lightblue;
     }
-  
      .nav-menu a:hover{
 	color:red;
 	border-bottom-style:solid;
@@ -89,21 +87,33 @@
 
      }
              #outer-layer {
-                 /*  border:1px solid red;*/
                  width: 100%;
                  height: 900px;
                  background-color:lavender;
-               /*  background-color:seashell;*/
-                 /*background: url(/assets/images/1.jpg) no-repeat center center fixed;*/
-        
                  
              }
-   #header{
-               /*  background-color:black;
-                 height:40px;*/
-               
-             }
-
+  #formstyle2
+    {
+      height:auto;
+      width:680px;
+      margin:0 auto;
+      position:relative;
+      z-index:10;
+     background-color:white;
+      border-radius:6px;
+    }
+    #formstyle2:target, #formstyle2:target + #cover {
+      display:block;
+      opacity:2;
+    }
+    #skills-style{
+        width:100px;
+        height:20px;
+        color:white;
+ 
+          background-color:blueviolet;
+          border-radius:6px;
+    }
   </style>
      <link rel="stylesheet"
           href= 
@@ -128,10 +138,9 @@
   <!-- Main Stylesheet File -->
    <link href="~/Homepage/css/style.css" rel="stylesheet" />
       <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     
 </head>
-<body>
+<body id="outer-layer">
  <form id="form1" runat="server">
   <!--==========================
     Header
@@ -146,13 +155,9 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-     
-            <li><a href="GiggerDash.aspx" style="color:cornflowerblue;font-size:medium;"><i class="w3-xxxlarge glyphicon glyphicon-user"></i>Profile</a></li> 
-
-          <li><p style="color:blue"> <a href="ViewGigGigger.aspx" style="color:cornflowerblue;font-size:medium;">View Gig</a></p> </li> 
-         
-         <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:cornflowerblue;font-size:medium;">Log Out</a></p> </li>
+          <li><p style="color:blue"> <a href="GiggerDashboard.aspx" style="color:cornflowerblue;font-size:medium;">Dashboard</a></p> </li>
           
+             <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:cornflowerblue;font-size:medium;">Log Out</a></p> </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -160,24 +165,25 @@
 
   
 
-     <div id="outer-layer"><br /><br />  
+     <div ><br /><br />  
          <br /><br /><br />
          <br/><br/><br/>
          
          <div>
              <div id="formstyle" style="text-align:center;"><br />
-                 
-                                
+                 <div id="formstyle2">
+                    <h3>Running  Gigs</h3><hr />
+                    <asp:Label ID="viewgig" runat="server" Text=""></asp:Label>
 
-             </div>
-               
+                </div>
+               </div>
          </div>
       
     <br /></div>
 
 
  
-  <footer id="footer">
+ <%-- <footer id="footer">
    
 
     <div class="container">
@@ -189,26 +195,13 @@
         Designed by <a href="#">QlityGigs</a>
       </div>
     </div>
-  </footer><!-- #footer -->
+  </footer>--%><!-- #footer -->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <!-- Uncomment below i you want to use a preloader -->
   <!-- <div id="preloader"></div> -->
 
   <!-- JavaScript Libraries -->
-  <script src="/Homepage/lib/jquery/jquery.min.js"></script>
-  <script src="/Homepage/lib/jquery/jquery-migrate.min.js"></script>
-  <script src="/Homepage/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/Homepage/lib/easing/easing.min.js"></script>
-  <script src="/Homepage/lib/superfish/hoverIntent.js"></script>
-  <script src="/Homepage/lib/superfish/superfish.min.js"></script>
-  <script src="/Homepage/lib/wow/wow.min.js"></script>
-  <script src="/Homepage/lib/waypoints/waypoints.min.js"></script>
-  <script src="/Homepage/lib/counterup/counterup.min.js"></script>
-  <script src="/Homepage/lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="/Homepage/lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="/Homepage/lib/lightbox/js/lightbox.min.js"></script>
-  <script src="/Homepage/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
   <!-- Contact Form JavaScript File -->
   <script src="/Homepage/contactform/contactform.js"></script>
 
