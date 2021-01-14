@@ -201,6 +201,7 @@
     <Content Include="Account\ManageLogins.aspx" />
     <Content Include="Account\ManagePassword.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\passwordreset.aspx" />
     <Content Include="Account\QlityGigs_Log.png" />
     <Content Include="Account\QlityGigs_Logo_Transparent.png" />
     <Content Include="Account\Registeres.aspx" />
@@ -513,6 +514,13 @@
     <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Account\passwordreset.aspx.cs">
+      <DependentUpon>passwordreset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\passwordreset.aspx.designer.cs">
+      <DependentUpon>passwordreset.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\Registeres.aspx.cs">
       <DependentUpon>Registeres.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -726,7 +734,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties content_4bootstrap_1css_1map__JsonSchema="" content_4bootstrap-theme_1min_1css_1map__JsonSchema="" />
+      <UserProperties content_4bootstrap-theme_1min_1css_1map__JsonSchema="" content_4bootstrap_1css_1map__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

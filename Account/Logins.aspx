@@ -10,6 +10,13 @@
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://apis.google.com/js/platform.js"></script>
          <style type="text/css">
+                #heade{
+                 background-color:lightgray;
+                 height:70px;
+               
+ 
+             }
+               
              .input-icons i { 
             position: absolute; 
         }       
@@ -99,8 +106,7 @@
              #header{
             /*     background-color:lightcyan;*/
                
-             }
- 
+             } 
 
   </style>
      <link rel="stylesheet"
@@ -133,10 +139,10 @@
   <!--==========================
     Header
   ============================-->
-  <header id="header">
+  <header id="heade">
     <div class="container-fluid">
-        
-      <div id="logo" class="pull-left"> <a href="../Homepage/Homepage.aspx"><img src="../Account/QlityGigs_Log.png" />
+        <br />
+      <div id="logo" class="pull-left" style=" position:fixed;left:40px;"> <a href="../Homepage/Homepage.aspx"><img src="../Account/QlityGigs_Log.png" />
           </a>   
       </div>
 
@@ -150,10 +156,8 @@
   </header><!-- #header -->
 
      <div id="outer-layer"> 
-         <br /><br />
-         <br/><br/><br/><br />   
-          <br/><br/><br/><br />
-        
+        <br /><br /><br />
+        <br />
          <div>
              <div id="formstyle" style="text-align:center;"><br />
                  <h4>Log in with registered account</h4><br />
@@ -180,7 +184,12 @@
             </div>
                
                   <asp:Button runat="server" Text="Log in" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" OnClick="Unnamed1_Click" />
-            <br />  <br />  <p>
+            <br /> 
+                 <p style="position:relative;top:10px;">
+                 
+                     <a href="passwordreset.aspx" style="color:green;">Reset password</a>
+                 </p>
+                 <p>
                          <%-- <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Register as a new user</asp:HyperLink>--%>
                         <a href="Registeres.aspx">Register as a new user</a>
                         </p>

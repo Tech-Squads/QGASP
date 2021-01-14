@@ -7,6 +7,12 @@
     <title></title>
 
          <style type="text/css">
+                #heade{
+                 background-color:black;
+                 height:60px;
+               
+ 
+             }
     .button
     {
       width: 150px;
@@ -107,27 +113,22 @@
   <!--==========================
     Header
   ============================-->
-  <header id="header">
+  <header id="heade">
     <div class="container-fluid">
-
-      <div id="logo" class="pull-left"> <img src="../Account/QlityGigs_Log.png" />
+        
+      <div id="logo" class="pull-left" style=" position:relative;left:50px;top:8px;"> <img src="../Account/QlityGigs_Log.png" />
        
       
       </div>
 
       <nav id="nav-menu-container">
-        <ul class="nav-menu">
+        <ul class="nav-menu" style=" position:relative;right:10px;top:15px;">
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li class="menu-has-children"><a href="../Account/Registeres.aspx">Join</a></>
-           <%-- <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>--%>
+      
+          <li class="menu-has-children" style="background-color:cadetblue;border-radius:5px;"><a href="../Account/Registeres.aspx">Join</a></>
+         
           </li>
           <li><a href="../Account/Logins.aspx">Login</a></li>
         </ul>
@@ -138,7 +139,8 @@
   <!--==========================
     Intro Section
   ============================-->
-  <section id="intro">
+
+  <section id="intro" style="height:10px;">
     <div class="intro-container">
       <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
 
@@ -222,31 +224,7 @@
     <!--==========================
       Featured Services Section
     ============================-->
-    <section id="featured-services">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-4 box">
-            <i class="ion-ios-bookmarks-outline"></i>
-            <h4 class="title"><a href="#"></a></h4>
-            <p class="description"></p>
-          </div>
-
-          <div class="col-lg-4 box box-bg">
-            <i class="ion-ios-stopwatch-outline"></i>
-            <h4 class="title"><a href="#"></a></h4>
-            <p class="description"></p>
-          </div>
-
-          <div class="col-lg-4 box">
-            <i class="ion-ios-heart-outline"></i>
-            <h4 class="title"><a href="#"></a></h4>
-            <p class="description"></p>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- #featured-services -->
+<!-- #featured-services -->
 
     <!--==========================
       About Us Section
@@ -318,7 +296,7 @@
 
         <div class="row">
 
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+<%--          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
             <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
             <h4 class="title"><a href="#"></a></h4>
             <p class="description"></p>
@@ -347,7 +325,7 @@
             <div class="icon"><i class="ion-ios-people-outline"></i></div>
             <h4 class="title"><a href="#"></a></h4>
             <p class="description"></p>
-          </div>
+          </div>--%>
 
         </div>
 
@@ -357,13 +335,13 @@
     <!--==========================
       Call To Action Section
     ============================-->
-    <section id="call-to-action" class="wow fadeIn">
+    <%--<section id="call-to-action" class="wow fadeIn">
       <div class="container text-center">
         <h3>Call To Action</h3>
         <p> </p>
         <a class="cta-btn" href="#">Call To Action</a>
       </div>
-    </section><!-- #call-to-action -->
+    </section>--%><!-- #call-to-action -->
 
     <!--==========================
       Skills Section
@@ -373,7 +351,7 @@
 
         <header class="section-header">
           <h3>Our Skills</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+          <p></p>
         </header>
 
         <div class="skills-content">
@@ -405,7 +383,7 @@
     <!--==========================
       Facts Section
     ============================-->
-    <section id="facts"  class="wow fadeIn">
+   <%-- <section id="facts"  class="wow fadeIn">
       <div class="container">
 
         <header class="section-header">
@@ -442,12 +420,12 @@
         </div>
 
       </div>
-    </section><!-- #facts -->
+    </section>--%><!-- #facts -->
 
     <!--==========================
       Portfolio Section
     ============================-->
-    <section id="portfolio"  class="section-bg" >
+    <%--<section id="portfolio"  class="section-bg" >
       <div class="container">
 
         <header class="section-header">
@@ -605,7 +583,7 @@
         </div>
 
       </div>
-    </section><!-- #portfolio -->
+    </section>--%><!-- #portfolio -->
 
     <!--==========================
       Clients Section

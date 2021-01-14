@@ -7,7 +7,12 @@
     <title></title>
 
          <style type="text/css">
-
+                  #heade{
+                 background-color:lavender;
+                 height:70px;
+               
+ 
+             }
 
              .input-icons i { 
             position: absolute; 
@@ -46,8 +51,8 @@
     
     #formstyle
     {
-      height:670px;
-      width:380px;
+         height:650px;
+      width:580px;
       margin:0 auto;
       position:relative;
       z-index:10;
@@ -135,19 +140,19 @@
   <!--==========================
     Header
   ============================-->
-  <header id="header">
+  <header id="heade">
     <div class="container-fluid">
-
-      <div id="logo" class="pull-left"> <img src="../Account/QlityGigs_Log.png" />
+        <br />
+      <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> <img src="../Account/QlityGigs_Log.png" />
        
       
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><p style="color:blue"> <a href="GiggerDashboard.aspx" style="color:blue;font-size:medium;">Dashboard</a></p></li>
+          <li><p style="color:blue"> <a href="GiggerDashboard.aspx" style="color:black;font-size:small;">Dashboard</a></p></li>
          
-          <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:blue;font-size:medium;">Log Out</a></p></li>
+          <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:black;font-size:small;">Log Out</a></p></li>
                  
          <%-- <li><a href="#contact">Login</a></li>--%>
      
@@ -159,97 +164,127 @@
   
 
      <div id="outer-layer"><br /><br />  
-         <br /><br /><br />
-         <br/><br/><br/>
+   
          
          <div>
              <div id="formstyle" style="text-align:center;"><br />
-                 <h4>Update Profile</h4><br />
-            <div class="input-icons"> 
+                 <h4>Update Profile</h4>
+
+                 
+            <div class="form-group">
+                 <div class="col-md-6">
+              <div style="text-align:left;color:gray;">
+                          First Name *
+              </div>
+                <asp:TextBox runat="server" ID="FirstName" CssClass="form-control"  />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="FirstName"
+                    CssClass="text-danger" ErrorMessage="Please enter Your First Name !" />
+            </div>
+
+                  <div class="col-md-6">
+                      <div style="text-align:left;color:gray">
+                          Last Name *
+                      </div>
+                     
+                <asp:TextBox runat="server" ID="LastName" CssClass="form-control"  />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="LastName"
+                    CssClass="text-danger" ErrorMessage="Please enter Your Last Name !" />
+            </div>
+        </div>
+
+<%--            <div class="input-icons"> 
                 <i class="fa fa-envelope icon"> 
               </i> 
                  <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" />
 
-            </div> 
+            </div> --%>
 
-            <div class="input-icons"> 
-              
-                   <asp:TextBox runat="server" ID="txtName" CssClass="btn btn-default" placeholder="Name" Width="340px" Height="40px"  />
-                 
-            </div> 
+          
+
+  <div class="form-group">
+                 <div class="col-md-12">
+              <div style="text-align:left;color:gray;">
+                           Company /Organization *
+              </div>
+           
+              <asp:TextBox runat="server" ID="txtcompany" CssClass="form-control" /><br />
+            </div>                
+            </div>
+
+
              
+               <div class="form-group">
+                 <div class="col-md-12">
+              <div style="text-align:left;color:gray;">
+                           Reference 
+              </div> 
+                  <asp:TextBox runat="server" ID="txtReferences" CssClass="form-control" /><br />
+                    
                  
-            <div class="input-icons"> 
-
-                 <asp:TextBox runat="server" ID="txtSurname"  CssClass="btn btn-default" placeholder="Surname" Width="340px" Height="40px" />
-
+            </div>                
             </div>
 
 
-            <div class="input-icons"> 
-
-                 <asp:TextBox runat="server" ID="txtCountry"  CssClass="btn btn-default" placeholder="Country" Width="340px" Height="40px"   />
-
+       
+               <div class="form-group">
+                 <div class="col-md-12">
+              <div style="text-align:left;color:gray;">
+                           Education 
+              </div> 
+                  <asp:TextBox runat="server" ID="txtEducation" CssClass="form-control"  /><br />
+            </div>                
+            </div>
+            
+             <div class="form-group">
+                 <div class="col-md-12">
+              <div style="text-align:left;color:gray;">
+                           Country *
+              </div> 
+                 <asp:DropDownList ID="DropDownListCountry" runat="server"  CssClass="form-control" />
+                     <asp:RequiredFieldValidator runat="server" ControlToValidate="DropDownListCountry"
+                    CssClass="text-danger" ErrorMessage="Please Select the country !" />
+                     <br />
+            </div>                
             </div>
 
-
-                 
-            <div class="input-icons"> 
-
-                <asp:TextBox runat="server" ID="txtCompany"  CssClass="btn btn-default" placeholder="Company/Organization" Width="340px" Height="40px"  />
-
+                <div class="form-group">
+                 <div class="col-md-6">
+              <div style="text-align:left;color:gray;">
+                       Past Project Name 
+              </div>
+                <asp:TextBox runat="server" ID="txtPastProjectName" CssClass="form-control"  />
+              
             </div>
 
-              <div class="input-icons"> 
-
-                <asp:TextBox runat="server" ID="txtEducation"   TextMode="MultiLine"  CssClass="btn btn-default" placeholder="Education"  Width="340px" Height="40px"  /><br />
-
-            </div>
-
-               <div class="input-icons"> 
-
-               <asp:TextBox runat="server" ID="txtReferences"   TextMode="MultiLine" CssClass="btn btn-default" placeholder="References"  Width="340px" Height="40px"  /><br />
-
-            </div>
-
-              <div class="input-icons"> 
-
-               <asp:TextBox runat="server" ID="txtPastProjectName"  CssClass="btn btn-default" placeholder="Past Project Name" Width="340px" Height="40px"  /><br />
+                  <div class="col-md-6">
+                      <div style="text-align:left;color:gray">
+                        Past Project Duration
+                      </div>
                    
+                <asp:TextBox runat="server" ID="txtPastProjectDuration" CssClass="form-control"  />
+         
             </div>
+                    <div class="col-md-12" style=" position:relative;top:5px;">
+                        <div style="text-align: left; color: gray">
+                            Past Project Description
+                        </div>
 
-                  <div class="input-icons"> 
+                        <asp:TextBox runat="server" ID="txtPastProjectDetails" name="message" CssClass="form-control" Rows="5" TextMode="MultiLine" Height="50px" /><br />
 
-                       <asp:TextBox runat="server" ID="txtPastProjectDetails"   TextMode="MultiLine"  CssClass="btn btn-default" placeholder="Past Project Details" Width="340px" Height="40px"/><br />
-                   </div>
+                    </div>
 
-                  <div class="input-icons"> 
+        </div>
 
-                       <asp:TextBox runat="server" ID="txtPastProjectDuration" CssClass="btn btn-default" placeholder="Past Project Duration" Width="340px" Height="40px" /><br />
-                   </div>
+              <div class="form-group"><br />
+            <div class="col-md-12" style="text-align:right"><br />
+       <asp:Button runat="server" ID="Update" Text="Update " CssClass="btn btn-default"  BackColor="blue" ForeColor="white" OnClick="Create_Click"  />
+                <asp:Button runat="server" ID="Edit" Text="Edit " CssClass="btn btn-default"  BackColor="green" BorderColor="white" ForeColor="white" OnClick="Update_Click"  />
+           </div>
+           </div>
 
-                  <div class="input-icons"> <br />
-                        <asp:Button runat="server" ID="Create" Text="Create " CssClass="btn btn-default"  BackColor="blue"  BorderColor="white" ForeColor="white" OnClick="Create_Click"  />
-                <asp:Button runat="server" ID="Update" Text="Update " CssClass="btn btn-default"  BackColor="purple" BorderColor="white" ForeColor="white" OnClick="Update_Click"  /><br />
-                  </div>
 
                  <br />
-                   <asp:RequiredFieldValidator runat="server" ControlToValidate="txtName"
-             CssClass="text-danger" ErrorMessage="The Name field is required*" /><br />
-                  <asp:RequiredFieldValidator runat="server" ControlToValidate="txtSurname"
-               CssClass="text-danger" ErrorMessage="The Surname field is required*" /><br />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCountry"
-             CssClass="text-danger" ErrorMessage="The Country field is required*" /> <br />
-              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEducation"
-                    CssClass="text-danger" ErrorMessage="The Education field is required." />  <br />
-                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtReferences"
-            CssClass="text-danger" ErrorMessage="The References field is required." /> <br />
-                     <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPastProjectName"
-                    CssClass="text-danger" ErrorMessage="The Past Project Name field is required." /> <br />
-                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPastProjectDetails"
-                    CssClass="text-danger" ErrorMessage="The Past Project Details field is required." /><br />
-                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPastProjectDuration"
-                    CssClass="text-danger" ErrorMessage="The Past Project Duration field is required." /> 
+                 
                
                 <label id="ErrorM" runat="server" visible="false"> Something went wrong please load page again!</label>
 

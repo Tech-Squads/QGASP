@@ -155,9 +155,9 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><p style="color:blue"> <a href="RequestorDashboard.aspx" style="color:cornflowerblue;font-size:medium;">Dashboard</a></p> </li>
+          <li><p style="color:blue"> <a href="RequestorDashboard.aspx" style="color:black;font-size:small;">Dashboard</a></p> </li>
 
-             <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:cornflowerblue;font-size:medium;">Log Out</a></p> </li>
+             <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:black;font-size:small;">Log Out</a></p> </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -172,7 +172,9 @@
          <div>
              <div id="formstyle" style="text-align:center;"><br />
                  <div id="formstyle2">
-                    <h3>Running  Gigs</h3><hr />
+                    <h3 >Running  Gigs</h3>
+                     <hr />
+                    <br />
                     <asp:Label ID="viewgig" runat="server" Text=""></asp:Label>
 
                 </div>

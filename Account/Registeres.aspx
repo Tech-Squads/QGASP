@@ -85,10 +85,9 @@
       border-radius:4px;
      
      }
-     #log{
+     #logo{
 
-         height:500px;
-         width:100px;
+      left:100px;
 
      }
              #outer-layer {
@@ -101,11 +100,14 @@
         
                  
              }
-   #header{
-               /*  background-color:black;
-                 height:40px;*/
+                #heade{
+                 background-color:lavender;
+                 height:70px;
                
+ 
              }
+               
+             
 
   </style>
      <link rel="stylesheet"
@@ -138,10 +140,10 @@
   <!--==========================
     Header
   ============================-->
-  <header id="header">
+  <header id="heade">
     <div class="container-fluid">
-
-      <div id="logo" class="pull-left"> 
+        <br />
+      <div id="logo" class="pull-left" style=" position:fixed;left:40px;"> 
           <a href="../Homepage/Homepage.aspx">
           <img src="../Account/QlityGigs_Log.png" />
               </a>
@@ -152,8 +154,8 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
          
-            <li><h4 style="color:black">already have an account ?</h4></li>
-          <li><h4 style="color:blue"> <a href="Logins.aspx" style="color:blue;">Log in</a></h4>
+            <li  style=" position:fixed;right:90px;" ><h4 style="color:black">already have an account ?</h4></li>
+          <li  style=" position:fixed;right:30px;"><h4 style="color:blue"> <a href="Logins.aspx" style="color:blue;">Log in</a></h4>
           
           </li>
          <%-- <li><a href="#contact">Login</a></li>--%>
@@ -166,19 +168,13 @@
   
 
      <div id="outer-layer"><br /><br />  
-         <br /><br />
-         <br/><br/><br/>
-         <br /><br />
+          <br /><br />
+         <br/>
 
          <div>
              <div id="formstyle" style="text-align:center;"><br />
                  <h4>Create new account</h4><br />
-           <%--     <div class="input-icons"> 
-                <i class="fa fa-user icon"> 
-              </i> 
-                 <asp:TextBox runat="server" ID="txtEmai" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" /> 
-            </div> --%>
-  
+         
             <div class="input-icons"> 
                 <i class="fa fa-envelope icon"> 
               </i> 
@@ -189,8 +185,11 @@
                 <i class="fa fa-key icon"> 
               </i> 
                  <asp:TextBox runat="server" ID="txtPassword" TextMode="Password"  CssClass="btn btn-default" placeholder="New Password" Width="340px" Height="40px"/>
-            </div> 
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" 
+                    runat="server" ErrorMessage=""
+                   ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
 
+                </div> 
                  <div class="input-icons"> 
                 <i class="fa fa-key icon"> 
               </i> 
@@ -201,19 +200,59 @@
                  <p>OR</p>
                
                    <div  class="g-signin2" data-width="370" data-height="50" data-longtitle="true"></div>
-                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
-           CssClass="text-danger" ErrorMessage="The Email field is required*" /><br />
-              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword"
-               CssClass="text-danger" ErrorMessage="The Password field is required*" /><br />
-              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtConfirmPassword"
-             CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required*" /><br />
+                
+       
+          
+                
 
 
                  <asp:Label ID="errormesage" runat="server" Text=""></asp:Label>
                   
 
              </div>
-               
+             <br />
+               <div style="text-align:center">
+                                  <asp:RegularExpressionValidator
+                    ID="RegularExpressionValidator1" runat="server" CssClass="text-danger" BackColor="white"
+                    ErrorMessage="Password must be 8 characters long with at least one lower case letter,
+                                      one upper case letter,
+                                      special character,
+                                      &  one number."
+                    
+                     ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"
+                    ControlToValidate="txtPassword">
+              
+                </asp:RegularExpressionValidator>
+
+
+                   <asp:RegularExpressionValidator
+                       ID="RegularExpressionValidator2" runat="server"  CssClass="text-danger" BackColor="white"
+                    
+                ErrorMessage="Please enter valid email" 
+
+                       
+                       ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
+                           ControlToValidate="txtEmail">  
+            </asp:RegularExpressionValidator>  
+
+                     </div>
+
+             
+              <div style="text-align:center">
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
+                        BackColor="white"
+                         CssClass="text-danger" ErrorMessage="The Email field is required*" />
+                  </div>
+              <div style="text-align:center">
+               <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword"
+                       BackColor="white"
+               CssClass="text-danger" ErrorMessage="The Password field is required*" />
+                  </div>
+              <div style="text-align:center">
+                       <asp:RequiredFieldValidator runat="server" ControlToValidate="txtConfirmPassword"
+                           BackColor="white"
+             CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required*" />
+               </div> 
          </div>
       
     <br /></div>
@@ -230,26 +269,6 @@
     </div>
   </footer><!-- #footer -->
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <!-- Uncomment below i you want to use a preloader -->
-  <!-- <div id="preloader"></div> -->
-  <!-- JavaScript Libraries -->
-  <script src="/Homepage/lib/jquery/jquery.min.js"></script>
-  <script src="/Homepage/lib/jquery/jquery-migrate.min.js"></script>
-  <script src="/Homepage/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/Homepage/lib/easing/easing.min.js"></script>
-  <script src="/Homepage/lib/superfish/hoverIntent.js"></script>
-  <script src="/Homepage/lib/superfish/superfish.min.js"></script>
-  <script src="/Homepage/lib/wow/wow.min.js"></script>
-  <script src="/Homepage/lib/waypoints/waypoints.min.js"></script>
-  <script src="/Homepage/lib/counterup/counterup.min.js"></script>
-  <script src="/Homepage/lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="/Homepage/lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="/Homepage/lib/lightbox/js/lightbox.min.js"></script>
-  <script src="/Homepage/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="/Homepage/contactform/contactform.js"></script>
-  <!-- Template Main Javascript File -->
-  <script src="/Homepage/js/main.js"></script>
  </form>
 </body>
 </html>

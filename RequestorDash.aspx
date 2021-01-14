@@ -6,7 +6,13 @@
     <title></title>
 
          <style type="text/css">
-
+               #heade{
+                 background-color:lavender;
+                 height:70px;
+               
+ 
+             }
+               
 
              .input-icons i { 
             position: absolute; 
@@ -45,8 +51,8 @@
     
     #formstyle
     {
-      height:390px;
-      width:380px;
+    height:515px;
+      width:580px;
       margin:0 auto;
       position:relative;
       z-index:10;
@@ -90,7 +96,7 @@
              #outer-layer {
                  /*  border:1px solid red;*/
                  width: 100%;
-                 height: 900px;
+                 height: 700px;
                  background-color:lavender;
                /*  background-color:seashell;*/
                  /*background: url(/assets/images/1.jpg) no-repeat center center fixed;*/
@@ -134,19 +140,20 @@
   <!--==========================
     Header
   ============================-->
-  <header id="header">
+  <header id="heade">
     <div class="container-fluid">
-
-      <div id="logo" class="pull-left"> <img src="../Account/QlityGigs_Log.png" />
+        <br />
+      <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> <img src="../Account/QlityGigs_Log.png" />
        
       
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><p style="color:blue"> <a href="RequestorDashboard.aspx" style="color:cornflowerblue;font-size:medium;">Dashboard</a></p> </li>
 
-             <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:cornflowerblue;font-size:medium;">Log Out</a></p> </li>
+            <li  style=" position:relative;right:20px;" ><h4 style="color:black"><a href="RequestorDashboard.aspx" style="color:black;font-size:small;">Dashboard</a></h4></li>
+
+             <li  style=" position:relative;right:0px;"><h4 style="color:blue"> <a href="Account/Logins.aspx" style="color:black;font-size:small;">Log Out</a></h4> </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -154,63 +161,90 @@
 
   
 
-     <div id="outer-layer"><br /><br />  
-         <br /><br /><br />
-         <br/><br/><br/>
-         
+     <div id="outer-layer">
+         <br />
+          
          <div>
              <div id="formstyle" style="text-align:center;"><br />
-                 <h4>Update Profile</h4><br />
-            <div class="input-icons"> 
+                 <h4>Update Profile</h4>
+
+
+                   <div class="form-group">
+                 <div class="col-md-6">
+              <div style="text-align:left;color:gray;">
+                          First Name *
+              </div>
+                <asp:TextBox runat="server" ID="FirstName" CssClass="form-control"  />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="FirstName"
+                    CssClass="text-danger" ErrorMessage="Please enter Your First Name !" />
+            </div>
+
+                  <div class="col-md-6">
+                      <div style="text-align:left;color:gray">
+                          Last Name *
+                      </div>
+                   
+                <asp:TextBox runat="server" ID="LastName" CssClass="form-control"  />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="LastName"
+                    CssClass="text-danger" ErrorMessage="Please enter Your Last Name !" />
+            </div>
+        </div>
+
+                     <div class="form-group">
+                 <div class="col-md-12">
+              <div style="text-align:left;color:gray;">
+                           Headline *
+              </div>
+           
+               <asp:TextBox runat="server" id="txtheadline" name="message" CssClass="form-control"  rows="5"    TextMode="MultiLine"  height="50px"/><br />
+            </div>                
+            </div>
+
+       <%--     <div class="input-icons"> 
                 <i class="fa fa-envelope icon"> 
               </i> 
                  <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" />
 
+            </div> --%>
+                        
+                 <div class="form-group">
+                 <div class="col-md-12">
+                 <div style="text-align:left;color:gray;">
+                           Current Position 
+                </div> 
+                  <asp:TextBox runat="server" ID="txtposition" CssClass="form-control" /><br />              
+                 
+            </div>                
             </div> 
 
-            <div class="input-icons"> 
-              
-                   <asp:TextBox runat="server" ID="txtName" CssClass="btn btn-default" placeholder="Name" Width="340px" Height="40px"  />
-                 
-            </div> 
-             
-                 
-            <div class="input-icons"> 
-
-                 <asp:TextBox runat="server" ID="txtSurname"  CssClass="btn btn-default" placeholder="Surname" Width="340px" Height="40px" />
-
+                   <div class="form-group">
+                 <div class="col-md-12">
+              <div style="text-align:left;color:gray;">
+                           Education 
+              </div> 
+                  <asp:TextBox runat="server" ID="txteducation" CssClass="form-control"  /><br />
+            </div>                
             </div>
 
-
-            <div class="input-icons"> 
-
-                 <asp:TextBox runat="server" ID="txtCountry"  CssClass="btn btn-default" placeholder="Country" Width="340px" Height="40px"   />
-
+                   <div class="form-group">
+                 <div class="col-md-12">
+              <div style="text-align:left;color:gray;">
+                           Country/Region *
+              </div> 
+                 <asp:DropDownList ID="DropDownListcountry" runat="server"  CssClass="form-control" />
+                     <asp:RequiredFieldValidator runat="server" ControlToValidate="DropDownListcountry"
+                    CssClass="text-danger" ErrorMessage="Please Select  !" />
+                     <br /><br />
+            </div>                
             </div>
+                 <div class="form-group"><br />
+            <div class="col-md-12" style="text-align:center">
+                 <asp:Button runat="server" ID="Create" Text="Update" CssClass="btn btn-default"  BackColor="blue"   ForeColor="white" OnClick="Create_Click"   />
+                <asp:Button runat="server" ID="Update" Text="Edit" CssClass="btn btn-default"  BackColor="green"  ForeColor="white" OnClick="Update_Click"   /><br />
+           </div>
+           </div>
 
 
-                 
-            <div class="input-icons"> 
-
-                <asp:TextBox runat="server" ID="txtCompany"  CssClass="btn btn-default" placeholder="Company/Organization" Width="340px" Height="40px"  />
-
-            </div>                      
-
-                  <div class="input-icons"> <br />
-                        <asp:Button runat="server" ID="Create" Text="Create " CssClass="btn btn-default"  BackColor="blue"  BorderColor="white" ForeColor="white" OnClick="Create_Click"   />
-                <asp:Button runat="server" ID="Update" Text="Update " CssClass="btn btn-default"  BackColor="purple" BorderColor="white" ForeColor="white" OnClick="Update_Click"   /><br />
-                  </div>
-
-                 <br />
-                   <asp:RequiredFieldValidator runat="server" ControlToValidate="txtName"
-             CssClass="text-danger" ErrorMessage="The Name field is required*" /><br />
-                  <asp:RequiredFieldValidator runat="server" ControlToValidate="txtSurname"
-               CssClass="text-danger" ErrorMessage="The Surname field is required*" /><br />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCountry"
-             CssClass="text-danger" ErrorMessage="The Country field is required*" /> <br />
-             
-                    
-               
                 <label id="ErrorM" runat="server" visible="false"> Something went wrong please load page again!</label>
 
              </div>
