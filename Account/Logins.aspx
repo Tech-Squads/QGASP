@@ -196,7 +196,7 @@
                  <p>OR</p>
                
                    <div  class="g-signin2" data-width="370" data-height="50" data-longtitle="true"></div>
-              <script>
+            <%--  <script>
                   function onSignIn(googleUser) {
                       var profile = googleUser.getBasicProfile();
                       console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -204,7 +204,7 @@
                       console.log('Image URL: ' + profile.getImageUrl());
                       console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
                   }
-              </script>
+              </script>--%>
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" ></script>
 

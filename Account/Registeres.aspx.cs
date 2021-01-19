@@ -27,7 +27,18 @@ namespace QlityG.Account
 
         }
 
-    
+
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            string clientid = "51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com";
+            string clientsecret = "OjY8rLlKgre3QmlDjmyeNifl";
+
+            string redirection_url = "https://localhost:44329/Account/Logins.aspx";
+
+            string url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + " ";
+            Response.Redirect(url);
+        }
 
         protected void Unnamed1_Click1(object sender, EventArgs e)
         {

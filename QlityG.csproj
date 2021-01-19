@@ -194,6 +194,7 @@
     <Content Include="Account\email icon.png" />
     <Content Include="Account\Forgot.aspx" />
     <Content Include="Account\google image.jpg" />
+    <Content Include="Account\google.png" />
     <Content Include="Account\Lockout.aspx" />
     <Content Include="Account\Logins.aspx" />
     <Content Include="Account\LoginStyle.css" />
@@ -734,7 +735,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties content_4bootstrap-theme_1min_1css_1map__JsonSchema="" content_4bootstrap_1css_1map__JsonSchema="" />
+      <UserProperties content_4bootstrap_1css_1map__JsonSchema="" content_4bootstrap-theme_1min_1css_1map__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

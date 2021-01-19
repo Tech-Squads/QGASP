@@ -10,7 +10,15 @@
     <script src="https://apis.google.com/js/platform.js"></script>
 
          <style type="text/css">
-
+                  .gmailbutton {
+            background-color:white;
+            color: black;
+            font-style:normal;
+            border-color:white;
+            box-shadow:inherit;
+           
+        
+        }
 
              .input-icons i { 
             position: absolute; 
@@ -195,16 +203,19 @@
               </i> 
                  <asp:TextBox runat="server" ID="txtConfirmPassword" TextMode="Password" CssClass="btn btn-default" placeholder="Confirm-Password" Width="340px" Height="40px" />
             </div> 
-                 <asp:Button runat="server" Text="Register" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" OnClick="Unnamed1_Click1"   /><br />
+                 <asp:Button runat="server" Text="Register" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" OnClick="Unnamed1_Click1" ValidationGroup="Group1"  /><br />
                <br />
                  <p>OR</p>
                
-                   <div  class="g-signin2" data-width="370" data-height="50" data-longtitle="true"></div>
+                  <%-- <div  class="g-signin2" data-width="370" data-height="50" data-longtitle="true"></div>--%>
+                            
                 
-       
-          
-                
+                   <div class="input-icons"> 
 
+                
+             <%-- <asp:ImageButton ID="ImageButton1" ImageUrl="google.png"   AlternateText="No Image available"  runat="server" height="40px" width="40px" OnClick="ImageButton1_Click" />--%>
+               <img src="google.png" style="height:40px;width:40px;" /><asp:Button ID="btnLogin" runat="server" Text="Register with Gmail" CssClass="gmailbutton" Height="40px" width="320px"  OnClick="btnLogin_Click" />
+            </div> 
 
                  <asp:Label ID="errormesage" runat="server" Text=""></asp:Label>
                   
@@ -240,20 +251,25 @@
              
               <div style="text-align:center">
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
+                        ValidationGroup="Group1" 
                         BackColor="white"
                          CssClass="text-danger" ErrorMessage="The Email field is required*" />
                   </div>
               <div style="text-align:center">
                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword"
+                    ValidationGroup="Group1"
                        BackColor="white"
                CssClass="text-danger" ErrorMessage="The Password field is required*" />
                   </div>
               <div style="text-align:center">
                        <asp:RequiredFieldValidator runat="server" ControlToValidate="txtConfirmPassword"
+                           ValidationGroup="Group1" 
                            BackColor="white"
              CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required*" />
                </div> 
          </div>
+
+         
       
     <br /></div>
   <footer id="footer">
