@@ -10,8 +10,19 @@
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://apis.google.com/js/platform.js"></script>
          <style type="text/css">
+
+              .gmailbutton {
+            background-color:white;
+            color: gray;
+            font-style:normal;
+            border-color:white;
+          
+            font-family:Calibri Light;
+           font-size:20px;
+        
+        }
                 #heade{
-                 background-color:lightgray;
+                 background-color:lavender;
                  height:70px;
                
  
@@ -98,7 +109,7 @@
                  /*  border:1px solid red;*/
                  width: 100%;
                  height: 800px;
-                 background-color:lightgrey;
+                 background-color:lavender;
                 /* background: url(/assets/images/1.jpg) no-repeat center center fixed;*/
           
                  
@@ -145,10 +156,13 @@
       <div id="logo" class="pull-left" style=" position:fixed;left:40px;"> <a href="../Homepage/Homepage.aspx"><img src="../Account/QlityGigs_Log.png" />
           </a>   
       </div>
-
+        
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-      
+       <li>
+                         <%-- <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Register as a new user</asp:HyperLink>--%>
+                        <a href="Registeres.aspx" style="color:blue">Register as a new user</a>
+         </li>
      
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -188,23 +202,19 @@
                  <p style="position:relative;top:10px;">
                  
                      <a href="passwordreset.aspx" style="color:green;">Reset password</a>
-                 </p>
-                 <p>
-                         <%-- <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Register as a new user</asp:HyperLink>--%>
-                        <a href="Registeres.aspx">Register as a new user</a>
-                        </p>
+                 </p><br />
+                
                  <p>OR</p>
+                 <asp:Label ID="lblcheck" runat="server" Text=""></asp:Label>
                
-                   <div  class="g-signin2" data-width="370" data-height="50" data-longtitle="true"></div>
-            <%--  <script>
-                  function onSignIn(googleUser) {
-                      var profile = googleUser.getBasicProfile();
-                      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-                      console.log('Name: ' + profile.getName());
-                      console.log('Image URL: ' + profile.getImageUrl());
-                      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-                  }
-              </script>--%>
+        <div class="input-icons"> 
+
+                
+
+               <img src="google.png" style="height:40px;width:40px;" /><asp:Button ID="btnLogin" runat="server" Text="Sign in with google account" CssClass="gmailbutton" Height="40px" width="320px"   />
+                      
+                     
+                   </div> 
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" ></script>
 

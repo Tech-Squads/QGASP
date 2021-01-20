@@ -25,7 +25,7 @@ namespace QlityG.Account
         UserModel u;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblcheck.Text = (string)Session["users"];
         }
 
         protected void Unnamed1_Click(object sender, EventArgs e)

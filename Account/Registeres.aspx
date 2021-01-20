@@ -12,11 +12,12 @@
          <style type="text/css">
                   .gmailbutton {
             background-color:white;
-            color: black;
+            color: gray;
             font-style:normal;
             border-color:white;
-            box-shadow:inherit;
-           
+          
+            font-family:Calibri Light;
+           font-size:20px;
         
         }
 
@@ -214,8 +215,13 @@
 
                 
              <%-- <asp:ImageButton ID="ImageButton1" ImageUrl="google.png"   AlternateText="No Image available"  runat="server" height="40px" width="40px" OnClick="ImageButton1_Click" />--%>
-               <img src="google.png" style="height:40px;width:40px;" /><asp:Button ID="btnLogin" runat="server" Text="Register with Gmail" CssClass="gmailbutton" Height="40px" width="320px"  OnClick="btnLogin_Click" />
-            </div> 
+               <img src="google.png" style="height:40px;width:40px;" /><asp:Button ID="btnLogin" runat="server" Text="Join using google account" CssClass="gmailbutton" Height="40px" width="320px"  OnClick="btngoogleReg_Click" />
+                      
+                     
+                   </div> 
+                 <asp:Label ID="lbllemails" runat="server" Text="" ></asp:Label>
+                 
+
 
                  <asp:Label ID="errormesage" runat="server" Text=""></asp:Label>
                   

@@ -9,9 +9,9 @@
          <style type="text/css">
                 #heade{
                  background-color:black;
-                 height:60px;
-               
- 
+                 height:68px;
+             width:100%;
+                    
              }
        
     .button
@@ -114,19 +114,20 @@
   <!--==========================
     Header
   ============================-->
-  <header id="heade">
+  <header id="header">
+      <div id="heade" style="position:fixed;top:2px;">
     <div class="container-fluid">
         
-      <div id="logo" class="pull-left" style=" position:relative;left:50px;top:8px;"> <img src="../Account/QlityGigs_Log.png" />
+      <div id="logo" class="pull-left" style=" position:relative;left:10px;top:10px;"> <img src="../Account/QlityGigs_Log.png" />
        
       
       </div>
 
       <nav id="nav-menu-container">
-        <ul class="nav-menu" style=" position:relative;right:10px;top:15px;">
+        <ul class="nav-menu" style=" position:relative;right:10px;top:20px;">
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#howitworks">How it works</a></li>
       
           <li class="menu-has-children" style="background-color:cadetblue;border-radius:5px;"><a href="../Account/Registeres.aspx">Join</a></>
          
@@ -135,6 +136,8 @@
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
+
+          </div>
   </header><!-- #header -->
 
   <!--==========================
@@ -287,11 +290,11 @@
     <!--==========================
       Services Section
     ============================-->
-    <section id="services">
+    <section id="howitworks">
       <div class="container">
 
         <header class="section-header wow fadeInUp">
-          <h3>Services</h3>
+          <h3>How it works</h3>
           <p></p>
         </header>
 
@@ -347,7 +350,7 @@
     <!--==========================
       Skills Section
     ============================-->
-    <section id="skills">
+   <%-- <section id="skills">
       <div class="container">
 
         <header class="section-header">
@@ -379,7 +382,7 @@
         </div>
 
       </div>
-    </section>
+    </section>--%>
 
     <!--==========================
       Facts Section
@@ -589,7 +592,7 @@
     <!--==========================
       Clients Section
     ============================-->
-    <section id="clients" class="wow fadeInUp">
+   <%-- <section id="clients" class="wow fadeInUp">
       <div class="container">
 
         <header class="section-header">
@@ -608,7 +611,7 @@
         </div>
 
       </div>
-    </section><!-- #clients -->
+    </section>--%><!-- #clients -->
 
     <section id="contact" class="section-bg wow fadeInUp">
       <div class="container">
