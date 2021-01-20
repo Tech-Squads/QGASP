@@ -215,19 +215,13 @@
          <label for="form_name">Select a skill *</label> <br />
          </div>
          </div>
-            <asp:TextBox ID="SkSkillsRequired" CssClass="btn btn-default"  runat="server"  /Width="50px" Height="300px"/><br /> 
-             <      
+            <asp:TextBox ID="SkillsRequired" CssClass="btn btn-default"  runat="server"  Width="50px" Height="300px"/><br /> 
+            
  <script>
-           //$('#tags').inputTags();
-
-         <%--  $('#<%=TextBox1.ClientID%>').inputTags({
-               tags: ['java','cirlce'],
-               max:8
-           }
-           );--%>
+        
 
 
-           $('#SkillsRequired').inputTags({
+     $('#SkillsRequired').inputTags({
                autocomplete: {
                    values: ['jQuery', 'Java', 'C++', 'Javascript', 'C#', 'ReactJs', 'ReactJs ', 'Sql', 'React', 'MongoDb', 'Html5', 'CSS', 'Bootstrap'],
                    only: false
@@ -238,7 +232,7 @@
                }
            });
 
-       </script>
+ </script>
 
         <br />
            <div class="form-group">
