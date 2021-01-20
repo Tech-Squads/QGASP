@@ -207,18 +207,17 @@
     <Content Include="Account\QlityGigs_Logo_Transparent.png" />
     <Content Include="Account\Registeres.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\resetemailform.aspx" />
     <Content Include="Account\ResetPassword.aspx" />
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\th.jpg" />
     <Content Include="assets\images\1.jpg" />
     <Content Include="CreateGig.aspx" />
-    <Content Include="CreatingGig.aspx" />
     <Content Include="GiggerDash.aspx" />
     <Content Include="GiggerDashboard.aspx" />
     <Content Include="RequestorDash.aspx" />
     <Content Include="RequestorDashboard.aspx" />
     <Content Include="SelectingType.aspx" />
-    <Content Include="Account\SelectType.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="assets\css\aos\aos.css" />
@@ -536,6 +535,13 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Account\resetemailform.aspx.cs">
+      <DependentUpon>resetemailform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\resetemailform.aspx.designer.cs">
+      <DependentUpon>resetemailform.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\ResetPassword.aspx.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -556,13 +562,6 @@
     </Compile>
     <Compile Include="CreateGig.aspx.designer.cs">
       <DependentUpon>CreateGig.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CreatingGig.aspx.cs">
-      <DependentUpon>CreatingGig.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CreatingGig.aspx.designer.cs">
-      <DependentUpon>CreatingGig.aspx</DependentUpon>
     </Compile>
     <Compile Include="GiggerDash.aspx.cs">
       <DependentUpon>GiggerDash.aspx</DependentUpon>
@@ -599,13 +598,6 @@
     </Compile>
     <Compile Include="SelectingType.aspx.designer.cs">
       <DependentUpon>SelectingType.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\SelectType.aspx.cs">
-      <DependentUpon>SelectType.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\SelectType.aspx.designer.cs">
-      <DependentUpon>SelectType.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
       <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
@@ -735,7 +727,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties content_4bootstrap_1css_1map__JsonSchema="" content_4bootstrap-theme_1min_1css_1map__JsonSchema="" />
+      <UserProperties content_4bootstrap-theme_1min_1css_1map__JsonSchema="" content_4bootstrap_1css_1map__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -45,7 +45,7 @@ namespace QlityG
         }
 
 
-        protected void Unnamed1_Click(object sender, EventArgs e)
+        protected void selectrequestor_Click(object sender, EventArgs e)
         {
             u.FirstLogin = "ACTIVE";
             u.uType = 2;
@@ -60,15 +60,15 @@ namespace QlityG
                 Session["userID"] = u.UserID;
                 Session["uType"] = "Req";
                 Response.Redirect("~/RequestorDashboard");
-                //Response.Redirect("~/RequestorProfile");
+                
             }
             Response.Redirect("~/SelectingType.aspx");
 
         }
 
-        protected void Unnamed2_Click(object sender, EventArgs e)
+        protected void selectgigger_Click(object sender, EventArgs e)
         {
-            u.FirstLogin = "v";
+            u.FirstLogin = "ACTIVE";
             u.uType = 1;
 
             string data = JsonConvert.SerializeObject(u);
@@ -79,9 +79,9 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 Session["userID"] = u.UserID;
-                Session["uType"] = u.uType;
-                //Response.Redirect("~/GiggerProfile");
-                Response.Redirect("~/GiggerDash");
+                Session["uType"] = u.uType;             
+                Response.Redirect("~/GiggerDashboard");
+
             }
             Response.Redirect("~/SelectingType.aspx");
 

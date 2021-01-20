@@ -197,11 +197,11 @@
                  <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" CssClass="btn btn-default" placeholder="Password"  Width="340px" Height="40px"/>
             </div>
                
-                  <asp:Button runat="server" Text="Log in" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" OnClick="Unnamed1_Click" />
+                  <asp:Button runat="server" Text="Log in" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" OnClick="login_Click" />
             <br /> 
                  <p style="position:relative;top:10px;">
                  
-                     <a href="passwordreset.aspx" style="color:green;">Reset password</a>
+                     <a href="resetemailform.aspx" style="color:green;">Reset password</a>
                  </p><br />
                 
                  <p>OR</p>
@@ -231,14 +231,7 @@
                  <asp:Label ID="ErrorMsg" runat="server" Text=""></asp:Label>
                  
                     <%--<a href="#" onclick="signOut();">Sign out</a>--%>
-<script>
-    function signOut() {
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function () {
-            console.log('User signed out.');
-        });
-    }
-</script>
+
 
 
                  </div> 

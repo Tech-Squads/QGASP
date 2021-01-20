@@ -148,8 +148,7 @@
   <!-- Main Stylesheet File -->
    <link href="~/Homepage/css/style.css" rel="stylesheet" />
       <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    
-</head>
+    </head>
 <body>
  <form id="form1" runat="server">
   <!--==========================
@@ -216,9 +215,9 @@
          <label for="form_name">Select a skill *</label> <br />
          </div>
          </div>
-            <asp:TextBox ID="SkillsRequired" CssClass="btn btn-default"  runat="server" Width="50px" Height="300px" /><br /> 
-            
-       <script>
+            <asp:TextBox ID="SkSkillsRequired" CssClass="btn btn-default"  runat="server"  /Width="50px" Height="300px"/><br /> 
+             <      
+ <script>
            //$('#tags').inputTags();
 
          <%--  $('#<%=TextBox1.ClientID%>').inputTags({
@@ -230,7 +229,7 @@
 
            $('#SkillsRequired').inputTags({
                autocomplete: {
-                   values: ['jQuery', 'Java', 'C++', 'Javascript', 'C#', 'ReactJs' , 'ReactJs ' ,'Sql' ,'React' ,'MongoDb' ,'Html5' ,'CSS' ,'Bootstrap'],
+                   values: ['jQuery', 'Java', 'C++', 'Javascript', 'C#', 'ReactJs', 'ReactJs ', 'Sql', 'React', 'MongoDb', 'Html5', 'CSS', 'Bootstrap'],
                    only: false
                },
                max: 8,
@@ -240,7 +239,6 @@
            });
 
        </script>
-
 
         <br />
            <div class="form-group">
@@ -262,7 +260,7 @@
 
          <div class="form-group">
           <div class="col-md-offset-2 col-md-8"><br /> 
-        <asp:Button runat="server" id="AddGig" CssClass="btn btn-default" Text="Create"  BorderColor ="Blue" ForeColor="Green" OnClick="AddGig_Click"  />
+        <asp:Button runat="server" id="AddGig" CssClass="btn btn-default" Text="Create"  BorderColor ="Blue" ForeColor="Green"   OnClick="AddGig_Click"/>
            </div>
            </div>
              
@@ -318,8 +316,7 @@
   <script src="/Homepage/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
   <!-- Contact Form JavaScript File -->
   <script src="/Homepage/contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
+    <!-- Template Main Javascript File -->
   <script src="/Homepage/js/main.js"></script>
  </form>
 </body>

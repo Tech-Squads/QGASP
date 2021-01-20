@@ -51,9 +51,9 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 Session["userID"] = u.UserID;
-                Response.Redirect("~/Homepage/Homepage");
+                Response.Redirect("~/GiggerDashboard");
             }
-            Response.Redirect("~/GiggerProfile");
+            //Response.Redirect("~/GiggerProfile");
         }
 
         protected void Update_Click(object sender, EventArgs e)
@@ -82,9 +82,9 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 Session["userID"] = u.UserID;
-                Response.Redirect("~/GiggerDash");
+                Response.Redirect("~/GiggerDashboard");
             }
-            Response.Redirect("~/GiggerProfile");
+            //Response.Redirect("~/GiggerProfile");
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -124,10 +124,10 @@ namespace QlityG
                         string objectPro = res.Content.ReadAsStringAsync().Result;
 
                         profile = new UProfile(JsonConvert.DeserializeObject<UProfile>(objectPro));
+                        DropDownListCountry.Text = countries.Text;
 
 
-                        DropDownListCountry.Text = profile.uCountry;
-            txtEducation.Text = profile.uEducation;
+                        txtEducation.Text = profile.uEducation;
             FirstName.Text = profile.uName;
             LastName.Text = profile.uSurname;
             //txtSkills.Text = profile.uSkills;
@@ -147,7 +147,7 @@ namespace QlityG
 }
 
 
-            //txtEmail.Text = u.uEmail;
+           
 
 
         }

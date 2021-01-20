@@ -204,7 +204,7 @@
               </i> 
                  <asp:TextBox runat="server" ID="txtConfirmPassword" TextMode="Password" CssClass="btn btn-default" placeholder="Confirm-Password" Width="340px" Height="40px" />
             </div> 
-                 <asp:Button runat="server" Text="Register" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" OnClick="Unnamed1_Click1" ValidationGroup="Group1"  /><br />
+                 <asp:Button runat="server" Text="Register" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" OnClick="register_Click" ValidationGroup="Group1"  /><br />
                <br />
                  <p>OR</p>
                

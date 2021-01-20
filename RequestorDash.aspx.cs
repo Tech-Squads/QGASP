@@ -122,10 +122,10 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 Session["userID"] = u.UserID;
-                //Response.Redirect("~/CreateGig");
+                
                 Response.Redirect("~/RequestorDashboard");
             }
-            Response.Redirect("~/RequestorProfile");
+       
         }
     }
 }

@@ -79,7 +79,7 @@ namespace QlityG.Account
         }
             protected void Page_Load(object sender, EventArgs e)
         {
-            //lblemailing.Text = (string)Session["emailing"];
+           
 
             if (!IsPostBack)
             {
@@ -145,7 +145,7 @@ namespace QlityG.Account
         {
             client.BaseAddress = baseAddress;
 
-            string clientid = "51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com";
+            //string clientid = "51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com";
             //string clientsecret = "OjY8rLlKgre3QmlDjmyeNifl";
 
             string redirection_url = "https://localhost:44329/Account/Logins.aspx";
@@ -172,7 +172,7 @@ namespace QlityG.Account
 
      
 
-        protected void Unnamed1_Click1(object sender, EventArgs e)
+        protected void register_Click(object sender, EventArgs e)
         {
             client.BaseAddress = baseAddress;
 

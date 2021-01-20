@@ -78,6 +78,15 @@ namespace QlityG
         protected global::System.Web.UI.WebControls.DropDownList DropDownListCountry;
 
         /// <summary>
+        /// countries control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox countries;
+
+        /// <summary>
         /// txtPastProjectName control.
         /// </summary>
         /// <remarks>

@@ -175,11 +175,11 @@
                  <h4>Continue as</h4><br />
           
              
-                 <asp:Button runat="server" Text="Requestor" class="buttn"  CssClass="btn btn-default" Backcolor="lightgray" BorderColor="red" ForeColor="black" Width="340px" Font-Size="Large" Height="40px" OnClick="Unnamed1_Click"   /><br />             
+                 <asp:Button runat="server" Text="Requestor" class="buttn"  CssClass="btn btn-default" Backcolor="lightgray" BorderColor="red" ForeColor="black" Width="340px" Font-Size="Large" Height="40px" OnClick="selectrequestor_Click"   /><br />             
                  <br />
 
                  <p>OR</p>
-                  <asp:Button runat="server" Text="Gigger" CssClass="btn btn-default" Backcolor="lightgray" BorderColor="red" ForeColor="black" Width="340px"    Font-Size="Large" Height="40px" OnClick="Unnamed2_Click"   /><br />  <br />             
+                  <asp:Button runat="server" Text="Gigger" CssClass="btn btn-default" Backcolor="lightgray" BorderColor="red" ForeColor="black" Width="340px"    Font-Size="Large" Height="40px" OnClick="selectgigger_Click"   /><br />  <br />             
                 <label id="ErrorM" runat="server" visible="false"> Something went wrong please load page again!</label>
 
 
