@@ -186,7 +186,7 @@
             <div class="input-icons"> 
                 <i class="fa fa-envelope icon"> 
               </i> 
-                 <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" />
+                 <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" required="required"/>
 
             </div> 
   
@@ -194,14 +194,15 @@
                 <i class="fa fa-key icon"> 
               </i> 
                
-                 <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" CssClass="btn btn-default" placeholder="Password"  Width="340px" Height="40px"/>
+                 <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" CssClass="btn btn-default" placeholder="Password"  Width="340px" Height="40px" required="required"/>
             </div>
                
                   <asp:Button runat="server" Text="Log in" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" OnClick="login_Click" />
             <br /> 
                  <p style="position:relative;top:10px;">
                  
-                     <a href="resetemailform.aspx" style="color:green;">Reset password</a>
+                   
+                     <a href="passwordreset.aspx" style="color:green;">Reset password</a>
                  </p><br />
                 
                  <p>OR</p>
@@ -218,11 +219,7 @@
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" ></script>
 
-                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
-                          CssClass="text-danger" ErrorMessage="The email field is required." /><br />
-
-                  <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword" 
-                           CssClass="text-danger" ErrorMessage="The password field is required." /><br />
+                <br />
                  <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
                         <p class="text-danger">
                             <asp:Literal runat="server" ID="FailureText" />
@@ -230,9 +227,7 @@
                     </asp:PlaceHolder>
                  <asp:Label ID="ErrorMsg" runat="server" Text=""></asp:Label>
                  
-                    <%--<a href="#" onclick="signOut();">Sign out</a>--%>
-
-
+        
 
                  </div> 
           

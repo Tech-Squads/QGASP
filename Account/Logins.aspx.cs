@@ -25,7 +25,7 @@ namespace QlityG.Account
         UserModel u;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //lblcheck.Text = (string)Session["users"];
+            
         }
 
         protected void login_Click(object sender, EventArgs e)
@@ -74,15 +74,27 @@ namespace QlityG.Account
                         if (LoggedUser.uType == 2)
                         {
 
-                            Session["email"] = LoggedUser.uEmail;
+                       
                             Session["UserID"] = LoggedUser.UserID;
 
                             Session["HasGig"] = LoggedUser.HasGig;
                             
                           
-                            Response.Redirect("/RequestorDash.aspx");
+                            Response.Redirect("/RequestorDashboard.aspx");
 
                         }
+                        if (LoggedUser.uType == 1)
+                        {
+
+                            Session["UserID"] = LoggedUser.UserID;
+
+                            Session["HasGig"] = LoggedUser.HasGig;
+
+
+                            Response.Redirect("/GiggerDashboard.aspx");
+
+                        }
+
                     }
                     
 

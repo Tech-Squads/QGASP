@@ -30,7 +30,6 @@ namespace QlityG
             pro.uPastProjectDetails = txtPastProjectDetails.Text;
             pro.uEducation = txtEducation.Text;
             pro.uReferences = txtReferences.Text;
-            //pro.uSkills = txtSkills.Text;
             pro.uCountry = DropDownListCountry.Text;
             pro.uName = FirstName.Text;
             pro.uSurname = LastName.Text;
@@ -50,10 +49,10 @@ namespace QlityG
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["userID"] = u.UserID;
+                Session["UserID"] = u.UserID;
                 Response.Redirect("~/GiggerDashboard");
             }
-            //Response.Redirect("~/GiggerProfile");
+           Response.Redirect("~/GiggerDash");
         }
 
         protected void Update_Click(object sender, EventArgs e)
@@ -64,9 +63,7 @@ namespace QlityG
             profile.uPastProjectDetails = txtPastProjectDetails.Text;
             profile.uEducation = txtEducation.Text;
             profile.uReferences = txtReferences.Text;
-            //profile.uSkills = txtSkills.Text;
             profile.uCountry = DropDownListCountry.Text;
-          
             profile.uSurname = LastName.Text;
           
 
@@ -81,10 +78,10 @@ namespace QlityG
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["userID"] = u.UserID;
+                Session["UserID"] = u.UserID;
                 Response.Redirect("~/GiggerDashboard");
             }
-            //Response.Redirect("~/GiggerProfile");
+            Response.Redirect("~/GiggerDash");
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -101,11 +98,11 @@ namespace QlityG
             Edit.Enabled = false;
             client.BaseAddress = baseAddress;
 
-            int userID = (int)Session["UserID"];
+            int userID =Convert.ToInt32(Session["UserID"]);
 
             if (userID.Equals(null))
             {
-                Response.Redirect("~/Account/Login");
+                Response.Redirect("~/Account/Logins");
             }
 
             HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + userID).Result;
@@ -124,13 +121,11 @@ namespace QlityG
                         string objectPro = res.Content.ReadAsStringAsync().Result;
 
                         profile = new UProfile(JsonConvert.DeserializeObject<UProfile>(objectPro));
-                        DropDownListCountry.Text = countries.Text;
-
-
-                        txtEducation.Text = profile.uEducation;
+                       
+            DropDownListCountry.Text = profile.uCountry;
+            txtEducation.Text = profile.uEducation;
             FirstName.Text = profile.uName;
             LastName.Text = profile.uSurname;
-            //txtSkills.Text = profile.uSkills;
             txtReferences.Text = profile.uReferences;
             txtPastProjectName.Text = profile.uPastProjectName;
             txtPastProjectDuration.Text = profile.uPastProjectDuration;
@@ -145,9 +140,6 @@ namespace QlityG
 {
     ErrorM.Visible = true;
 }
-
-
-           
 
 
         }

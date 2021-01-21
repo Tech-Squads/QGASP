@@ -243,7 +243,7 @@
                  <asp:DropDownList ID="DropDownListCountry" runat="server"  CssClass="form-control" />
                      <asp:RequiredFieldValidator runat="server" ControlToValidate="DropDownListCountry"
                     CssClass="text-danger" ErrorMessage="Please Select the country !" />
-                        <asp:TextBox runat="server" ID="countries" CssClass="form-control"  /><br />
+                     
                      <br />
             </div>                
             </div>

@@ -187,13 +187,13 @@
             <div class="input-icons"> 
                 <i class="fa fa-envelope icon"> 
               </i> 
-                <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" />
+                <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" required="required" />
             </div> 
   
             <div class="input-icons"> 
                 <i class="fa fa-key icon"> 
               </i> 
-                 <asp:TextBox runat="server" ID="txtPassword" TextMode="Password"  CssClass="btn btn-default" placeholder="New Password" Width="340px" Height="40px"/>
+                 <asp:TextBox runat="server" ID="txtPassword" TextMode="Password"  CssClass="btn btn-default" placeholder="New Password" Width="340px" Height="40px" required="required"/>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" 
                     runat="server" ErrorMessage=""
                    ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
@@ -208,13 +208,13 @@
                <br />
                  <p>OR</p>
                
-                  <%-- <div  class="g-signin2" data-width="370" data-height="50" data-longtitle="true"></div>--%>
+           
                             
                 
                    <div class="input-icons"> 
 
                 
-             <%-- <asp:ImageButton ID="ImageButton1" ImageUrl="google.png"   AlternateText="No Image available"  runat="server" height="40px" width="40px" OnClick="ImageButton1_Click" />--%>
+            
                <img src="google.png" style="height:40px;width:40px;" /><asp:Button ID="btnLogin" runat="server" Text="Join using google account" CssClass="gmailbutton" Height="40px" width="320px"  OnClick="btngoogleReg_Click" />
                       
                      
@@ -254,25 +254,7 @@
 
                      </div>
 
-             
-              <div style="text-align:center">
-                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
-                        ValidationGroup="Group1" 
-                        BackColor="white"
-                         CssClass="text-danger" ErrorMessage="The Email field is required*" />
-                  </div>
-              <div style="text-align:center">
-               <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword"
-                    ValidationGroup="Group1"
-                       BackColor="white"
-               CssClass="text-danger" ErrorMessage="The Password field is required*" />
-                  </div>
-              <div style="text-align:center">
-                       <asp:RequiredFieldValidator runat="server" ControlToValidate="txtConfirmPassword"
-                           ValidationGroup="Group1" 
-                           BackColor="white"
-             CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required*" />
-               </div> 
+        
          </div>
 
          
