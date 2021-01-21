@@ -20,16 +20,16 @@ namespace QlityG.Account
 
         HttpClient client = new HttpClient();
 
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        Uri baseAddress = new Uri(Utils.USendRL);
 
         UserModel u;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void login_Click(object sender, EventArgs e)
-        {    
+        {
 
             client.BaseAddress = baseAddress;
             uEmail = txtEmail.Text.Trim().ToUpper();
@@ -53,54 +53,48 @@ namespace QlityG.Account
                 if (LoggedUser == null)
                 {
                     ErrorMessage.Visible = true;
-
                 }
                 else
                 {
-
-                    if (LoggedUser.FirstLogin == "True")
+                    switch (LoggedUser.FirstLogin)
                     {
-
-                        Session["email"] = LoggedUser.uEmail;
-                        Session["UserID"] = LoggedUser.UserID;
-
-                        Session["HasGig"] = LoggedUser.HasGig;
-                        
-                        Response.Redirect("/SelectingType.aspx");
-
-                    }
-                    else
-                    {
-                        if (LoggedUser.uType == 2)
-                        {
-
-                       
+                        case "True":
                             Session["UserID"] = LoggedUser.UserID;
+                            Response.Redirect("~/SelectingType.aspx");
+                            break;
 
-                            Session["HasGig"] = LoggedUser.HasGig;
-                            
-                          
-                            Response.Redirect("/RequestorDashboard.aspx");
+                        case "ACTIVE":
+                            if (LoggedUser.uType == 1)
+                            {
+                                Session["UserID"] = LoggedUser.UserID;
+                                Response.Redirect("~/GiggerDash.aspx");
+                            }
+                            else if (LoggedUser.uType == 2)
+                            {
+                                Session["UserID"] = LoggedUser.UserID;
+                                Response.Redirect("~/RequestorDash.aspx");
+                            }
 
-                        }
-                        if (LoggedUser.uType == 1)
-                        {
+                            break;
 
-                            Session["UserID"] = LoggedUser.UserID;
-
-                            Session["HasGig"] = LoggedUser.HasGig;
-
-
-                            Response.Redirect("/GiggerDashboard.aspx");
-
-                        }
-
+                        case "False":
+                            if (LoggedUser.uType == 1)
+                            {
+                                Session["UserID"] = LoggedUser.UserID;
+                                Response.Redirect("~/GiggerDashboard.aspx");
+                            }
+                            else if (LoggedUser.uType == 2)
+                            {
+                                Session["UserID"] = LoggedUser.UserID;
+                                Response.Redirect("~/RequestorDashboard.aspx");
+                            }
+                            break;
+                        default:
+                            break;
                     }
-                    
-
 
                 }
-                
+
             }
             else
             {

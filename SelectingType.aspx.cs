@@ -16,7 +16,8 @@ namespace QlityG
     {
         UserModel u;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        Uri baseAddress = new Uri(Utils.USendRL);
+        int UserID;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,8 +28,8 @@ namespace QlityG
                 Response.Redirect("~/Account/Login");
             }
 
-            int userID = (int)Session["UserID"];
-            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + userID).Result;
+            UserID = Convert.ToInt32(Session["UserID"]);
+            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + UserID).Result;
 
             if (resp.IsSuccessStatusCode)
             {
@@ -52,15 +53,13 @@ namespace QlityG
 
             string data = JsonConvert.SerializeObject(u);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + u.UserID, content).Result;
+            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + UserID, content).Result;
 
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["userID"] = u.UserID;
-                Session["uType"] = "Req";
+                Session["UserID"] = UserID;
                 Response.Redirect("~/RequestorDashboard");
-                
             }
             Response.Redirect("~/SelectingType.aspx");
 
@@ -73,15 +72,13 @@ namespace QlityG
 
             string data = JsonConvert.SerializeObject(u);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + u.UserID, content).Result;
+            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + UserID, content).Result;
 
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["userID"] = u.UserID;
-                Session["uType"] = u.uType;             
+                Session["UserID"] = UserID;
                 Response.Redirect("~/GiggerDashboard");
-
             }
             Response.Redirect("~/SelectingType.aspx");
 

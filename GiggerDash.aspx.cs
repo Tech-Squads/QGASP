@@ -13,18 +13,17 @@ namespace QlityG
 {
     public partial class GiggerDash : System.Web.UI.Page
     {
-
-
         UserModel u;
         UProfile pro, profile;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri("https://localhost:44364");
+        Uri baseAddress = new Uri(Utils.USendRL);
+        int UserID;
+
 
         protected void Create_Click(object sender, EventArgs e)
         {
-
             pro = new UProfile();
-            pro.userID = u.UserID;
+            pro.userID = UserID;
             pro.uPastProjectName = txtPastProjectName.Text;
             pro.uPastProjectDuration = txtPastProjectDuration.Text;
             pro.uPastProjectDetails = txtPastProjectDetails.Text;
@@ -44,20 +43,20 @@ namespace QlityG
 
             string uData = JsonConvert.SerializeObject(u);
             StringContent uContent = new StringContent(uData, Encoding.UTF8, "application/json");
-            HttpResponseMessage respnse = client.PutAsync(client.BaseAddress + "/UpdateUser/" + u.UserID, uContent).Result;
+            HttpResponseMessage respnse = client.PutAsync(client.BaseAddress + "/UpdateUser/" + UserID, uContent).Result;
 
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["UserID"] = u.UserID;
+                Session["UserID"] = UserID;
                 Response.Redirect("~/GiggerDashboard");
             }
-           Response.Redirect("~/GiggerDash");
+            Response.Redirect("~/GiggerDash");
         }
 
         protected void Update_Click(object sender, EventArgs e)
         {
-            profile.userID = u.UserID;
+            profile.userID = UserID;
             profile.uPastProjectName = txtPastProjectName.Text;
             profile.uPastProjectDuration = txtPastProjectDuration.Text;
             profile.uPastProjectDetails = txtPastProjectDetails.Text;
@@ -65,16 +64,10 @@ namespace QlityG
             profile.uReferences = txtReferences.Text;
             profile.uCountry = DropDownListCountry.Text;
             profile.uSurname = LastName.Text;
-          
 
             string data = JsonConvert.SerializeObject(profile);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUProfile/" + u.UserID, content).Result;
-
-
-
-
-
+            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUProfile/" + UserID, content).Result;
 
             if (resp.IsSuccessStatusCode)
             {
@@ -98,14 +91,14 @@ namespace QlityG
             Edit.Enabled = false;
             client.BaseAddress = baseAddress;
 
-            int userID =Convert.ToInt32(Session["UserID"]);
+            UserID = Convert.ToInt32(Session["UserID"]);
 
-            if (userID.Equals(null))
+            if (UserID.Equals(null))
             {
-                Response.Redirect("~/Account/Logins");
+                Response.Redirect("~/Account/Login");
             }
 
-            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + userID).Result;
+            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + UserID).Result;
 
             if (resp.IsSuccessStatusCode)
             {
@@ -115,36 +108,38 @@ namespace QlityG
                 if (u.FirstLogin == "False")
                 {
                     Edit.Enabled = true;
-                    HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserProfile/" + u.UserID).Result;
+                    Update.Visible = false;
+                    HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserProfile/" + UserID).Result;
                     if (res.IsSuccessStatusCode)
                     {
                         string objectPro = res.Content.ReadAsStringAsync().Result;
-
                         profile = new UProfile(JsonConvert.DeserializeObject<UProfile>(objectPro));
-                       
-            DropDownListCountry.Text = profile.uCountry;
-            txtEducation.Text = profile.uEducation;
-            FirstName.Text = profile.uName;
-            LastName.Text = profile.uSurname;
-            txtReferences.Text = profile.uReferences;
-            txtPastProjectName.Text = profile.uPastProjectName;
-            txtPastProjectDuration.Text = profile.uPastProjectDuration;
-            txtPastProjectDetails.Text = profile.uPastProjectDetails;
-            txtcompany.Text = profile.uCompany;
-        }
+                        DropDownListCountry.Text = profile.uCountry;
+                        txtEducation.Text = profile.uEducation;
+                        FirstName.Text = profile.uName;
+                        LastName.Text = profile.uSurname;
+                        txtReferences.Text = profile.uReferences;
+                        txtPastProjectName.Text = profile.uPastProjectName;
+                        txtPastProjectDuration.Text = profile.uPastProjectDuration;
+                        txtPastProjectDetails.Text = profile.uPastProjectDetails;
+                        txtcompany.Text = profile.uCompany;
+                    }
+                    else
+                    {
+                        //Enable the edit profile button so they can change their existing profile or force them to update/create it
+                    }
 
-    }
-    Update.Enabled = true;
+                }
+                //Edit.Visible = false;
+                Update.Enabled = true;
             }
             else
-{
-    ErrorM.Visible = true;
-}
-
+            {
+                ErrorM.Visible = true;
+            }
 
         }
 
     }
 
-       
-    }
+}

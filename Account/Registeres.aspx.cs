@@ -27,7 +27,7 @@ namespace QlityG.Account
         string url = "https://accounts.google.com/o/oauth2/token";
 
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        Uri baseAddress = new Uri(Utils.USendRL);
 
         UserModel user;
         string email, password ,googlemail;
