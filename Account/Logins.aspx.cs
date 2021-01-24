@@ -47,15 +47,16 @@ namespace QlityG.Account
             if (resp.IsSuccessStatusCode)
             {
                 string data = resp.Content.ReadAsStringAsync().Result;
-                UserModel LoggedUser = new UserModel(JsonConvert.DeserializeObject<UserModel>(data));
-
-
-                if (LoggedUser == null)
+                if(data == "null")
                 {
-                    ErrorMessage.Visible = true;
+                    ErrorMsg.Text = "Incorrect Email and Password!.";
+                    ErrorMsg.Visible = true;
                 }
                 else
                 {
+
+                    UserModel LoggedUser = new UserModel(JsonConvert.DeserializeObject<UserModel>(data));
+
                     switch (LoggedUser.FirstLogin)
                     {
                         case "True":
@@ -89,16 +90,16 @@ namespace QlityG.Account
                                 Response.Redirect("~/RequestorDashboard.aspx");
                             }
                             break;
-                        default:
+                            default:
                             break;
                     }
-
                 }
-
+                   
             }
             else
             {
-                ErrorMsg.Text = "Incorrect logins";
+                ErrorMsg.Text = "An Error Occured Please try again.";
+                ErrorMsg.Visible = true;
             }
         }
     }

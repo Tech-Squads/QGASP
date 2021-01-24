@@ -148,7 +148,7 @@ namespace QlityG.Account
             //string clientid = "51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com";
             //string clientsecret = "OjY8rLlKgre3QmlDjmyeNifl";
 
-            string redirection_url = "https://localhost:44329/Account/Logins.aspx";
+            string redirection_url = "https://102.22.83.108/Account/Logins.aspx";
 
             string url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + " ";
          

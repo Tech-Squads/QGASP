@@ -17,7 +17,6 @@ namespace QlityG.Models
      
         public UserModel(UserModel u)
         {
-           
             this.uEmail = u.uEmail;
             this.uPassword = u.uPassword;
             this.UserID = u.UserID;
@@ -25,11 +24,17 @@ namespace QlityG.Models
             this.uType = u.uType;
             this.HasGig = u.HasGig;
         }
+
+        
         public UserModel()
         {
 
         }
-
+        public UserModel(string Email,string Password)
+        {
+            this.uEmail = Email;
+            this.uPassword = Password;
+        }
 
     }
 }

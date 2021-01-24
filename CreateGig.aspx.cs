@@ -24,6 +24,7 @@ namespace QlityG
             Label1.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm tt");
             client.BaseAddress = baseAddress;
             gig = new GigModel();
+
             userID = (int)Session["UserID"];
             HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/api/User/GetUserByID/" + userID).Result;
 

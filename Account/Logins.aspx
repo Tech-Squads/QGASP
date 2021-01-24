@@ -225,7 +225,7 @@
                             <asp:Literal runat="server" ID="FailureText" />
                         </p>
                     </asp:PlaceHolder>
-                 <asp:Label ID="ErrorMsg" runat="server" Text=""></asp:Label>
+                 <asp:Label ID="ErrorMsg" runat="server" Visible="false" Text="Incorrect Email and Password!"></asp:Label>
                  
         
 
