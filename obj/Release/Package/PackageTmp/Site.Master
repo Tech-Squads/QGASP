@@ -20,8 +20,7 @@
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
+             
                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
@@ -34,7 +33,7 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
+            
             </Scripts>
         </asp:ScriptManager>
 
@@ -54,9 +53,13 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" style="font-size:18px;">
-                        <li><a runat="server" href="~/Home">Home</a></li>
+                       <%-- <li><a runat="server" href="~/Home">Home</a></li>--%>
+                        <%--  <li><a runat="server" href="~/MainHomepage">Home</a></li>--%>
+                        <li><a runat="server" href="~/Homepage/Homepage">Home</a></li>
+
                         <li><a runat="server" href="~/About">Overview</a></li>
                         <li><a runat="server" href="~/Contact">How it works</a></li>
+                      
                     
                      
                        

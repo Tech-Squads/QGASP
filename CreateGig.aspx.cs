@@ -16,7 +16,7 @@ namespace QlityG
         GigModel gig;
         UserModel u;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri("https://localhost:44364");
+        Uri baseAddress = new Uri(Utils.USendRL);
         int userID;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -24,6 +24,7 @@ namespace QlityG
             Label1.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm tt");
             client.BaseAddress = baseAddress;
             gig = new GigModel();
+
             userID = (int)Session["UserID"];
             HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/api/User/GetUserByID/" + userID).Result;
 

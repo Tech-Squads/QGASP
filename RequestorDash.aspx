@@ -8,7 +8,7 @@
          <style type="text/css">
                #heade{
                  background-color:lavender;
-                 height:70px;
+                 height:70px; 
                
  
              }
