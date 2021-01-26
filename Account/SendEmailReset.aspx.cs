@@ -10,16 +10,13 @@ using Newtonsoft.Json;
 using Owin;
 using QlityG.DataAccess;
 using QlityG.Models;
-using System.IO;
-using System.Web.Script.Serialization;
-using ASPSnippets.GoogleAPI;
-
 
 namespace QlityG.Account
 {
-    public partial class Logins : System.Web.UI.Page
+    public partial class SendEmailReset : System.Web.UI.Page
     {
-        string uEmail, uPassword;
+        string uEmail;
+
 
 
         HttpClient client = new HttpClient();
@@ -29,36 +26,24 @@ namespace QlityG.Account
         UserModel u;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
-        protected void btngoogleReg_Click(object sender, EventArgs e)
+        protected void sendmail_Click(object sender, EventArgs e)
         {
 
-            //your client id  
-            string clientid = "51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com";
-            //your client secret  
-            //string clientsecret = "OjY8rLlKgre3QmlDjmyeNifl";
-            //your redirection url  
-            string redirection_url = "https://localhost:44329/Account/GoogleSignin.aspx";
-            string url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + "";
-            Response.Redirect(url);
-        }
-
-        protected void login_Click(object sender, EventArgs e)
-        {    
 
             client.BaseAddress = baseAddress;
             uEmail = txtEmail.Text.Trim().ToUpper();
-            uPassword = Utils.HashThis(txtPassword.Text.Trim().ToUpper());
+         
 
             u = new UserModel();
             u.uEmail = uEmail;
-            u.uPassword = uPassword;
+          
 
             string dat = JsonConvert.SerializeObject(u);
             StringContent content = new StringContent(dat, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + string.Format("/UserLogon?Uemail={0}&Upassword={1}", uEmail, uPassword)).Result;
+            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + string.Format("/UserLogongoogle?Uemail={0}", uEmail)).Result;
 
 
             if (resp.IsSuccessStatusCode)
@@ -66,8 +51,8 @@ namespace QlityG.Account
                 string data = resp.Content.ReadAsStringAsync().Result;
                 if (data == "null")
                 {
-                    ErrorMsg.Text = "Incorrect Email and Password!.";
-                    ErrorMsg.Visible = true;
+                    ErrorMessage.Text = " This Email does not exist on our system!";
+                    ErrorMessage.Visible = true;
                 }
                 else
                 {
@@ -78,19 +63,19 @@ namespace QlityG.Account
                     {
                         case "True":
                             Session["UserID"] = LoggedUser.UserID;
-                            Response.Redirect("~/SelectingType.aspx");
+                            Response.Redirect("~/Account/passwordreset");
                             break;
 
                         case "ACTIVE":
                             if (LoggedUser.uType == 1)
                             {
                                 Session["UserID"] = LoggedUser.UserID;
-                                Response.Redirect("~/GiggerDash.aspx");
+                                Response.Redirect("~/Account/passwordreset");
                             }
                             else if (LoggedUser.uType == 2)
                             {
                                 Session["UserID"] = LoggedUser.UserID;
-                                Response.Redirect("~/RequestorDash.aspx");
+                                Response.Redirect("~/Account/passwordreset");
                             }
 
                             break;
@@ -99,12 +84,12 @@ namespace QlityG.Account
                             if (LoggedUser.uType == 1)
                             {
                                 Session["UserID"] = LoggedUser.UserID;
-                                Response.Redirect("~/GiggerDashboard.aspx");
+                                Response.Redirect("~/Account/passwordreset");
                             }
                             else if (LoggedUser.uType == 2)
                             {
                                 Session["UserID"] = LoggedUser.UserID;
-                                Response.Redirect("~/RequestorDashboard.aspx");
+                                Response.Redirect("~/Account/passwordreset");
                             }
                             break;
                         default:
@@ -115,8 +100,8 @@ namespace QlityG.Account
             }
             else
             {
-                ErrorMsg.Text = "An Error Occured Please try again.";
-                ErrorMsg.Visible = true;
+                ErrorMessage.Text = "An Error Occured Please try again.";
+                ErrorMessage.Visible = true;
             }
         }
     }

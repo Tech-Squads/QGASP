@@ -626,3 +626,4 @@ C:\applications\13Jan App\obj\Debug\QlityG.csproj.CoreCompileInputs.cache
 C:\applications\13Jan App\obj\Debug\QlityG.csproj.CopyComplete
 C:\applications\13Jan App\obj\Debug\QlityG.dll
 C:\applications\13Jan App\obj\Debug\QlityG.pdb
+C:\applications\13Jan App\bin\ASPSnippets.GoogleAPI.dll

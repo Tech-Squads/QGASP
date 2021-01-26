@@ -1,107 +1,109 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Net.Http;
+using System.Text;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Net;
-using System.Net.Mail;
-using System.Configuration;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using Newtonsoft.Json;
+using Owin;
+using QlityG.DataAccess;
+using QlityG.Models;
 
 namespace QlityG.Account
 {
+
+
     public partial class passwordreset : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection();
-        SqlCommand cmd = new SqlCommand();
-        SqlDataAdapter sda = new SqlDataAdapter();
-        DataTable dt = new DataTable();
-        DataSet ds = new DataSet();
+
+        string uPassword;
+
+        string newpassword,confirmpass;
+
+        HttpClient client = new HttpClient();
+
+        Uri baseAddress = new Uri(Utils.TestUSendRL);
+
+        UserModel u;
+       
+        int UserID;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-       
+            client.BaseAddress = baseAddress;
+
+            int userID = Convert.ToInt32(Session["UserID"]);
+           
+
         }
 
         protected void resetbtn(object sender, EventArgs e)
         {
 
-            //dt = new DataTable();
-            ////cmd.CommandText = "Update Phonebooktable set PhoneNum='" + txtOldPassword.Text.ToString() + "',Address='" + txtnewPassword.Text.ToString() + "' where Name='" + txtEmail.Text.ToString() + "'";
-            //if (txtnewPassword.Text == txtconfirmpass.Text)
-            //{
-            //    cmd.CommandText = "Update Phonebooktable set PhoneNum='" + txtnewPassword.Text.ToString() + "' where  Name=@Email +'";
-            //    cmd.Connection = con;
-            //    cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+
+          
+            uPassword = Utils.HashThis(txtOldPassword.Text.Trim().ToUpper());
 
 
-            //    SqlDataReader sdr = cmd.ExecuteReader();
+            u = new UserModel();
+            u.uPassword = uPassword;
 
 
-            //    if (sdr.Read())
-            //    {
-            //        //email
-            //        string username = sdr["Name"].ToString();
-            //        //password
-            //        string password = sdr["PhoneNum"].ToString();
-
-            //        MailMessage mm = new MailMessage("joretogeorg@gmail.com", txtEmail.Text);
-            //        mm.Subject = "Your Password !";
-            //        mm.Body = string.Format("Hello : <h1>{0}</h1>  <br/> <h1>{1}</h1>");
-            //        mm.IsBodyHtml = true;
-            //        SmtpClient smtp = new SmtpClient();
-            //        smtp.Host = "smtp.gmail.com";
-            //        smtp.EnableSsl = true;
-            //        NetworkCredential nc = new NetworkCredential();
-            //        nc.UserName = "joretogeorg@gmail.com";
-            //        nc.Password = "Ubi0780!";
-            //        smtp.UseDefaultCredentials = true;
-            //        smtp.Credentials = nc;
-            //        smtp.Port = 587;
-            //        smtp.Send(mm);
-            //        //cmd.ExecuteNonQuery();
-            //        //Label1.Text = "Your password was  updated ! " + txtEmail.Text;
-            //        //Label1.ForeColor = Color.Green;
-
-            //    }
-            //    Label1.Text = "Password was  successfful  updated !!";
-            //    Label1.ForeColor = System.Drawing.Color.Green;
-            //    con.Close();
-            //}
-
-            SqlConnection con = new SqlConnection("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=QGAPI;Integrated Security=True");
-            SqlDataAdapter sda = new SqlDataAdapter("select uPassword from Users where uPassword = '" + txtOldPassword.Text + "' ", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+            string dat = JsonConvert.SerializeObject(u);
+            StringContent content = new StringContent(dat, Encoding.UTF8, "application/json");
+            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + string.Format("/UserLogonPass?Upassword={0}", uPassword)).Result;
 
 
-            if (dt.Rows.Count.ToString() == "1")
+            if (resp.IsSuccessStatusCode)
             {
-                if (txtnewPassword.Text == txtconfirmpass.Text)
+                string data = resp.Content.ReadAsStringAsync().Result;
+                if (data == "null")
                 {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand("update Users set uPassword = '" + txtconfirmpass.Text + "' where   uPassword = '" + txtOldPassword.Text + "'", con);
-                    cmd.ExecuteNonQuery();
-
-
-
-
-                    con.Close();
-                    Label1.Text = "Successfully updated";
-                    Label1.ForeColor = System.Drawing.Color.Green;
+                    ErrorMessage.Text = "Your old password is incorrect .";
+                   
+                    ErrorMessage.Visible = true;
                 }
                 else
                 {
-                    Label1.Text = "New password and confirm password should match !";
+
+                    UserModel LoggedUser = new UserModel(JsonConvert.DeserializeObject<UserModel>(data));
+
+
+                    if (txtnewPassword.Text == txtconfirmpass.Text)
+                    {
+                        newpassword = Utils.HashThis(txtnewPassword.Text.Trim().ToUpper());
+                        confirmpass = Utils.HashThis(txtconfirmpass.Text.Trim().ToUpper());
+
+
+                        string datas = JsonConvert.SerializeObject(u);
+                        StringContent contents = new StringContent(datas, Encoding.UTF8, "application/json");
+
+                       //HttpResponseMessage respo = client.PostAsync(client.BaseAddress + "/AddUser", contents).Result;
+                        HttpResponseMessage respo = client.PutAsync(client.BaseAddress + "/UpdateUser/" + u.UserID,  contents).Result;
+
+                        if (respo.IsSuccessStatusCode)
+                        {
+
+                            ErrorMessage.Text = " The password is been updated ! .";
+
+                        }
+                        else
+                        {
+                            ErrorMessage.Text = "Incorrect";
+                           
+                        }
+
+                    }
                 }
+
             }
             else
             {
-                Label1.Text = "Please check your old password !";
+                ErrorMessage.Text = "An Error Occured Please try again.";
+                ErrorMessage.Visible = true;
             }
-
         }
     }
 }

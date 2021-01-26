@@ -152,7 +152,7 @@
   <header id="heade">
     <div class="container-fluid">
         <br />
-      <div id="logo" class="pull-left" style=" position:fixed;left:40px;"> 
+      <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> 
           <a href="../Homepage/Homepage.aspx">
           <img src="../Account/QlityGigs_Log.png" />
               </a>
@@ -162,11 +162,8 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-         
-            <li  style=" position:fixed;right:90px;" ><h4 style="color:black">already have an account ?</h4></li>
-          <li  style=" position:fixed;right:30px;"><h4 style="color:blue"> <a href="Logins.aspx" style="color:blue;">Log in</a></h4>
+          <li  style="position:fixed;right:50px;"><b>already have an account ? <a href="Logins.aspx" style="color:blue">Login</a></b></li>
           
-          </li>
          <%-- <li><a href="#contact">Login</a></li>--%>
      
         </ul>
@@ -181,79 +178,79 @@
          <br/>
 
          <div>
-             <div id="formstyle" style="text-align:center;"><br />
-                 <h4>Create new account</h4><br />
+             <div id="formstyle" style="text-align:center;"><h4 style="position:relative;top:10px;">Create new account</h4><br />
+                 
          
             <div class="input-icons"> 
+              
+                            
                 <i class="fa fa-envelope icon"> 
               </i> 
-                <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" required="required" />
+                <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px"  />
+            <div style="text-align:center; position:relative;top:1px;">
+                      
+                    <%--     <asp:RequiredFieldValidator ID="RequiredFieldemail" 
+                    runat="server" ErrorMessage="Please enter email*"
+                   ControlToValidate="txtPassword" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator><br />--%>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server"
+                    ControlToValidate="txtEmail" ErrorMessage="Enter valid email adress *" Font-Size="Small" ForeColor="Red" 
+                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                </div>
             </div> 
   
-            <div class="input-icons"> 
+                 
+            <div class="input-icons" > 
                 <i class="fa fa-key icon"> 
-              </i> 
-                 <asp:TextBox runat="server" ID="txtPassword" TextMode="Password"  CssClass="btn btn-default" placeholder="New Password" Width="340px" Height="40px" required="required"/>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" 
-                    runat="server" ErrorMessage=""
-                   ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+              </i>  <div style="text-align:center; position:relative;top:-1px;">
 
+                 <asp:TextBox runat="server" ID="txtPassword" TextMode="Password"  CssClass="btn btn-default" placeholder="New Password" Width="340px" Height="40px" required="required"/>
+                  </div>
+                                           <div style="text-align:center;position:relative;top:4px;">
+              <%--  <asp:RequiredFieldValidator ID="RequiredFieldpass" 
+                    runat="server" ErrorMessage="Please enter password *"
+                   ControlToValidate="txtPassword" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                                 <asp:RegularExpressionValidator
+                    ID="RegularExpressionValidator1" runat="server" CssClass="text-danger" BackColor="white"
+                    ErrorMessage="Too short.Use at least 8 characters *"
+                    
+                     ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"
+                    ControlToValidate="txtPassword" ForeColor="Red" Font-Size="Small" ></asp:RegularExpressionValidator>
+                </div>
                 </div> 
                  <div class="input-icons"> 
                 <i class="fa fa-key icon"> 
               </i> 
                  <asp:TextBox runat="server" ID="txtConfirmPassword" TextMode="Password" CssClass="btn btn-default" placeholder="Confirm-Password" Width="340px" Height="40px" />
+                  <div style="text-align:center">          
+                   <%--  <asp:RequiredFieldValidator ID="RequiredFieldconfi" 
+                    runat="server" ErrorMessage="Please enter confirm password *"
+                   ControlToValidate="txtConfirmPassword" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator><br />--%>
+                         <asp:Label ID="errormesage" runat="server" Text="" ForeColor="Red" Font-Size="Small"></asp:Label>
+</div>
+                   
+
             </div> 
+                 <div style="text-align:center;position:relative;top:1px;">
                  <asp:Button runat="server" Text="Register" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" OnClick="register_Click" ValidationGroup="Group1"  /><br />
-               <br />
-                 <p>OR</p>
+               </div>
+                 <p style="position:relative;top:10px;">OR</p>
                
            
-                            
+          
                 
-                   <div class="input-icons"> 
+                   <div class="input-icons" style="position:relative;top:1px;"> 
 
                 
-            
-               <img src="google.png" style="height:40px;width:40px;" /><asp:Button ID="btnLogin" runat="server" Text="Join using google account" CssClass="gmailbutton" Height="40px" width="320px"  OnClick="btngoogleReg_Click" />
-                      
+              <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="google%20sign%20in%20button.png" style="background-color:white;height:50px;width:340px;border:1px solid lightgray;border-radius:5px;" OnClick="btngoogleReg_Click"/><br />
                      
                    </div> 
                  <asp:Label ID="lbllemails" runat="server" Text="" ></asp:Label>
-                 
 
-
-                 <asp:Label ID="errormesage" runat="server" Text=""></asp:Label>
-                  
+              
+                  <asp:Label ID="Label1" runat="server" Text="" ></asp:Label>
 
              </div>
-             <br />
-               <div style="text-align:center">
-                                  <asp:RegularExpressionValidator
-                    ID="RegularExpressionValidator1" runat="server" CssClass="text-danger" BackColor="white"
-                    ErrorMessage="Password must be 8 characters long with at least one lower case letter,
-                                      one upper case letter,
-                                      special character,
-                                      &  one number."
-                    
-                     ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"
-                    ControlToValidate="txtPassword">
-              
-                </asp:RegularExpressionValidator>
-
-
-                   <asp:RegularExpressionValidator
-                       ID="RegularExpressionValidator2" runat="server"  CssClass="text-danger" BackColor="white"
-                    
-                ErrorMessage="Please enter valid email" 
-
-                       
-                       ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
-                           ControlToValidate="txtEmail">  
-            </asp:RegularExpressionValidator>  
-
-                     </div>
-
+            
         
          </div>
 

@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ASPSnippets.GoogleAPI">
+      <HintPath>..\..\Users\MKLM\Downloads\ASPSnippets.GoogleAPI.dll</HintPath>
+    </Reference>
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
     </Reference>
@@ -191,10 +194,12 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Account\1.jpg" />
-    <Content Include="Account\email icon.png" />
     <Content Include="Account\Forgot.aspx" />
     <Content Include="Account\google image.jpg" />
-    <Content Include="Account\google.png" />
+    <Content Include="Account\google sign in button.png" />
+    <Content Include="Account\Googleform.aspx" />
+    <Content Include="Account\Googlelogo.png" />
+    <Content Include="Account\GoogleSignin.aspx" />
     <Content Include="Account\Lockout.aspx" />
     <Content Include="Account\Logins.aspx" />
     <Content Include="Account\LoginStyle.css" />
@@ -209,6 +214,7 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Account\ResetPassword.aspx" />
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\SendEmailReset.aspx" />
     <Content Include="Account\th.jpg" />
     <Content Include="assets\images\1.jpg" />
     <Content Include="CreateGig.aspx" />
@@ -471,6 +477,20 @@
     <Compile Include="Account\Forgot.aspx.designer.cs">
       <DependentUpon>Forgot.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Account\Googleform.aspx.cs">
+      <DependentUpon>Googleform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Googleform.aspx.designer.cs">
+      <DependentUpon>Googleform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\GoogleSignin.aspx.cs">
+      <DependentUpon>GoogleSignin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\GoogleSignin.aspx.designer.cs">
+      <DependentUpon>GoogleSignin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\Lockout.aspx.cs">
       <DependentUpon>Lockout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -547,6 +567,13 @@
     </Compile>
     <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
       <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\SendEmailReset.aspx.cs">
+      <DependentUpon>SendEmailReset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\SendEmailReset.aspx.designer.cs">
+      <DependentUpon>SendEmailReset.aspx</DependentUpon>
     </Compile>
     <Compile Include="CreateGig.aspx.cs">
       <DependentUpon>CreateGig.aspx</DependentUpon>

@@ -19,6 +19,7 @@ namespace QlityG.Models
         public string uPastProjectName { get; set; }
         public string uPastProjectDuration { get; set; }
         public string uPastProjectDetails { get; set; }
+        public string uPassword { get; set; }
 
 
 
@@ -34,6 +35,7 @@ namespace QlityG.Models
             this.uPastProjectName = pro.uPastProjectName;
             this.uPastProjectDuration = pro.uPastProjectDuration;
             this.uPastProjectDetails = pro.uPastProjectDetails;
+            this.uPassword = pro.uPassword;
             this.userID = pro.userID;
 
         }

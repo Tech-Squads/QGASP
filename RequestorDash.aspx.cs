@@ -34,10 +34,10 @@ namespace QlityG
             Create.Enabled = false;
             client.BaseAddress = baseAddress;
 
-            int userID = (int)Session["UserID"];
+            int userID = Convert.ToInt32(Session["UserID"]);
             if (userID.Equals(null))
             {
-                Response.Redirect("~/Account/Login");
+                Response.Redirect("~/Account/Logins");
             }
 
             HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + userID).Result;
@@ -92,9 +92,9 @@ namespace QlityG
             {
                 Session["userID"] = u.UserID;
                 Response.Redirect("~/RequestorDashboard");
-                //Response.Redirect("~/RequestorDashboards");
+               
             }
-            Response.Redirect("~/RequestorProfile");
+            Response.Redirect("~/RequestorDash");
         }
 
         protected void Create_Click(object sender, EventArgs e)

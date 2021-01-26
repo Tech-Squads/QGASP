@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
 
-    <meta name="google-signin-client_id" content="51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com"/>
+   <%-- <meta name="google-signin-client_id" content="51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com"/>--%>
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://apis.google.com/js/platform.js"></script>
          <style type="text/css">
@@ -63,7 +63,7 @@
     
     #formstyle
     {
-      height:360px;
+      height:395px;
       width:380px;
       margin:0 auto;
       position:relative;
@@ -153,16 +153,15 @@
   <header id="heade">
     <div class="container-fluid">
         <br />
-      <div id="logo" class="pull-left" style=" position:fixed;left:40px;"> <a href="../Homepage/Homepage.aspx"><img src="../Account/QlityGigs_Log.png" />
+      <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> <a href="../Homepage/Homepage.aspx"><img src="../Account/QlityGigs_Log.png" />
           </a>   
       </div>
         
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-       <li>
-                         <%-- <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Register as a new user</asp:HyperLink>--%>
-                        <a href="Registeres.aspx" style="color:blue">Register as a new user</a>
-         </li>
+       <li  style="position:relative;right:1px;"><b>Don't have an account ? <a href="Registeres.aspx" style="color:blue">Join</a></b></li>
+                            
+
      
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -187,7 +186,15 @@
                 <i class="fa fa-envelope icon"> 
               </i> 
                  <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" required="required"/>
-
+                      <div style="text-align:center; position:relative;top:1px;">
+                      
+                    <%--     <asp:RequiredFieldValidator ID="RequiredFieldemail" 
+                    runat="server" ErrorMessage="Please enter email*"
+                   ControlToValidate="txtPassword" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator><br />--%>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server"
+                    ControlToValidate="txtEmail" ErrorMessage="Enter valid email adress *" Font-Size="Small" ForeColor="Red" 
+                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                </div>
             </div> 
   
             <div class="input-icons"> 
@@ -195,24 +202,33 @@
               </i> 
                
                  <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" CssClass="btn btn-default" placeholder="Password"  Width="340px" Height="40px" required="required"/>
+                                             <div style="text-align:center;position:relative;top:4px;">
+            
+                                 <asp:RegularExpressionValidator
+                    ID="RegularExpressionValidator1" runat="server" CssClass="text-danger" BackColor="white"
+                    ErrorMessage="Password must be 8 characters long *"
+                    
+                     ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"
+                    ControlToValidate="txtPassword" ForeColor="Red" Font-Size="Small" ></asp:RegularExpressionValidator>
+                </div>
             </div>
                
                   <asp:Button runat="server" Text="Log in" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" OnClick="login_Click" />
             <br /> 
-                 <p style="position:relative;top:10px;">
+                 <p style="position:relative;top:8px;">
                  
                    
-                     <a href="passwordreset.aspx" style="color:green;">Reset password</a>
-                 </p><br />
+                     <a href="SendEmailReset.aspx" style="color:green;">Reset password</a>
+                 </p>
                 
-                 <p>OR</p>
+                 <p style="position:relative;top:3px;">OR</p>
                  <asp:Label ID="lblcheck" runat="server" Text=""></asp:Label>
                
         <div class="input-icons"> 
 
-                
-
-               <img src="google.png" style="height:40px;width:40px;" /><asp:Button ID="btnLogin" runat="server" Text="Sign in with google account" CssClass="gmailbutton" Height="40px" width="320px"   />
+ 
+           <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="google%20sign%20in%20button.png" style="background-color:white;height:50px;width:340px;border:1px solid lightgray;border-radius:5px;" OnClick="btngoogleReg_Click"/><br />
+          <asp:Label ID="ErrorMsg" runat="server" Text=""  ForeColor="Red"></asp:Label>
                       
                      
                    </div> 
@@ -225,7 +241,7 @@
                             <asp:Literal runat="server" ID="FailureText" />
                         </p>
                     </asp:PlaceHolder>
-                 <asp:Label ID="ErrorMsg" runat="server" Text=""></asp:Label>
+                 
                  
         
 

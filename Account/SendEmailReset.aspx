@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="passwordreset.aspx.cs" Inherits="QlityG.Account.passwordreset" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SendEmailReset.aspx.cs" Inherits="QlityG.Account.SendEmailReset" %>
 
 <!DOCTYPE html>
 
@@ -42,7 +42,7 @@
     
     #formstyle
     {
-      height:300px;
+      height:200px;
       width:380px;
       margin:0 auto;
       position:relative;
@@ -133,55 +133,40 @@
         <br />
          <div>
              <div id="formstyle" style="text-align:center;"><br />
-                 <h4>Reset password</h4>
+                 <h4>Provide your registered email</h4><br />
 
-  
-      <%--      <div class="input-icons"> 
-                <i class="fa fa-envelope icon"> 
-              </i> 
-                 <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" />
-
-            </div> --%>
   
             <div class="input-icons"> 
-                <i class="fa fa-key icon"> 
+                <i class="fa fa-envelope icon"> 
               </i> 
-               
-                 <asp:TextBox runat="server" ID="txtOldPassword" TextMode="Password" CssClass="btn btn-default" placeholder=" Old Password"  Width="340px" Height="40px" required="required"/>
-            </div>
-                  <div class="input-icons"> 
-                <i class="fa fa-key icon"> 
-              </i> 
-               
-                 <asp:TextBox runat="server" ID="txtnewPassword" TextMode="Password" CssClass="btn btn-default" placeholder=" New Password"  Width="340px" Height="40px"/>
-            </div>
+                 <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" required="required"/>
 
-                  <div class="input-icons"> 
-                <i class="fa fa-key icon"> 
-              </i> 
+
+            </div> 
+
+                <div style="text-align:center;position:relative;top:1px;">
+                      <asp:Label ID="ErrorMessage" runat="server" Text="" ForeColor="red"></asp:Label>
+                         </div>
+           
+     
+                  <div style="text-align:center; position:relative;top:1px;">
+                      
+                    <%--     <asp:RequiredFieldValidator ID="RequiredFieldemail" 
+                    runat="server" ErrorMessage="Please enter email*"
+                   ControlToValidate="txtPassword" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator><br />--%>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server"
+                    ControlToValidate="txtEmail" ErrorMessage="Enter valid email adress *" Font-Size="Small" ForeColor="Red" 
+                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                </div>
+                 
+                  <div style="position:fixed;right:507px;">
+                 <asp:Button runat="server" Text="Save" CssClass="btn btn-default" Backcolor="blue" BorderColor="Blue" ForeColor="white" Width="70px" Height="30px" OnClick="sendmail_Click"  />
+                     
+               </div>
                
-                 <asp:TextBox runat="server" ID="txtconfirmpass" TextMode="Password" CssClass="btn btn-default" placeholder="Confirm Password"  Width="340px" Height="40px"/>
-            </div>
-                 <asp:Label ID="ErrorMessage" runat="server" Text="" ForeColor="red"/><br />
-                  <asp:Button runat="server" Text="Reset" CssClass="btn btn-default" Backcolor="blue"  ForeColor="white"  style="position:relative;top:10px;" OnClick="resetbtn"/>
-                 
-                 <br /> 
-                 <div style="text-align:center;position:relative;top:10px;font-size:small;" >
-                                  <asp:RegularExpressionValidator
-                    ID="RegularExpressionValidator1" runat="server" CssClass="text-danger" BackColor="white"
-                    ErrorMessage="Too short.Use at least 8 characters *"
-                    
-                     ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"
-                    ControlToValidate="txtnewPassword">
-              
-                </asp:RegularExpressionValidator>
-                   
-                     </div>
-                 
-                 </div> 
-          
+          </div>
          
-
+            
          </div>
       
     </div>
