@@ -153,7 +153,7 @@
     <div class="container-fluid">
         <br />
       <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> 
-          <a href="../Homepage/Homepage.aspx">
+          <a href="../Mainpage.aspx">
           <img src="../Account/QlityGigs_Log.png" />
               </a>
        

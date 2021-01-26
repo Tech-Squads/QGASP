@@ -133,7 +133,7 @@
   <!-- Main Stylesheet File -->
    <link href="~/Homepage/css/style.css" rel="stylesheet" />
       <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    
+  
 </head>
 <body>
  <form id="form1" runat="server">
@@ -274,6 +274,7 @@
   <!-- <div id="preloader"></div> -->
 
   <!-- JavaScript Libraries -->
+     
   <script src="/Homepage/lib/jquery/jquery.min.js"></script>
   <script src="/Homepage/lib/jquery/jquery-migrate.min.js"></script>
   <script src="/Homepage/lib/bootstrap/js/bootstrap.bundle.min.js"></script>

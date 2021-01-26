@@ -42,7 +42,7 @@
     
     #formstyle
     {
-      height:300px;
+      height:230px;
       width:380px;
       margin:0 auto;
       position:relative;
@@ -134,21 +134,8 @@
          <div>
              <div id="formstyle" style="text-align:center;"><br />
                  <h4>Reset password</h4>
-
   
-      <%--      <div class="input-icons"> 
-                <i class="fa fa-envelope icon"> 
-              </i> 
-                 <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" />
-
-            </div> --%>
-  
-            <div class="input-icons"> 
-                <i class="fa fa-key icon"> 
-              </i> 
-               
-                 <asp:TextBox runat="server" ID="txtOldPassword" TextMode="Password" CssClass="btn btn-default" placeholder=" Old Password"  Width="340px" Height="40px" required="required"/>
-            </div>
+         
                   <div class="input-icons"> 
                 <i class="fa fa-key icon"> 
               </i> 
@@ -162,10 +149,10 @@
                
                  <asp:TextBox runat="server" ID="txtconfirmpass" TextMode="Password" CssClass="btn btn-default" placeholder="Confirm Password"  Width="340px" Height="40px"/>
             </div>
-                 <asp:Label ID="ErrorMessage" runat="server" Text="" ForeColor="red"/><br />
+                 <asp:Label ID="ErrorMessage" runat="server" Text="" ForeColor="red"/>
                   <asp:Button runat="server" Text="Reset" CssClass="btn btn-default" Backcolor="blue"  ForeColor="white"  style="position:relative;top:10px;" OnClick="resetbtn"/>
                  
-                 <br /> 
+                 
                  <div style="text-align:center;position:relative;top:10px;font-size:small;" >
                                   <asp:RegularExpressionValidator
                     ID="RegularExpressionValidator1" runat="server" CssClass="text-danger" BackColor="white"

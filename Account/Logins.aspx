@@ -139,7 +139,7 @@
   <link href="/Homepage/lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
   <link href="/Homepage/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
   <link href="/Homepage/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-
+    
   <!-- Main Stylesheet File -->
    <link href="~/Homepage/css/style.css" rel="stylesheet" />
       <link href="~/Content/bootstrap.css" rel="stylesheet" />
@@ -153,8 +153,9 @@
   <header id="heade">
     <div class="container-fluid">
         <br />
-      <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> <a href="../Homepage/Homepage.aspx"><img src="../Account/QlityGigs_Log.png" />
-          </a>   
+      <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> <a href="../Mainpage.aspx"><img src="../Account/QlityGigs_Log.png" />
+          
+      </a>   
       </div>
         
       <nav id="nav-menu-container">

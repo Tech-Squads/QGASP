@@ -122,7 +122,7 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
       
-     
+            <li  style="position:relative;right:1px;"><b>Back to <a href="Registeres.aspx" style="color:blue">Login</a></b></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div><br />
@@ -160,8 +160,8 @@
                 </div>
                  
                   <div style="position:fixed;right:507px;">
-                 <asp:Button runat="server" Text="Save" CssClass="btn btn-default" Backcolor="blue" BorderColor="Blue" ForeColor="white" Width="70px" Height="30px" OnClick="sendmail_Click"  />
-                     
+                 <asp:Button runat="server" Text="Continue" CssClass="btn btn-default" Backcolor="blue" BorderColor="Blue" ForeColor="white" Width="80px" Height="30px" OnClick="sendmail_Click"  />
+                   
                </div>
                
           </div>

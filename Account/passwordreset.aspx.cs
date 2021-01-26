@@ -18,24 +18,18 @@ namespace QlityG.Account
     public partial class passwordreset : System.Web.UI.Page
     {
 
-        string uPassword;
-
-        string newpassword,confirmpass;
+        UserModel u;
 
         HttpClient client = new HttpClient();
-
         Uri baseAddress = new Uri(Utils.TestUSendRL);
-
-        UserModel u;
-       
-        int UserID;
+        string password;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            client.BaseAddress = baseAddress;
 
             int userID = Convert.ToInt32(Session["UserID"]);
-           
+
+         
 
         }
 
@@ -43,67 +37,34 @@ namespace QlityG.Account
         {
 
 
-          
-            uPassword = Utils.HashThis(txtOldPassword.Text.Trim().ToUpper());
 
-
-            u = new UserModel();
-            u.uPassword = uPassword;
-
-
-            string dat = JsonConvert.SerializeObject(u);
-            StringContent content = new StringContent(dat, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + string.Format("/UserLogonPass?Upassword={0}", uPassword)).Result;
-
-
-            if (resp.IsSuccessStatusCode)
+            if (txtnewPassword.Text == txtconfirmpass.Text)
             {
-                string data = resp.Content.ReadAsStringAsync().Result;
-                if (data == "null")
+                password = Utils.HashThis(txtconfirmpass.Text.Trim().ToUpper());
+
+                u.uPassword = password;
+
+                
+                string data = JsonConvert.SerializeObject(u);
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+                HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + u.UserID, content).Result;
+
+
+                if (resp.IsSuccessStatusCode)
                 {
-                    ErrorMessage.Text = "Your old password is incorrect .";
-                   
-                    ErrorMessage.Visible = true;
+                  
+                    ErrorMessage.Text = "password updated .";
+
                 }
-                else
-                {
-
-                    UserModel LoggedUser = new UserModel(JsonConvert.DeserializeObject<UserModel>(data));
-
-
-                    if (txtnewPassword.Text == txtconfirmpass.Text)
-                    {
-                        newpassword = Utils.HashThis(txtnewPassword.Text.Trim().ToUpper());
-                        confirmpass = Utils.HashThis(txtconfirmpass.Text.Trim().ToUpper());
-
-
-                        string datas = JsonConvert.SerializeObject(u);
-                        StringContent contents = new StringContent(datas, Encoding.UTF8, "application/json");
-
-                       //HttpResponseMessage respo = client.PostAsync(client.BaseAddress + "/AddUser", contents).Result;
-                        HttpResponseMessage respo = client.PutAsync(client.BaseAddress + "/UpdateUser/" + u.UserID,  contents).Result;
-
-                        if (respo.IsSuccessStatusCode)
-                        {
-
-                            ErrorMessage.Text = " The password is been updated ! .";
-
-                        }
-                        else
-                        {
-                            ErrorMessage.Text = "Incorrect";
-                           
-                        }
-
-                    }
-                }
+                ErrorMessage.Text = "Incorrect Email and Password!.";
 
             }
             else
             {
-                ErrorMessage.Text = "An Error Occured Please try again.";
-                ErrorMessage.Visible = true;
+                ErrorMessage.Text = "passwords do not match!.";
             }
         }
+
     }
 }
+    

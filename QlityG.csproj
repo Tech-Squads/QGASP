@@ -212,14 +212,13 @@
     <Content Include="Account\QlityGigs_Logo_Transparent.png" />
     <Content Include="Account\Registeres.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
-    <Content Include="Account\ResetPassword.aspx" />
-    <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\SendEmailReset.aspx" />
     <Content Include="Account\th.jpg" />
     <Content Include="assets\images\1.jpg" />
     <Content Include="CreateGig.aspx" />
     <Content Include="GiggerDash.aspx" />
     <Content Include="GiggerDashboard.aspx" />
+    <Content Include="Mainpage.aspx" />
     <Content Include="RequestorDash.aspx" />
     <Content Include="RequestorDashboard.aspx" />
     <Content Include="SelectingType.aspx" />
@@ -554,20 +553,6 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\ResetPassword.aspx.cs">
-      <DependentUpon>ResetPassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\ResetPassword.aspx.designer.cs">
-      <DependentUpon>ResetPassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
-      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
-      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\SendEmailReset.aspx.cs">
       <DependentUpon>SendEmailReset.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -595,6 +580,13 @@
     </Compile>
     <Compile Include="GiggerDashboard.aspx.designer.cs">
       <DependentUpon>GiggerDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mainpage.aspx.cs">
+      <DependentUpon>Mainpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mainpage.aspx.designer.cs">
+      <DependentUpon>Mainpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Utils.cs" />
     <Compile Include="RequestorDash.aspx.cs">
