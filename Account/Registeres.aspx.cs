@@ -24,7 +24,7 @@ namespace QlityG.Account
        
 
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        Uri baseAddress = new Uri(Utils.USendRL);
 
         UserModel user;
         string email, password;
@@ -42,7 +42,7 @@ namespace QlityG.Account
             //your client id  
               string clientid = "51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com";
             //your client secret  
-            string clientsecret = "OjY8rLlKgre3QmlDjmyeNifl";
+            //string clientsecret = "OjY8rLlKgre3QmlDjmyeNifl";
             //your redirection url  
             string redirection_url = "https://localhost:44329/Account/Googleform.aspx";
                      string url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + "";

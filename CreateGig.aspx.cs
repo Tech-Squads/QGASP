@@ -17,7 +17,7 @@ namespace QlityG
         UserModel u;
         HttpClient client = new HttpClient();
         Uri baseAddress = new Uri(Utils.USendRL);
-        int userID;
+        int UserID;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,8 +25,9 @@ namespace QlityG
             client.BaseAddress = baseAddress;
             gig = new GigModel();
 
-            userID = (int)Session["UserID"];
-            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/api/User/GetUserByID/" + userID).Result;
+           
+             UserID = Convert.ToInt32(Session["UserID"]);
+            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/api/User/GetUserByID/" + UserID).Result;
 
             if (resp.IsSuccessStatusCode)
             {
@@ -45,7 +46,7 @@ namespace QlityG
             gig.GigDescription = gDescription.Text.Trim();
             gig.ContactDetails = ContactEmail.Text.Trim();
             gig.RequiredSkills = SkillsRequired.Text.Trim();
-            gig.RequestorID = userID;
+            gig.RequestorID = UserID;
 
 
             string data = JsonConvert.SerializeObject(gig);
@@ -55,11 +56,33 @@ namespace QlityG
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["userID"] = userID;
+                Session["userID"] = UserID;
                 //Response.Redirect("~/ViewGigs");
                 Response.Redirect("~/RequestorDashboard");
             }
             Response.Redirect("~/Homepage/Homepage");
+        }
+        protected void update_Click(object sender, EventArgs e)
+        {
+            u.FirstLogin = "ACTIVE";
+            u.uType = 2;
+
+            string data = JsonConvert.SerializeObject(u);
+            StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + UserID, content).Result;
+
+
+            if (resp.IsSuccessStatusCode)
+            {
+              
+                Response.Redirect("~/RequestorDashboard");
+            }
+            Response.Redirect("~/SelectingType.aspx");
+
+        }
+        protected void Delete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

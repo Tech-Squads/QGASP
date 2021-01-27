@@ -149,7 +149,7 @@
                
                  <asp:TextBox runat="server" ID="txtconfirmpass" TextMode="Password" CssClass="btn btn-default" placeholder="Confirm Password"  Width="340px" Height="40px"/>
             </div>
-                 <asp:Label ID="ErrorMessage" runat="server" Text="" ForeColor="red"/>
+                 <asp:Label ID="ErrorMessage" runat="server" Text="" ForeColor="red"/><br />
                   <asp:Button runat="server" Text="Reset" CssClass="btn btn-default" Backcolor="blue"  ForeColor="white"  style="position:relative;top:10px;" OnClick="resetbtn"/>
                  
                  

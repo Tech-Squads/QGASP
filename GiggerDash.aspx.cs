@@ -71,7 +71,7 @@ namespace QlityG
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["UserID"] = u.UserID;
+                Session["UserID"] = UserID;
                 Response.Redirect("~/GiggerDashboard");
             }
             Response.Redirect("~/GiggerDash");
@@ -95,7 +95,7 @@ namespace QlityG
 
             if (UserID.Equals(null))
             {
-                Response.Redirect("~/Account/Login");
+                Response.Redirect("~/Account/Logins");
             }
 
             HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + UserID).Result;

@@ -17,8 +17,8 @@ namespace QlityG
         UserModel u;
         UProfile pro, profile;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
-
+        Uri baseAddress = new Uri(Utils.USendRL);
+        int UserID;
         protected void Page_Load(object sender, EventArgs e)
         {
             var items = new List<string>
@@ -34,13 +34,13 @@ namespace QlityG
             Create.Enabled = false;
             client.BaseAddress = baseAddress;
 
-            int userID = Convert.ToInt32(Session["UserID"]);
-            if (userID.Equals(null))
+            UserID = Convert.ToInt32(Session["UserID"]);
+            if (UserID.Equals(null))
             {
                 Response.Redirect("~/Account/Logins");
             }
 
-            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + userID).Result;
+            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + UserID).Result;
 
             if (resp.IsSuccessStatusCode)
             {
@@ -56,8 +56,6 @@ namespace QlityG
                         string objectPro = res.Content.ReadAsStringAsync().Result;
 
                         profile = new UProfile(JsonConvert.DeserializeObject<UProfile>(objectPro));
-
-
                         DropDownListcountry.Text = profile.uCountry;
                         FirstName.Text = profile.uName;
                         LastName.Text = profile.uSurname;
@@ -76,11 +74,12 @@ namespace QlityG
 
         protected void Update_Click(object sender, EventArgs e)
         {
-            profile.uCompany = txtposition.Text;
-            profile.uCountry = DropDownListcountry.Text;
             profile.uName = FirstName.Text;
             profile.uSurname = LastName.Text;
-            profile.uReferences = txtheadline.Text;
+            profile.uCompany = txtcompany.Text;
+            profile.uCountry = DropDownListcountry.Text;
+          
+            //profile.uReferences = txtheadline.Text;
             profile.uEducation = txteducation.Text;
 
             string data = JsonConvert.SerializeObject(profile);
@@ -90,7 +89,7 @@ namespace QlityG
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["userID"] = u.UserID;
+                Session["UserID"] = UserID;
                 Response.Redirect("~/RequestorDashboard");
                
             }
@@ -101,7 +100,8 @@ namespace QlityG
         {
             pro = new UProfile();
 
-            pro.uCompany = txtposition.Text;
+            pro.userID = UserID;
+            pro.uCompany = txtcompany.Text;
             pro.uCountry = DropDownListcountry.Text;
             pro.uName = FirstName.Text;
             pro.uSurname = LastName.Text;
@@ -121,11 +121,11 @@ namespace QlityG
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["userID"] = u.UserID;
-                
-                Response.Redirect("~/RequestorDashboard");
+                Session["UserID"] = UserID;
+
+                Response.Redirect("~/RequestorDashboard.aspx");
             }
-       
+            Response.Redirect(" ~/RequestorDash.aspx");
         }
     }
 }

@@ -51,8 +51,8 @@
     
     #formstyle
     {
-    height:515px;
-      width:580px;
+    height:420px;
+      width:540px;
       margin:0 auto;
       position:relative;
       z-index:10;
@@ -162,7 +162,7 @@
   
 
      <div id="outer-layer">
-         <br />
+         <br /><br />
           
          <div>
              <div id="formstyle" style="text-align:center;"><br />
@@ -190,7 +190,7 @@
             </div>
         </div>
 
-                     <div class="form-group">
+                <%--     <div class="form-group">
                  <div class="col-md-12">
               <div style="text-align:left;color:gray;">
                            Headline *
@@ -198,7 +198,7 @@
            
                <asp:TextBox runat="server" id="txtheadline" name="message" CssClass="form-control"  rows="5"    TextMode="MultiLine"  height="50px"/><br />
             </div>                
-            </div>
+            </div>--%>
 
        <%--     <div class="input-icons"> 
                 <i class="fa fa-envelope icon"> 
@@ -210,9 +210,9 @@
                  <div class="form-group">
                  <div class="col-md-12">
                  <div style="text-align:left;color:gray;">
-                           Current Position 
+                           Company 
                 </div> 
-                  <asp:TextBox runat="server" ID="txtposition" CssClass="form-control" /><br />              
+                  <asp:TextBox runat="server" ID="txtcompany" CssClass="form-control" /><br />              
                  
             </div>                
             </div> 

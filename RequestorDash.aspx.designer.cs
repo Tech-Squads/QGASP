@@ -42,22 +42,13 @@ namespace QlityG
         protected global::System.Web.UI.WebControls.TextBox LastName;
 
         /// <summary>
-        /// txtheadline control.
+        /// txtcompany control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtheadline;
-
-        /// <summary>
-        /// txtposition control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtposition;
+        protected global::System.Web.UI.WebControls.TextBox txtcompany;
 
         /// <summary>
         /// txteducation control.
