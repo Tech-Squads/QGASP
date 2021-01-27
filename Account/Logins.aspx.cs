@@ -77,8 +77,13 @@ namespace QlityG.Account
                     switch (LoggedUser.FirstLogin)
                     {
                         case "True":
-                            Session["UserID"] = LoggedUser.UserID;
-                            Response.Redirect("~/SelectingType.aspx");
+                            if (LoggedUser.uType == 0)
+                            {
+                                Session["UserID"] = LoggedUser.UserID;
+                                Response.Redirect("~/SelectingType.aspx");
+                            }
+                         
+
                             break;
 
                         case "ACTIVE":

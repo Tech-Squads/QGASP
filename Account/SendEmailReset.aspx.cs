@@ -62,6 +62,7 @@ namespace QlityG.Account
                     switch (LoggedUser.FirstLogin)
                     {
                         case "True":
+                         
                             Session["UserID"] = LoggedUser.UserID;
                             Response.Redirect("~/Account/passwordreset");
                             break;

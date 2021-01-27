@@ -17,54 +17,67 @@ namespace QlityG.Account
 
     public partial class passwordreset : System.Web.UI.Page
     {
-
         UserModel u;
-
         HttpClient client = new HttpClient();
         Uri baseAddress = new Uri(Utils.TestUSendRL);
+        int UserID;
         string password;
-
         protected void Page_Load(object sender, EventArgs e)
         {
+            client.BaseAddress = baseAddress;
+            if (Session["UserID"].Equals(null))
+            {
+                ErrorMessage.Text = "not found";
+            }
 
-            int userID = Convert.ToInt32(Session["UserID"]);
+            UserID = Convert.ToInt32(Session["UserID"]);
+            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + UserID).Result;
 
-         
+            if (resp.IsSuccessStatusCode)
+            {
+                string data = resp.Content.ReadAsStringAsync().Result;
+                u = new UserModel(JsonConvert.DeserializeObject<UserModel>(data));
+            }
+
+            else
+            {
+                ErrorMessage.Visible = true;
+            }
 
         }
 
         protected void resetbtn(object sender, EventArgs e)
         {
 
-
+        
 
             if (txtnewPassword.Text == txtconfirmpass.Text)
             {
-                password = Utils.HashThis(txtconfirmpass.Text.Trim().ToUpper());
-
+                password = Utils.HashThis(txtnewPassword.Text.Trim().ToUpper());
                 u.uPassword = password;
+               
 
-                
                 string data = JsonConvert.SerializeObject(u);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + u.UserID, content).Result;
+                HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + UserID, content).Result;
 
 
                 if (resp.IsSuccessStatusCode)
                 {
-                  
-                    ErrorMessage.Text = "password updated .";
 
+                    ErrorMessage.Text = "Success";
                 }
-                ErrorMessage.Text = "Incorrect Email and Password!.";
 
+                else
+                {
+                    ErrorMessage.Text = "Error";
+                }
             }
             else
             {
-                ErrorMessage.Text = "passwords do not match!.";
+                ErrorMessage.Text = "Ensure password matches !";
+
             }
         }
-
     }
-}
-    
+}   

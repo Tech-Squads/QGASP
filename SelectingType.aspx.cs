@@ -16,7 +16,7 @@ namespace QlityG
     {
         UserModel u;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.USendRL);
+        Uri baseAddress = new Uri(Utils.TestUSendRL);
         int UserID;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -25,7 +25,7 @@ namespace QlityG
             client.BaseAddress = baseAddress;
             if (Session["UserID"].Equals(null))
             {
-                Response.Redirect("~/Account/Login");
+                Response.Redirect("~/Account/Logins");
             }
 
             UserID = Convert.ToInt32(Session["UserID"]);
