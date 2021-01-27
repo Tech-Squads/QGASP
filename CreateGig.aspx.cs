@@ -60,24 +60,30 @@ namespace QlityG
                 //Response.Redirect("~/ViewGigs");
                 Response.Redirect("~/RequestorDashboard");
             }
-            Response.Redirect("~/Homepage/Homepage");
+            Response.Redirect("~/Mainpage");
         }
         protected void update_Click(object sender, EventArgs e)
         {
-            u.FirstLogin = "ACTIVE";
-            u.uType = 2;
 
-            string data = JsonConvert.SerializeObject(u);
+            gig.GigTitle = gigTitle.Text.Trim();
+
+            gig.DueDate = Label1.Text.Trim();
+            gig.GigDescription = gDescription.Text.Trim();
+            gig.ContactDetails = ContactEmail.Text.Trim();
+            gig.RequiredSkills = SkillsRequired.Text.Trim();
+            gig.RequestorID = UserID;
+
+            string data = JsonConvert.SerializeObject(gig);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + UserID, content).Result;
+            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/Updategig/" + UserID, content).Result;
 
 
             if (resp.IsSuccessStatusCode)
             {
-              
-                Response.Redirect("~/RequestorDashboard");
+
+                ErrorMsg.Text = "Gig updated successfuly";
             }
-            Response.Redirect("~/SelectingType.aspx");
+            ErrorMsg.Text = "Gig not updated";
 
         }
         protected void Delete_Click(object sender, EventArgs e)
