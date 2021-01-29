@@ -130,7 +130,7 @@
 
      <div id="outer-layer"> 
         <br /><br /><br />
-        <br />
+        <br /><br /><br />
          <div>
              <div id="formstyle" style="text-align:center;"><br />
                  <h4>Provide your registered email</h4><br />

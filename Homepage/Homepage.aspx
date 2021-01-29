@@ -13,7 +13,6 @@
              width:100%;
                     
              }
-       
     .button
     {
       width: 150px;
@@ -89,7 +88,8 @@
   </style>
 
     <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon" />
+  <link href="../Account/QlityGigs_Log.png" rel="icon" />
+
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
 
   <!-- Google Fonts -->
@@ -115,15 +115,15 @@
     Header
   ============================-->
   <header id="header">
-      <div id="heade" style="position:fixed;top:2px;">
+       <div id="heade" style="position:fixed;top:2px;">
     <div class="container-fluid">
-        
+
       <div id="logo" class="pull-left" style=" position:relative;left:10px;top:10px;"> <img src="../Account/QlityGigs_Log.png" />
        
       
       </div>
 
-      <nav id="nav-menu-container">
+        <nav id="nav-menu-container">
         <ul class="nav-menu" style=" position:relative;right:10px;top:20px;">
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#about">About Us</a></li>
@@ -134,17 +134,15 @@
           </li>
           <li><a href="../Account/Logins.aspx">Login</a></li>
         </ul>
-      </nav><!-- #nav-menu-container -->
+      </nav>
     </div>
-
-          </div>
+           </div>
   </header><!-- #header -->
 
   <!--==========================
     Intro Section
   ============================-->
-
-  <section id="intro" style="height:10px;">
+  <section id="intro">
     <div class="intro-container">
       <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
 
@@ -169,7 +167,8 @@
               <div class="carousel-content">
                 <h2></h2>
                 <p></p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                  
+                <a href="../Account/Logins.aspx" class="btn-get-started scrollto">Get Started</a>
               </div>
             </div>
           </div>
@@ -180,7 +179,7 @@
               <div class="carousel-content">
                 <h2></h2>
                 <p></p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                 <a href="../Account/Logins.aspx" class="btn-get-started scrollto">Get Started</a>
               </div>
             </div>
           </div>
@@ -191,7 +190,7 @@
               <div class="carousel-content">
                 <h2></h2>
                 <p></p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                <a href="../Account/Logins.aspx" class="btn-get-started scrollto">Get Started</a>
               </div>
             </div>
           </div>
@@ -202,7 +201,7 @@
               <div class="carousel-content">
                 <h2></h2>
                 <p></p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+               <a href="../Account/Logins.aspx" class="btn-get-started scrollto">>Get Started</a>
               </div>
             </div>
           </div>
@@ -228,7 +227,22 @@
     <!--==========================
       Featured Services Section
     ============================-->
-<!-- #featured-services -->
+   <section id="howitworks">
+      <div class="container">
+
+        <header class="section-header wow fadeInUp">
+          <h3>How it works</h3>
+          <p></p>
+        </header>
+
+        <div class="row">
+
+
+
+        </div>
+
+      </div>
+    </section>
 
     <!--==========================
       About Us Section
@@ -287,331 +301,14 @@
       </div>
     </section><!-- #about -->
 
-    <!--==========================
-      Services Section
-    ============================-->
-    <section id="howitworks">
-      <div class="container">
+  
+  
 
-        <header class="section-header wow fadeInUp">
-          <h3>How it works</h3>
-          <p></p>
-        </header>
+   
 
-        <div class="row">
+   
 
-<%--          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-            <h4 class="title"><a href="#"></a></h4>
-            <p class="description"></p>
-          </div>
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
-            <h4 class="title"><a href="#"></a></h4>
-            <p class="description"></p>
-          </div>
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-paper-outline"></i></div>
-            <h4 class="title"><a href="#"></a></h4>
-            <p class="description"></p>
-          </div>
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-            <h4 class="title"><a href="#"></a></h4>
-            <p class="description"></p>
-          </div>
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-barcode-outline"></i></div>
-            <h4 class="title"><a href="#"></a></h4>
-            <p class="description"></p>
-          </div>
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-people-outline"></i></div>
-            <h4 class="title"><a href="#"></a></h4>
-            <p class="description"></p>
-          </div>--%>
-
-        </div>
-
-      </div>
-    </section><!-- #services -->
-
-    <!--==========================
-      Call To Action Section
-    ============================-->
-    <%--<section id="call-to-action" class="wow fadeIn">
-      <div class="container text-center">
-        <h3>Call To Action</h3>
-        <p> </p>
-        <a class="cta-btn" href="#">Call To Action</a>
-      </div>
-    </section>--%><!-- #call-to-action -->
-
-    <!--==========================
-      Skills Section
-    ============================-->
-   <%-- <section id="skills">
-      <div class="container">
-
-        <header class="section-header">
-          <h3>Our Skills</h3>
-          <p></p>
-        </header>
-
-        <div class="skills-content">
-
-          <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">HTML <i class="val">100%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">CSS <i class="val">90%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
-            </div>
-          </div>
-
-
-        </div>
-
-      </div>
-    </section>--%>
-
-    <!--==========================
-      Facts Section
-    ============================-->
-   <%-- <section id="facts"  class="wow fadeIn">
-      <div class="container">
-
-        <header class="section-header">
-          <h3>Facts</h3>
-          <p></p>
-        </header>
-
-        <div class="row counters">
-
-  				<div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">274</span>
-            <p>Clients</p>
-  				</div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">421</span>
-            <p>Projects</p>
-  				</div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">1,364</span>
-            <p>Hours Of Support</p>
-  				</div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">18</span>
-            <p>Hard Workers</p>
-  				</div>
-
-  			</div>
-
-        <div class="facts-img">
-          <img src="img/facts-img.png" alt="" class="img-fluid" />
-        </div>
-
-      </div>
-    </section>--%><!-- #facts -->
-
-    <!--==========================
-      Portfolio Section
-    ============================-->
-    <%--<section id="portfolio"  class="section-bg" >
-      <div class="container">
-
-        <header class="section-header">
-          <h3 class="section-title">Our Portfolio</h3>
-        </header>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio/app1.jpg" class="img-fluid" alt="" />
-                <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">App 1</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio/web3.jpg" class="img-fluid" alt="" />
-                <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Web 3</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio/app2.jpg" class="img-fluid" alt="" />
-                <a href="img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">App 2</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio/card2.jpg" class="img-fluid" alt="" />
-                <a href="img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Card 2</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio/web2.jpg" class="img-fluid" alt="" />
-                <a href="img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Web 2</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio/app3.jpg" class="img-fluid" alt="" />
-                <a href="img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">App 3</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio/card1.jpg" class="img-fluid" alt="" />
-                <a href="img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Card 1</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio/card3.jpg" class="img-fluid" alt="" />
-                <a href="img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Card 3</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio/web1.jpg" class="img-fluid" alt="" />
-                <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Web 1</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>--%><!-- #portfolio -->
-
-    <!--==========================
-      Clients Section
-    ============================-->
-   <%-- <section id="clients" class="wow fadeInUp">
-      <div class="container">
-
-        <header class="section-header">
-          <h3>Our Clients</h3>
-        </header>
-
-        <div class="owl-carousel clients-carousel">
-          <img src="img/clients/client-1.png" alt=""/>
-          <img src="img/clients/client-2.png" alt=""/>
-          <img src="img/clients/client-3.png" alt=""/>
-          <img src="img/clients/client-4.png" alt=""/>
-          <img src="img/clients/client-5.png" alt=""/>
-          <img src="img/clients/client-6.png" alt=""/>
-          <img src="img/clients/client-7.png" alt=""/>
-          <img src="img/clients/client-8.png" alt=""/>
-        </div>
-
-      </div>
-    </section>--%><!-- #clients -->
+  
 
     <section id="contact" class="section-bg wow fadeInUp">
       <div class="container">
@@ -693,7 +390,7 @@ Johannesburg,South Africa
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <h5>Qlity Gigs</h5>
+            <h5></h5>
             <p></p>
           </div>
 
@@ -702,9 +399,9 @@ Johannesburg,South Africa
             <ul>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
+            
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">How it works</a></li>
+   
             </ul>
           </div>
 

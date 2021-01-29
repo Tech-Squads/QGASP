@@ -194,6 +194,7 @@
                    ControlToValidate="txtPassword" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator><br />--%>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server"
                     ControlToValidate="txtEmail" ErrorMessage="Enter valid email adress *" Font-Size="Small" ForeColor="Red" 
+                    ValidationGroup="Group1"
                     ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </div>
             </div> 
@@ -203,7 +204,7 @@
                 <i class="fa fa-key icon"> 
               </i>  <div style="text-align:center; position:relative;top:-1px;">
 
-                 <asp:TextBox runat="server" ID="txtPassword" TextMode="Password"  CssClass="btn btn-default" placeholder="New Password" Width="340px" Height="40px" required="required"/>
+                 <asp:TextBox runat="server" ID="txtPassword" TextMode="Password"  CssClass="btn btn-default" placeholder="New Password" Width="340px" Height="40px"/>
                   </div>
                                            <div style="text-align:center;position:relative;top:4px;">
               <%--  <asp:RequiredFieldValidator ID="RequiredFieldpass" 
@@ -211,6 +212,7 @@
                    ControlToValidate="txtPassword" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                                  <asp:RegularExpressionValidator
                     ID="RegularExpressionValidator1" runat="server" CssClass="text-danger" BackColor="white"
+                                     ValidationGroup="Group1"
                     ErrorMessage="Too short.Use at least 8 characters *"
                     
                      ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"

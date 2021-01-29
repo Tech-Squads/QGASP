@@ -254,8 +254,12 @@
 
          <div class="form-group">
           <div class="col-md-offset-2 col-md-8"><br /> 
-        <asp:Button runat="server" id="AddGig" CssClass="btn btn-default" Text="Create"  BorderColor ="Blue" ForeColor="Green"   OnClick="AddGig_Click"/>
-           </div>
+        <asp:Button runat="server" id="AddGig" CssClass="btn btn-default" Text="Create"  BorderColor ="green" ForeColor="Green" OnClick="AddGig_Click"  />
+         <asp:Button runat="server" id="update" CssClass="btn btn-default" Text="Update"  BorderColor ="Blue" ForeColor="blue" OnClick="update_Click"  />
+           <asp:Button runat="server" id="Delete" CssClass="btn btn-default" Text="Delete"  BorderColor ="red" ForeColor="blue" OnClick="Delete_Click"  />
+          <br />
+               <asp:Label ID="ErrorMsg" runat="server"  ForeColor="red" Text="" />   
+          </div>
            </div>
              
         <div style="text-align:center">

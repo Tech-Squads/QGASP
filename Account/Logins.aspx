@@ -186,13 +186,13 @@
             <div class="input-icons"> 
                 <i class="fa fa-envelope icon"> 
               </i> 
-                 <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" required="required"/>
+                 <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default"  TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" />
                       <div style="text-align:center; position:relative;top:1px;">
                       
                     <%--     <asp:RequiredFieldValidator ID="RequiredFieldemail" 
                     runat="server" ErrorMessage="Please enter email*"
                    ControlToValidate="txtPassword" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator><br />--%>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server"
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ValidationGroup="validatingroup"
                     ControlToValidate="txtEmail" ErrorMessage="Enter valid email adress *" Font-Size="Small" ForeColor="Red" 
                     ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </div>
@@ -202,11 +202,12 @@
                 <i class="fa fa-key icon"> 
               </i> 
                
-                 <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" CssClass="btn btn-default" placeholder="Password"  Width="340px" Height="40px" required="required"/>
+                 <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" CssClass="btn btn-default"   placeholder="Password"  Width="340px" Height="40px" />
                                              <div style="text-align:center;position:relative;top:4px;">
             
                                  <asp:RegularExpressionValidator
                     ID="RegularExpressionValidator1" runat="server" CssClass="text-danger" BackColor="white"
+                                     ValidationGroup="validatingroup"
                     ErrorMessage="Password must be 8 characters long *"
                     
                      ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"
@@ -214,7 +215,7 @@
                 </div>
             </div>
                
-                  <asp:Button runat="server" Text="Log in" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" OnClick="login_Click" />
+                  <asp:Button runat="server" Text="Log in" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" ValidationGroup="validatingroup"  OnClick="login_Click" />
             <br /> 
                  <p style="position:relative;top:8px;">
                  
@@ -228,7 +229,7 @@
         <div class="input-icons"> 
 
  
-           <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="google%20sign%20in%20button.png" style="background-color:white;height:50px;width:340px;border:1px solid lightgray;border-radius:5px;" OnClick="btngoogleReg_Click"/><br />
+           <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="google%20sign%20in%20button.png" style="background-color:white;height:50px;width:340px;border:1px solid lightgray;border-radius:5px;" OnClick="btngoogleReg_Click"  ValidationGroup="validatingroup"/><br />
           <asp:Label ID="ErrorMsg" runat="server" Text=""  ForeColor="Red"></asp:Label>
                       
                      

@@ -56,7 +56,7 @@ namespace QlityG
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["userID"] = UserID;
+                Session["UserID"] = UserID;
                 //Response.Redirect("~/ViewGigs");
                 Response.Redirect("~/RequestorDashboard");
             }

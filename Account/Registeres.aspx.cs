@@ -86,10 +86,14 @@ namespace QlityG.Account
                 }
               
             }
+            //if (txtPassword.Text == null || txtConfirmPassword==null)
+            //{
+            //    errormesage.Text = "Fields are required !";
+            //}
 
             else
             {
-                errormesage.Text = "Ensure passwords are matching !";
+                errormesage.Text = "please try again  !";
             }
         }
     }
