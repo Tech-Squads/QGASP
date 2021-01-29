@@ -40,7 +40,7 @@ namespace QlityG.Account
             //your client secret  
             //string clientsecret = "OjY8rLlKgre3QmlDjmyeNifl";
             //your redirection url  
-            string redirection_url = "https://localhost:44329/Account/GoogleSignin.aspx";
+            string redirection_url = "http://localhost:8080/Account/GoogleSignin.aspx";
             string url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + "";
             Response.Redirect(url);
         }

@@ -31,7 +31,7 @@ namespace QlityG.Account
         string clientid = "51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com";
         string clientsecret = "OjY8rLlKgre3QmlDjmyeNifl";
 
-        string redirection_url = "https://localhost:44329/Account/Googleform.aspx";
+        string redirection_url = "https://localhost:8080/Account/Googleform.aspx";
         string url = "https://accounts.google.com/o/oauth2/token";
 
 
