@@ -159,7 +159,7 @@
                     ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </div>
                  
-                  <div style="position:fixed;right:507px;">
+                  <div >
                  <asp:Button runat="server" Text="Continue" CssClass="btn btn-default" Backcolor="blue" BorderColor="Blue" ForeColor="white" Width="80px" Height="30px" OnClick="sendmail_Click"  />
                    
                </div>

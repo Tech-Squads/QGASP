@@ -63,7 +63,7 @@
         width:100%;
         height:70px;
      
-        background:lightblue;
+        background:lightgray;
     }
   
      .nav-menu a:hover{
@@ -77,7 +77,7 @@
              
                  width: 100%;
                  height: 800px;
-                 background-color:lightgrey;
+                 background-color:lightgray;
               
              }
   

@@ -22,7 +22,7 @@
         
         }
                 #heade{
-                 background-color:lavender;
+                 background-color:lightgray;
                  height:70px;
                
  
@@ -84,7 +84,7 @@
         width:100%;
         height:70px;
      
-        background:lightblue;
+        background:lightgray;
     }
   
      .nav-menu a:hover{
@@ -109,7 +109,7 @@
                  /*  border:1px solid red;*/
                  width: 100%;
                  height: 800px;
-                 background-color:lavender;
+                 background-color:lightgray;
                 /* background: url(/assets/images/1.jpg) no-repeat center center fixed;*/
           
                  
