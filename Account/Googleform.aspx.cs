@@ -106,7 +106,7 @@ namespace QlityG.Account
 
                 string data = JsonConvert.SerializeObject(user);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/AddUser", content).Result;
+                HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/UserLogongoogle", content).Result;
                 if (resp.IsSuccessStatusCode)
                 {
 

@@ -192,6 +192,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="2.jpg" />
     <Content Include="About.aspx" />
     <Content Include="Account\1.jpg" />
     <Content Include="Account\Forgot.aspx" />
@@ -218,7 +219,7 @@
     <Content Include="CreateGig.aspx" />
     <Content Include="GiggerDash.aspx" />
     <Content Include="GiggerDashboard.aspx" />
-    <Content Include="Mainpage.aspx" />
+    <Content Include="index.aspx" />
     <Content Include="RequestorDash.aspx" />
     <Content Include="RequestorDashboard.aspx" />
     <Content Include="SelectingType.aspx" />
@@ -318,7 +319,6 @@
     <Content Include="contactform\contactform.js" />
     <Content Include="contactform\Readme.txt" />
     <Content Include="Homepage\css\style.css" />
-    <Content Include="Homepage\Homepage.aspx" />
     <Content Include="Homepage\img\about-bg.jpg" />
     <Content Include="Homepage\img\about-mission.jpg" />
     <Content Include="Homepage\img\about-plan.jpg" />
@@ -429,7 +429,100 @@
     <Content Include="lib\ionicons\fonts\ionicons.ttf" />
     <Content Include="lib\ionicons\fonts\ionicons.woff" />
     <Content Include="lib\owlcarousel\LICENSE" />
+    <Content Include="_css\style.css" />
+    <Content Include="_img\about-bg.jpg" />
+    <Content Include="_img\about-mission.jpg" />
+    <Content Include="_img\about-plan.jpg" />
+    <Content Include="_img\about-vision.jpg" />
+    <Content Include="_img\apple-touch-icon.png" />
+    <Content Include="_img\call-to-action-bg.jpg" />
+    <Content Include="_img\clients\client-1.png" />
+    <Content Include="_img\clients\client-2.png" />
+    <Content Include="_img\clients\client-3.png" />
+    <Content Include="_img\clients\client-4.png" />
+    <Content Include="_img\clients\client-5.png" />
+    <Content Include="_img\clients\client-6.png" />
+    <Content Include="_img\clients\client-7.png" />
+    <Content Include="_img\clients\client-8.png" />
+    <Content Include="_img\facts-bg.jpg" />
+    <Content Include="_img\facts-img.png" />
+    <Content Include="_img\favicon.png" />
+    <Content Include="_img\intro-carousel\1.jpg" />
+    <Content Include="_img\intro-carousel\2.jpg" />
+    <Content Include="_img\intro-carousel\3.jpg" />
+    <Content Include="_img\intro-carousel\4.jpg" />
+    <Content Include="_img\intro-carousel\5.jpg" />
+    <Content Include="_img\portfolio\app1.jpg" />
+    <Content Include="_img\portfolio\app2.jpg" />
+    <Content Include="_img\portfolio\app3.jpg" />
+    <Content Include="_img\portfolio\card1.jpg" />
+    <Content Include="_img\portfolio\card2.jpg" />
+    <Content Include="_img\portfolio\card3.jpg" />
+    <Content Include="_img\portfolio\web1.jpg" />
+    <Content Include="_img\portfolio\web2.jpg" />
+    <Content Include="_img\portfolio\web3.jpg" />
+    <Content Include="_img\preloader.gif" />
+    <Content Include="_img\quote-sign-left.png" />
+    <Content Include="_img\quote-sign-right.png" />
+    <Content Include="_img\team-1.jpg" />
+    <Content Include="_img\team-2.jpg" />
+    <Content Include="_img\team-3.jpg" />
+    <Content Include="_img\team-4.jpg" />
+    <Content Include="_img\testimonial-1.jpg" />
+    <Content Include="_img\testimonial-2.jpg" />
+    <Content Include="_img\testimonial-3.jpg" />
+    <Content Include="_img\testimonial-4.jpg" />
+    <Content Include="_img\testimonial-5.jpg" />
+    <Content Include="_js\main.js" />
+    <Content Include="_lib\animate\animate.css" />
+    <Content Include="_lib\animate\animate.min.css" />
+    <Content Include="_lib\bootstrap\css\bootstrap.css" />
+    <Content Include="_lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="_lib\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="_lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="_lib\counterup\counterup.min.js" />
+    <Content Include="_lib\easing\easing.js" />
+    <Content Include="_lib\easing\easing.min.js" />
+    <Content Include="_lib\font-awesome\css\font-awesome.css" />
+    <Content Include="_lib\font-awesome\css\font-awesome.min.css" />
+    <Content Include="_lib\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="_lib\ionicons\css\ionicons.css" />
+    <Content Include="_lib\ionicons\css\ionicons.min.css" />
+    <Content Include="_lib\ionicons\fonts\ionicons.svg" />
+    <Content Include="_lib\isotope\isotope.pkgd.js" />
+    <Content Include="_lib\isotope\isotope.pkgd.min.js" />
+    <Content Include="_lib\jquery\jquery-migrate.min.js" />
+    <Content Include="_lib\jquery\jquery.min.js" />
+    <Content Include="_lib\lightbox\css\lightbox.css" />
+    <Content Include="_lib\lightbox\css\lightbox.min.css" />
+    <Content Include="_lib\lightbox\images\close.png" />
+    <Content Include="_lib\lightbox\images\loading.gif" />
+    <Content Include="_lib\lightbox\images\next.png" />
+    <Content Include="_lib\lightbox\images\prev.png" />
+    <Content Include="_lib\lightbox\js\lightbox.js" />
+    <Content Include="_lib\lightbox\js\lightbox.min.js" />
+    <Content Include="_lib\lightbox\links.php" />
+    <Content Include="_lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="_lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="_lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="_lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="_lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="_lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="_lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="_lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="_lib\owlcarousel\owl.carousel.js" />
+    <Content Include="_lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="_lib\superfish\hoverIntent.js" />
+    <Content Include="_lib\superfish\superfish.js" />
+    <Content Include="_lib\superfish\superfish.min.js" />
+    <Content Include="_lib\touchSwipe\jquery.touchSwipe.js" />
+    <Content Include="_lib\touchSwipe\jquery.touchSwipe.min.js" />
+    <Content Include="_lib\waypoints\links.php" />
+    <Content Include="_lib\waypoints\waypoints.min.js" />
+    <Content Include="_lib\wow\wow.js" />
+    <Content Include="_lib\wow\wow.min.js" />
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\StyleSheetGigs.css" />
     <Content Include="Scripts\bootstrap.js" />
@@ -468,6 +561,15 @@
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="_lib\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="_lib\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="_lib\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="_lib\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="_lib\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="_lib\ionicons\fonts\ionicons.eot" />
+    <Content Include="_lib\ionicons\fonts\ionicons.ttf" />
+    <Content Include="_lib\ionicons\fonts\ionicons.woff" />
+    <Content Include="_lib\owlcarousel\LICENSE" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\Forgot.aspx.cs">
@@ -582,12 +684,12 @@
     <Compile Include="GiggerDashboard.aspx.designer.cs">
       <DependentUpon>GiggerDashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Mainpage.aspx.cs">
-      <DependentUpon>Mainpage.aspx</DependentUpon>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Mainpage.aspx.designer.cs">
-      <DependentUpon>Mainpage.aspx</DependentUpon>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Utils.cs" />
     <Compile Include="RequestorDash.aspx.cs">
@@ -642,13 +744,6 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Homepage\Homepage.aspx.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Homepage\Homepage.aspx.designer.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\DataTool.cs" />
     <Compile Include="DataAccess\Helper.cs" />
@@ -739,7 +834,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties content_4bootstrap-theme_1min_1css_1map__JsonSchema="" content_4bootstrap_1css_1map__JsonSchema="" />
+      <UserProperties content_4bootstrap_1css_1map__JsonSchema="" content_4bootstrap-theme_1min_1css_1map__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -79,20 +79,15 @@
         width:100%;
         height:70px;
      
-        background:lightblue;
+        background:lightgray;
     }
   
      .nav-menu a:hover{
 	color:red;
 	border-bottom-style:solid;
 	
-}
-     #join-cov{
-         height:20px;
-      background-color:rebeccapurple;
-      /*border:5px solid #cccccc;*/
-      border-radius:4px;
-     
+
+   
      }
      #logo{
 
@@ -103,20 +98,19 @@
                  /*  border:1px solid red;*/
                  width: 100%;
                  height: 800px;
-                 background-color:lavender;
+                 background-color:lightgray;
                /*  background-color:seashell;*/
                  /*background: url(/assets/images/1.jpg) no-repeat center center fixed;*/
         
                  
              }
                 #heade{
-                 background-color:lavender;
+                 background-color:lightgray;
                  height:70px;
                
  
              }
-               
-             
+                     
 
   </style>
      <link rel="stylesheet"
@@ -153,7 +147,7 @@
     <div class="container-fluid">
         <br />
       <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> 
-          <a href="../Mainpage.aspx">
+          <a href="../index.aspx">
           <img src="../Account/QlityGigs_Log.png" />
               </a>
        

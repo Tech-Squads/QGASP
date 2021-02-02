@@ -77,7 +77,7 @@
              
                  width: 100%;
                  height: 800px;
-                 background-color:lightgrey;
+                 background-color:lightgray;
               
              }
   
@@ -115,7 +115,7 @@
   <header id="heade">
     <div class="container-fluid">
         <br />
-      <div id="logo" class="pull-left" style=" position:fixed;left:40px;"> <a href="../Homepage/Homepage.aspx"><img src="../Account/QlityGigs_Log.png" />
+      <div id="logo" class="pull-left" style=" position:fixed;left:40px;"> <a href="../index.aspx"><img src="../Account/QlityGigs_Log.png" />
           </a>   
       </div>
 
@@ -159,7 +159,7 @@
                     ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </div>
                  
-                  <div style="position:fixed;right:507px;">
+                  <div >
                  <asp:Button runat="server" Text="Continue" CssClass="btn btn-default" Backcolor="blue" BorderColor="Blue" ForeColor="white" Width="80px" Height="30px" OnClick="sendmail_Click"  />
                    
                </div>
