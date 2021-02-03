@@ -22,7 +22,7 @@ namespace QlityG.Account
     public partial class GoogleSignin : System.Web.UI.Page
     {
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        Uri baseAddress = new Uri(Utils.USendRL);
 
         UserModel u;
         string googleEmail;
@@ -161,86 +161,6 @@ namespace QlityG.Account
                 ErrorMessage.Text = "An Error Occured Please try again.";
                 ErrorMessage.Visible = true;
             }
-
-
-            //client.BaseAddress = baseAddress;
-            //googleEmail = lblEmail.Text.Trim().ToUpper();
-
-
-            //u = new UserModel();
-            //u.uEmail = googleEmail;
-
-
-            //string dat = JsonConvert.SerializeObject(u);
-            //StringContent content = new StringContent(dat, Encoding.UTF8, "application/json");
-            //HttpResponseMessage resp = client.GetAsync(client.BaseAddress + string.Format("/UserLogon?Uemail={0}", googleEmail)).Result;
-
-
-            //if (resp.IsSuccessStatusCode)
-            //{
-            //    string data = resp.Content.ReadAsStringAsync().Result;
-            //    UserModel LoggedUser = new UserModel(JsonConvert.DeserializeObject<UserModel>(data));
-
-
-
-            //    if (LoggedUser == null)
-            //    {
-            //        ErrorMessage.Visible = true;
-
-            //    }
-            //    else
-            //    {
-
-            //        if (LoggedUser.FirstLogin == "True")
-            //        {
-
-
-            //            Session["UserID"] = LoggedUser.UserID;
-
-            //            Session["HasGig"] = LoggedUser.HasGig;
-
-            //            Response.Redirect("/SelectingType.aspx");
-
-            //        }
-            //        else
-            //        {
-            //            if (LoggedUser.uType == 2)
-            //            {
-
-
-            //                Session["UserID"] = LoggedUser.UserID;
-
-            //                Session["HasGig"] = LoggedUser.HasGig;
-
-
-
-            //                Response.Redirect("/RequestorDashboard.aspx");
-
-            //            }
-            //            if (LoggedUser.uType == 1)
-            //            {
-
-            //                Session["UserID"] = LoggedUser.UserID;
-
-            //                Session["HasGig"] = LoggedUser.HasGig;
-
-
-            //                Response.Redirect("/GiggerDashboard.aspx");
-
-            //            }
-
-            //        }
-
-
-
-            //    }
-
-            //}
-            //else
-            //{
-            //    Response.Redirect("~/Account/Logins");
-            //    ErrorMessage.Text = "Incorrect logins";
-            //}
 
 
 
