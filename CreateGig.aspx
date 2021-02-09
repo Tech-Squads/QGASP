@@ -74,7 +74,7 @@
         width:100%;
         height:70px;
      
-        background:lightblue;
+        background:lightgray;
     }
   
      .nav-menu a:hover{
@@ -108,9 +108,18 @@
             /*     background-color:lightcyan;*/
                
              }
+
+             #skills_layer{
+                   width:360px;
+                    background-color:white;
+                     margin:0 auto;
+                    height:40px;
+                   position:relative;
+                    z-index:10;
+             }
    #loginScreenin
     {
-      height:470px;
+      height:350px;
       width:400px;
       margin:0 auto;
       position:relative;
@@ -157,8 +166,8 @@
   <header id="header">
     <div class="container-fluid">
         
-      <div id="logo" class="pull-left"> <a href="../Homepage/Homepage.aspx"><img src="../Account/QlityGigs_Log.png" />
-          </a>   
+      <div id="logo" class="pull-left"> <img src="../Account/QlityGigs_Log.png" />
+          
       </div>
 
       <nav id="nav-menu-container">
@@ -182,41 +191,29 @@
              <div id="formstyl" style="text-align:center;"><br />
                 
       
-  <div id="loginScreenin" style="text-align:center">
+  <div id="loginScreenin">
         
          <div style="text-align:center"><br />    
 
              <p style="font-size:16px;color:black;">Create Gig</p>
               <div class="form-group"> 
-              <div class="col-md-offset-2 col-md-8">
-              <%-- <label for="form_name">Title/Name *</label> <br /> --%>         
-               <asp:TextBox runat="server" id="gigTitle" type="text" name="name"  CssClass="btn btn-default" placeholder="Enter Title of the Gig *"  required="required"    Width="250px" /><br/><br/>
+              <div>       
+               <asp:TextBox runat="server" id="gigTitle" type="text" name="name"  CssClass="btn btn-default" placeholder="Enter Title of the Gig *"  Width="360px" Height="40px" required="required" /><br/>
                </div>
-           </div><br />
+           </div>
 
+            <div class="form-group">
+             <asp:TextBox runat="server" ID="gDescription" name="message" CssClass="btn btn-default" placeholder=" Gig Description"   Width="360px" Height="50px" /> <br/>
+           </div>
 
-        <div class="form-group">             
-                 <div class="col-md-offset-2 col-md-8">
-               <%--  <label for="form_email">Contact Email *</label><br />--%>
-                    <asp:TextBox runat="server" id="ContactEmail" type="email" name="email" CssClass="btn btn-default" placeholder="eg John@gmail.com"  data-error="Valid email is required."    Width="250px" /><br/><br/>
-                </div>              
-          </div>
-
-           <div class="form-group">      
-                
-                 <div class="col-md-offset-2 col-md-8">
-                    <%--  <label for="form_lastname">Due Date *</label><br />--%>
-             <%--   <asp:TextBox runat="server" id="dueDate" type="text" name="surname" CssClass="btn btn-default"  placeholder="Please enter the last day for a respond"  data-error=" Field is required."  Width="250px" /><br/><br/>--%>
-                </div>              
-          </div>
-
-        <div class="form-group">  
-         <div class="col-md-offset-2 col-md-8">
+        <div >  
+         <div>
          <label for="form_name">Select a skill *</label> <br />
          </div>
          </div>
-            <asp:TextBox ID="SkillsRequired" CssClass="btn btn-default"  runat="server"  Width="50px" Height="300px"/><br /> 
-            
+             <div id="skills_layer">
+            <asp:TextBox ID="SkillsRequired" CssClass="btn btn-default"  runat="server"  Width="360px" Height="50px"/><br /> 
+            </div>
  <script>
         
 
@@ -235,27 +232,25 @@
  </script>
 
         <br />
-           <div class="form-group">
-          <div class="col-md-offset-2 col-md-8">
-                                       
-         <%--    <br /><label for="form_message">Description of Gig *</label><br />--%>
-           <asp:TextBox runat="server" id="gDescription" name="message" CssClass="btn btn-default" placeholder=" Gig Description" rows="5"    TextMode="MultiLine"  Width="250px" /> <br/><br/>
-           </div>
-          </div>
+        
 
+         
+          
                 <div class="form-group">
           <div class="col-md-offset-2 col-md-8">
                                     
               
-              <asp:Label ID="Label1" runat="server"  ForeColor="orange" Text="" />    
+              <asp:Label ID="Label1" runat="server"  ForeColor="blue" Text="" />    
          
            </div>
           </div>
 
          <div class="form-group">
-          <div class="col-md-offset-2 col-md-8"><br /> 
+          <div class="col-md-offset-2 col-md-8">
+
         <asp:Button runat="server" id="AddGig" CssClass="btn btn-default" Text="Create"  BorderColor ="green" ForeColor="Green" OnClick="AddGig_Click"  />
-         <asp:Button runat="server" id="update" CssClass="btn btn-default" Text="Update"  BorderColor ="Blue" ForeColor="blue" OnClick="update_Click"  />
+             
+               <asp:Button runat="server" id="update" CssClass="btn btn-default" Text="Update"  BorderColor ="Blue" ForeColor="blue" OnClick="update_Click"  />
            <asp:Button runat="server" id="Delete" CssClass="btn btn-default" Text="Delete"  BorderColor ="red" ForeColor="blue" OnClick="Delete_Click"  />
           <br />
                <asp:Label ID="ErrorMsg" runat="server"  ForeColor="red" Text="" />   
@@ -267,10 +262,7 @@
       
         </div>
 
-             
-        
-        </div>
-
+</div>
   </div> 
      </div>      
          </div>   

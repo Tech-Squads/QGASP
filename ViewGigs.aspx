@@ -6,7 +6,11 @@
 <head runat="server">
     <title></title>
   <style type="text/css">
-
+      #heade {
+          background-color: lightgray;
+          height: 68px;
+          width: 100%;
+      }
 
              .input-icons i { 
             position: absolute; 
@@ -42,14 +46,25 @@
       font-weight:bold;
       text-decoration:none;
     }
+
+
+     #formstyl
+    {
+      height:40px;
+      width:100%;
+
+     background-color:black;
+    
+    }
     
     #formstyle
     {
       height:auto;
       width:780px;
       margin:0 auto;
-      position:relative;
+      
       z-index:10;
+      clear:both;
     
      /* background: url(login.png) no-repeat;*/
      background-color:white;
@@ -89,7 +104,7 @@
              #outer-layer {
                  width: 100%;
                  height: 900px;
-                 background-color:lavender;
+                 background-color:lightgray;
                  
              }
   #formstyle2
@@ -97,7 +112,7 @@
       height:auto;
       width:680px;
       margin:0 auto;
-      position:relative;
+    
       z-index:10;
      background-color:white;
       border-radius:6px;
@@ -114,6 +129,12 @@
           background-color:blueviolet;
           border-radius:6px;
     }
+    #divbox{
+         background-color: black;
+          height: 68px;
+          width: 100%;
+    }
+        
   </style>
      <link rel="stylesheet"
           href= 
@@ -145,34 +166,46 @@
   <!--==========================
     Header
   ============================-->
-  <header id="header">
-    <div class="container-fluid">
 
-      <div id="logo" class="pull-left"> <img src="../Account/QlityGigs_Log.png" />
+      <header id="heade" style="position:fixed;top:0px;">
+    <div class="container-fluid">
+        <br />
+      <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> 
+          <a href="../index.aspx">
+          <img src="../Account/QlityGigs_Log.png" />
+              </a>
        
       
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><p style="color:blue"> <a href="RequestorDashboard.aspx" style="color:black;font-size:small;">Dashboard</a></p> </li>
+         <li><p style="color:blue"> <a href="RequestorDashboard.aspx" style="color:black;font-size:small;">Dashboard</a></p> </li>
 
              <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:black;font-size:small;">Log Out</a></p> </li>
+     
         </ul>
+
+
       </nav><!-- #nav-menu-container -->
     </div>
-  </header><!-- #header -->
+  </header>
+    
+
 
   
 
      <div ><br /><br />  
          <br /><br /><br />
-         <br/><br/><br/>
-         
-         <div>
+         <br/><br/>
+        
+       
+
+
+            <div>
              <div id="formstyle" style="text-align:center;"><br />
                  <div id="formstyle2">
-                    <h3 >Running  Gigs</h3>
+                    <h3 >View Gigs</h3>
                      <hr />
                     <br />
                     <asp:Label ID="viewgig" runat="server" Text=""></asp:Label>

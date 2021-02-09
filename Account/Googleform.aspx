@@ -209,15 +209,10 @@
                  </div><br />
                  
                  <h4 id="hthree">Google Account</h4><br />
-            
+            <div > 
+                <p style="color:forestgreen;">Your account is ,</p><asp:Label ID="lblEmail" runat="server" Text=""></asp:Label><br />
 
-                  <div > 
-              
-                            
-                            <asp:Label ID="lblEmail" runat="server" Text=""></asp:Label><br /><br />
-                    
-
-                      <div style="text-align:right;position:relative;right:30px;">
+                      <div style="text-align:center;"><br />
                      <asp:Button ID="btnContinue" runat="server" Text="Join" CSSClass='buttons' Backcolor="blue"  ForeColor="white"  Width="55px" Height="36px" OnClick="btnContinue_Click"   />
                       </div>
                        <asp:Label ID="errormesage" runat="server" Text="" ForeColor="red"></asp:Label>

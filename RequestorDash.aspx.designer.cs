@@ -60,13 +60,13 @@ namespace QlityG
         protected global::System.Web.UI.WebControls.TextBox txteducation;
 
         /// <summary>
-        /// DropDownListcountry control.
+        /// Selectcountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListcountry;
+        protected global::System.Web.UI.WebControls.TextBox Selectcountry;
 
         /// <summary>
         /// Create control.

@@ -212,12 +212,13 @@
             
 
                   <div > 
-                      <asp:Label ID="lblEmail" runat="server" Text=""></asp:Label>
+                     <p style="color:forestgreen;">Your account is ,</p><asp:Label ID="lblEmail" runat="server" Text=""></asp:Label>
+                            
                             
                 <%--<asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="" Width="340px" Height="40px"  /><br /><br />--%>
                      
 
-                      <div style="text-align:right;position:relative;right:30px;">
+                      <div style="text-align:center;"><br />
                      <asp:Button ID="btnContinue" runat="server" Text="Continue" CSSClass='buttons' Backcolor="blue"  ForeColor="white"  Width="78px" Height="36px" OnClick="btnContinue_Click"   />
                       </div>
                       <asp:Label ID="ErrorMessage" runat="server" Text=""></asp:Label>

@@ -77,7 +77,7 @@
              
                  width: 100%;
                  height: 800px;
-                 background-color:lightgrey;
+                 background-color:lightgray;
               
              }
   
@@ -115,7 +115,7 @@
   <header id="heade">
     <div class="container-fluid">
         <br />
-      <div id="logo" class="pull-left" style=" position:fixed;left:40px;"> <a href="../Homepage/Homepage.aspx"><img src="../Account/QlityGigs_Log.png" />
+      <div id="logo" class="pull-left" style=" position:fixed;left:40px;"> <a href="../index.aspx"><img src="../Account/QlityGigs_Log.png" />
           </a>   
       </div>
 

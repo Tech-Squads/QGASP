@@ -22,7 +22,7 @@ namespace QlityG.Account
     public partial class Googleform : System.Web.UI.Page
     {
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        Uri baseAddress = new Uri(Utils.USendRL);
 
         UserModel user;
         string googleEmail;
@@ -61,7 +61,7 @@ namespace QlityG.Account
         }
         public class Userclass
         {
-          
+
             public string email
             {
                 get;
@@ -69,8 +69,8 @@ namespace QlityG.Account
             }
         }
 
-           
-            protected void Page_Load(object sender, EventArgs e)
+
+        protected void Page_Load(object sender, EventArgs e)
         {
 
             if (!IsPostBack)
@@ -93,35 +93,35 @@ namespace QlityG.Account
             client.BaseAddress = baseAddress;
 
 
-            if (lblEmail.Text !=null)
+            if (lblEmail.Text != null)
             {
                 googleEmail = lblEmail.Text.Trim().ToUpper();
-               
+
 
                 user = new UserModel();
                 user.FirstLogin = "True";
                 user.uEmail = googleEmail;
-                user.HasGig = "False";            
+                user.HasGig = "False";
                 user.uType = 0;
 
                 string data = JsonConvert.SerializeObject(user);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/UserLogongoogle", content).Result;
+                HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/AddUser", content).Result;
                 if (resp.IsSuccessStatusCode)
                 {
 
-                    Response.Redirect("~/Account/Logins");
+                    errormesage.Text = "You are registered";
 
                 }
                 else
 
                 {
-                    errormesage.Text = "An Error Occuried Please try again!.";
+                    errormesage.Text = "Your email exists on our system !";
                 }
 
             }
 
-          
+
 
         }
         public void GetToken(string code)
@@ -160,7 +160,7 @@ namespace QlityG.Account
             response.Close();
             JavaScriptSerializer js = new JavaScriptSerializer();
             Userclass userinfo = js.Deserialize<Userclass>(responseFromServer);
-          
+
             lblEmail.Text = userinfo.email;
 
 

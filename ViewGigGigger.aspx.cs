@@ -19,7 +19,7 @@ namespace QlityG
 
         List<GigModel> gigs = new List<GigModel>();
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.USendRL);
+        Uri baseAddress = new Uri(Utils.TestUSendRL);
 
         protected void Page_Load(object sender, EventArgs e)
         {

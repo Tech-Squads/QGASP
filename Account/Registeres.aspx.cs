@@ -21,80 +21,109 @@ namespace QlityG.Account
 {
     public partial class Registeres : System.Web.UI.Page
     {
-       
+
 
         HttpClient client = new HttpClient();
         Uri baseAddress = new Uri(Utils.USendRL);
 
         UserModel user;
         string email, password;
-     
-      
-            protected void Page_Load(object sender, EventArgs e)
+
+
+        protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-     
+
         protected void btngoogleReg_Click(object sender, EventArgs e)
         {
 
 
             //your client id  
-              string clientid = "51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com";
+            string clientid = "51695088027-fgq4ej9ctndugj70h1pdbln0rhthess5.apps.googleusercontent.com";
             //your client secret  
             //string clientsecret = "OjY8rLlKgre3QmlDjmyeNifl";
             //your redirection url  
             string redirection_url = "https://localhost:44329/Account/Googleform.aspx";
-                     string url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + "";
+            string url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + "";
             Response.Redirect(url);
 
 
         }
-     
+
 
 
         protected void register_Click(object sender, EventArgs e)
         {
-            client.BaseAddress = baseAddress;
+            client.BaseAddress = baseAddress;         
 
+     
+         if (txtPassword.Text == txtConfirmPassword.Text)
+                    {
 
-            if (txtPassword.Text == txtConfirmPassword.Text)
-            {
-                email = txtEmail.Text.Trim().ToUpper();
-                password = Utils.HashThis(txtPassword.Text.Trim().ToUpper());
-
-                user = new UserModel();
-                user.FirstLogin = "True";
-                user.uEmail = email;
-                user.HasGig = "False";
-                user.uPassword = password;
-                user.uType = 0;
-
-                string data = JsonConvert.SerializeObject(user);
-                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/AddUser", content).Result;
-                if (resp.IsSuccessStatusCode)
+                if (txtEmail.Text !="")
                 {
-                 
-                    Response.Redirect("~/Account/Logins");
+
+                    if (txtPassword.Text != "")
+
+                    {
+                        if (txtPassword.Text != "" && txtEmail.Text!=null)
+                        {
+                            email = txtEmail.Text.Trim().ToUpper();
+                            password = Utils.HashThis(txtPassword.Text.Trim().ToUpper());
+                            user = new UserModel();
+                            user.FirstLogin = "True";
+                            user.uEmail = email;
+                            user.HasGig = "False";
+                            user.uPassword = password;
+                            user.uType = 0;
+
+                            string data = JsonConvert.SerializeObject(user);
+                            StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+                            HttpResponseMessage resp = client.PostAsync(client.BaseAddress + "/AddUser", content).Result;
+
+                            if (resp.IsSuccessStatusCode)
+                            {
+                                Response.Redirect("~/Account/Logins");
+                            }
+                            else
+
+                            {
+                                lblemailerror.Text = "This email is already in use.";
+                            }
+
+                        }
+                        else
+
+                        {
+                            lblemailerror.Text = "Email and Password are required*";
+                        }
+
+
+                    }
+                    else
+
+                    {
+                        lblerrorPass.Text = "Password is required*";
+                    }
+
+
 
                 }
+
                 else
-
                 {
-                    errormesage.Text = "This email exists on our system !";
+                    lblemailerror.Text = "Email is required*";
                 }
-              
-            }
-            //if (txtPassword.Text == null || txtConfirmPassword==null)
-            //{
-            //    errormesage.Text = "Fields are required !";
-            //}
 
-            else
-            {
-                errormesage.Text = "please try again  !";
-            }
+                    }
+          else
+           {
+             errormesage.Text = "Password must match*";
+           }
+
         }
+
     }
 }
+    

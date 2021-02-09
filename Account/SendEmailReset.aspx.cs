@@ -51,7 +51,7 @@ namespace QlityG.Account
                 string data = resp.Content.ReadAsStringAsync().Result;
                 if (data == "null")
                 {
-                    ErrorMessage.Text = " This Email does not exist on our system!";
+                    ErrorMessage.Text = " Incorrect email.";
                     ErrorMessage.Visible = true;
                 }
                 else
@@ -105,5 +105,7 @@ namespace QlityG.Account
                 ErrorMessage.Visible = true;
             }
         }
+
+    
     }
 }

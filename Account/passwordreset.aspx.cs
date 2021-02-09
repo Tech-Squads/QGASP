@@ -65,7 +65,7 @@ namespace QlityG.Account
                 if (resp.IsSuccessStatusCode)
                 {
 
-                    ErrorMessage.Text = "Password updated successfully";
+                    lblsuccess.Text = "Password updated successfully.";
                 }
 
                 else

@@ -63,7 +63,7 @@
     
     #formstyle
     {
-      height:395px;
+      height:371px;
       width:380px;
       margin:0 auto;
       position:relative;
@@ -153,14 +153,14 @@
   <header id="heade">
     <div class="container-fluid">
         <br />
-      <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> <a href="../Mainpage.aspx"><img src="../Account/QlityGigs_Log.png" />
-          
-      </a>   
+      <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> <a href="../index.aspx"><img src="../Account/QlityGigs_Log.png" />
+         </a>
+     
       </div>
         
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-       <li  style="position:relative;right:1px;"><b>Don't have an account ? <a href="Registeres.aspx" style="color:blue">Join</a></b></li>
+       <li  style="position:relative;right:1px;"><b>don't have an account? <a href="Registeres.aspx" style="color:blue">Join</a></b></li>
                             
 
      
@@ -174,28 +174,19 @@
         <br />
          <div>
              <div id="formstyle" style="text-align:center;"><br />
-                 <h4>Log in with registered account</h4><br />
-        <%--        <div class="input-icons"> 
-                <i class="fa fa-user icon"> 
-              </i> 
-                <input class="input-field" 
-                       type="text" 
-                       placeholder="Username or email" /> 
-            </div> --%>
-  
+                 <h4>Log in with registered account</h4>
+                  <div style="text-align:center; position:relative;top:1px;" >
+                     <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ValidationGroup="validatingroup"
+                    ControlToValidate="txtEmail" ErrorMessage="Enter valid email adress *" Font-Size="Small" ForeColor="Red" 
+                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                  </div>
             <div class="input-icons"> 
                 <i class="fa fa-envelope icon"> 
               </i> 
                  <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default"  TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" />
                       <div style="text-align:center; position:relative;top:1px;">
-                      
-                    <%--     <asp:RequiredFieldValidator ID="RequiredFieldemail" 
-                    runat="server" ErrorMessage="Please enter email*"
-                   ControlToValidate="txtPassword" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator><br />--%>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ValidationGroup="validatingroup"
-                    ControlToValidate="txtEmail" ErrorMessage="Enter valid email adress *" Font-Size="Small" ForeColor="Red" 
-                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                </div>
+                         <asp:Label ID="lblemailerror" runat="server" ForeColor="Red" Text=""></asp:Label>                     
+                     </div>
             </div> 
   
             <div class="input-icons"> 
@@ -203,9 +194,9 @@
               </i> 
                
                  <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" CssClass="btn btn-default"   placeholder="Password"  Width="340px" Height="40px" />
-                                             <div style="text-align:center;position:relative;top:4px;">
+                  <div style="text-align:center;position:relative;top:1px;">
             
-                                 <asp:RegularExpressionValidator
+                     <asp:RegularExpressionValidator
                     ID="RegularExpressionValidator1" runat="server" CssClass="text-danger" BackColor="white"
                                      ValidationGroup="validatingroup"
                     ErrorMessage="Password must be 8 characters long *"
@@ -213,6 +204,9 @@
                      ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"
                     ControlToValidate="txtPassword" ForeColor="Red" Font-Size="Small" ></asp:RegularExpressionValidator>
                 </div>
+                 <div style="text-align:center; position:relative;top:1px;">
+                         <asp:Label ID="lblPassError" runat="server" ForeColor="Red" Text=""></asp:Label>                     
+                 </div>
             </div>
                
                   <asp:Button runat="server" Text="Log in" CssClass="btn btn-default" Backcolor="Green" BorderColor="Blue" ForeColor="white" Width="340px" Height="40px" ValidationGroup="validatingroup"  OnClick="login_Click" />

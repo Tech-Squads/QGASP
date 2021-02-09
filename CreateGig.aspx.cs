@@ -44,7 +44,7 @@ namespace QlityG
             
             gig.DueDate = Label1.Text.Trim();
             gig.GigDescription = gDescription.Text.Trim();
-            gig.ContactDetails = ContactEmail.Text.Trim();
+            //gig.ContactDetails = ContactEmail.Text.Trim();
             gig.RequiredSkills = SkillsRequired.Text.Trim();
             gig.RequestorID = UserID;
 
@@ -57,10 +57,13 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 Session["UserID"] = UserID;
+
                 //Response.Redirect("~/ViewGigs");
                 Response.Redirect("~/RequestorDashboard");
+
+
             }
-            Response.Redirect("~/Mainpage");
+            Response.Redirect("~/index.aspx");
         }
         protected void update_Click(object sender, EventArgs e)
         {
@@ -69,13 +72,13 @@ namespace QlityG
 
             gig.DueDate = Label1.Text.Trim();
             gig.GigDescription = gDescription.Text.Trim();
-            gig.ContactDetails = ContactEmail.Text.Trim();
+            //gig.ContactDetails = ContactEmail.Text.Trim();
             gig.RequiredSkills = SkillsRequired.Text.Trim();
-            gig.RequestorID = UserID;
+            
 
-            string data = JsonConvert.SerializeObject(gig);
-            StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/Updategig/" + UserID, content).Result;
+            string dat = JsonConvert.SerializeObject(gig);
+            StringContent content = new StringContent(dat, Encoding.UTF8, "application/json");
+            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateGig/" + UserID, content).Result;
 
 
             if (resp.IsSuccessStatusCode)

@@ -59,7 +59,7 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 Session["UserID"] = UserID;
-                Response.Redirect("~/RequestorDashboard");
+                Response.Redirect("~/RequestorDash.aspx");
             }
             Response.Redirect("~/SelectingType.aspx");
 
@@ -78,7 +78,7 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 Session["UserID"] = UserID;
-                Response.Redirect("~/GiggerDashboard");
+                Response.Redirect("~/GiggerDash.aspx");
             }
             Response.Redirect("~/SelectingType.aspx");
 

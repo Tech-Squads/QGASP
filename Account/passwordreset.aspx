@@ -63,7 +63,7 @@
         width:100%;
         height:70px;
      
-        background:lightgray;
+        background:lightblue;
     }
   
      .nav-menu a:hover{
@@ -77,7 +77,7 @@
              
                  width: 100%;
                  height: 800px;
-                 background-color:lightgray;
+                 background-color:lightgrey;
               
              }
   
@@ -115,7 +115,7 @@
   <header id="heade">
     <div class="container-fluid">
         <br />
-      <div id="logo" class="pull-left" style=" position:fixed;left:40px;"> <a href="../Homepage/Homepage.aspx"><img src="../Account/QlityGigs_Log.png" />
+      <div id="logo" class="pull-left" style=" position:fixed;left:40px;"><a href="../index.aspx"><img src="../Account/QlityGigs_Log.png" />
           </a>   
       </div>
 
@@ -149,6 +149,7 @@
                
                  <asp:TextBox runat="server" ID="txtconfirmpass" TextMode="Password" CssClass="btn btn-default" placeholder="Confirm Password"  Width="340px" Height="40px"/>
             </div>
+                 <asp:Label ID="lblsuccess" runat="server" Text="" ForeColor="green"/>
                  <asp:Label ID="ErrorMessage" runat="server" Text="" ForeColor="red"/><br />
                   <asp:Button runat="server" Text="Reset" CssClass="btn btn-default" Backcolor="blue"  ForeColor="white"  style="position:relative;top:10px;" OnClick="resetbtn"/>
                  

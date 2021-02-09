@@ -4,7 +4,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <script src="https://apis.google.com/js/api.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <link href="Gigstyle/css/inputTags.css" rel="stylesheet" />
+    <script src="Gigstyle/js/inputTags.jquery.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
          <style type="text/css">
                #heade{
                  background-color:lavender;
@@ -174,9 +182,8 @@
               <div style="text-align:left;color:gray;">
                           First Name *
               </div>
-                <asp:TextBox runat="server" ID="FirstName" CssClass="form-control"  />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="FirstName"
-                    CssClass="text-danger" ErrorMessage="Please enter Your First Name !" />
+                <asp:TextBox runat="server" ID="FirstName" CssClass="form-control" required="required" />
+             
             </div>
 
                   <div class="col-md-6">
@@ -184,28 +191,12 @@
                           Last Name *
                       </div>
                    
-                <asp:TextBox runat="server" ID="LastName" CssClass="form-control"  />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="LastName"
-                    CssClass="text-danger" ErrorMessage="Please enter Your Last Name !" />
+                <asp:TextBox runat="server" ID="LastName" CssClass="form-control" required="required" />
+              
             </div>
         </div>
 
-                <%--     <div class="form-group">
-                 <div class="col-md-12">
-              <div style="text-align:left;color:gray;">
-                           Headline *
-              </div>
-           
-               <asp:TextBox runat="server" id="txtheadline" name="message" CssClass="form-control"  rows="5"    TextMode="MultiLine"  height="50px"/><br />
-            </div>                
-            </div>--%>
-
-       <%--     <div class="input-icons"> 
-                <i class="fa fa-envelope icon"> 
-              </i> 
-                 <asp:TextBox runat="server" ID="txtEmail" CssClass="btn btn-default" TextMode="Email"  placeholder="Email Address" Width="340px" Height="40px" />
-
-            </div> --%>
+     
                         
                  <div class="form-group">
                  <div class="col-md-12">
@@ -231,14 +222,36 @@
               <div style="text-align:left;color:gray;">
                            Country/Region *
               </div> 
-                 <asp:DropDownList ID="DropDownListcountry" runat="server"  CssClass="form-control" />
-                     <asp:RequiredFieldValidator runat="server" ControlToValidate="DropDownListcountry"
-                    CssClass="text-danger" ErrorMessage="Please Select  !" />
+                      <asp:TextBox ID="Selectcountry" CssClass="btn btn-default"  runat="server"  Width="50px" Height="300px" required="required"/><br />
+
+
+                        
+ <script>
+
+
+
+     $('#Selectcountry').inputTags({
+         autocomplete: {
+             values: ["Afghanistan", "Albania", "Algeria", "American Samoa", "Angola", "Anguilla", "Antartica", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba", "Ashmore and Cartier Island", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burma", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central African Republic", "Chad", "Chile", "China", "Christmas Island", "Clipperton Island", "Cocos (Keeling) Islands", "Colombia", "Comoros", "Congo, Democratic Republic of the", "Congo, Republic of the", "Cook Islands", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czeck Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Europa Island", "Falkland Islands (Islas Malvinas)", "Faroe Islands", "Fiji", "Finland", "France", "French Guiana", "French Polynesia", "French Southern and Antarctic Lands", "Gabon", "Gambia, The", "Gaza Strip", "Georgia", "Germany", "Ghana", "Gibraltar", "Glorioso Islands", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Heard Island and McDonald Islands", "Holy See (Vatican City)", "Honduras", "Hong Kong", "Howland Island", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Ireland, Northern", "Israel", "Italy", "Jamaica", "Jan Mayen", "Japan", "Jarvis Island", "Jersey", "Johnston Atoll", "Jordan", "Juan de Nova Island", "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia, Former Yugoslav Republic of", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Man, Isle of", "Marshall Islands", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico", "Micronesia, Federated States of", "Midway Islands", "Moldova", "Monaco", "Mongolia", "Montserrat", "Morocco", "Mozambique", "Namibia", "Nauru", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Pitcaim Islands", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romainia", "Russia", "Rwanda", "Saint Helena", "Saint Kitts and Nevis", "Saint Lucia", "Saint Pierre and Miquelon", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Scotland", "Senegal", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Georgia and South Sandwich Islands", "Spain", "Spratly Islands", "Sri Lanka", "Sudan", "Suriname", "Svalbard", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Tobago", "Toga", "Tokelau", "Tonga", "Trinidad", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "Uruguay", "USA", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Virgin Islands", "Wales", "Wallis and Futuna", "West Bank", "Western Sahara", "Yemen", "Yugoslavia", "Zambia", "Zimbabwe"],
+             only: false
+         },
+         max: 1,
+         create: function () {
+             console.log('Tag added !');
+         }
+     });
+
+ </script>
+
+            
                      <br /><br />
             </div>                
             </div>
                  <div class="form-group"><br />
             <div class="col-md-12" style="text-align:center">
+
+          
+
                  <asp:Button runat="server" ID="Create" Text="Update" CssClass="btn btn-default"  BackColor="blue"   ForeColor="white" OnClick="Create_Click"   />
                 <asp:Button runat="server" ID="Update" Text="Edit" CssClass="btn btn-default"  BackColor="green"  ForeColor="white" OnClick="Update_Click"   /><br />
            </div>
