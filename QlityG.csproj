@@ -209,6 +209,7 @@
     <Content Include="Account\ManagePassword.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\passwordreset.aspx" />
+    <Content Include="Account\pwordsuccsspage.aspx" />
     <Content Include="Account\QlityGigs_Log.png" />
     <Content Include="Account\QlityGigs_Logo_Transparent.png" />
     <Content Include="Account\Registeres.aspx" />
@@ -457,6 +458,7 @@
     <Content Include="CreateGig.aspx" />
     <Content Include="GiggerDash.aspx" />
     <Content Include="GiggerDashboard.aspx" />
+    <Content Include="GiggerViewGigsIndex.aspx" />
     <Content Include="index.aspx" />
     <Content Include="RequestorDash.aspx" />
     <Content Include="RequestorDashboard.aspx" />
@@ -929,6 +931,13 @@
     <Compile Include="Account\passwordreset.aspx.designer.cs">
       <DependentUpon>passwordreset.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Account\pwordsuccsspage.aspx.cs">
+      <DependentUpon>pwordsuccsspage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\pwordsuccsspage.aspx.designer.cs">
+      <DependentUpon>pwordsuccsspage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\Registeres.aspx.cs">
       <DependentUpon>Registeres.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -970,6 +979,13 @@
     </Compile>
     <Compile Include="GiggerDashboard.aspx.designer.cs">
       <DependentUpon>GiggerDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiggerViewGigsIndex.aspx.cs">
+      <DependentUpon>GiggerViewGigsIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiggerViewGigsIndex.aspx.designer.cs">
+      <DependentUpon>GiggerViewGigsIndex.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

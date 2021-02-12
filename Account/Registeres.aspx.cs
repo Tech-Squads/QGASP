@@ -24,7 +24,7 @@ namespace QlityG.Account
 
 
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.USendRL);
+        Uri baseAddress = new Uri(Utils.TestUSendRL);
 
         UserModel user;
         string email, password;

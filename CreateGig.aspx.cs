@@ -16,7 +16,7 @@ namespace QlityG
         GigModel gig;
         UserModel u;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.USendRL);
+        Uri baseAddress = new Uri(Utils.TestUSendRL);
         int UserID;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -89,9 +89,9 @@ namespace QlityG
             ErrorMsg.Text = "Gig not updated";
 
         }
-        protected void Delete_Click(object sender, EventArgs e)
-        {
+        //protected void Delete_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
     }
 }

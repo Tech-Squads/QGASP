@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewGigsIndex.aspx.cs" Inherits="QlityG.ViewGigsIndex" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GiggerViewGigsIndex.aspx.cs" Inherits="QlityG.GiggerViewGigsIndex" %>
 
 <!DOCTYPE html>
 
@@ -38,7 +38,7 @@
 			 height:auto;
              width:60%; 
 			 background-color:white;
-			  border-radius:10px;
+			  border-radius:5px;
 			  	 position:relative;
 				   left:20px;
 		}
@@ -189,9 +189,8 @@
 					
 				</div>
 
-				<div>
-                    
-					<a href="RequestorDash.aspx" style="color:black;">
+				<div>             
+					<a href="GiggerDash.aspx" style="color:black;">
 						<table style="text-align:center;position:relative;left:20px;">
 									<tr>
 
@@ -233,11 +232,9 @@
 						<div id="viewgig_div">
 							<div id="header1">
 							<h3>View gigs</h3>
-							
+			     
 
 							</div>
-
-							
 							         <hr />
                     
                     <asp:Label ID="viewgig" runat="server" Text=""></asp:Label>

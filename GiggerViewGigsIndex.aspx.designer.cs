@@ -11,7 +11,7 @@ namespace QlityG
 {
 
 
-    public partial class CreateGig
+    public partial class GiggerViewGigsIndex
     {
 
         /// <summary>
@@ -24,66 +24,48 @@ namespace QlityG
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// gigTitle control.
+        /// lblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox gigTitle;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
 
         /// <summary>
-        /// gDescription control.
+        /// lblname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox gDescription;
+        protected global::System.Web.UI.WebControls.Label lblname;
 
         /// <summary>
-        /// SkillsRequired control.
+        /// lblsurname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SkillsRequired;
+        protected global::System.Web.UI.WebControls.Label lblsurname;
 
         /// <summary>
-        /// Label1 control.
+        /// lblcompany control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblcompany;
 
         /// <summary>
-        /// AddGig control.
+        /// viewgig control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddGig;
-
-        /// <summary>
-        /// update control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button update;
-
-        /// <summary>
-        /// ErrorMsg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorMsg;
+        protected global::System.Web.UI.WebControls.Label viewgig;
     }
 }

@@ -19,7 +19,7 @@ namespace QlityG.Account
     {
         UserModel u;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.USendRL);
+        Uri baseAddress = new Uri(Utils.TestUSendRL);
         int UserID;
         string password;
         protected void Page_Load(object sender, EventArgs e)
@@ -64,8 +64,8 @@ namespace QlityG.Account
 
                 if (resp.IsSuccessStatusCode)
                 {
-
-                    lblsuccess.Text = "Password updated successfully.";
+                  
+                    Response.Redirect("~/Account/pwordsuccsspage.aspx");
                 }
 
                 else

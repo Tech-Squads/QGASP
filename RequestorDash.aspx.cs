@@ -17,15 +17,15 @@ namespace QlityG
         UserModel u;
         UProfile pro, profile;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.USendRL);
+        Uri baseAddress = new Uri(Utils.TestUSendRL);
         int UserID;
-      
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
-       
 
-            
+
+
             Update.Enabled = false;
             Create.Enabled = false;
             client.BaseAddress = baseAddress;
@@ -52,9 +52,11 @@ namespace QlityG
                         string objectPro = res.Content.ReadAsStringAsync().Result;
 
                         profile = new UProfile(JsonConvert.DeserializeObject<UProfile>(objectPro));
-                        Selectcountry.Text = profile.uCountry;
+                        myInput.Text = profile.uCountry;
                         FirstName.Text = profile.uName;
                         LastName.Text = profile.uSurname;
+                        txtcompany.Text = profile.uCompany;
+                        txteducation.Text = profile.uEducation;
                     }
                 }
                 Create.Enabled = true;
@@ -66,31 +68,31 @@ namespace QlityG
             }
 
 
-            //txtEmail.Text = u.uEmail;
+            //lblEmail.Text = u.uEmail;
         }
 
         protected void Update_Click(object sender, EventArgs e)
         {
-           
 
+            profile.userID = UserID;
             profile.uName = FirstName.Text;
             profile.uSurname = LastName.Text;
             profile.uCompany = txtcompany.Text;
-            profile.uCountry = Selectcountry.Text;
-          
+            profile.uCountry = myInput.Text;
+
             //profile.uReferences = txtheadline.Text;
             profile.uEducation = txteducation.Text;
 
             string data = JsonConvert.SerializeObject(profile);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUProfile/" + u.UserID, content).Result;
+            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/AddProfile/" + u.UserID, content).Result;
 
 
             if (resp.IsSuccessStatusCode)
             {
                 Session["UserID"] = UserID;
                 Response.Redirect("~/RequestorDashboard");
-               
+
             }
             Response.Redirect("~/RequestorDash");
         }
@@ -100,12 +102,10 @@ namespace QlityG
 
             pro = new UProfile();
 
-
-
             pro.userID = UserID;
             pro.uCompany = txtcompany.Text;
-            pro.uCountry = Selectcountry.Text;
-           
+            pro.uCountry = myInput.Text;
+
             pro.uName = FirstName.Text;
             pro.uSurname = LastName.Text;
             pro.uEducation = txteducation.Text;

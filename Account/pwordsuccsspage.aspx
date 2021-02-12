@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="passwordreset.aspx.cs" Inherits="QlityG.Account.passwordreset" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pwordsuccsspage.aspx.cs" Inherits="QlityG.Account.pwordsuccsspage" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Reset password</title>
+  <title>Reset password</title>
          <style type="text/css">
                 #heade{
                  background-color:lightgray;
@@ -52,7 +52,7 @@
      background-color:white;
      
    
-      border-radius:6px;
+      border-radius:10px;
     }
     #formstyle:target, #formstyle:target + #cover{
       display:block;
@@ -76,11 +76,20 @@
              #outer-layer {
              
                  width: 100%;
-                 height: 800px;
+                 height: 590px;
                  background-color:lightgrey;
               
              }
-  
+             #button{
+                background-color:forestgreen;
+                 border:1px solid brown;
+                 border-radius:5px;
+                 text-align:center;
+                 color:white;
+                 width:90px;
+                 height:40px;
+                 border-color:black;
+             }
   </style>
      <link rel="stylesheet"
           href= 
@@ -130,65 +139,21 @@
 
      <div id="outer-layer"> 
         <br /><br /><br />
-        <br />
+        <br /><br />
          <div>
              <div id="formstyle" style="text-align:center;"><br />
-                 <h4>Reset password</h4>
+                 <h4 style="color:black;">Your password was successfully updated. </h4>
   
-         
-                  <div class="input-icons"> 
-                <i class="fa fa-key icon"> 
-              </i> 
-               
-                 <asp:TextBox runat="server" ID="txtnewPassword" TextMode="Password" CssClass="btn btn-default" placeholder=" New Password"  Width="340px" Height="40px"/>
-            </div>
+         <br /><br />
+        <br /> <a href="Logins.aspx">
+             <div id="button" style="text-align:center;position:relative;left:150px;"><h4 style="position:relative;top:1px;">Login</h4></div>
 
-                  <div class="input-icons"> 
-                <i class="fa fa-key icon"> 
-              </i> 
-               
-                 <asp:TextBox runat="server" ID="txtconfirmpass" TextMode="Password" CssClass="btn btn-default" placeholder="Confirm Password"  Width="340px" Height="40px"/>
-            </div>
-                 <asp:Label ID="lblsuccess" runat="server" Text="" ForeColor="green"/>
-                 <asp:Label ID="ErrorMessage" runat="server" Text="" ForeColor="red"/><br />
-                  <asp:Button runat="server" Text="Reset" CssClass="btn btn-default" Backcolor="blue"  ForeColor="white"  style="position:relative;top:10px;" OnClick="resetbtn"/>
-                 
-                 
-                 <div style="text-align:center;position:relative;top:10px;font-size:small;" >
-                                  <asp:RegularExpressionValidator
-                    ID="RegularExpressionValidator1" runat="server" CssClass="text-danger" BackColor="white"
-                    ErrorMessage="Too short.Use at least 8 characters *"
-                    
-                     ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"
-                    ControlToValidate="txtnewPassword">
-              
-                </asp:RegularExpressionValidator>
-                   
-                     </div>
-                 
-                 </div> 
-          
-         
+          </a> 
 
          </div>
-      
-    </div>
-
-     
- 
-  <footer id="footer">
-    
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>QlityGigs</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-       
-        Designed by <a href="#">QlityGigs</a>
       </div>
     </div>
-  </footer><!-- #footer -->
+
 
 
   <script src="/Homepage/js/main.js"></script>

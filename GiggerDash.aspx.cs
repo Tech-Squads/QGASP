@@ -16,20 +16,20 @@ namespace QlityG
         UserModel u;
         UProfile pro, profile;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.USendRL);
-        int UserID;
+        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        int useID;
 
 
         protected void Create_Click(object sender, EventArgs e)
         {
             pro = new UProfile();
-            pro.userID = UserID;
+            pro.userID = useID;
             pro.uPastProjectName = txtPastProjectName.Text;
             pro.uPastProjectDuration = txtPastProjectDuration.Text;
             pro.uPastProjectDetails = txtPastProjectDetails.Text;
             pro.uEducation = txtEducation.Text;
             pro.uReferences = txtReferences.Text;
-            pro.uCountry = Selectcountry.Text;
+            pro.uCountry = myInput.Text;
             pro.uName = FirstName.Text;
             pro.uSurname = LastName.Text;
 
@@ -43,12 +43,12 @@ namespace QlityG
 
             string uData = JsonConvert.SerializeObject(u);
             StringContent uContent = new StringContent(uData, Encoding.UTF8, "application/json");
-            HttpResponseMessage respnse = client.PutAsync(client.BaseAddress + "/UpdateUser/" + UserID, uContent).Result;
+            HttpResponseMessage respnse = client.PutAsync(client.BaseAddress + "/UpdateUser/" + useID, uContent).Result;
 
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["UserID"] = UserID;
+                Session["UserID"] = useID;
                 Response.Redirect("~/GiggerDashboard");
             }
             Response.Redirect("~/GiggerDash");
@@ -56,22 +56,22 @@ namespace QlityG
 
         protected void Update_Click(object sender, EventArgs e)
         {
-            profile.userID = UserID;
+            profile.userID = useID;
             profile.uPastProjectName = txtPastProjectName.Text;
             profile.uPastProjectDuration = txtPastProjectDuration.Text;
             profile.uPastProjectDetails = txtPastProjectDetails.Text;
             profile.uEducation = txtEducation.Text;
             profile.uReferences = txtReferences.Text;
-            profile.uCountry = Selectcountry.Text;
+            profile.uCountry = myInput.Text;
             profile.uSurname = LastName.Text;
 
             string data = JsonConvert.SerializeObject(profile);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUProfile/" + UserID, content).Result;
+            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/AddProfile/" + useID, content).Result;
 
             if (resp.IsSuccessStatusCode)
             {
-                Session["UserID"] = UserID;
+                Session["UserID"] = useID;
                 Response.Redirect("~/GiggerDashboard");
             }
             Response.Redirect("~/GiggerDash");
@@ -84,14 +84,14 @@ namespace QlityG
             Edit.Enabled = false;
             client.BaseAddress = baseAddress;
 
-            UserID = Convert.ToInt32(Session["UserID"]);
+            useID = Convert.ToInt32(Session["UserID"]);
 
-            if (UserID.Equals(null))
+            if (useID.Equals(null))
             {
                 Response.Redirect("~/Account/Logins");
             }
 
-            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + UserID).Result;
+            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + useID).Result;
 
             if (resp.IsSuccessStatusCode)
             {
@@ -102,12 +102,12 @@ namespace QlityG
                 {
                     Edit.Enabled = true;
                     Update.Visible = false;
-                    HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserProfile/" + UserID).Result;
+                    HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserProfile/" + useID).Result;
                     if (res.IsSuccessStatusCode)
                     {
                         string objectPro = res.Content.ReadAsStringAsync().Result;
                         profile = new UProfile(JsonConvert.DeserializeObject<UProfile>(objectPro));
-                        Selectcountry.Text = profile.uCountry;
+                        myInput.Text = profile.uCountry;
                         txtEducation.Text = profile.uEducation;
                         FirstName.Text = profile.uName;
                         LastName.Text = profile.uSurname;
@@ -121,10 +121,10 @@ namespace QlityG
                     {
                         //Enable the edit profile button so they can change their existing profile or force them to update/create it
                     }
-
+                    Update.Enabled = true;
                 }
-                //Edit.Visible = false;
-                Update.Enabled = true;
+                //Edit.Visible = true;
+                //Update.Enabled = true;
             }
             else
             {

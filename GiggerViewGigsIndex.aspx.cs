@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace QlityG
 {
-    public partial class ViewGigsIndex : System.Web.UI.Page
+    public partial class GiggerViewGigsIndex : System.Web.UI.Page
     {
         readonly StringBuilder card = new StringBuilder();
         readonly StringBuilder cards = new StringBuilder();
@@ -79,7 +79,7 @@ namespace QlityG
 
                 if (u.FirstLogin == "False")
                 {
-                   
+
                     HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserProfile/" + u.UserID).Result;
                     if (res.IsSuccessStatusCode)
                     {
@@ -125,7 +125,7 @@ namespace QlityG
                 if (u.FirstLogin == "False")
                 {
 
-                   
+
                 }
 
             }

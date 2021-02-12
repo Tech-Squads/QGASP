@@ -69,13 +69,13 @@ namespace QlityG
         protected global::System.Web.UI.WebControls.TextBox txtEducation;
 
         /// <summary>
-        /// Selectcountry control.
+        /// myInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Selectcountry;
+        protected global::System.Web.UI.WebControls.TextBox myInput;
 
         /// <summary>
         /// txtPastProjectName control.

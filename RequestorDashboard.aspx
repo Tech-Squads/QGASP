@@ -67,7 +67,7 @@
         width:100%;
         height:70px;
      
-        background:lightblue;
+        background:lightgray;
     }
   
      .nav-menu a:hover{
@@ -92,7 +92,7 @@
                  /*  border:1px solid red;*/
                  width: 100%;
                  height: 900px;
-                 background-color:lavender;
+                 background-color:lightgray;
                /*  background-color:seashell;*/
                  /*background: url(/assets/images/1.jpg) no-repeat center center fixed;*/
         
@@ -150,7 +150,7 @@
 
             <li><a href="RequestorDash.aspx" style="color:cornflowerblue;font-size:medium;"><i class="w3-xxxlarge glyphicon glyphicon-user"></i>Profile</a></li> 
 
-          <li><p style="color:blue"> <a href="ViewGigs.aspx" style="color:cornflowerblue;font-size:medium;">View Gig</a></p> </li> 
+          <li><p style="color:blue"> <a href="ViewGigsIndex.aspx" style="color:cornflowerblue;font-size:medium;">View Gig</a></p> </li> 
          
           <li><p style="color:blue"> <a href="CreateGig.aspx" style="color:cornflowerblue;font-size:medium;">Create Gig</a></p> </li> 
          
