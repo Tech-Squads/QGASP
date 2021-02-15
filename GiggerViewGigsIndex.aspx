@@ -190,7 +190,7 @@
 				</div>
 
 				<div>             
-					<a href="GiggerDash.aspx" style="color:black;">
+					<a href="GiggerEditP.aspx" style="color:black;">
 						<table style="text-align:center;position:relative;left:20px;">
 									<tr>
 

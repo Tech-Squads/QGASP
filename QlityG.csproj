@@ -456,12 +456,15 @@
     <Content Include="assets_view\vendor\toastr\toastr.js" />
     <Content Include="assets_view\vendor\toastr\toastr.min.css" />
     <Content Include="CreateGig.aspx" />
+    <Content Include="GigEdit.aspx" />
     <Content Include="GiggerDash.aspx" />
     <Content Include="GiggerDashboard.aspx" />
+    <Content Include="GiggerEditP.aspx" />
     <Content Include="GiggerViewGigsIndex.aspx" />
     <Content Include="index.aspx" />
     <Content Include="RequestorDash.aspx" />
     <Content Include="RequestorDashboard.aspx" />
+    <Content Include="RequestorEditP.aspx" />
     <Content Include="SelectingType.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
@@ -966,6 +969,13 @@
     <Compile Include="CreateGig.aspx.designer.cs">
       <DependentUpon>CreateGig.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GigEdit.aspx.cs">
+      <DependentUpon>GigEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GigEdit.aspx.designer.cs">
+      <DependentUpon>GigEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GiggerDash.aspx.cs">
       <DependentUpon>GiggerDash.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -979,6 +989,13 @@
     </Compile>
     <Compile Include="GiggerDashboard.aspx.designer.cs">
       <DependentUpon>GiggerDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiggerEditP.aspx.cs">
+      <DependentUpon>GiggerEditP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiggerEditP.aspx.designer.cs">
+      <DependentUpon>GiggerEditP.aspx</DependentUpon>
     </Compile>
     <Compile Include="GiggerViewGigsIndex.aspx.cs">
       <DependentUpon>GiggerViewGigsIndex.aspx</DependentUpon>
@@ -1008,6 +1025,13 @@
     </Compile>
     <Compile Include="RequestorDashboard.aspx.designer.cs">
       <DependentUpon>RequestorDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestorEditP.aspx.cs">
+      <DependentUpon>RequestorEditP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestorEditP.aspx.designer.cs">
+      <DependentUpon>RequestorEditP.aspx</DependentUpon>
     </Compile>
     <Compile Include="SelectingType.aspx.cs">
       <DependentUpon>SelectingType.aspx</DependentUpon>
@@ -1137,7 +1161,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties content_4bootstrap_1css_1map__JsonSchema="" content_4bootstrap-theme_1min_1css_1map__JsonSchema="" />
+      <UserProperties content_4bootstrap-theme_1min_1css_1map__JsonSchema="" content_4bootstrap_1css_1map__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

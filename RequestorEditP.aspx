@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RequestorDash.aspx.cs" Inherits="QlityG.RequestorDash" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RequestorEditP.aspx.cs" Inherits="QlityG.RequestorEditP" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -210,7 +211,10 @@ input[type=submit] {
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
+        
               <%--<li  style=" position:relative;right:20px;" >Logged as ,<asp:Label ID="lblEmail" runat="server"  ForeColor="blue"></asp:Label></li>--%>
+             <li  style=" position:relative;right:20px;" ><h4 style="color:black"><a href="ViewGigsIndex.aspx" style="color:black;font-size:small;">View Gigs</a></h4></li>
+
             <li  style=" position:relative;right:20px;" ><h4 style="color:black"><a href="RequestorDashboard.aspx" style="color:black;font-size:small;">Dashboard</a></h4></li>
           
              <li  style=" position:relative;right:0px;"><h4 style="color:blue"> <a href="Account/Logins.aspx" style="color:black;font-size:small;">Log Out</a></h4> </li>
@@ -226,7 +230,7 @@ input[type=submit] {
           
          <div>
              <div id="formstyle" style="text-align:center;"><br />
-                 <h4>Update Profile</h4>
+                 <h4>Edit Profile</h4>
                  
                  
           
@@ -288,7 +292,7 @@ input[type=submit] {
 
           
 
-                 <asp:Button runat="server" ID="Create" Text="Update" CssClass="btn btn-default"  BackColor="blue"   ForeColor="white" OnClick="Create_Click"   />
+                 <asp:Button runat="server" ID="Create" Text="Save" CssClass="btn btn-default"  BackColor="blue"   ForeColor="white" OnClick="Create_Click"   />
                <%-- <asp:Button runat="server" ID="Update" Text="Edit" CssClass="btn btn-default"  BackColor="green"  ForeColor="white" OnClick="Update_Click"   />--%><br />
            </div>
            </div>

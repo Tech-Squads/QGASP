@@ -147,7 +147,7 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
      
-            <li><a href="GiggerDash.aspx" style="color:black;font-size:medium;"><i class="w3-xxxlarge glyphicon glyphicon-user"></i>Profile</a></li> 
+            <li><a href="GiggerEditP.aspx" style="color:black;font-size:medium;"><i class="w3-xxxlarge glyphicon glyphicon-user"></i>Profile</a></li> 
 
           <li><p style="color:blue"> <a href="GiggerViewGigsIndex.aspx" style="color:black;font-size:medium;">View Gig</a></p> </li> 
          

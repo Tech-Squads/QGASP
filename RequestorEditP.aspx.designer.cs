@@ -11,7 +11,7 @@ namespace QlityG
 {
 
 
-    public partial class RequestorDash
+    public partial class RequestorEditP
     {
 
         /// <summary>

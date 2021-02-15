@@ -52,7 +52,7 @@ namespace QlityG
                     card.Append("<h3 style='font-size:16px;background-color:lightgray;border-radius:5px;text-align:center;word-spacing: 2em;'>" + gig.RequiredSkills + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
 
                     card.Append("<div style='text-align:right;margin:auto;' >");
-                    card.Append("<h3 style='font-size:18px;backcolor:red;'>" + "<a href = '/Homepage/Homepage' class= 'card-link'>Respond</a>" + "</h3>");
+                    //card.Append("<h3 style='font-size:18px;backcolor:red;'>" + "<a href = '/Homepage/Homepage' class= 'card-link'>Respond</a>" + "</h3>");
                     card.Append("</div>");
 
                     card.Append("<h3 style='font-size:18px;'>" + "<hr/>" + "</h3>");

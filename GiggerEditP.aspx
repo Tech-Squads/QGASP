@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GiggerDash.aspx.cs" Inherits="QlityG.GiggerDash" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GiggerEditP.aspx.cs" Inherits="QlityG.GiggerEditP" %>
 
 <!DOCTYPE html>
 
@@ -210,6 +210,8 @@ input[type=submit] {
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
+              <li  style=" position:relative;right:20px;" ><h4 style="color:black"><a href="GiggerViewGigsIndex.aspx" style="color:black;font-size:small;">View Gigs</a></h4></li>
+
           <li><p style="color:blue"> <a href="GiggerDashboard.aspx" style="color:black;font-size:small;">Dashboard</a></p></li>
          
           <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:black;font-size:small;">Log Out</a></p></li>
@@ -228,7 +230,7 @@ input[type=submit] {
          
          <div>
              <div id="formstyle" style="text-align:center;"><br />
-                 <h4>Update Profile</h4>
+                 <h4>Edit Profile</h4>
 
             <div class="form-group">
                  <div class="col-md-6">
@@ -331,7 +333,7 @@ input[type=submit] {
 
               <div class="form-group"><br />
             <div class="col-md-12" style="text-align:center"><br />
-       <asp:Button runat="server" ID="Update" Text="Update" CssClass="btn btn-default"  BackColor="blue" ForeColor="white" OnClick="Create_Click"  />
+       <asp:Button runat="server" ID="Update" Text="Save" CssClass="btn btn-default"  BackColor="blue" ForeColor="white" OnClick="Create_Click"  />
                <%-- <asp:Button runat="server" ID="Edit" Text="Edit " CssClass="btn btn-default"  BackColor="green" BorderColor="white" ForeColor="white" OnClick="Update_Click"  />--%>
            </div>
            </div>
