@@ -22,8 +22,8 @@ namespace QlityG
 
 
         UserModel u;
-        UProfile profile;
-        //GigModel g;
+       
+       
         int UserID;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -79,34 +79,19 @@ namespace QlityG
 
                 if (u.FirstLogin == "False")
                 {
-
-                    HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserProfile/" + u.UserID).Result;
+                    HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserPro/" + u.UserID).Result;
                     if (res.IsSuccessStatusCode)
                     {
                         string objectPro = res.Content.ReadAsStringAsync().Result;
 
-                        profile = new UProfile(JsonConvert.DeserializeObject<UProfile>(objectPro));
+                        u = new UserModel(JsonConvert.DeserializeObject<UserModel>(objectPro));
 
                         //lblcountry.Text = profile.uCountry;
-                        lblcompany.Text = profile.uCompany;
-                        lblname.Text = profile.uName;
-                        lblsurname.Text = profile.uSurname;
+                        lblcompany.Text = u.uCompany;
+                        lblname.Text = u.uName;
+                        lblsurname.Text = u.uSurname;
                     }
 
-
-
-                    //HttpResponseMessage ress = client.GetAsync(client.BaseAddress + "/GetUserGig/" + u.UserID).Result;
-                    //if (ress.IsSuccessStatusCode)
-                    //{
-                    //    string objectgig = ress.Content.ReadAsStringAsync().Result;
-
-                    //    g = new GigModel(JsonConvert.DeserializeObject<GigModel>(objectgig));
-
-                    //    lblgigtitle.Text = g.GigTitle;
-                    //    lblgigdescription.Text = g.GigDescription;
-                    //    lblrequiredskills.Text = g.RequiredSkills;
-                    //    lblduedate.Text = g.DueDate;
-                    //}
                 }
 
             }

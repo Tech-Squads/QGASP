@@ -20,7 +20,13 @@
          <style type="text/css">
              .input-icons i { 
             position: absolute; 
-        }       
+        }  
+               #heade{
+                 background-color:lightgray;
+                 height:70px; 
+               
+ 
+             }
         .input-icons { 
             width: 100%; 
             margin-bottom: 10px; 
@@ -163,20 +169,21 @@
   <!--==========================
     Header
   ============================-->
-  <header id="header">
+  <header id="heade">
     <div class="container-fluid">
-        
-      <div id="logo" class="pull-left"> <img src="../Account/QlityGigs_Log.png" />
-          
-      </div>
+        <br />
+      <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> <img src="../Account/QlityGigs_Log.png" /></div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          
+           
 
-            <li><p style="color:blue"> <a href="RequestorDashboard.aspx" style="color:black;font-size:medium;">Dashboard</a></p> </li>
+           
 
-      <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:black;font-size:medium;">Log Out</a></p> </li>
+             <li><p style="color:blue"> <a href="RequestorDashboard.aspx" style="color:blue;font-size:small;">Dashboard</a></p> </li>
+             <li><p style="color:blue"> <a href="ViewGigsIndex.aspx" style="color:blue;font-size:small;">View Gig</a></p> </li>
+
+      <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:blue;font-size:small;">Log Out</a></p> </li>
      
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -185,7 +192,7 @@
 
      <div id="outer-layer"> 
          <br /><br />
-         <br/><br/><br/><br />   
+         <br/><br/><br/>  
         
          <div>
              <div id="formstyl" style="text-align:center;"><br />

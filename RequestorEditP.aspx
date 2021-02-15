@@ -213,11 +213,11 @@ input[type=submit] {
         <ul class="nav-menu">
         
               <%--<li  style=" position:relative;right:20px;" >Logged as ,<asp:Label ID="lblEmail" runat="server"  ForeColor="blue"></asp:Label></li>--%>
-             <li  style=" position:relative;right:20px;" ><h4 style="color:black"><a href="ViewGigsIndex.aspx" style="color:black;font-size:small;">View Gigs</a></h4></li>
+             <li  style=" position:relative;right:20px;" ><h4 style="color:blue"><a href="ViewGigsIndex.aspx" style="color:blue;font-size:small;">View Gigs</a></h4></li>
 
-            <li  style=" position:relative;right:20px;" ><h4 style="color:black"><a href="RequestorDashboard.aspx" style="color:black;font-size:small;">Dashboard</a></h4></li>
+            <li  style=" position:relative;right:20px;" ><h4 style="color:blue"><a href="RequestorDashboard.aspx" style="color:blue;font-size:small;">Dashboard</a></h4></li>
           
-             <li  style=" position:relative;right:0px;"><h4 style="color:blue"> <a href="Account/Logins.aspx" style="color:black;font-size:small;">Log Out</a></h4> </li>
+             <li  style=" position:relative;right:0px;"><h4 style="color:blue"> <a href="Account/Logins.aspx" style="color:blue;font-size:small;">Log Out</a></h4> </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

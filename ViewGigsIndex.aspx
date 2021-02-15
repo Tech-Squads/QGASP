@@ -42,23 +42,45 @@
 			  	 position:relative;
 				   left:20px;
 		}
-			#viewgig_divleft{
-			 height:200px;
-             width:300px; 
-			 background-color:white;
+			#viewgig_divright{
+			 height:800px;
+             width:390px; 
+			 background-color:whitesmoke;
 				
-			 border-radius:10px;
+			 /*border-radius:10px;*/
 			 position:fixed;
-			 right:50px;
-			 top:130px;
+			 right:0px;
+			 top:110px;
 		}
-			#header1{
-				width:200px;
-				height:40px;
-			
+			#viewnewgig{
+				 background-color:white;
+				 border-radius:10px;
+				 width:300px;
+				 height:300px;
 				position:fixed;
-				left:540px;
-				top:62px;
+				right:40px;
+			 top:150px;
+			 text-align:center;
+			
+			}
+			#header1{
+				width:650px;
+				height:60px;
+			background-color:white;
+				position:fixed;
+				text-align:center;
+				left:280px;
+				top:120px;
+				
+			}
+				#header3{
+				width:650px;
+				height:60px;
+			background-color:white;
+				position:fixed;
+				text-align:center;
+				left:280px;
+				top:150px;
 				
 			}
 			#accouleft_div{
@@ -70,26 +92,81 @@
 				background-color:white;
 				border-radius:10px;
 			}
+			  #heade{
+                 background-color:lightgray;
+                 height:60px; 
+				 width:1400px;
+				
+               
+ 
+             }
+
 
 	  </style>
+
+
+	<link rel="stylesheet"
+          href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon" />
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet" />
+
+  <!-- Bootstrap CSS File -->
+  <link href="/Homepage/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Libraries CSS Files -->
+  <link href="/Homepage/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="/Homepage/lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="/Homepage/lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
+  <link href="/Homepage/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="/Homepage/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheet File -->
+   <link href="~/Homepage/css/style.css" rel="stylesheet" />
+      <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 </head>
 <body>
     <form id="form1" runat="server">
         
 
 			<!-- WRAPPER -->
+
 	<div id="wrapper">
+				
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
+			 <header id="heade">
+    <div class="container-fluid">
+        <br />
+      <div id="logo" class="pull-left" style=" position:fixed;left:50px;top:9px;"> <img src="../Account/QlityGigs_Log.png" /></div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+           
+        
+			<li><p style="color:blue"> <a href="RequestorDashboard.aspx" style="color:blue;font-size:small;">Dashboard</a></p> </li>
+
+            <li><a href="RequestorEditP.aspx" style="color:blue;font-size:small;"><i class="w3-xxxlarge glyphicon glyphicon-user"></i>Profile</a></li> 
+    
+          <li><p style="color:blue"> <a href="CreateGig.aspx" style="color:blue;font-size:small;">Create Gig</a></p> </li> 
+         
+         <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:blue;font-size:small;">Log Out</a></p> </li>
+         
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header>
 			<div class="container-fluid">
 				<div class="navbar-btn">
 					<button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu"></i></button>
 				</div>
 				<!-- logo -->
-				<div id="heade" style="position:relative;left:10px;top:20px;">		
-					<img src="/Account/QlityGigs_Log.png" alt="QlityGigs Logo" style="width:170px;height:40px;" />
-
-				</div>
+				 
 				<!-- end logo -->
 				<div class="navbar-right">
 					<!-- search form -->
@@ -107,15 +184,15 @@
 					<!-- navbar menu -->
 					<div id="navbar-menu">
 						<ul class="nav navbar-nav">
-							<li class="dropdown">
+							<%--<li class="dropdown">
 								<a href="RequestorDashboard.aspx" class="dropdown-toggle icon-menu" data-toggle="dropdown">
 									<i class="lnr lnr-home">Dashboard</i>
 									
 								</a>						
 								
-							</li>
+							</li>--%>
 
-								<li class="dropdown">
+<%--								<li class="dropdown">
 								<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
 									<i class="fa fa-calendar">Calender</i>
 									
@@ -123,7 +200,7 @@
 									
 								
 								
-							</li>
+							</li>--%>
 
 
 
@@ -180,10 +257,37 @@
 				<span class="sr-only">Toggle Fullwidth</span>
 				<i class="fa fa-angle-left"></i>
 			</button>
-			<div class="sidebar-scroll">
+			<div class="sidebar-scroll"><br />
 				<div id="accouleft_div">
 				<div class="user-account"><br />
-					<img src="assets_view/img/user.png" class="img-responsive img-circle user-photo" alt="User Profile Picture" />
+					<%--<br /><p>Edit profile</p>
+					<ul class="dropdown-menu user-menu menu-icon">
+									<li class="menu-headin"><p>Edit profile</p></li>		
+									<li>Labels</li>
+						<li>Labels</li>
+				    </ul>--%>
+					<div class="dropdown">
+						<a href="#" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Edit profile</strong> <i class="fa fa-caret-down"></i></a>
+						<ul class="dropdown-menu dropdown-menu-right account">
+							<li>
+								<asp:FileUpload ID="fImage" runat="server"  Width="200px"/>
+							</li>
+							<li style="color:white;">The picture</li>
+							<li style="text-align:center"><a href="#">
+								  <asp:Button runat="server" ID="create" Text="Save" CssClass="btn btn-default"  BackColor="blue" ForeColor="white" OnClick="Create_Click"   />
+							    </a></li>
+							<li>
+								<asp:Label ID="ImageError" runat="server" Text=""></asp:Label>
+							</li>
+							<li class="divider"></li>
+							
+						</ul>
+					</div>
+					
+			<%--<asp:FileUpload ID="fImage" runat="server" />--%>
+
+
+					<%--<img src="2.jpg" class="img-responsive img-circle user-photo" alt="User Profile Picture" />--%>
 							<%--<asp:Label ID="lblEmail" runat="server" Text=""></asp:Label>--%>					
 						
 					
@@ -194,7 +298,8 @@
 					<a href="RequestorEditP.aspx" style="color:black;">
 						<table style="text-align:center;position:relative;left:20px;">
 									<tr>
-
+										<td><asp:Label ID="LblImage" runat="server" Text="label"></asp:Label></td>
+										<td><asp:Image ID="ImgProfilePic" runat="server" /></td>
 										<td><asp:Label ID="lblname" runat="server" Font-Bold="true" Font-Size="Large" Text=""></asp:Label></td>
 										<td style="color:white">--</td>
 										<td><asp:Label ID="lblsurname" runat="server"  Font-Bold="true" Font-Size="Large" Text=""></asp:Label></td>
@@ -203,6 +308,12 @@
 								
 
 					</table>
+
+						<asp:Image ID="imgRespaldo" runat="server" CssClass="img-fluid" style="display:none" />
+
+<div id="PDFObj" runat="server" class="col-12" style="display:none;" >
+    <asp:Literal ID="ltObjPDF" runat="server"/>
+</div>
 				</a>
 				</div>
 						<h4 style="text-align:center;"><asp:Label ID="lblcompany" runat="server"  Text=""></asp:Label></h4>
@@ -231,19 +342,27 @@
 						<div>
 							<br />
 						<div id="viewgig_div">
+							
 							<div id="header1">
-							<h3>View gigs</h3>
+								<div id="header3">
+									<h3>View gigs</h3>
+							</div>
+								<br /><br /><br />
+							
 							
 
 							</div>
 
-							
+							<br /><br /><br /><br /><br />
 							         <hr />
                     
                     <asp:Label ID="viewgig" runat="server" Text=""></asp:Label>
 						</div>
 
-						<div id="viewgig_divleft">
+						<div id="viewgig_divright">
+							<div id="viewnewgig"><br />
+								<h4>Top latest gigs</h4><hr />
+							</div>
 
 						</div>
 					</div>

@@ -28,7 +28,7 @@
 	<link rel="icon" type="image/png" sizes="40x100" href="/Account/QlityGigs_Log.png" />
 
 
-	  <style type="text/css">
+	    <style type="text/css">
 
 	    #heade{        
              height:20px;
@@ -38,27 +38,49 @@
 			 height:auto;
              width:60%; 
 			 background-color:white;
-			  border-radius:5px;
+			  border-radius:10px;
 			  	 position:relative;
 				   left:20px;
 		}
-			#viewgig_divleft{
-			 height:200px;
-             width:300px; 
-			 background-color:white;
+			#viewgig_divright{
+			 height:800px;
+             width:390px; 
+			 background-color:whitesmoke;
 				
-			 border-radius:10px;
+			 /*border-radius:10px;*/
 			 position:fixed;
-			 right:50px;
-			 top:130px;
+			 right:0px;
+			 top:110px;
 		}
-			#header1{
-				width:200px;
-				height:40px;
-			
+			#viewnewgig{
+				 background-color:white;
+				 border-radius:10px;
+				 width:300px;
+				 height:300px;
 				position:fixed;
-				left:540px;
-				top:62px;
+				right:40px;
+			 top:150px;
+			 text-align:center;
+			
+			}
+			#header1{
+				width:650px;
+				height:60px;
+			background-color:white;
+				position:fixed;
+				text-align:center;
+				left:280px;
+				top:120px;
+				
+			}
+				#header3{
+				width:650px;
+				height:60px;
+			background-color:white;
+				position:fixed;
+				text-align:center;
+				left:280px;
+				top:150px;
 				
 			}
 			#accouleft_div{
@@ -70,8 +92,41 @@
 				background-color:white;
 				border-radius:10px;
 			}
+			  #heade{
+                 background-color:lightgray;
+                 height:60px; 
+				 width:1400px;
+				
+               
+ 
+             }
+
 
 	  </style>
+	<link rel="stylesheet"
+          href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon" />
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet" />
+
+  <!-- Bootstrap CSS File -->
+  <link href="/Homepage/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Libraries CSS Files -->
+  <link href="/Homepage/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="/Homepage/lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="/Homepage/lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
+  <link href="/Homepage/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="/Homepage/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheet File -->
+   <link href="~/Homepage/css/style.css" rel="stylesheet" />
+      <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -79,17 +134,34 @@
 
 			<!-- WRAPPER -->
 	<div id="wrapper">
+				
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
+			 <header id="heade">
+    <div class="container-fluid">
+        <br />
+      <div id="logo" class="pull-left" style=" position:fixed;left:50px;top:9px;"> <img src="../Account/QlityGigs_Log.png" /></div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+           
+        
+        	<li><p style="color:blue"> <a href="GiggerDashboard.aspx" style="color:blue;font-size:small;">Dashboard</a></p> </li>
+
+            <li><a href="GiggerEditP.aspx" style="color:blue;font-size:small;"><i class="w3-xxxlarge glyphicon glyphicon-user"></i>Profile</a></li> 
+         
+         <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:blue;font-size:small;">Log Out</a></p> </li>
+         
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header>
 			<div class="container-fluid">
 				<div class="navbar-btn">
 					<button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu"></i></button>
 				</div>
 				<!-- logo -->
-				<div id="heade" style="position:relative;left:10px;top:20px;">		
-					<img src="/Account/QlityGigs_Log.png" alt="QlityGigs Logo" style="width:170px;height:40px;" />
-
-				</div>
+				 
 				<!-- end logo -->
 				<div class="navbar-right">
 					<!-- search form -->
@@ -107,15 +179,15 @@
 					<!-- navbar menu -->
 					<div id="navbar-menu">
 						<ul class="nav navbar-nav">
-							<li class="dropdown">
+							<%--<li class="dropdown">
 								<a href="RequestorDashboard.aspx" class="dropdown-toggle icon-menu" data-toggle="dropdown">
 									<i class="lnr lnr-home">Dashboard</i>
 									
 								</a>						
 								
-							</li>
+							</li>--%>
 
-								<li class="dropdown">
+<%--								<li class="dropdown">
 								<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
 									<i class="fa fa-calendar">Calender</i>
 									
@@ -123,7 +195,7 @@
 									
 								
 								
-							</li>
+							</li>--%>
 
 
 
@@ -230,22 +302,31 @@
 						<div>
 							<br />
 						<div id="viewgig_div">
+							
 							<div id="header1">
-							<h3>View gigs</h3>
-			     
+								<div id="header3">
+									<h3>View gigs</h3>
+							</div>
+								<br /><br /><br />
+							
+							
 
 							</div>
+
+							<br /><br /><br /><br /><br />
 							         <hr />
                     
                     <asp:Label ID="viewgig" runat="server" Text=""></asp:Label>
 						</div>
 
-						<div id="viewgig_divleft">
+						<div id="viewgig_divright">
+							<div id="viewnewgig"><br />
+								<h4>Top latest gigs</h4><hr />
+							</div>
 
 						</div>
 					</div>
 					</div>
-				
 			
 				
 				<div class="dashboard-section no-margin">

@@ -6,7 +6,11 @@
 <head runat="server">
     <title></title>
   <style type="text/css">
+         #heade{
+                 background-color:lightgray;
+                 height:70px;     
 
+             }
 
              .input-icons i { 
             position: absolute; 
@@ -136,25 +140,22 @@
   <!--==========================
     Header
   ============================-->
-  <header id="header">
+  <header id="heade">
     <div class="container-fluid">
-
-      <div id="logo" class="pull-left"> <img src="../Account/QlityGigs_Log.png" />
-       
-      
-      </div>
+        <br />
+      <div id="logo" class="pull-left" style=" position:fixed;left:50px;"> <img src="../Account/QlityGigs_Log.png" /></div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
         
 
-            <li><a href="RequestorEditP.aspx" style="color:cornflowerblue;font-size:medium;"><i class="w3-xxxlarge glyphicon glyphicon-user"></i>Profile</a></li> 
+            <li><a href="RequestorEditP.aspx" style="color:blue;font-size:small;"><i class="w3-xxxlarge glyphicon glyphicon-user"></i>Profile</a></li> 
 
-          <li><p style="color:blue"> <a href="ViewGigsIndex.aspx" style="color:cornflowerblue;font-size:medium;">View Gig</a></p> </li> 
+          <li><p style="color:blue"> <a href="ViewGigsIndex.aspx" style="color:blue;font-size:small;">View Gig</a></p> </li> 
          
-          <li><p style="color:blue"> <a href="CreateGig.aspx" style="color:cornflowerblue;font-size:medium;">Create Gig</a></p> </li> 
+          <li><p style="color:blue"> <a href="CreateGig.aspx" style="color:blue;font-size:small;">Create Gig</a></p> </li> 
          
-         <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:cornflowerblue;font-size:medium;">Log Out</a></p> </li>
+         <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:blue;font-size:small;">Log Out</a></p> </li>
          
         </ul>
       </nav><!-- #nav-menu-container -->

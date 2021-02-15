@@ -210,9 +210,9 @@ input[type=submit] {
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><p style="color:blue"> <a href="GiggerDashboard.aspx" style="color:black;font-size:small;">Dashboard</a></p></li>
+          <li><p style="color:blue"> <a href="GiggerDashboard.aspx" style="color:blue;font-size:small;">Dashboard</a></p></li>
          
-          <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:black;font-size:small;">Log Out</a></p></li>
+          <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:blue;font-size:small;">Log Out</a></p></li>
                  
          <%-- <li><a href="#contact">Login</a></li>--%>
      

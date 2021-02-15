@@ -8,6 +8,8 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
+using System.Data;
 
 namespace QlityG
 {
@@ -22,8 +24,8 @@ namespace QlityG
 
 
         UserModel u;
-        UProfile profile;
-        //GigModel g;
+       
+        
         int UserID;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -79,18 +81,21 @@ namespace QlityG
 
                 if (u.FirstLogin == "False")
                 {
-                   
-                    HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserProfile/" + u.UserID).Result;
+                    HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserPro/" + u.UserID).Result;
                     if (res.IsSuccessStatusCode)
                     {
                         string objectPro = res.Content.ReadAsStringAsync().Result;
 
-                        profile = new UProfile(JsonConvert.DeserializeObject<UProfile>(objectPro));
+                        u = new UserModel(JsonConvert.DeserializeObject<UserModel>(objectPro));
+                        byte[] imagem = (byte[])(dr["IMG"]);
+                    string PROFILE_PIC = Convert.ToBase64String(imagem);
 
+                        ImgProfilePic.ImageUrl = String.Format("data:image/jpg;base64,{0}", PROFILE_PIC);
                         //lblcountry.Text = profile.uCountry;
-                        lblcompany.Text = profile.uCompany;
-                        lblname.Text = profile.uName;
-                        lblsurname.Text = profile.uSurname;
+                        lblcompany.Text = u.uCompany;
+                        lblname.Text = u.uName;
+                        lblsurname.Text = u.uSurname;
+                        LblImage.Text = u.uImageP;
                     }
 
 
@@ -114,6 +119,7 @@ namespace QlityG
 
 
             lblEmail.Text = u.uEmail;
+            LblImage.Text = u.uImageP;
 
 
 
@@ -125,13 +131,48 @@ namespace QlityG
                 if (u.FirstLogin == "False")
                 {
 
-                   
+
                 }
 
             }
 
+         
+        }
+        protected void Create_Click(object sender, EventArgs e)
+        {
+            if(fImage.PostedFile !=null)
+            {
+                string strpath =Path.GetExtension(fImage.PostedFile.FileName);
+                if (strpath !=".jpg" && strpath !=".jpeg" && strpath !="" && strpath !=".png")
+                {
+                    ImageError.Text = "Only Image type .jpeg, .jpg, .gif, .png allowed ! ";
+                    ImageError.ForeColor = System.Drawing.Color.Red;  
+                }
+                else
+                {
+                    ImageError.Text = "Profile image is saved. ";
+                    ImageError.ForeColor = System.Drawing.Color.Green;
+                }
+                string fileimg = Path.GetFileName(fImage.PostedFile.FileName);
+                fImage.SaveAs(Server.MapPath("~/UserImages/")+fileimg);
+
+                u.uImageP = fileimg;
+
+                string data = JsonConvert.SerializeObject(u);
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+                HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + UserID, content).Result;
 
 
+                if (resp.IsSuccessStatusCode)
+                {
+                    Session["UserID"] = UserID;
+                    //Response.Redirect("~/.aspx");
+                    ImageError.Text = "Image saved successfully/";
+                }
+                Response.Redirect("~/SelectingType.aspx");
+
+
+            }
 
 
         }

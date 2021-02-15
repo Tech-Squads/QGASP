@@ -15,7 +15,7 @@ namespace QlityG.Models
         public string HasGig { get; set; }
         public string uSurname { get; set; }
         public string uName { get; set; }
-
+        public string uImageP { get; set; }
 
         //for Profile
         public string uCountry { get; set; }
@@ -61,6 +61,7 @@ namespace QlityG.Models
             this.uGigDescription = u.uGigDescription;
             this.uContactDetails = u.uContactDetails;
             this.uRequiredSkills = u.uRequiredSkills;
+            this.uImageP = u.uImageP;
         }
 
         
