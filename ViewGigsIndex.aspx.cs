@@ -10,6 +10,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace QlityG
 {
@@ -87,15 +88,12 @@ namespace QlityG
                         string objectPro = res.Content.ReadAsStringAsync().Result;
 
                         u = new UserModel(JsonConvert.DeserializeObject<UserModel>(objectPro));
-                        byte[] imagem = (byte[])(dr["IMG"]);
-                    string PROFILE_PIC = Convert.ToBase64String(imagem);
-
-                        ImgProfilePic.ImageUrl = String.Format("data:image/jpg;base64,{0}", PROFILE_PIC);
+                       
                         //lblcountry.Text = profile.uCountry;
                         lblcompany.Text = u.uCompany;
                         lblname.Text = u.uName;
                         lblsurname.Text = u.uSurname;
-                        LblImage.Text = u.uImageP;
+                        //LblImage.Text = u.uImageP;
                     }
 
 
@@ -119,7 +117,7 @@ namespace QlityG
 
 
             lblEmail.Text = u.uEmail;
-            LblImage.Text = u.uImageP;
+            //LblImage.Text = u.uImageP;
 
 
 
@@ -153,23 +151,26 @@ namespace QlityG
                     ImageError.Text = "Profile image is saved. ";
                     ImageError.ForeColor = System.Drawing.Color.Green;
                 }
+                //fImage.SaveAs(Server.MapPath("~/Images/" + fImage.FileName));
                 string fileimg = Path.GetFileName(fImage.PostedFile.FileName);
-                fImage.SaveAs(Server.MapPath("~/UserImages/")+fileimg);
+                fImage.PostedFile.SaveAs(Server.MapPath("UserImages/") + fileimg);
 
-                u.uImageP = fileimg;
+                u.uImageP = "~/ UserImages /" + fileimg;
+              
+               
 
                 string data = JsonConvert.SerializeObject(u);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
                 HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + UserID, content).Result;
 
 
-                if (resp.IsSuccessStatusCode)
-                {
-                    Session["UserID"] = UserID;
-                    //Response.Redirect("~/.aspx");
-                    ImageError.Text = "Image saved successfully/";
-                }
-                Response.Redirect("~/SelectingType.aspx");
+                //if (resp.IsSuccessStatusCode)
+                //{
+                //    Session["UserID"] = UserID;
+                //    //Response.Redirect("~/.aspx");
+                //    ImageError.Text = "Image saved successfully/";
+                //}
+                //ImageError.Text = "not success";
 
 
             }

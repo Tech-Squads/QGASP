@@ -60,24 +60,6 @@ namespace QlityG
         protected global::System.Web.UI.WebControls.Label ImageError;
 
         /// <summary>
-        /// LblImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblImage;
-
-        /// <summary>
-        /// ImgProfilePic control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgProfilePic;
-
-        /// <summary>
         /// lblname control.
         /// </summary>
         /// <remarks>
@@ -96,31 +78,13 @@ namespace QlityG
         protected global::System.Web.UI.WebControls.Label lblsurname;
 
         /// <summary>
-        /// imgRespaldo control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgRespaldo;
-
-        /// <summary>
-        /// PDFObj control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PDFObj;
-
-        /// <summary>
-        /// ltObjPDF control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltObjPDF;
+        protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
         /// lblcompany control.

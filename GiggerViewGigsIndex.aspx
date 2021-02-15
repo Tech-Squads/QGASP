@@ -255,7 +255,27 @@
 			<div class="sidebar-scroll">
 				<div id="accouleft_div">
 				<div class="user-account"><br />
-					<img src="assets_view/img/user.png" class="img-responsive img-circle user-photo" alt="User Profile Picture" />
+					<div class="dropdown">
+						<a href="#" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Edit profile</strong> <i class="fa fa-caret-down"></i></a>
+						<ul class="dropdown-menu dropdown-menu-right account">
+							<li>
+								<%--<asp:FileUpload ID="fImage" runat="server"  Width="200px"/>--%>
+											 <asp:FileUpload ID="FileUpload1" runat="server"  Width="200px" />
+							</li>
+							<li style="color:white;">The picture</li>
+							<li style="text-align:center"><a href="#">
+								  <asp:Button runat="server" ID="create" Text="Save" CssClass="btn btn-default"  BackColor="blue" ForeColor="white" OnClick="Create_Click"   />
+							    </a></li>
+							<li>
+								<asp:Label ID="ImageError" runat="server" Text=""></asp:Label>
+							</li>
+							<li class="divider"></li>
+							
+						</ul>
+					</div>
+
+					<asp:Label ID="Label9" runat="server" Text=""></asp:Label>
+					<%--<img src="assets_view/img/user.png" class="img-responsive img-circle user-photo" alt="User Profile Picture" />--%>
 							<%--<asp:Label ID="lblEmail" runat="server" Text=""></asp:Label>--%>					
 						
 					

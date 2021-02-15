@@ -26,8 +26,8 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="assets_view/img/apple-icon.png" />
 	<link rel="icon" type="image/png" sizes="40x100" href="/Account/QlityGigs_Log.png" />
-
-
+    
+    
 	  <style type="text/css">
 
 	    #heade{        
@@ -133,7 +133,7 @@
 <body>
     <form id="form1" runat="server">
         
-
+        
 			<!-- WRAPPER -->
 
 	<div id="wrapper">
@@ -298,22 +298,21 @@
 					<a href="RequestorEditP.aspx" style="color:black;">
 						<table style="text-align:center;position:relative;left:20px;">
 									<tr>
-										<td><asp:Label ID="LblImage" runat="server" Text="label"></asp:Label></td>
-										<td><asp:Image ID="ImgProfilePic" runat="server" /></td>
+										
 										<td><asp:Label ID="lblname" runat="server" Font-Bold="true" Font-Size="Large" Text=""></asp:Label></td>
 										<td style="color:white">--</td>
 										<td><asp:Label ID="lblsurname" runat="server"  Font-Bold="true" Font-Size="Large" Text=""></asp:Label></td>
 
 									</tr>	
-								
+                            <asp:Image ID="Image1" runat="server" />
 
 					</table>
+					
+                       
 
-						<asp:Image ID="imgRespaldo" runat="server" CssClass="img-fluid" style="display:none" />
-
-<div id="PDFObj" runat="server" class="col-12" style="display:none;" >
+<%--<div id="PDFObj" runat="server" class="col-12" style="display:none;" >
     <asp:Literal ID="ltObjPDF" runat="server"/>
-</div>
+</div>--%>
 				</a>
 				</div>
 						<h4 style="text-align:center;"><asp:Label ID="lblcompany" runat="server"  Text=""></asp:Label></h4>

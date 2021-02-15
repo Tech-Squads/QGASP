@@ -17,14 +17,52 @@ namespace QlityG
         HttpClient client = new HttpClient();
         Uri baseAddress = new Uri(Utils.TestUSendRL);
         int UserID;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
 
+            //client.BaseAddress = baseAddress;
+            //if (Session["UserID"].Equals(null))
+            //{
+            //    ErrorM.Visible = true;
+            //}
+
+            //UserID = Convert.ToInt32(Session["UserID"]);
+            //HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetUserByID/" + UserID).Result;
+
+            //if (resp.IsSuccessStatusCode)
+            //{
+            //string data = resp.Content.ReadAsStringAsync().Result;
+            //u = new UserModel(JsonConvert.DeserializeObject<UserModel>(data));
+            //if (u.FirstLogin == "False")
+            //{
+
+            //    HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserPro/" + u.UserID).Result;
+            //    if (res.IsSuccessStatusCode)
+            //    {
+            //        string objectPro = res.Content.ReadAsStringAsync().Result;
+
+            //        u = new UserModel(JsonConvert.DeserializeObject<UserModel>(objectPro));
+            //        myInput.Text = u.uCountry;
+            //        FirstName.Text = u.uName;
+            //        LastName.Text = u.uSurname;
+            //        txtcompany.Text = u.uCompany;
+            //        txteducation.Text = u.uEducation;
+            //    }
+            //}
+            //    ErrorM.Visible = false;
+            //}
+
+            //else
+            //{
+            //    ErrorM.Visible = true;
+            //}
             client.BaseAddress = baseAddress;
             if (Session["UserID"].Equals(null))
             {
-                ErrorM.Visible = true;
+                Response.Redirect("~/Account/Logins");
             }
 
             UserID = Convert.ToInt32(Session["UserID"]);
@@ -34,29 +72,27 @@ namespace QlityG
             {
                 string data = resp.Content.ReadAsStringAsync().Result;
                 u = new UserModel(JsonConvert.DeserializeObject<UserModel>(data));
-                if (u.FirstLogin == "False")
-                {
-                    
-                    HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserPro/" + u.UserID).Result;
-                    if (res.IsSuccessStatusCode)
-                    {
-                        string objectPro = res.Content.ReadAsStringAsync().Result;
 
-                        u = new UserModel(JsonConvert.DeserializeObject<UserModel>(objectPro));
-                        myInput.Text = u.uCountry;
-                        FirstName.Text = u.uName;
-                        LastName.Text = u.uSurname;
-                        txtcompany.Text = u.uCompany;
-                        txteducation.Text = u.uEducation;
-                    }
-                }
+
+                HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserPro/" + u.UserID).Result;
+                //    if (res.IsSuccessStatusCode)
+                //    {
+                //        string objectPro = res.Content.ReadAsStringAsync().Result;
+
+                //        u = new UserModel(JsonConvert.DeserializeObject<UserModel>(objectPro));
+                //        myInput.Text = u.uCountry;
+                //        FirstName.Text = u.uName;
+                //        LastName.Text = u.uSurname;
+                //        txtcompany.Text = u.uCompany;
+                //        txteducation.Text = u.uEducation;
+                //    }
             }
 
             else
             {
                 ErrorM.Visible = true;
             }
-           
+
         }
 
    
@@ -64,6 +100,9 @@ namespace QlityG
         protected void Create_Click(object sender, EventArgs e)
         {
            
+
+
+
             u.uCompany = txtcompany.Text;
             u.uCountry = myInput.Text;
 

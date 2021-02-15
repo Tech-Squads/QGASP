@@ -8,6 +8,8 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
+using System.Data;
 
 namespace QlityG
 {
@@ -90,6 +92,7 @@ namespace QlityG
                         lblcompany.Text = u.uCompany;
                         lblname.Text = u.uName;
                         lblsurname.Text = u.uSurname;
+                        Label9.Text = u.uImageP;
                     }
 
                 }
@@ -117,6 +120,44 @@ namespace QlityG
 
 
 
+
+
+        }
+        protected void Create_Click(object sender, EventArgs e)
+        {
+            if (FileUpload1.PostedFile != null)
+            {
+                string strpath = Path.GetExtension(FileUpload1.PostedFile.FileName);
+                if (strpath != ".jpg" && strpath != ".jpeg" && strpath != "" && strpath != ".png")
+                {
+                    ImageError.Text = "Only Image type .jpeg, .jpg, .gif, .png allowed ! ";
+                    ImageError.ForeColor = System.Drawing.Color.Red;
+                }
+                else
+                {
+                    ImageError.Text = "Profile image is saved. ";
+                    ImageError.ForeColor = System.Drawing.Color.Green;
+                }
+                string fileimg = Path.GetFileName(FileUpload1.PostedFile.FileName);
+                FileUpload1.SaveAs(Server.MapPath("~/UserImages/") + fileimg);
+
+                u.uImageP = "~/ UserImages /" + fileimg;
+
+                string data = JsonConvert.SerializeObject(u);
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+                HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + UserID, content).Result;
+
+
+                //if (resp.IsSuccessStatusCode)
+                //{
+                //    Session["UserID"] = UserID;
+                //    //Response.Redirect("~/.aspx");
+                //    ImageError.Text = "Image saved successfully/";
+                //}
+                //ImageError.Text = "not success";
+
+
+            }
 
 
         }

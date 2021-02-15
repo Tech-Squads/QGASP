@@ -147,11 +147,11 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
      
-            <li><a href="GiggerEditP.aspx" style="color:black;font-size:medium;"><i class="w3-xxxlarge glyphicon glyphicon-user"></i>Profile</a></li> 
+            <li><a href="GiggerEditP.aspx" style="color:blue;font-size:small;"><i class="w3-xxxlarge glyphicon glyphicon-user"></i>Profile</a></li> 
 
-          <li><p style="color:blue"> <a href="GiggerViewGigsIndex.aspx" style="color:black;font-size:medium;">View Gig</a></p> </li> 
+          <li><p style="color:blue"> <a href="GiggerViewGigsIndex.aspx" style="color:blue;font-size:small;">View Gig</a></p> </li> 
          
-         <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:black;font-size:medium;">Log Out</a></p> </li>
+         <li><p style="color:blue"> <a href="Account/Logins.aspx" style="color:blue;font-size:small;">Log Out</a></p> </li>
           
         </ul>
       </nav><!-- #nav-menu-container -->

@@ -29,6 +29,8 @@ namespace QlityG
             u.uReferences = txtReferences.Text;
             u.uCountry = myInput.Text;
             u.uSurname = LastName.Text;
+            u.uName = FirstName.Text;
+            u.uCompany = txtcompany.Text;
 
             string data = JsonConvert.SerializeObject(u);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
