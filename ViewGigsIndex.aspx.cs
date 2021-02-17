@@ -19,17 +19,35 @@ namespace QlityG
         readonly StringBuilder card = new StringBuilder();
         readonly StringBuilder cards = new StringBuilder();
 
-        List<GigModel> gigs = new List<GigModel>();
+        List<GigModel> gigses = new List<GigModel>();
+        List<UserModel> gigs = new List<UserModel>();
         HttpClient client = new HttpClient();
         Uri baseAddress = new Uri(Utils.TestUSendRL);
 
 
         UserModel u;
-       
-        
+        UserModel user;
+
+        string skills;
+      
+
         int UserID;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
+
+            //string[] filesindirecotory = Directory.GetFiles(Server.MapPath("~/UserImages"));
+            //List<String> images = new List<string>(filesindirecotory.Count());
+            //foreach (string item in filesindirecotory)
+            //{
+            //    images.Add(String.Format("~/UserImages/{1}", System.IO.Path.GetFileName(item)));
+            //}
+            //Repeater1.DataSource = images;
+            //Repeater1.DataBind();
+
+
+
 
             client.BaseAddress = baseAddress;
 
@@ -40,9 +58,9 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 string data = resp.Content.ReadAsStringAsync().Result;
-                gigs = JsonConvert.DeserializeObject<List<GigModel>>(data);
+                gigses = JsonConvert.DeserializeObject<List<GigModel>>(data);
 
-                foreach (GigModel gig in gigs)
+                foreach (GigModel gig in gigses)
                 {
                     card.Append("<div style='text-align:left;' >");
                     card.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.GigTitle + "" + "</b>" + "</h3>");
@@ -88,11 +106,22 @@ namespace QlityG
                         string objectPro = res.Content.ReadAsStringAsync().Result;
 
                         u = new UserModel(JsonConvert.DeserializeObject<UserModel>(objectPro));
-                       
+
+
+                      
+
+
                         //lblcountry.Text = profile.uCountry;
                         lblcompany.Text = u.uCompany;
                         lblname.Text = u.uName;
                         lblsurname.Text = u.uSurname;
+                        Image1.ImageUrl = u.uImageP;
+
+
+
+                        //byte[] imagedata = (byte[])objectPro["uImageP"];
+
+                        //Image2.ImageUrl = u.uImageP;
                         //LblImage.Text = u.uImageP;
                     }
 
@@ -136,6 +165,59 @@ namespace QlityG
 
          
         }
+        protected void searching_Click(object sender, EventArgs e)
+        {
+
+           
+            if (txtskills.Text != "")
+            {
+                skills = txtskills.Text;
+
+                string data = JsonConvert.SerializeObject(user);
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+                HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/Getskillscontains/" + skills).Result;
+
+
+                if (resp.IsSuccessStatusCode)
+                {
+                    string datas = resp.Content.ReadAsStringAsync().Result;
+                    gigs = JsonConvert.DeserializeObject<List<UserModel>>(datas);
+
+                    foreach (UserModel gig in gigs)
+                    {
+                        card.Append("<div style='text-align:left;' >");
+                        card.Append("<h3 style='font-size:18px;'>" + "<hr/>" + "</h3>");
+                        card.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.uGigTitle + "" + "</b>" + "</h3>");
+
+
+                        card.Append("<h3 style='font-size:18px;'>" + "<br/>" + "</h3>");
+
+                        //card.Append("<div style='text-align:right;margin:auto;' >");
+                        card.Append("<h4 style='font-size:16px;color:gray;'>" + "Date Posted  :" + gig.uDueDate + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h4>");
+                        //card.Append("</div>");
+
+                        //card.Append("<h3 style='font-size:16px;'>" + gig.uGigDescription + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
+                        //card.Append("<h3 style='font-size:16px;background-color:lightgray;border-radius:5px;text-align:center;word-spacing: 2em;'>" + gig.uRequiredSkills + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
+
+                        //card.Append("<div style='text-align:right;margin:auto;' >");
+                        //card.Append("<h3 style='font-size:18px;backcolor:red;'>" + "<a href = '/Homepage/Homepage' class= 'card-link'>Respond</a>" + "</h3>");
+                        //card.Append("</div>");
+
+
+                        card.Append("<h3 style='font-size:18px;'>" + "<br/>" + "</h3>");
+                        viewgigskills.Controls.Add(new Literal { Text = card.ToString() });
+
+
+                    }
+                }
+
+            }
+            else
+
+            {
+                //errorm.Text = "Please fill the text*";
+            }
+        }
         protected void Create_Click(object sender, EventArgs e)
         {
             if(fImage.PostedFile !=null)
@@ -177,5 +259,6 @@ namespace QlityG
 
 
         }
+
     }
 }

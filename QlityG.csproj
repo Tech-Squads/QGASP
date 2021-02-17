@@ -454,6 +454,7 @@
     <Content Include="assets_view\vendor\toastr\toastr.css" />
     <Content Include="assets_view\vendor\toastr\toastr.js" />
     <Content Include="assets_view\vendor\toastr\toastr.min.css" />
+    <Content Include="checkviewgigstatus.aspx" />
     <Content Include="CreateGig.aspx" />
     <Content Include="GigEdit.aspx" />
     <Content Include="GiggerDash.aspx" />
@@ -670,6 +671,11 @@
     <Content Include="lib\ionicons\fonts\ionicons.ttf" />
     <Content Include="lib\ionicons\fonts\ionicons.woff" />
     <Content Include="lib\owlcarousel\LICENSE" />
+    <Content Include="UserImages\Screenshot %281%29.png" />
+    <Content Include="UserImages\Screenshot %282%29.png" />
+    <Content Include="UserImages\Screenshot %2820%29.png" />
+    <Content Include="UserImages\Screenshot %2832%29.png" />
+    <Content Include="UserImages\Screenshot %287%29.png" />
     <Content Include="ViewGigsIndex.aspx" />
     <Content Include="_css\style.css" />
     <Content Include="_img\about-bg.jpg" />
@@ -961,6 +967,13 @@
     <Compile Include="Account\SendEmailReset.aspx.designer.cs">
       <DependentUpon>SendEmailReset.aspx</DependentUpon>
     </Compile>
+    <Compile Include="checkviewgigstatus.aspx.cs">
+      <DependentUpon>checkviewgigstatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkviewgigstatus.aspx.designer.cs">
+      <DependentUpon>checkviewgigstatus.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CreateGig.aspx.cs">
       <DependentUpon>CreateGig.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1010,6 +1023,7 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\EmailClass.cs" />
     <Compile Include="Models\Utils.cs" />
     <Compile Include="RequestorDash.aspx.cs">
       <DependentUpon>RequestorDash.aspx</DependentUpon>
@@ -1126,8 +1140,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Images\" />
-    <Folder Include="UserImages\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

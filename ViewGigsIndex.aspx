@@ -100,7 +100,19 @@
                
  
              }
-
+ .input-icons i { 
+            position: absolute; 
+        }       
+        .input-icons { 
+            width: 100%; 
+            margin-bottom: 10px; 
+        }          
+        .icon { 
+            padding: 10px; 
+            color: black; 
+            min-width: 50px; 
+            text-align: center; 
+        } 
 
 	  </style>
 
@@ -175,10 +187,19 @@
 					</div>
 
 					
-
 					<div id="navbar-search" class="navbar-form search-form">
-						<input value="" class="form-control" placeholder="Search here..." type="text" />
-						<button type="button" class="btn btn-default"><i class="fa fa-search"></i></button>
+						  <div class="input-icons"> 
+							<%--  <i class="fa fa-search"></i>--%>
+							   <asp:TextBox runat="server" ID="txtskills" CssClass="form-control" borderColor="Blue" placeholder="Search here .."  ValidationGroup="Group1"  Width="250px"/>
+						<div style="position:relative;top:-23px;left:182px;">
+							  <i class="fa fa-search"></i>
+						</div>
+					<div style="position:relative;top:-34px;left:8px;">
+						 <asp:Button runat="server" ID="searching" Text="Search" CssClass="btn btn-default" BackColor="blue" ForeColor="White" width="50px"  ValidationGroup="Group1" OnClick="searching_Click" />
+					</div>
+						</div> 
+    
+
 					</div>
 					<!-- end search form -->
 					<!-- navbar menu -->
@@ -217,7 +238,8 @@
 									<i class="lnr lnr-cog"></i>
 								</a>
 								<ul class="dropdown-menu user-menu menu-icon">
-									<li class="menu-heading">ACCOUNT SETTINGS</li>		
+									<li class="menu-heading">ACCOUNT SETTINGS</li>	
+									
 									<li><asp:Label ID="lblEmail" runat="server" Text=""></asp:Label></li>
 								</ul>
 							</li>
@@ -267,7 +289,7 @@
 						<li>Labels</li>
 				    </ul>--%>
 					<div class="dropdown">
-						<a href="#" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Edit profile</strong> <i class="fa fa-caret-down"></i></a>
+						<a href="#" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Edit photo</strong> <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu dropdown-menu-right account">
 							<li>
 								<asp:FileUpload ID="fImage" runat="server"  Width="200px"/>
@@ -289,8 +311,31 @@
 
 					<%--<img src="2.jpg" class="img-responsive img-circle user-photo" alt="User Profile Picture" />--%>
 							<%--<asp:Label ID="lblEmail" runat="server" Text=""></asp:Label>--%>					
-						
-					
+					<div>
+                            <%--    <asp:Repeater ID="Repeater1" runat="server">
+									<ItemTemplate>
+                                        <asp:Image ID="Image2" runat="server"  ImageUrl='<%# Container.DataItem %>'/>
+									</ItemTemplate>
+                                </asp:Repeater>--%>
+
+
+                                <asp:DataList ID="DataList1" runat="server">
+
+									<ItemTemplate>
+                                        <asp:Image ID="Image7" runat="server" />
+                                        <asp:Image ID="Image2" runat="server"  ImageUrl='<%# Container.DataItem %>'/>
+										<asp:Label ID="lblE" runat="server" Text=""></asp:Label>
+										<asp:Label ID="Label1" runat="server" Text='<%#Eval("UserID") %>'></asp:Label>
+                                        <img src="UserImages/<%#Eval("uImageP") %>" />
+
+									</ItemTemplate>
+                                </asp:DataList>
+
+						   
+
+					</div>	
+				
+
 				</div>
 
 				<div>
@@ -354,7 +399,7 @@
 
 							<br /><br /><br /><br /><br />
 							         <hr />
-                    
+                     <asp:Label ID="viewgigskills" runat="server" Text=""></asp:Label>
                     <asp:Label ID="viewgig" runat="server" Text=""></asp:Label>
 						</div>
 

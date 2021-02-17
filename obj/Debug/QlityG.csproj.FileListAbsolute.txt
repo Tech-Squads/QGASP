@@ -835,6 +835,8 @@ C:\BckUp\13Jan App\obj\Debug\QlityG.csproj.CoreCompileInputs.cache
 C:\BckUp\13Jan App\obj\Debug\QlityG.csproj.CopyComplete
 C:\BckUp\13Jan App\obj\Debug\QlityG.dll
 C:\BckUp\13Jan App\obj\Debug\QlityG.pdb
+C:\gitFE\obj\Debug\QlityG.csproj.CoreCompileInputs.cache
+C:\gitFE\obj\Debug\QlityG.csprojAssemblyReference.cache
 C:\gitFE\bin\QlityG.dll.config
 C:\gitFE\bin\QlityG.dll
 C:\gitFE\bin\QlityG.pdb
@@ -934,8 +936,6 @@ C:\gitFE\bin\Microsoft.Owin.Security.Twitter.xml
 C:\gitFE\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\gitFE\bin\Microsoft.Owin.Security.OAuth.xml
 C:\gitFE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\gitFE\obj\Debug\QlityG.csprojAssemblyReference.cache
-C:\gitFE\obj\Debug\QlityG.csproj.CoreCompileInputs.cache
 C:\gitFE\obj\Debug\QlityG.csproj.CopyComplete
 C:\gitFE\obj\Debug\QlityG.dll
 C:\gitFE\obj\Debug\QlityG.pdb

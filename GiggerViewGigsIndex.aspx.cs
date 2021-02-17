@@ -93,6 +93,7 @@ namespace QlityG
                         lblname.Text = u.uName;
                         lblsurname.Text = u.uSurname;
                         Label9.Text = u.uImageP;
+
                     }
 
                 }
