@@ -16,7 +16,7 @@ namespace QlityG
       
         UserModel u;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        Uri baseAddress = new Uri(Utils.USendRL);
         int UserID;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -60,6 +60,7 @@ namespace QlityG
         {
 
             u.HasGig = "True";
+            u.uStatusGig = "New";
             u.uGigTitle = gigTitle.Text.Trim();
 
             u.uDueDate = Label1.Text.Trim();
@@ -76,7 +77,7 @@ namespace QlityG
             if (resp.IsSuccessStatusCode)
             {
                 Session["UserID"] = UserID;
-                Response.Redirect("~/RequestorDashboard");
+                Response.Redirect("~/ViewGigsIndex");
             }
 
             ErrorMsg.Text = "Gig not Created.";

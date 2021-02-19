@@ -19,7 +19,7 @@ namespace QlityG.Account
     {
         UserModel u;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        Uri baseAddress = new Uri(Utils.USendRL);
         int UserID;
         string password;
         protected void Page_Load(object sender, EventArgs e)

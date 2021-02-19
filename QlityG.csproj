@@ -461,6 +461,7 @@
     <Content Include="GiggerDashboard.aspx" />
     <Content Include="GiggerEditP.aspx" />
     <Content Include="GiggerViewGigsIndex.aspx" />
+    <Content Include="HomeRequestor.aspx" />
     <Content Include="index.aspx" />
     <Content Include="RequestorDash.aspx" />
     <Content Include="RequestorDashboard.aspx" />
@@ -671,6 +672,7 @@
     <Content Include="lib\ionicons\fonts\ionicons.ttf" />
     <Content Include="lib\ionicons\fonts\ionicons.woff" />
     <Content Include="lib\owlcarousel\LICENSE" />
+    <Content Include="TestSendMail.aspx" />
     <Content Include="UserImages\Screenshot %281%29.png" />
     <Content Include="UserImages\Screenshot %282%29.png" />
     <Content Include="UserImages\Screenshot %2820%29.png" />
@@ -1016,6 +1018,13 @@
     <Compile Include="GiggerViewGigsIndex.aspx.designer.cs">
       <DependentUpon>GiggerViewGigsIndex.aspx</DependentUpon>
     </Compile>
+    <Compile Include="HomeRequestor.aspx.cs">
+      <DependentUpon>HomeRequestor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeRequestor.aspx.designer.cs">
+      <DependentUpon>HomeRequestor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1110,6 +1119,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="TestSendMail.aspx.cs">
+      <DependentUpon>TestSendMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestSendMail.aspx.designer.cs">
+      <DependentUpon>TestSendMail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewGigGigger.aspx.cs">
       <DependentUpon>ViewGigGigger.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

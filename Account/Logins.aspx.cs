@@ -24,7 +24,7 @@ namespace QlityG.Account
 
         HttpClient client = new HttpClient();
 
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        Uri baseAddress = new Uri(Utils.USendRL);
 
         UserModel u;
         protected void Page_Load(object sender, EventArgs e)
@@ -118,7 +118,7 @@ namespace QlityG.Account
                                     else if (LoggedUser.uType == 2)
                                     {
                                         Session["UserID"] = LoggedUser.UserID;
-                                        Response.Redirect("~/RequestorDashboard.aspx");
+                                        Response.Redirect("~/ViewGigsIndex.aspx");
                                     }
                                     break;
                                 default:

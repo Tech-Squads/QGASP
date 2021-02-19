@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewGigsIndex.aspx.cs" Inherits="QlityG.ViewGigsIndex" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomeRequestor.aspx.cs" Inherits="QlityG.HomeRequestor" %>
 
 <!DOCTYPE html>
 
@@ -28,7 +28,7 @@
 	<link rel="icon" type="image/png" sizes="40x100" href="/Account/QlityGigs_Log.png" />
     
     
-	   <style type="text/css">
+	  <style type="text/css">
 
 
 	    #heade{        
@@ -174,7 +174,7 @@
         <ul class="nav-menu">
            
         
-			<%--<li><p style="color:blue"> <a href="RequestorDashboard.aspx" style="color:blue;font-size:small;">View Gig</a></p> </li>--%>
+			<li><p style="color:blue"> <a href="RequestorDashboard.aspx" style="color:blue;font-size:small;">Dashboard</a></p> </li>
 
             <li><a href="RequestorEditP.aspx" style="color:blue;font-size:small;"><i class="w3-xxxlarge glyphicon glyphicon-user"></i>Profile</a></li> 
     
@@ -205,7 +205,7 @@
 							  <i class="fa fa-search"></i>
 						</div>--%>
 					<div style="position:relative;top:-34px;left:8px;">
-			<asp:Button runat="server" ID="searching" Text="Search" CssClass="btn btn-default" BackColor="blue" ForeColor="White" width="50px"  ValidationGroup="Group1" OnClick="searching_Click" />
+						 <asp:Button runat="server" ID="searching" Text="Search" CssClass="btn btn-default" BackColor="blue" ForeColor="White" width="50px"  ValidationGroup="Group1"  />
 					</div>
 						</div> 
     
@@ -234,13 +234,7 @@
 							</li>--%>
 
 
-								<li style="font-size:medium;color:blue;">
-								<a href="#"  data-toggle="dropdown">
-									Home<i class="fa fa-home"></i>
-									<span class="notification-dot"></span>
-								</a>
-								
-							</li>
+
 
 								<li class="dropdown">
 								<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
@@ -256,28 +250,21 @@
 								<ul class="dropdown-menu user-menu menu-icon">
 									<li class="menu-heading">ACCOUNT SETTINGS</li>	
 									
-									
+									<li><asp:Label ID="lblEmail" runat="server" Text=""></asp:Label></li>
 								</ul>
 							</li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
-									Me<i class="fa fa-caret-down"></i>
+									<i class="lnr lnr-question-circle"></i>
 								</a>
 								<ul class="dropdown-menu user-menu">
-									
-									
-									<li style="font-size:medium;"><a href="#"><b>My profile</b></a></li>
-
-
-
-									<li style="position:relative;left:20px;"><asp:Label ID="lblEmail" runat="server" Text=""></asp:Label></li>
-									<li style="position:relative;left:20px;"><asp:Label ID="Label2" runat="server" Text=""></asp:Label>  <asp:Label ID="Label3" runat="server" Text=""></asp:Label></li>
-									<li style="text-align:;"></li>
-									<li class="menu-heading">My Gigs</li>
-									<li><a href="#">View gigs </a></li>
-									<li><a href="#"> Edit gig </a></li>
+									<li>
+										<div class="search-form help-search-form">
+										</div>
+									</li>
+									<li class="menu-heading">HOW-TO</li>
+									<li><a href="#">Create gig</a></li>
 									<li class="menu-heading">ACCOUNT</li>
-
 									<li><a href="#">Change Password</a></li>
 									<li><a href="#">Privacy &amp; Security</a></li>
 									<li><a href="#">Membership</a></li>
@@ -313,7 +300,7 @@
 							</li>
 							<li style="color:white;">The picture</li>
 							<li style="text-align:center"><a href="#">
-																  <asp:Button runat="server" ID="create" Text="Save" CssClass="btn btn-default"  BackColor="blue" ForeColor="white" OnClick="Create_Click"   />
+								  <asp:Button runat="server" ID="create" Text="Save" CssClass="btn btn-default"  BackColor="blue" ForeColor="white"  />
 							    </a></li>
 							<li>
 								<asp:Label ID="ImageError" runat="server" Text=""></asp:Label>

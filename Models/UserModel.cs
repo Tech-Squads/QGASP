@@ -35,6 +35,8 @@ namespace QlityG.Models
         public string uRequiredSkills { get; set; }
         public string uContactDetails { get; set; }
         public int uRequestorID { get; set; }
+        public string uStatusGig { get; set; }
+
 
 
         public UserModel(UserModel u)
@@ -55,6 +57,7 @@ namespace QlityG.Models
             this.uPastProjectName = u.uPastProjectName;
             this.uPastProjectDuration = u.uPastProjectDuration;
             this.uPastProjectDetails = u.uPastProjectDetails;
+
             this.uGigID = u.uGigID;
             this.uGigTitle = u.uGigTitle;
             this.uRequestorID = u.uRequestorID;
@@ -62,6 +65,7 @@ namespace QlityG.Models
             this.uContactDetails = u.uContactDetails;
             this.uRequiredSkills = u.uRequiredSkills;
             this.uImageP = u.uImageP;
+            this.uStatusGig = u.uStatusGig;
         }
 
         

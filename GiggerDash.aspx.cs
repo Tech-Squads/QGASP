@@ -15,7 +15,7 @@ namespace QlityG
     {
         UserModel u;
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        Uri baseAddress = new Uri(Utils.USendRL);
         int UserID;
 
 
@@ -41,7 +41,7 @@ namespace QlityG
                 {
                 Session["UserID"] = UserID;
 
-                Response.Redirect("~/GiggerDashboard");
+                Response.Redirect("~/GiggerViewGigsIndex");
             }
 
             Response.Redirect("~/GiggerDash");

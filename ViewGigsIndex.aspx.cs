@@ -22,7 +22,7 @@ namespace QlityG
         List<GigModel> gigses = new List<GigModel>();
         List<UserModel> gigs = new List<UserModel>();
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        Uri baseAddress = new Uri(Utils.USendRL);
 
 
         UserModel u;
@@ -53,24 +53,24 @@ namespace QlityG
 
             //FirstName.Enabled = false;
 
-            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/GetAllGigs").Result;
+            HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/Gettingallgigs").Result;
 
             if (resp.IsSuccessStatusCode)
             {
                 string data = resp.Content.ReadAsStringAsync().Result;
-                gigses = JsonConvert.DeserializeObject<List<GigModel>>(data);
+                gigs = JsonConvert.DeserializeObject<List<UserModel>>(data);
 
-                foreach (GigModel gig in gigses)
+                foreach (UserModel gig in gigs)
                 {
                     card.Append("<div style='text-align:left;' >");
-                    card.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.GigTitle + "" + "</b>" + "</h3>");
+                    card.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.uGigTitle + "" + "</b>" + "</h3>");
 
                     card.Append("<div style='text-align:right;margin:auto;' >");
-                    card.Append("<h4 style='font-size:16px;'>" + "Date Posted  :" + gig.DueDate + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h4>");
+                    card.Append("<h4 style='font-size:16px;color:gray;'>" + "Date Posted  :" + gig.uDueDate + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h4>");
                     card.Append("</div>");
 
-                    card.Append("<h3 style='font-size:16px;'>" + gig.GigDescription + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
-                    card.Append("<h3 style='font-size:16px;background-color:lightgray;border-radius:5px;text-align:center;word-spacing: 2em;'>" + gig.RequiredSkills + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
+                    card.Append("<h3 style='font-size:16px;'>" + gig.uGigDescription + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
+                    card.Append("<h3 style='font-size:16px;background-color:lightgray;border-radius:5px;text-align:center;word-spacing: 2em;'>" + gig.uRequiredSkills + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
 
                     card.Append("<div style='text-align:right;margin:auto;' >");
                     //card.Append("<h3 style='font-size:18px;backcolor:red;'>" + "<a href = '/Homepage/Homepage' class= 'card-link'>Respond</a>" + "</h3>");
@@ -83,6 +83,45 @@ namespace QlityG
 
                 }
             }
+            //for new gigs display
+            //HttpResponseMessage respon = client.GetAsync(client.BaseAddress + "/Getnewgigrunning").Result;
+            //if (respon.IsSuccessStatusCode)
+            //    {
+            //        string data = respon.Content.ReadAsStringAsync().Result;
+            //        gigs = JsonConvert.DeserializeObject<List<UserModel>>(data);
+
+            //        foreach (UserModel gig in gigs)
+            //        {
+            //            card.Append("<div style='text-align:left;' >");
+            //            card.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.uGigTitle + "" + "</b>" + "</h3>");
+
+            //            card.Append("<div style='text-align:right;margin:auto;' >");
+            //            card.Append("<h4 style='font-size:16px;'>" + "Date Posted  :" + gig.uDueDate + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h4>");
+            //            card.Append("</div>");
+
+            //            card.Append("<h3 style='font-size:16px;'>" + gig.uGigDescription + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
+            //            card.Append("<h3 style='font-size:16px;background-color:lightgray;border-radius:5px;text-align:center;word-spacing: 2em;'>" + gig.uRequiredSkills + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
+
+            //            card.Append("<div style='text-align:right;margin:auto;' >");
+            //            //card.Append("<h3 style='font-size:18px;backcolor:red;'>" + "<a href = '/Homepage/Homepage' class= 'card-link'>Respond</a>" + "</h3>");
+            //            card.Append("</div>");
+
+            //            card.Append("<h3 style='font-size:18px;'>" + "<hr/>" + "</h3>");
+            //            card.Append("<h3 style='font-size:18px;'>" + "<br/>" + "</h3>");
+            //            LblNewGigs.Controls.Add(new Literal { Text = card.ToString() });
+
+
+            //        }
+            //    }
+
+
+
+
+
+
+
+
+
 
 
             UserID = Convert.ToInt32(Session["UserID"]);
@@ -115,8 +154,12 @@ namespace QlityG
                         lblcompany.Text = u.uCompany;
                         lblname.Text = u.uName;
                         lblsurname.Text = u.uSurname;
+                        Label2.Text = u.uName;
+                        Label3.Text = u.uSurname;
                         Image1.ImageUrl = u.uImageP;
 
+                        //DataList1.DataSource = u.uImageP;
+                        //DataList1.DataBind();
 
 
                         //byte[] imagedata = (byte[])objectPro["uImageP"];
@@ -175,7 +218,7 @@ namespace QlityG
 
                 string data = JsonConvert.SerializeObject(user);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/Getskillscontains/" + skills).Result;
+                HttpResponseMessage resp = client.GetAsync(client.BaseAddress + "/Getnumbercontains/" + skills).Result;
 
 
                 if (resp.IsSuccessStatusCode)
