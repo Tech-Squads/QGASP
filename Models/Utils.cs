@@ -11,14 +11,14 @@ namespace QlityG.Models
     public class Utils
     {
 
-        static string vpsURL= "http://localhost:8080";
-        static string localURL = "https://localhost:44364";
+        //static string vpsURL= "http://localhost:8080";
+        //static string localURL = "https://localhost:44364";
 
 
-        //internal static readonly string USendRL = "http://localhost:8080" ;
-        //internal static readonly string TestUSendRL = "https://localhost:44364";
-        internal static readonly string TestUSendRL = localURL;
-        internal static readonly string USendRL = vpsURL;
+        internal static readonly string USendRL = "http://localhost:8080";
+        internal static readonly string TestUSendRL = "https://localhost:44364";
+        //internal static readonly string TestUSendRL = localURL;
+        //internal static readonly string USendRL = vpsURL;
 
 
         public static string HashThis(string passW)

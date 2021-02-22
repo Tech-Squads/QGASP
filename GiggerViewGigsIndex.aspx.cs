@@ -89,10 +89,10 @@ namespace QlityG
                         u = new UserModel(JsonConvert.DeserializeObject<UserModel>(objectPro));
 
                         //lblcountry.Text = profile.uCountry;
-                        lblcompany.Text = u.uCompany;
-                        lblname.Text = u.uName;
-                        lblsurname.Text = u.uSurname;
-                        Label9.Text = u.uImageP;
+                        lblcompany.Text = u.uCompanys;
+                        lblname.Text = u.uNames;
+                        lblsurname.Text = u.uSurnames;
+                        Label9.Text = u.uImagePs;
 
                     }
 
@@ -142,7 +142,7 @@ namespace QlityG
                 string fileimg = Path.GetFileName(FileUpload1.PostedFile.FileName);
                 FileUpload1.SaveAs(Server.MapPath("~/UserImages/") + fileimg);
 
-                u.uImageP = "~/ UserImages /" + fileimg;
+                u.uImagePs = "~/ UserImages /" + fileimg;
 
                 string data = JsonConvert.SerializeObject(u);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");

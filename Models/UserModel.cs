@@ -13,29 +13,29 @@ namespace QlityG.Models
         public int uType { get; set; }
         public string FirstLogin { get; set; }
         public string HasGig { get; set; }
-        public string uSurname { get; set; }
-        public string uName { get; set; }
-        public string uImageP { get; set; }
+        public string uSurnames { get; set; }
+        public string uNames { get; set; }
+        public string uImagePs { get; set; }
 
         //for Profile
-        public string uCountry { get; set; }
-        public string uCompany { get; set; }
-        public string uEducation { get; set; }
-        public string uSkills { get; set; }
-        public string uReferences { get; set; }
-        public string uPastProjectName { get; set; }
-        public string uPastProjectDuration { get; set; }
-        public string uPastProjectDetails { get; set; }
+        public string uCountrys { get; set; }
+        public string uCompanys { get; set; }
+        public string uEducations { get; set; }
+        public string uSkill { get; set; }
+        public string uReference { get; set; }
+        public string uPastProjectNames { get; set; }
+        public string uPastProjectDurations { get; set; }
+        public string uPastProjectDetail { get; set; }
 
         //for gig
-        public int uGigID { get; set; }
-        public string uGigTitle { get; set; }
-        public string uDueDate { get; set; }
-        public string uGigDescription { get; set; }
+        public int uGigIDs { get; set; }
+        public string uGigTitles { get; set; }
+        public string uDueDates { get; set; }
+        public string uGigDescriptions { get; set; }
         public string uRequiredSkills { get; set; }
-        public string uContactDetails { get; set; }
-        public int uRequestorID { get; set; }
-        public string uStatusGig { get; set; }
+        public string uContactDetail { get; set; }
+        public int uRequestorIDs { get; set; }
+        public string uStatusGigs { get; set; }
 
 
 
@@ -47,25 +47,25 @@ namespace QlityG.Models
             this.FirstLogin = u.FirstLogin;
             this.uType = u.uType;
             this.HasGig = u.HasGig;
-            this.uSurname = u.uSurname;
-            this.uName = u.uName;
-            this.uCountry = u.uCountry;
-            this.uCompany = u.uCompany;
-            this.uEducation = u.uEducation;
-            this.uSkills = u.uSkills;
-            this.uReferences = u.uReferences;
-            this.uPastProjectName = u.uPastProjectName;
-            this.uPastProjectDuration = u.uPastProjectDuration;
-            this.uPastProjectDetails = u.uPastProjectDetails;
+            this.uSurnames = u.uSurnames;
+            this.uNames = u.uNames;
+            this.uCountrys = u.uCountrys;
+            this.uCompanys = u.uCompanys;
+            this.uEducations = u.uEducations;
+            this.uSkill = u.uSkill;
+            this.uReference = u.uReference;
+            this.uPastProjectNames = u.uPastProjectNames;
+            this.uPastProjectDurations = u.uPastProjectDurations;
+            this.uPastProjectDetail = u.uPastProjectDetail;
 
-            this.uGigID = u.uGigID;
-            this.uGigTitle = u.uGigTitle;
-            this.uRequestorID = u.uRequestorID;
-            this.uGigDescription = u.uGigDescription;
-            this.uContactDetails = u.uContactDetails;
+            this.uGigIDs = u.uGigIDs;
+            this.uGigTitles = u.uGigTitles;
+            this.uRequestorIDs = u.uRequestorIDs;
+            this.uGigDescriptions = u.uGigDescriptions;
+            this.uContactDetail = u.uContactDetail;
             this.uRequiredSkills = u.uRequiredSkills;
-            this.uImageP = u.uImageP;
-            this.uStatusGig = u.uStatusGig;
+            this.uImagePs = u.uImagePs;
+            this.uStatusGigs = u.uStatusGigs;
         }
 
         

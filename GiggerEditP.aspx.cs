@@ -41,15 +41,15 @@ namespace QlityG
                         string objectPro = res.Content.ReadAsStringAsync().Result;
 
                         u = new UserModel(JsonConvert.DeserializeObject<UserModel>(objectPro));
-                        myInput.Text = u.uCountry;
-                        txtEducation.Text = u.uEducation;
-                        FirstName.Text = u.uName;
-                        LastName.Text = u.uSurname;
-                        txtReferences.Text = u.uReferences;
-                        txtPastProjectName.Text = u.uPastProjectName;
-                        txtPastProjectDuration.Text = u.uPastProjectDuration;
-                        txtPastProjectDetails.Text = u.uPastProjectDetails;
-                        txtcompany.Text = u.uCompany;
+                        myInput.Text = u.uCountrys;
+                        txtEducation.Text = u.uEducations;
+                        FirstName.Text = u.uNames;
+                        LastName.Text = u.uSurnames;
+                        txtReferences.Text = u.uReference;
+                        txtPastProjectName.Text = u.uPastProjectNames;
+                        txtPastProjectDuration.Text = u.uPastProjectDurations;
+                        txtPastProjectDetails.Text = u.uPastProjectDetail;
+                        txtcompany.Text = u.uCompanys;
                     }
                 }
               
@@ -63,15 +63,15 @@ namespace QlityG
         protected void Create_Click(object sender, EventArgs e)
         {
            
-            u.uPastProjectName = txtPastProjectName.Text;
-            u.uPastProjectDuration = txtPastProjectDuration.Text;
-            u.uPastProjectDetails = txtPastProjectDetails.Text;
-            u.uEducation = txtEducation.Text;
-            u.uReferences = txtReferences.Text;
-            u.uCountry = myInput.Text;
-            u.uSurname = LastName.Text;
-            u.uName = FirstName.Text;
-            u.uCompany = txtcompany.Text;
+            u.uPastProjectNames = txtPastProjectName.Text;
+            u.uPastProjectDurations = txtPastProjectDuration.Text;
+            u.uPastProjectDetail = txtPastProjectDetails.Text;
+            u.uEducations = txtEducation.Text;
+            u.uReference = txtReferences.Text;
+            u.uCountrys = myInput.Text;
+            u.uSurnames = LastName.Text;
+            u.uNames = FirstName.Text;
+            u.uCompanys = txtcompany.Text;
 
             string data = JsonConvert.SerializeObject(u);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");

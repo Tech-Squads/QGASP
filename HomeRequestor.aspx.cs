@@ -43,13 +43,13 @@ namespace QlityG
                 {
                     cards.Append("<div style='text-align:left;' >");
                     cards.Append("<h3 style='font-size:18px;'>" + "<hr/>" + "</h3>");
-                    cards.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.uGigTitle + "" + "</b>" + "</h3>");
+                    cards.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.uGigTitles + "" + "</b>" + "</h3>");
 
                     cards.Append("<div style='text-align:right;margin:auto;' >");
-                    cards.Append("<h4 style='font-size:16px;color:gray;'>" + "Date Posted  :" + gig.uDueDate + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h4>");
+                    cards.Append("<h4 style='font-size:16px;color:gray;'>" + "Date Posted  :" + gig.uDueDates + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h4>");
                     cards.Append("</div>");
 
-                    cards.Append("<h3 style='font-size:16px;'>" + gig.uGigDescription + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
+                    cards.Append("<h3 style='font-size:16px;'>" + gig.uGigDescriptions + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
                     cards.Append("<h3 style='font-size:16px;background-color:lightgray;border-radius:5px;text-align:center;word-spacing: 2em;'>" + gig.uRequiredSkills + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
 
                     //card.Append("<div style='text-align:right;margin:auto;' >");

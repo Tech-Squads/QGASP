@@ -22,15 +22,15 @@ namespace QlityG
         protected void Create_Click(object sender, EventArgs e)
         {
             u.FirstLogin = "False";
-            u.uPastProjectName = txtPastProjectName.Text;
-            u.uPastProjectDuration = txtPastProjectDuration.Text;
-            u.uPastProjectDetails = txtPastProjectDetails.Text;
-            u.uEducation = txtEducation.Text;
-            u.uReferences = txtReferences.Text;
-            u.uCountry = myInput.Text;
-            u.uSurname = LastName.Text;
-            u.uName = FirstName.Text;
-            u.uCompany = txtcompany.Text;
+            u.uPastProjectNames = txtPastProjectName.Text;
+            u.uPastProjectDurations = txtPastProjectDuration.Text;
+            u.uPastProjectDetail = txtPastProjectDetails.Text;
+            u.uEducations = txtEducation.Text;
+            u.uReference = txtReferences.Text;
+            u.uCountrys = myInput.Text;
+            u.uSurnames = LastName.Text;
+            u.uNames = FirstName.Text;
+            u.uCompanys = txtcompany.Text;
 
             string data = JsonConvert.SerializeObject(u);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");

@@ -117,12 +117,12 @@ namespace QlityG
         protected void Create_Click(object sender, EventArgs e)
         {
             u.FirstLogin = "False";
-            u.uCompany = txtcompany.Text;
-            u.uCountry = myInput.Text;
+            u.uCompanys = txtcompany.Text;
+            u.uCountrys = myInput.Text;
 
-            u.uName = FirstName.Text;
-            u.uSurname = LastName.Text;
-            u.uEducation = txteducation.Text;
+            u.uNames = FirstName.Text;
+            u.uSurnames = LastName.Text;
+            u.uEducations = txteducation.Text;
 
             string data = JsonConvert.SerializeObject(u);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");

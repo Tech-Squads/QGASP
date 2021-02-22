@@ -49,13 +49,13 @@ namespace QlityG
                     {
                         card.Append("<div style='text-align:left;' >");
                         card.Append("<h3 style='font-size:18px;'>" + "<hr/>" + "</h3>");
-                        card.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.uGigTitle + "" + "</b>" + "</h3>");
+                        card.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.uGigTitles + "" + "</b>" + "</h3>");
 
 
                         card.Append("<h3 style='font-size:18px;'>" + "<br/>" + "</h3>");
 
                         //card.Append("<div style='text-align:right;margin:auto;' >");
-                        card.Append("<h4 style='font-size:16px;color:gray;'>" + "Date Posted  :" + gig.uDueDate + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h4>");
+                        card.Append("<h4 style='font-size:16px;color:gray;'>" + "Date Posted  :" + gig.uDueDates + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h4>");
                         //card.Append("</div>");
 
                         //card.Append("<h3 style='font-size:16px;'>" + gig.uGigDescription + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");

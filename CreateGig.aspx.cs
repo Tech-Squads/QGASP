@@ -60,14 +60,14 @@ namespace QlityG
         {
 
             u.HasGig = "True";
-            u.uStatusGig = "New";
-            u.uGigTitle = gigTitle.Text.Trim();
+            u.uStatusGigs = "New";
+            u.uGigTitles = gigTitle.Text.Trim();
 
-            u.uDueDate = Label1.Text.Trim();
-            u.uGigDescription = gDescription.Text.Trim();
+            u.uDueDates = Label1.Text.Trim();
+            u.uGigDescriptions = gDescription.Text.Trim();
             //gig.ContactDetails = ContactEmail.Text.Trim();
             u.uRequiredSkills = SkillsRequired.Text.Trim();
-            u.uRequestorID = UserID;
+            u.uRequestorIDs = UserID;
 
             string data = JsonConvert.SerializeObject(u);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");

@@ -63,13 +63,13 @@ namespace QlityG
                 foreach (UserModel gig in gigs)
                 {
                     card.Append("<div style='text-align:left;' >");
-                    card.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.uGigTitle + "" + "</b>" + "</h3>");
+                    card.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.uGigTitles + "" + "</b>" + "</h3>");
 
                     card.Append("<div style='text-align:right;margin:auto;' >");
-                    card.Append("<h4 style='font-size:16px;color:gray;'>" + "Date Posted  :" + gig.uDueDate + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h4>");
+                    card.Append("<h4 style='font-size:16px;color:gray;'>" + "Date Posted  :" + gig.uDueDates + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h4>");
                     card.Append("</div>");
 
-                    card.Append("<h3 style='font-size:16px;'>" + gig.uGigDescription + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
+                    card.Append("<h3 style='font-size:16px;'>" + gig.uGigDescriptions + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
                     card.Append("<h3 style='font-size:16px;background-color:lightgray;border-radius:5px;text-align:center;word-spacing: 2em;'>" + gig.uRequiredSkills + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
 
                     card.Append("<div style='text-align:right;margin:auto;' >");
@@ -151,12 +151,12 @@ namespace QlityG
 
 
                         //lblcountry.Text = profile.uCountry;
-                        lblcompany.Text = u.uCompany;
-                        lblname.Text = u.uName;
-                        lblsurname.Text = u.uSurname;
-                        Label2.Text = u.uName;
-                        Label3.Text = u.uSurname;
-                        Image1.ImageUrl = u.uImageP;
+                        lblcompany.Text = u.uCompanys;
+                        lblname.Text = u.uNames;
+                        lblsurname.Text = u.uSurnames;
+                        Label2.Text = u.uNames;
+                        Label3.Text = u.uSurnames;
+                        Image1.ImageUrl = u.uImagePs;
 
                         //DataList1.DataSource = u.uImageP;
                         //DataList1.DataBind();
@@ -230,13 +230,13 @@ namespace QlityG
                     {
                         card.Append("<div style='text-align:left;' >");
                         card.Append("<h3 style='font-size:18px;'>" + "<hr/>" + "</h3>");
-                        card.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.uGigTitle + "" + "</b>" + "</h3>");
+                        card.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.uGigTitles + "" + "</b>" + "</h3>");
 
 
                         card.Append("<h3 style='font-size:18px;'>" + "<br/>" + "</h3>");
 
                         //card.Append("<div style='text-align:right;margin:auto;' >");
-                        card.Append("<h4 style='font-size:16px;color:gray;'>" + "Date Posted  :" + gig.uDueDate + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h4>");
+                        card.Append("<h4 style='font-size:16px;color:gray;'>" + "Date Posted  :" + gig.uDueDates + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h4>");
                         //card.Append("</div>");
 
                         //card.Append("<h3 style='font-size:16px;'>" + gig.uGigDescription + "<a href = '/Homepage/Homepage' class= 'card-link'></a>" + "</h3>");
@@ -280,7 +280,7 @@ namespace QlityG
                 string fileimg = Path.GetFileName(fImage.PostedFile.FileName);
                 fImage.PostedFile.SaveAs(Server.MapPath("UserImages/") + fileimg);
 
-                u.uImageP = "~/ UserImages /" + fileimg;
+                u.uImagePs = "~/ UserImages /" + fileimg;
               
                
 
