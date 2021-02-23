@@ -113,7 +113,7 @@ namespace QlityG.Account
                                     if (LoggedUser.uType == 1)
                                     {
                                         Session["UserID"] = LoggedUser.UserID;
-                                        Response.Redirect("~/GiggerDashboard.aspx");
+                                        Response.Redirect("~/GiggerViewGigsIndex.aspx");
                                     }
                                     else if (LoggedUser.uType == 2)
                                     {

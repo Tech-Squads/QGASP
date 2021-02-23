@@ -22,7 +22,7 @@ namespace QlityG
         List<UserModel> Gignew = new List<UserModel>();
 
         HttpClient client = new HttpClient();
-        Uri baseAddress = new Uri(Utils.TestUSendRL);
+        Uri baseAddress = new Uri(Utils.USendRL);
 
         protected void Page_Load(object sender, EventArgs e)
         {

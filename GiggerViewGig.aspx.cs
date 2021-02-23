@@ -10,11 +10,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace QlityG
 {
-    public partial class GiggerViewGigsIndex : System.Web.UI.Page
+    public partial class GiggerViewGig : System.Web.UI.Page
     {
+
         readonly StringBuilder card = new StringBuilder();
         readonly StringBuilder cards = new StringBuilder();
 
@@ -151,13 +153,13 @@ namespace QlityG
 
 
                         //lblcountry.Text = profile.uCountry;
-                        lblcompany.Text = u.uCompanys;
-                        lblname.Text = u.uNames;
-                        lblsurname.Text = u.uSurnames;
+                        //lblcompany.Text = u.uCompanys;
+                        //lblname.Text = u.uNames;
+                        //lblsurname.Text = u.uSurnames;
                         Label2.Text = u.uNames;
                         Label3.Text = u.uSurnames;
                         //Image1.ImageUrl = u.uImagePs;
-                        Label9.Text = u.uImagePs;
+                        //Label9.Text = u.uImagePs;
 
                         //DataList1.DataSource = u.uImageP;
                         //DataList1.DataBind();
@@ -262,43 +264,6 @@ namespace QlityG
                 //errorm.Text = "Please fill the text*";
             }
         }
-        protected void Create_Click(object sender, EventArgs e)
-        {
-            if (FileUpload1.PostedFile != null)
-            {
-                string strpath = Path.GetExtension(FileUpload1.PostedFile.FileName);
-                if (strpath != ".jpg" && strpath != ".jpeg" && strpath != "" && strpath != ".png")
-                {
-                    ImageError.Text = "Only Image type .jpeg, .jpg, .gif, .png allowed ! ";
-                    ImageError.ForeColor = System.Drawing.Color.Red;
-                }
-                else
-                {
-                    ImageError.Text = "Profile image is saved. ";
-                    ImageError.ForeColor = System.Drawing.Color.Green;
-                }
-                string fileimg = Path.GetFileName(FileUpload1.PostedFile.FileName);
-                FileUpload1.SaveAs(Server.MapPath("~/UserImages/") + fileimg);
 
-                u.uImagePs = "~/ UserImages /" + fileimg;
-
-                string data = JsonConvert.SerializeObject(u);
-                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + UserID, content).Result;
-
-
-                //if (resp.IsSuccessStatusCode)
-                //{
-                //    Session["UserID"] = UserID;
-                //    //Response.Redirect("~/.aspx");
-                //    ImageError.Text = "Image saved successfully/";
-                //}
-                //ImageError.Text = "not success";
-
-
-            }
-
-
-        }
     }
 }

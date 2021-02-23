@@ -75,17 +75,17 @@ namespace QlityG
 
 
                 HttpResponseMessage res = client.GetAsync(client.BaseAddress + "/GetUserPro/" + u.UserID).Result;
-                //    if (res.IsSuccessStatusCode)
-                //    {
-                //        string objectPro = res.Content.ReadAsStringAsync().Result;
+                if (res.IsSuccessStatusCode)
+                {
+                    string objectPro = res.Content.ReadAsStringAsync().Result;
 
-                //        u = new UserModel(JsonConvert.DeserializeObject<UserModel>(objectPro));
-                //        myInput.Text = u.uCountry;
-                //        FirstName.Text = u.uName;
-                //        LastName.Text = u.uSurname;
-                //        txtcompany.Text = u.uCompany;
-                //        txteducation.Text = u.uEducation;
-                //    }
+                    u = new UserModel(JsonConvert.DeserializeObject<UserModel>(objectPro));
+                    myInput.Text = u.uCountrys;
+                    FirstName.Text = u.uNames;
+                    LastName.Text = u.uSurnames;
+                    txtcompany.Text = u.uCompanys;
+                    txteducation.Text = u.uEducations;
+                }
             }
 
             else
@@ -112,7 +112,7 @@ namespace QlityG
 
             string data = JsonConvert.SerializeObject(u);
             StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + UserID, content).Result;
+            HttpResponseMessage resp = client.PutAsync(client.BaseAddress + "/UpdateUser/" + u.UserID, content).Result;
 
 
             if (resp.IsSuccessStatusCode)

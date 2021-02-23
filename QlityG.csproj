@@ -454,18 +454,19 @@
     <Content Include="assets_view\vendor\toastr\toastr.css" />
     <Content Include="assets_view\vendor\toastr\toastr.js" />
     <Content Include="assets_view\vendor\toastr\toastr.min.css" />
-    <Content Include="checkviewgigstatus.aspx" />
     <Content Include="CreateGig.aspx" />
     <Content Include="GigEdit.aspx" />
     <Content Include="GiggerDash.aspx" />
     <Content Include="GiggerDashboard.aspx" />
     <Content Include="GiggerEditP.aspx" />
+    <Content Include="GiggerViewGig.aspx" />
     <Content Include="GiggerViewGigsIndex.aspx" />
     <Content Include="HomeRequestor.aspx" />
     <Content Include="index.aspx" />
     <Content Include="RequestorDash.aspx" />
     <Content Include="RequestorDashboard.aspx" />
     <Content Include="RequestorEditP.aspx" />
+    <Content Include="RequestorViewGig.aspx" />
     <Content Include="SelectingType.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
@@ -969,13 +970,6 @@
     <Compile Include="Account\SendEmailReset.aspx.designer.cs">
       <DependentUpon>SendEmailReset.aspx</DependentUpon>
     </Compile>
-    <Compile Include="checkviewgigstatus.aspx.cs">
-      <DependentUpon>checkviewgigstatus.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="checkviewgigstatus.aspx.designer.cs">
-      <DependentUpon>checkviewgigstatus.aspx</DependentUpon>
-    </Compile>
     <Compile Include="CreateGig.aspx.cs">
       <DependentUpon>CreateGig.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1010,6 +1004,13 @@
     </Compile>
     <Compile Include="GiggerEditP.aspx.designer.cs">
       <DependentUpon>GiggerEditP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiggerViewGig.aspx.cs">
+      <DependentUpon>GiggerViewGig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiggerViewGig.aspx.designer.cs">
+      <DependentUpon>GiggerViewGig.aspx</DependentUpon>
     </Compile>
     <Compile Include="GiggerViewGigsIndex.aspx.cs">
       <DependentUpon>GiggerViewGigsIndex.aspx</DependentUpon>
@@ -1054,6 +1055,13 @@
     </Compile>
     <Compile Include="RequestorEditP.aspx.designer.cs">
       <DependentUpon>RequestorEditP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestorViewGig.aspx.cs">
+      <DependentUpon>RequestorViewGig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestorViewGig.aspx.designer.cs">
+      <DependentUpon>RequestorViewGig.aspx</DependentUpon>
     </Compile>
     <Compile Include="SelectingType.aspx.cs">
       <DependentUpon>SelectingType.aspx</DependentUpon>
@@ -1193,7 +1201,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties content_4bootstrap-theme_1min_1css_1map__JsonSchema="" content_4bootstrap_1css_1map__JsonSchema="" />
+      <UserProperties content_4bootstrap_1css_1map__JsonSchema="" content_4bootstrap-theme_1min_1css_1map__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

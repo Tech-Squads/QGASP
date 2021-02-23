@@ -63,6 +63,7 @@ namespace QlityG
                 foreach (UserModel gig in gigs)
                 {
                     card.Append("<div style='text-align:left;' >");
+                    card.Append("<h3 style='font-size:18px;'>" + "<hr/>" + "</h3>");
                     card.Append("<h3 style='font-size:16px;'>" + "<b>" + gig.uGigTitles + "" + "</b>" + "</h3>");
 
                     card.Append("<div style='text-align:right;margin:auto;' >");
@@ -156,7 +157,8 @@ namespace QlityG
                         lblsurname.Text = u.uSurnames;
                         Label2.Text = u.uNames;
                         Label3.Text = u.uSurnames;
-                        Image1.ImageUrl = u.uImagePs;
+                        //Image1.ImageUrl = u.uImagePs;
+                        Label9.Text = u.uImagePs;
 
                         //DataList1.DataSource = u.uImageP;
                         //DataList1.DataBind();
@@ -263,26 +265,23 @@ namespace QlityG
         }
         protected void Create_Click(object sender, EventArgs e)
         {
-            if(fImage.PostedFile !=null)
+            if (FileUpload1.PostedFile != null)
             {
-                string strpath =Path.GetExtension(fImage.PostedFile.FileName);
-                if (strpath !=".jpg" && strpath !=".jpeg" && strpath !="" && strpath !=".png")
+                string strpath = Path.GetExtension(FileUpload1.PostedFile.FileName);
+                if (strpath != ".jpg" && strpath != ".jpeg" && strpath != "" && strpath != ".png")
                 {
                     ImageError.Text = "Only Image type .jpeg, .jpg, .gif, .png allowed ! ";
-                    ImageError.ForeColor = System.Drawing.Color.Red;  
+                    ImageError.ForeColor = System.Drawing.Color.Red;
                 }
                 else
                 {
                     ImageError.Text = "Profile image is saved. ";
                     ImageError.ForeColor = System.Drawing.Color.Green;
                 }
-                //fImage.SaveAs(Server.MapPath("~/Images/" + fImage.FileName));
-                string fileimg = Path.GetFileName(fImage.PostedFile.FileName);
-                fImage.PostedFile.SaveAs(Server.MapPath("UserImages/") + fileimg);
+                string fileimg = Path.GetFileName(FileUpload1.PostedFile.FileName);
+                FileUpload1.SaveAs(Server.MapPath("~/UserImages/") + fileimg);
 
                 u.uImagePs = "~/ UserImages /" + fileimg;
-              
-               
 
                 string data = JsonConvert.SerializeObject(u);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
@@ -302,6 +301,5 @@ namespace QlityG
 
 
         }
-
     }
 }

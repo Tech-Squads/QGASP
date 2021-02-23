@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewGigsIndex.aspx.cs" Inherits="QlityG.ViewGigsIndex" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RequestorViewGig.aspx.cs" Inherits="QlityG.RequestorViewGig" %>
 
 <!DOCTYPE html>
 
@@ -100,7 +100,7 @@
 				position:relative;
 				left:40px;
 				top:20px;
-				height:340px;
+				height:260px;
 				width:180px;
 				background-color:white;
 				border-radius:10px;
@@ -158,7 +158,7 @@
 <body>
     <form id="form1" runat="server">
         
-        
+        <div>
 			<!-- WRAPPER -->
 
 	<div id="wrapper">
@@ -171,13 +171,13 @@
       <div id="logo" class="pull-left" style=" position:fixed;left:50px;top:9px;"> <img src="../Account/QlityGigs_Log.png" /></div>
 
       <nav id="nav-menu-container">
-        <ul class="nav-menu">        
-        
+        <ul class="nav-menu">
+           
+
+
 			<%--<li><p style="color:blue"> <a href="RequestorDashboard.aspx" style="color:blue;font-size:small;">View Gig</a></p> </li>--%>
 
             <li><p style="color:blue"> <a href="RequestorEditP.aspx" style="color:blue;font-size:small;"><i class="w3-xxxlarge glyphicon glyphicon-user"></i>Profile</a></p></li> 
-    
-			 <li style="color:blue"><p style="color:blue"> <a href="RequestorViewGig.aspx" style="color:blue;font-size:small;">View Gigs</a></p> </li> 
 
           <li style="color:blue"><p style="color:blue"> <a href="CreateGig.aspx" style="color:blue;font-size:small;">Create Gig</a></p> </li> 
          
@@ -206,7 +206,9 @@
 							  <i class="fa fa-search"></i>
 						</div>--%>
 					<div style="position:relative;top:-34px;left:8px;">
-			<asp:Button runat="server" ID="searching" Text="Search" CssClass="btn btn-default" BackColor="blue" ForeColor="White" width="50px"  ValidationGroup="Group1" OnClick="searching_Click" />
+						<asp:Button runat="server" ID="searching" Text="Search" CssClass="btn btn-default" BackColor="blue" ForeColor="White" width="50px"  ValidationGroup="Group1"  />
+
+			<%--<asp:Button runat="server" ID="searching" Text="Search" CssClass="btn btn-default" BackColor="blue" ForeColor="White" width="50px"  ValidationGroup="Group1" OnClick="searching_Click" />--%>
 					</div>
 						</div> 
     
@@ -306,7 +308,7 @@
 			<div class="sidebar-scroll">
 				<div id="accouleft_div">
 				<div class="user-account"><br />
-					<div class="dropdown" >
+			<%--		<div class="dropdown" >
 						<a href="#" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Edit photo</strong> <i class="fa fa-caret-down"></i></a>
 						<ul class="dropdown-menu dropdown-menu-right account">
 							<li>
@@ -314,7 +316,7 @@
 							</li>
 							<li style="color:white;">The picture</li>
 							<li style="text-align:center"><a href="#">
-																  <asp:Button runat="server" ID="create" Text="Save" CssClass="btn btn-default"  BackColor="blue" ForeColor="white" OnClick="Create_Click"   />
+																  <asp:Button runat="server" ID="create" Text="Save" CssClass="btn btn-default"  BackColor="blue" ForeColor="white"   />
 							    </a></li>
 							<li>
 								<asp:Label ID="ImageError" runat="server" Text=""></asp:Label>
@@ -322,22 +324,23 @@
 							<li class="divider"></li>
 							
 						</ul>
+					</div>--%>
+					<div>
+						<p style="font-size:medium;color:gray;">My items</p>
+						<hr />
+					</div>
+
+						<div>
+						<p style="font-size:medium;color:gray;">Posted gigs</p>
+						<hr />
+					</div>
+
+						<div>
+						<p style="font-size:medium;color:gray;">My gigs</p>
+						<hr />
 					</div>
 					<asp:Label ID="Label9" runat="server" Text=""></asp:Label>
-			<%--<asp:FileUpload ID="fImage" runat="server" />--%>
-
-
-					<%--<img src="2.jpg" class="img-responsive img-circle user-photo" alt="User Profile Picture" />--%>
-							<%--<asp:Label ID="lblEmail" runat="server" Text=""></asp:Label>--%>					
-					<div>
-                            <%--    <asp:Repeater ID="Repeater1" runat="server">
-									<ItemTemplate>
-                                        <asp:Image ID="Image2" runat="server"  ImageUrl='<%# Container.DataItem %>'/>
-									</ItemTemplate>
-                                </asp:Repeater>--%>
-
-
-                                <asp:DataList ID="DataList1" runat="server">
+                             <%--   <asp:DataList ID="DataList1" runat="server">
 
 									<ItemTemplate>
                                         <asp:Image ID="Image7" runat="server" />
@@ -348,7 +351,7 @@
 										<img src="~/UserImages/@item.uImageP">
 
 									</ItemTemplate>
-                                </asp:DataList>
+                                </asp:DataList>--%>
 
 						   
 
@@ -357,7 +360,7 @@
 
 				</div>
 
-				<div>
+		<%--		<div>
                     
 					<a href="RequestorEditP.aspx" style="color:black;">
 						<table style="text-align:center;position:relative;left:20px;">
@@ -373,12 +376,8 @@
 					</table>
 					
                        
-
-<%--<div id="PDFObj" runat="server" class="col-12" style="display:none;" >
-    <asp:Literal ID="ltObjPDF" runat="server"/>
-</div>--%>
 				</a>
-				</div>
+				</div>--%>
 						<h4 style="text-align:center;"><asp:Label ID="lblcompany" runat="server"  Text=""></asp:Label></h4>
 					<br /><hr />
 
@@ -410,7 +409,7 @@
 								<div id="header3" >
 									<div id="header4"></div>
 									<br /><br />
-									<div style="position:fixed;left:550px;"><h3>View gigs</h3></div>
+									<%--<div style="position:fixed;left:550px;"><h3>View gigs</h3></div>--%>
 								
 							</div>	
 
